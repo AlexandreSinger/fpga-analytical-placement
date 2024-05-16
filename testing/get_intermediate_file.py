@@ -50,7 +50,7 @@ def run_test_main(args):
     # Check if config file for test suite exists
     test_suite_config_file_path = os.path.join(os.getcwd(), "configs", args.test_suite_name + "_config.txt")
     if (not os.path.isfile(test_suite_config_file_path)):
-        print("config file for test suite " + args.test_suite_name + " does not exist!")
+        print("Config file for test suite " + args.test_suite_name + " does not exist! The config file name should be in the form <test_suite_name>_config.txt.")
         return
 
     # Copy config file to tmp
