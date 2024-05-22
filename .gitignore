@@ -162,3 +162,4 @@ cython_debug/
 # Git ignore for fix IO testing: 
 testing/configs/*
 testing/tests/*
+testing/fix_io/*
