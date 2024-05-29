@@ -17,6 +17,16 @@ def command_parser():
     default_output_path = os.path.join(os.getcwd(), "tests")
     parser.add_argument("-output_path", default=default_output_path, type=str, help="path of the output directory")
     parser.add_argument("-save_tmp", action="store_true", help="do not remove the tmp dir at then end of the script")
+    default_configs_path = os.path.join(os.getcwd(), "configs") 
+    parser.add_argument("-configs_path", default=default_configs_path, type=str, help="path of the config files directory")
+    parser.add_argument(
+        "-j",
+        "-p",
+        default=1,
+        type=int,
+        metavar="NUM_PROC",
+        help="How many processors to use for execution.",
+    )
     return parser
 
 # This function moves files from tmp to output
@@ -48,7 +58,7 @@ def run_test_main(args):
     os.makedirs(tmp_path)
 
     # Check if config file for test suite exists
-    test_suite_config_file_path = os.path.join(os.getcwd(), "configs", args.test_suite_name + "_config.txt")
+    test_suite_config_file_path = os.path.join(args.configs_path, args.test_suite_name + "_config.txt")
     if (not os.path.isfile(test_suite_config_file_path)):
         print("Config file for test suite " + args.test_suite_name + " does not exist! The config file name should be in the form <test_suite_name>_config.txt.")
         return
@@ -61,8 +71,10 @@ def run_test_main(args):
 
     # Run vtr task on the test suite
     vtr_task_path = "vtr_flow/scripts/run_vtr_task.py"
-    result = subprocess.run([os.path.join(args.vtr_path, vtr_task_path), tmp_path], \
+    print("command being run: ", [os.path.join(args.vtr_path, vtr_task_path), tmp_path, "-j"+str(args.j)])
+    result = subprocess.run([os.path.join(args.vtr_path, vtr_task_path), tmp_path, "-j"+str(args.j)], \
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print(result.stdout.decode('unicode_escape'))
     if(result.returncode != 0):
         print("run_vtr_task failed: ", result.stderr)
         return
