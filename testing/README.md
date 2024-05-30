@@ -17,7 +17,7 @@ This script runs vpr with io constraints for a result directory such as `./tests
 ```sh
 ./run_ap_with_constraint.py <test_suite_name> -vtr_path ~/vtr-verilog-to-routing-ap -test_cases_path ./tests -chan_width 100
 ```
-For the chan_width option, you should provide the largest required width for the arch circuit combination in tests dir.
+For the chan_width option, you should provide the largest required width for the arch circuit combination in tests dir. The result of the run is in `./tests/arch/circuit/common/ap_dir/run###`.
 
 # test_ap.sh
 This script runs the above three scripts in sequence. There are less fined graned options, but is convenient to run everything at once. 
