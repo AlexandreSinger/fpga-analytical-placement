@@ -4,6 +4,7 @@
 
 import argparse
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -20,6 +21,17 @@ def command_parser():
 
     return parser
     
+# Helper method to extract the run number from the given run directory name.
+# For example "run003" would return 3.
+def extract_run_number(run):
+    if run is None:
+        return None
+    match = re.match(r"run(\d+)", run)
+    if match:
+        return int(match.group(1))
+    else:
+        return None
+
 # This is the main function of the python script
 def run_test_main(args):
     # parse arguments
@@ -38,8 +50,22 @@ def run_test_main(args):
             circuit_dir_path = os.path.join(arch_dir_path, circuit, "common")
             ap_run_dir = os.path.join(circuit_dir_path, "ap_dir")
             os.makedirs(ap_run_dir, exist_ok=True)
+            runs = [d for d in os.listdir(ap_run_dir) if os.path.isdir(os.path.join(ap_run_dir, d)) and d.startswith("run")]
+            last_run_num = 0
+            print(runs)
+            if len(runs) is not 0:
+                last_run = sorted(runs)[-1]
+                print(last_run)
+                last_run_num = extract_run_number(last_run)
+                print(last_run_num)
+                if last_run_num is None:
+                    last_run_num = 0
+            run_num = last_run_num + 1
+            run_name = "run{:03d}".format(run_num)
+            run_dir = os.path.join(ap_run_dir, run_name)
+            os.makedirs(run_dir)
             script_path = os.getcwd();
-            os.chdir(ap_run_dir)
+            os.chdir(run_dir)
             # This part is for handling the two scenarios where test name could be .v or .blif
             circuit_name = circuit[:-2]
             pre_vpr_str = ""
