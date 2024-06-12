@@ -74,18 +74,31 @@ def run_test_main(args):
                 pre_vpr_str = ".pre-vtr"
             print("circuit_name: "+circuit_name)
             print("pre_vpr_str: "+pre_vpr_str)
-            result = subprocess.run([os.path.join(args.vtr_path, "vpr", "vpr"), \
+            try:
+                process = subprocess.Popen([os.path.join(args.vtr_path, "vpr", "vpr"), \
                                      os.path.join(circuit_dir_path, arch), \
                                      os.path.join(circuit_dir_path, circuit_name + ".pre-vpr.blif"), \
+                                     "--analysis", \
                                      "--net_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".net"), \
                                      "--place_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".place"), \
                                      "--route_chan_width", str(args.chan_width), \
                                      "--read_vpr_constraints", os.path.join(circuit_dir_path, "io_constraint.xml")], \
                                     stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            print(result.stdout.decode('unicode_escape'))
-            if(result.returncode != 0):
-                print("vpr failed: ", result.stderr)
-                return
+                print([os.path.join(args.vtr_path, "vpr", "vpr"), \
+                                     os.path.join(circuit_dir_path, arch), \
+                                     os.path.join(circuit_dir_path, circuit_name + ".pre-vpr.blif"), \
+                                     "--net_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".net"), \
+                                     "--place_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".place"), \
+                                     "--route_chan_width", str(args.chan_width), \
+                                     "--read_vpr_constraints", os.path.join(circuit_dir_path, "io_constraint.xml")])
+                stdout, stderr = process.communicate()
+                returncode = process.returncode
+                if returncode != 0:
+                    print(f"Program exited with error code {returncode}")
+                    print(f"Error message: {stderr.decode()}")
+            except Exception as e:
+                print(f"Rpogram crashed with exception: {e}")
+
             os.chdir(script_path)
 
 if __name__ == "__main__":
