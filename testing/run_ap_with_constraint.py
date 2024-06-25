@@ -74,23 +74,16 @@ def run_test_main(args):
                 pre_vpr_str = ".pre-vtr"
             print("circuit_name: "+circuit_name)
             print("pre_vpr_str: "+pre_vpr_str)
-            try:
-                process = subprocess.Popen([os.path.join(args.vtr_path, "vpr", "vpr"), \
+            run_list = [os.path.join(args.vtr_path, "vpr", "vpr"), \
                                      os.path.join(circuit_dir_path, arch), \
                                      os.path.join(circuit_dir_path, circuit_name + ".pre-vpr.blif"), \
                                      "--analysis", \
                                      "--net_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".net"), \
                                      "--place_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".place"), \
                                      "--route_chan_width", str(args.chan_width), \
-                                     "--read_vpr_constraints", os.path.join(circuit_dir_path, "io_constraint.xml")], \
-                                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                print([os.path.join(args.vtr_path, "vpr", "vpr"), \
-                                     os.path.join(circuit_dir_path, arch), \
-                                     os.path.join(circuit_dir_path, circuit_name + ".pre-vpr.blif"), \
-                                     "--net_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".net"), \
-                                     "--place_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".place"), \
-                                     "--route_chan_width", str(args.chan_width), \
-                                     "--read_vpr_constraints", os.path.join(circuit_dir_path, "io_constraint.xml")])
+                                     "--read_vpr_constraints", os.path.join(circuit_dir_path, "io_constraint.xml")]
+            try:
+                process = subprocess.Popen(run_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 stdout, stderr = process.communicate()
                 returncode = process.returncode
                 if returncode != 0:
@@ -98,7 +91,8 @@ def run_test_main(args):
                     print(f"Error message: {stderr.decode()}")
             except Exception as e:
                 print(f"Rpogram crashed with exception: {e}")
-
+            with open(os.path.join(run_dir, "vpr_stdout.log"), "a") as vpr_log_file:
+                vpr_log_file.write(" ".join(run_list))
             os.chdir(script_path)
 
 if __name__ == "__main__":
