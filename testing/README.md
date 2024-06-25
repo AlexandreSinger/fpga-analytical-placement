@@ -24,3 +24,17 @@ This script runs the above three scripts in sequence. There are less fined grane
 ```sh
 ./test_ap.sh <test_suite_name>
 ```
+# collect_ap_hwpl.py
+This script collects hwpl information and put them in a csv file named `hpwls.csv`.
+```sh
+./collect_ap_hwpl.py <test_suite_name>
+```
+
+# hpwl_compare.py
+This script is meant to be run on google colab. Upload hpwls.csv to cloud first. 
+
+# display_placement_iteration.py
+This script display animation of placement if they are printed by vpr.
+```sh
+./dispaly_placement_iteration.py <path_to_vpr_stdout_log>
+```
