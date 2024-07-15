@@ -13,7 +13,7 @@ import sys
 def command_parser():
     parser = argparse.ArgumentParser(description="parse arguments for fix io script")
     parser.add_argument("test_suite_name", help="name of the one test suite being run")
-    default_vtr_path = os.path.join(os.path.expanduser("~"), "vtr-verilog-to-routing-ap")
+    default_vtr_path = os.path.join(os.path.expanduser("~"), "vtr-verilog-to-routing")
     parser.add_argument("-vtr_path", default=default_vtr_path, type=str, help="path of root directory for VTR")
     default_test_cases_path = os.path.join(os.getcwd(), "tests")
     parser.add_argument("-test_cases_path", default=default_test_cases_path, type=str, help="path of to intermediate files of the testcases")
@@ -71,15 +71,13 @@ def run_test_main(args):
             pre_vpr_str = ""
             if(circuit[-13:]==".pre-vpr.blif"):
                 circuit_name = circuit[:-13]
-                pre_vpr_str = ".pre-vtr"
+                pre_vpr_str = ".pre-vpr"
             print("circuit_name: "+circuit_name)
             print("pre_vpr_str: "+pre_vpr_str)
             run_list = [os.path.join(args.vtr_path, "vpr", "vpr"), \
                                      os.path.join(circuit_dir_path, arch), \
                                      os.path.join(circuit_dir_path, circuit_name + ".pre-vpr.blif"), \
-                                     "--analysis", \
-                                     "--net_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".net"), \
-                                     "--place_file", os.path.join(circuit_dir_path, circuit_name + pre_vpr_str+".place"), \
+                                     "--analytical_place", \
                                      "--route_chan_width", str(args.chan_width), \
                                      "--read_vpr_constraints", os.path.join(circuit_dir_path, "io_constraint.xml")]
             try:

@@ -17,20 +17,24 @@ def run_test_main(args):
     # parse arguments
     args = command_parser().parse_args(args)
     pwd = os.getcwd()
+
+    print("Getting intermediate files...")
     result = subprocess.run([os.path.join(pwd, "get_intermediate_file.py"), args.test_suite_name], \
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     print(result.stdout.decode('unicode_escape'))
     if(result.returncode != 0):
         print("get_intermediate_file failed: ", result.stderr)
         return
-    
+
+    print("Generating fixed IOs...")
     result = subprocess.run([os.path.join(pwd, "generate_fix_io.py"), args.test_suite_name], \
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     print(result.stdout.decode('unicode_escape'))
     if(result.returncode != 0):
         print("generate_fix_io failed: ", result.stderr)
         return
-    
+
+    print("Running AP...")
     result = subprocess.run([os.path.join(pwd, "run_ap_with_constraint.py"), args.test_suite_name], \
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     print(result.stdout.decode('unicode_escape'))
