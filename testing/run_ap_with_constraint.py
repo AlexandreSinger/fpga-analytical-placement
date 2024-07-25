@@ -18,6 +18,8 @@ def command_parser():
     default_test_cases_path = os.path.join(os.getcwd(), "tests")
     parser.add_argument("-test_cases_path", default=default_test_cases_path, type=str, help="path of to intermediate files of the testcases")
     parser.add_argument("-chan_width", default=100, type=int, help="largest chan width required for tests in this test suite")
+    parser.add_argument("-run_simulated_annealing", action="store_true", help="test simulated annealing")
+    parser.add_argument("-device_name", type=str, help="This should match the device name argument in the test suite config file")
 
     return parser
     
@@ -74,12 +76,18 @@ def run_test_main(args):
                 pre_vpr_str = ".pre-vpr"
             print("circuit_name: "+circuit_name)
             print("pre_vpr_str: "+pre_vpr_str)
+            constraint_file_name = "io_constraint.xml"
+            if args.run_simulated_annealing:
+                constraint_file_name = "constraint.xml"
             run_list = [os.path.join(args.vtr_path, "vpr", "vpr"), \
                                      os.path.join(circuit_dir_path, arch), \
                                      os.path.join(circuit_dir_path, circuit_name + ".pre-vpr.blif"), \
                                      "--analytical_place", \
                                      "--route_chan_width", str(args.chan_width), \
-                                     "--read_vpr_constraints", os.path.join(circuit_dir_path, "io_constraint.xml")]
+                                     "--read_vpr_constraints", os.path.join(circuit_dir_path, constraint_file_name)]
+            if args.device_name is not None:
+                run_list.append("--device")
+                run_list.append(args.device_name)
             try:
                 process = subprocess.Popen(run_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 stdout, stderr = process.communicate()
