@@ -19,6 +19,7 @@ def command_parser():
     parser.add_argument("-test_cases_path", default=default_test_cases_path, type=str, help="path of to intermediate files of the testcases")
     default_output_file=os.path.join(os.getcwd(), "hpwls.csv")
     parser.add_argument("-output_file", default=default_output_file, type=str, help="path of to output file")
+    parser.add_argument("-run_simulated_annealing", action="store_true", help="test simulated annealing")
 
     return parser
     
@@ -65,17 +66,27 @@ def run_test_main(args):
             run_name = "run{:03d}".format(last_run_num)
             result_file_path = os.path.join(ap_run_dir, run_name, "vpr_stdout.log")
             writer.writerow([arch, circuit, run_name])
-            HPWL = []
-            PLHPWL = []
-            result_file = open(result_file_path, "r")
-            for line in result_file:
-                line_list = line.split()
-                if len(line_list) == 2 and line_list[0] == "HPWL:":
-                    HPWL.append(line_list[1])
-                elif len(line_list) == 3 and line_list[0] == "Post-Legalized":
-                    PLHPWL.append(line_list[2])
-            writer.writerow(HPWL)
-            writer.writerow(PLHPWL)
+            if not args.run_simulated_annealing:
+                HPWL = []
+                PLHPWL = []
+                result_file = open(result_file_path, "r")
+                for line in result_file:
+                    line_list = line.split()
+                    if len(line_list) == 2 and line_list[0] == "HPWL:":
+                        HPWL.append(line_list[1])
+                    elif len(line_list) == 3 and line_list[0] == "Post-Legalized":
+                        PLHPWL.append(line_list[2])
+                writer.writerow(HPWL)
+                writer.writerow(PLHPWL)
+            else:
+                HPWL = []
+                result_file = open(result_file_path, "r")
+                for line in result_file:
+                    line_list = line.split()
+                    if len(line_list) == 4 and line_list[0] == "simulated":
+                        HPWL.append(line_list[-1])
+                writer.writerow(HPWL)
+
 
 if __name__ == "__main__":
     run_test_main(sys.argv[1:])
