@@ -18,7 +18,7 @@ def command_parser():
     default_test_cases_path = os.path.join(os.getcwd(), "tests")
     parser.add_argument("-test_cases_path", default=default_test_cases_path, type=str, help="path of to intermediate files of the testcases")
     parser.add_argument("-chan_width", default=100, type=int, help="largest chan width required for tests in this test suite")
-    parser.add_argument("-run_simulated_annealing", action="store_true", help="test simulated annealing")
+    parser.add_argument("-run_simulated_annealing", action="store_true", help="This flag tells the script to use the unmodified constraint file where all pins are constrained, it is used to test performence of simulated annealing placer")
     parser.add_argument("-device_name", type=str, help="This should match the device name argument in the test suite config file")
 
     return parser
