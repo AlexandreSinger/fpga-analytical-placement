@@ -1,12 +1,23 @@
-# get_intermediate_file.py manual
+# QuickStart
+
+The full AP flow can be run using the `test_ap.py` script. For example:
+```
+test_ap.py alu4
+```
+This runs the full AP flow on the alu4 MCNC circuit.
+
+In order to run this properly, you need a VTR repository on the `AlexandreSinger/vtr-verilog-to-routing:feature-analytical-placer` branch.
+
+
+# get_intermediate_files.py manual
 Before running the script, create `<test_suite_name>_config.txt` for the corresponding test suite under the `configs` directory. An example config file would be `~/vtr-verilog-to-routing/vtr_flow/tasks/regression_tests/vtr_reg_basic/basic_no_timing/config/config.txt`. The config file contains lists of architecture description and test files, and more. 
 ```sh
-./get_intermediate_file.py <test_suite_name> -vtr_path ~/vtr-verilog-to-routing -output_path ./tests
+./get_intermediate_files.py <test_suite_name> -vtr_path ~/vtr-verilog-to-routing -output_path ./tests
 ```
 After running the commend, the output can be found in `./test/<test_suite_name>`.
 
 # generate_fix_io.py manual
-Before running the script, append `--write_vpr_constraints constraint.xml` after `script_params_common = ` and then run get_intermediate_file.py.
+Before running the script, append `--write_vpr_constraints constraint.xml` after `script_params_common = ` and then run get_intermediate_files.py.
 ```sh
 ./generate_fix_io.py <test_suite_name> -input_path ./tests
 ```
@@ -19,10 +30,10 @@ This script runs vpr with io constraints for a result directory such as `./tests
 ```
 For the chan_width option, you should provide the largest required width for the arch circuit combination in tests dir. The result of the run is in `./tests/arch/circuit/common/ap_dir/run###`.
 
-# test_ap.sh
+# test_ap.py
 This script runs the above three scripts in sequence. There are less fined graned options, but is convenient to run everything at once. 
 ```sh
-./test_ap.sh <test_suite_name>
+./test_ap.py <test_suite_name>
 ```
 # collect_ap_hwpl.py
 This script collects hwpl information and put them in a csv file named `hpwls.csv`.

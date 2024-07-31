@@ -7,6 +7,7 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
 
 # This function parses arguments of this python script
 def command_parser():
@@ -38,30 +39,36 @@ def move_files(test_suite_output_path, tmp_path):
             shutil.move(item_path, test_suite_output_path)
     
 # This is the main function of the python script
-def run_test_main(args):
+def get_intermediate_files(args):
     # parse arguments
     args = command_parser().parse_args(args)
 
-    # if output for test suite exists, stop; if not, create that directory. 
+    # Get the location the temperary files will be generated into.
+    #   <output_path>/<test_suite_name>
     test_suite_output_path = os.path.join(args.output_path, args.test_suite_name)
-    if(not os.path.isdir(test_suite_output_path)):
-        os.makedirs(test_suite_output_path)
-    else: 
-        print(args.test_suite_name + "'s output already exists!")
-        return
+    print(f"Generating intermediate files into {test_suite_output_path}.");
 
-    # Remove tmp directory if exists, then create tmp directory
-    # Tmp directory is needed to make vtr task and the script's output structure compatiable
-    tmp_path = os.path.join(os.getcwd(), "tmp")
-    if(os.path.isdir(tmp_path)):
-        shutil.rmtree(tmp_path)
-    os.makedirs(tmp_path)
+    # Get the file path to the config file.
+    #   <config_path>/<test_suite_name>_config.txt
+    test_suite_config_file_path = os.path.join(args.configs_path, args.test_suite_name + "_config.txt")
+
+    # if output for test suite exists, stop.
+    if (os.path.isdir(test_suite_output_path)):
+        print(f"{args.test_suite_name}'s output already exists! Skipping generating intermediate files.")
+        return True
 
     # Check if config file for test suite exists
-    test_suite_config_file_path = os.path.join(args.configs_path, args.test_suite_name + "_config.txt")
     if (not os.path.isfile(test_suite_config_file_path)):
-        print("Config file for test suite " + args.test_suite_name + " does not exist! The config file name should be in the form <test_suite_name>_config.txt.")
-        return
+        print(f"Error: Config file for test suite {args.test_suite_name} does not exist! The config file name should be in the form <test_suite_name>_config.txt.")
+        return False
+
+    print(f"Using config file: {test_suite_config_file_path}")
+
+    # Make the directory
+    os.makedirs(test_suite_output_path)
+
+    # Create a temporary directory.
+    tmp_path = tempfile.mkdtemp()
 
     # Copy config file to tmp
     tmp_config_dir_path = os.path.join(tmp_path, "config")
@@ -71,20 +78,30 @@ def run_test_main(args):
 
     # Run vtr task on the test suite
     vtr_task_path = "vtr_flow/scripts/run_vtr_task.py"
-    print("command being run: ", [os.path.join(args.vtr_path, vtr_task_path), tmp_path, "-j"+str(args.j)])
-    result = subprocess.run([os.path.join(args.vtr_path, vtr_task_path), tmp_path, "-j"+str(args.j)], \
-                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    print(result.stdout.decode('unicode_escape'))
-    if(result.returncode != 0):
-        print("run_vtr_task failed: ", result.stderr)
-        return
+    vtr_task_command = [os.path.join(args.vtr_path, vtr_task_path), tmp_path, "-j"+str(args.j)]
+    print(f"Running VTR task with the following command: {vtr_task_command}")
+    result = subprocess.run(vtr_task_command, stdout=None, stderr=subprocess.PIPE)
 
     # Move files from tmp to output
+    print(f"Moving temporary files from {tmp_path} to {test_suite_output_path}")
     move_files(test_suite_output_path, tmp_path)
 
     # Remove tmp unless save_tmp is enabled
-    if(not args.save_tmp):
+    if(args.save_tmp):
+        print(f"Saving temporary directory. Directory located at {tmp_path}")
+    else:
+        print(f"Removing temp directory")
         shutil.rmtree(tmp_path)
 
+    # If running the task failed, raise an error.
+    if(result.returncode != 0):
+        print("Error: run_vtr_task failed: ", result.stderr)
+        return False
+
+    print(f"Successfully generated intermediate files into {test_suite_output_path}")
+    return True
+
 if __name__ == "__main__":
-    run_test_main(sys.argv[1:])
+    success = get_intermediate_files(sys.argv[1:])
+    if not success:
+        sys.exit(-1)
