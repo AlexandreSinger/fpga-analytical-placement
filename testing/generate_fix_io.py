@@ -67,14 +67,16 @@ def run_test_main(args):
 
     # if input for test suite does not exist, raise an error
     test_suite_input_path = os.path.join(args.input_path, args.test_suite_name)
+    print(f"Generating fixed IO for test suite with the intermediate files: {test_suite_input_path}")
     if(not os.path.isdir(test_suite_input_path)):
-        print("Input path is invalid or it does not contain test suite " + args.test_suite_name + "!")
-        return
+        print(f"Error: Input path is invalid or it does not contain test suite {args.test_suite_name}!")
+        return False
 
     # Iterate through combination of target and circuit pair and create corresponding pair in the output directory. The constraints files are then modified in each iteration.
     for arch in os.listdir(test_suite_input_path):
         input_arch_dir_path = os.path.join(test_suite_input_path, arch)
         for circuit in os.listdir(input_arch_dir_path):
+            print(f"\tGenerating fixed IO for: {circuit}")
             input_circuit_dir_path = os.path.join(input_arch_dir_path, circuit)
             common_path = os.path.join(input_circuit_dir_path, "common")
             blif_path = os.path.join(common_path, circuit)
@@ -84,9 +86,13 @@ def run_test_main(args):
             constraint_output_path = os.path.join(common_path, "io_constraint.xml")
             if(not os.path.isfile(blif_path)):
                 print(blif_path)
-                print("Files missing for "+arch+" "+circuit+"!")
-                return
+                print(f"Error: Files missing for {arch} {circuit}!")
+                return False
             modify_constraint(blif_path, constraint_input_path, constraint_output_path)
- 
+    print("All fixed IO files generated successfully.")
+    return True
+
 if __name__ == "__main__":
-    run_test_main(sys.argv[1:])
+    success = run_test_main(sys.argv[1:])
+    if not success:
+        sys.exit(-1)
