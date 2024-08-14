@@ -32,7 +32,7 @@ def command_parser():
 
 # This function moves files from tmp to output
 def move_files(test_suite_output_path, tmp_path):
-    # run001 is the output vtr task generats runing the first time
+    # run001 is the output vtr task generates running the first time
     for item in os.listdir(os.path.join(tmp_path, "run001")):
         item_path = os.path.join(tmp_path, "run001", item)
         if(os.path.isdir(item_path) and item.endswith(".xml")):
@@ -85,6 +85,9 @@ def get_intermediate_files(args):
     # Move files from tmp to output
     print(f"Moving temporary files from {tmp_path} to {test_suite_output_path}")
     move_files(test_suite_output_path, tmp_path)
+
+    # Copy the config file into the output path, this can be useful.
+    shutil.copy(test_suite_config_file_path, test_suite_output_path);
 
     # Remove tmp unless save_tmp is enabled
     if(args.save_tmp):

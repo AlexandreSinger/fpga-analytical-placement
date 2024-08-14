@@ -26,5 +26,6 @@ qor_parse_file=qor_standard.txt
 # Pass requirements
 pass_requirements_file=pass_requirements.txt
 
+# Note: using a smaller device to test a more congested placement.
 script_params=-starting_stage vpr -track_memory_usage --write_vpr_constraints constraint.xml --device "unnamed_device"
 
