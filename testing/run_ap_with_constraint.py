@@ -21,10 +21,19 @@ def command_parser():
     parser.add_argument("-runs_path", default=default_runs_path, type=str, help="path to where to store the run results.")
     parser.add_argument("-chan_width", default=100, type=int, help="largest chan width required for tests in this test suite")
     parser.add_argument("-run_simulated_annealing", action="store_true", help="This flag tells the script to use the unmodified constraint file where all pins are constrained, it is used to test performence of simulated annealing placer")
-    parser.add_argument("-device_name", type=str, help="This should match the device name argument in the test suite config file")
 
     return parser
-    
+
+# Helper method to get the device name out of the config file.
+def get_device_name(config_path):
+    device_pattern = r'--device\s+"([^"]+)"'
+    with open(config_path, 'r') as config:
+        for line in config:
+            match = re.search(device_pattern, line)
+            if match:
+                return match.group(1)
+    return None
+
 # Helper method to extract the run number from the given run directory name.
 # For example "run003" would return 3.
 def extract_run_number(run):
@@ -49,6 +58,9 @@ def run_test_main(args):
 
     print(f"Running AP flow using intermediate files located at: {test_path}")
 
+    # Get the config file
+    config_path = os.path.join(test_path, args.test_suite_name + "_config.txt")
+
     ap_run_base_dir = os.path.join(args.runs_path, args.test_suite_name)
     os.makedirs(ap_run_base_dir, exist_ok=True)
     runs = [d for d in os.listdir(ap_run_base_dir) if os.path.isdir(os.path.join(ap_run_base_dir, d)) and d.startswith("run")]
@@ -68,6 +80,8 @@ def run_test_main(args):
     # results are in tests/arch/circuit/common/ap_run
     for arch in os.listdir(test_path):
         arch_dir_path = os.path.join(test_path, arch)
+        if not os.path.isdir(arch_dir_path):
+            continue
         for circuit in os.listdir(arch_dir_path):
             circuit_dir_path = os.path.join(arch_dir_path, circuit, "common")
             ap_run_dir = os.path.join(run_dir, arch, circuit, "common")
@@ -89,9 +103,10 @@ def run_test_main(args):
                                      "--analytical_place", \
                                      "--route_chan_width", str(args.chan_width), \
                                      "--read_vpr_constraints", os.path.join(circuit_dir_path, constraint_file_name)]
-            if args.device_name is not None:
+            device_name = get_device_name(config_path);
+            if device_name is not None:
                 run_list.append("--device")
-                run_list.append(args.device_name)
+                run_list.append(device_name)
             try:
                 process = subprocess.Popen(run_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 stdout, stderr = process.communicate()

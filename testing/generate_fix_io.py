@@ -75,6 +75,8 @@ def run_test_main(args):
     # Iterate through combination of target and circuit pair and create corresponding pair in the output directory. The constraints files are then modified in each iteration.
     for arch in os.listdir(test_suite_input_path):
         input_arch_dir_path = os.path.join(test_suite_input_path, arch)
+        if not os.path.isdir(input_arch_dir_path):
+            continue
         for circuit in os.listdir(input_arch_dir_path):
             print(f"\tGenerating fixed IO for: {circuit}")
             input_circuit_dir_path = os.path.join(input_arch_dir_path, circuit)
