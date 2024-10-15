@@ -19,7 +19,7 @@ def command_parser():
     parser.add_argument("-test_cases_path", default=default_test_cases_path, type=str, help="path to intermediate files of the testcases")
     default_runs_path = os.path.join(os.getcwd(), "ap_runs")
     parser.add_argument("-runs_path", default=default_runs_path, type=str, help="path to where to store the run results.")
-    parser.add_argument("-chan_width", default=100, type=int, help="largest chan width required for tests in this test suite")
+    parser.add_argument("-route_chan_width", default=-1, type=int, help="routing channel width to use for all circuits. -1 does a min channel width route.")
     parser.add_argument("-run_simulated_annealing", action="store_true", help="This flag tells the script to use the unmodified constraint file where all pins are constrained, it is used to test performence of simulated annealing placer")
 
     return parser
@@ -97,16 +97,20 @@ def run_test_main(args):
             constraint_file_name = "io_constraint.xml"
             if args.run_simulated_annealing:
                 constraint_file_name = "constraint.xml"
+            # TODO: Should take the same arguments from the config file if possible.
             run_list = [os.path.join(args.vtr_path, "vpr", "vpr"), \
                                      os.path.join(circuit_dir_path, arch), \
                                      os.path.join(circuit_dir_path, circuit_name + ".pre-vpr.blif"), \
                                      "--analytical_place", \
-                                     "--route_chan_width", str(args.chan_width), \
+                                     "--route", \
                                      "--read_vpr_constraints", os.path.join(circuit_dir_path, constraint_file_name)]
             device_name = get_device_name(config_path);
             if device_name is not None:
                 run_list.append("--device")
                 run_list.append(device_name)
+            if args.route_chan_width > 0:
+                run_list.append("--route_chan_width")
+                run_list.append(str(args.route_chan_width))
             try:
                 process = subprocess.Popen(run_list, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 stdout, stderr = process.communicate()
