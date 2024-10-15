@@ -82,7 +82,7 @@ def run_test_main(args):
             input_circuit_dir_path = os.path.join(input_arch_dir_path, circuit)
             common_path = os.path.join(input_circuit_dir_path, "common")
             blif_path = os.path.join(common_path, circuit)
-            if(circuit[:-2] == ".v"):
+            if(circuit.endswith(".v")):
                 blif_path = os.path.join(common_path, circuit[:-2]+".pre-vpr.blif")
             constraint_input_path = os.path.join(common_path, "constraint.xml")
             constraint_output_path = os.path.join(common_path, "io_constraint.xml")
