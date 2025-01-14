@@ -1,0 +1,88 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:i2"><add_atom name_pattern="out:i2" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:l2"><add_atom name_pattern="out:l2" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:n2"><add_atom name_pattern="out:n2" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:r2"><add_atom name_pattern="out:r2" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:h2"><add_atom name_pattern="out:h2" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:o2"><add_atom name_pattern="out:o2" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:u2"><add_atom name_pattern="out:u2" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:q2"><add_atom name_pattern="out:q2" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p2"><add_atom name_pattern="out:p2" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:s2"><add_atom name_pattern="out:s2" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:t2"><add_atom name_pattern="out:t2" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:j2"><add_atom name_pattern="out:j2" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:m2"><add_atom name_pattern="out:m2" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:k2"><add_atom name_pattern="out:k2" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="a"><add_atom name_pattern="a" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="b"><add_atom name_pattern="b" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="c"><add_atom name_pattern="c" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="d"><add_atom name_pattern="d" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="e"><add_atom name_pattern="e" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="f"><add_atom name_pattern="f" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="g"><add_atom name_pattern="g" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="h"><add_atom name_pattern="h" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="i"><add_atom name_pattern="i" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="j"><add_atom name_pattern="j" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="k"><add_atom name_pattern="k" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="l"><add_atom name_pattern="l" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="m"><add_atom name_pattern="m" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="n"><add_atom name_pattern="n" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+</partition_list>
+</vpr_constraints>

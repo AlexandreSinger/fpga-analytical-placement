@@ -1,0 +1,412 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:pdata_0_0_"><add_atom name_pattern="out:pdata_0_0_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_10_10_"><add_atom name_pattern="out:pdata_10_10_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_11_11_"><add_atom name_pattern="out:pdata_11_11_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="15" y_low="15" />
+</partition>
+<partition name="out:pdata_12_12_"><add_atom name_pattern="out:pdata_12_12_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_13_13_"><add_atom name_pattern="out:pdata_13_13_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_14_14_"><add_atom name_pattern="out:pdata_14_14_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="15" y_low="15" />
+</partition>
+<partition name="out:pdata_15_15_"><add_atom name_pattern="out:pdata_15_15_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_1_1_"><add_atom name_pattern="out:pdata_1_1_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="15" y_low="15" />
+</partition>
+<partition name="out:pdata_2_2_"><add_atom name_pattern="out:pdata_2_2_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="15" y_low="15" />
+</partition>
+<partition name="out:pdata_3_3_"><add_atom name_pattern="out:pdata_3_3_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_4_4_"><add_atom name_pattern="out:pdata_4_4_" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_5_5_"><add_atom name_pattern="out:pdata_5_5_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="15" y_low="15" />
+</partition>
+<partition name="out:pdata_6_6_"><add_atom name_pattern="out:pdata_6_6_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_7_7_"><add_atom name_pattern="out:pdata_7_7_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_8_8_"><add_atom name_pattern="out:pdata_8_8_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdata_9_9_"><add_atom name_pattern="out:pdata_9_9_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:paddress_0_0_"><add_atom name_pattern="out:paddress_0_0_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="15" y_low="15" />
+</partition>
+<partition name="out:paddress_10_10_"><add_atom name_pattern="out:paddress_10_10_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:paddress_11_11_"><add_atom name_pattern="out:paddress_11_11_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="15" y_low="15" />
+</partition>
+<partition name="out:paddress_12_12_"><add_atom name_pattern="out:paddress_12_12_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="15" y_low="15" />
+</partition>
+<partition name="out:paddress_13_13_"><add_atom name_pattern="out:paddress_13_13_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="15" y_low="15" />
+</partition>
+<partition name="out:paddress_14_14_"><add_atom name_pattern="out:paddress_14_14_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="15" y_low="15" />
+</partition>
+<partition name="out:paddress_15_15_"><add_atom name_pattern="out:paddress_15_15_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:paddress_1_1_"><add_atom name_pattern="out:paddress_1_1_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:paddress_2_2_"><add_atom name_pattern="out:paddress_2_2_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="15" y_low="15" />
+</partition>
+<partition name="out:paddress_3_3_"><add_atom name_pattern="out:paddress_3_3_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:paddress_4_4_"><add_atom name_pattern="out:paddress_4_4_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:paddress_5_5_"><add_atom name_pattern="out:paddress_5_5_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="15" y_low="15" />
+</partition>
+<partition name="out:paddress_6_6_"><add_atom name_pattern="out:paddress_6_6_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:paddress_7_7_"><add_atom name_pattern="out:paddress_7_7_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="15" y_low="15" />
+</partition>
+<partition name="out:paddress_8_8_"><add_atom name_pattern="out:paddress_8_8_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:paddress_9_9_"><add_atom name_pattern="out:paddress_9_9_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pdn"><add_atom name_pattern="out:pdn" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:piack_0_0_"><add_atom name_pattern="out:piack_0_0_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_0_0_"><add_atom name_pattern="out:ppeaka_0_0_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_10_10_"><add_atom name_pattern="out:ppeaka_10_10_" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_11_11_"><add_atom name_pattern="out:ppeaka_11_11_" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_12_12_"><add_atom name_pattern="out:ppeaka_12_12_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaka_13_13_"><add_atom name_pattern="out:ppeaka_13_13_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_14_14_"><add_atom name_pattern="out:ppeaka_14_14_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaka_15_15_"><add_atom name_pattern="out:ppeaka_15_15_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_1_1_"><add_atom name_pattern="out:ppeaka_1_1_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_2_2_"><add_atom name_pattern="out:ppeaka_2_2_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaka_3_3_"><add_atom name_pattern="out:ppeaka_3_3_" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="8" y_low="8" />
+</partition>
+<partition name="out:ppeaka_4_4_"><add_atom name_pattern="out:ppeaka_4_4_" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_5_5_"><add_atom name_pattern="out:ppeaka_5_5_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaka_6_6_"><add_atom name_pattern="out:ppeaka_6_6_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_7_7_"><add_atom name_pattern="out:ppeaka_7_7_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaka_8_8_"><add_atom name_pattern="out:ppeaka_8_8_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="out:ppeaka_9_9_"><add_atom name_pattern="out:ppeaka_9_9_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_0_0_"><add_atom name_pattern="out:ppeakb_0_0_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_10_10_"><add_atom name_pattern="out:ppeakb_10_10_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_11_11_"><add_atom name_pattern="out:ppeakb_11_11_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_12_12_"><add_atom name_pattern="out:ppeakb_12_12_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_13_13_"><add_atom name_pattern="out:ppeakb_13_13_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_14_14_"><add_atom name_pattern="out:ppeakb_14_14_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_15_15_"><add_atom name_pattern="out:ppeakb_15_15_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_1_1_"><add_atom name_pattern="out:ppeakb_1_1_" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_2_2_"><add_atom name_pattern="out:ppeakb_2_2_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_3_3_"><add_atom name_pattern="out:ppeakb_3_3_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_4_4_"><add_atom name_pattern="out:ppeakb_4_4_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_5_5_"><add_atom name_pattern="out:ppeakb_5_5_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_6_6_"><add_atom name_pattern="out:ppeakb_6_6_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_7_7_"><add_atom name_pattern="out:ppeakb_7_7_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakb_8_8_"><add_atom name_pattern="out:ppeakb_8_8_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="out:ppeakb_9_9_"><add_atom name_pattern="out:ppeakb_9_9_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_0_0_"><add_atom name_pattern="out:ppeaki_0_0_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_10_10_"><add_atom name_pattern="out:ppeaki_10_10_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_11_11_"><add_atom name_pattern="out:ppeaki_11_11_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_12_12_"><add_atom name_pattern="out:ppeaki_12_12_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_13_13_"><add_atom name_pattern="out:ppeaki_13_13_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_14_14_"><add_atom name_pattern="out:ppeaki_14_14_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_15_15_"><add_atom name_pattern="out:ppeaki_15_15_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_1_1_"><add_atom name_pattern="out:ppeaki_1_1_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_2_2_"><add_atom name_pattern="out:ppeaki_2_2_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_3_3_"><add_atom name_pattern="out:ppeaki_3_3_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_4_4_"><add_atom name_pattern="out:ppeaki_4_4_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_5_5_"><add_atom name_pattern="out:ppeaki_5_5_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_6_6_"><add_atom name_pattern="out:ppeaki_6_6_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_7_7_"><add_atom name_pattern="out:ppeaki_7_7_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_8_8_"><add_atom name_pattern="out:ppeaki_8_8_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaki_9_9_"><add_atom name_pattern="out:ppeaki_9_9_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakp_0_0_"><add_atom name_pattern="out:ppeakp_0_0_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakp_10_10_"><add_atom name_pattern="out:ppeakp_10_10_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakp_11_11_"><add_atom name_pattern="out:ppeakp_11_11_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeakp_12_12_"><add_atom name_pattern="out:ppeakp_12_12_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeakp_13_13_"><add_atom name_pattern="out:ppeakp_13_13_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeakp_14_14_"><add_atom name_pattern="out:ppeakp_14_14_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeakp_15_15_"><add_atom name_pattern="out:ppeakp_15_15_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakp_1_1_"><add_atom name_pattern="out:ppeakp_1_1_" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="9" y_low="9" />
+</partition>
+<partition name="out:ppeakp_2_2_"><add_atom name_pattern="out:ppeakp_2_2_" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeakp_3_3_"><add_atom name_pattern="out:ppeakp_3_3_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakp_4_4_"><add_atom name_pattern="out:ppeakp_4_4_" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakp_5_5_"><add_atom name_pattern="out:ppeakp_5_5_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakp_6_6_"><add_atom name_pattern="out:ppeakp_6_6_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakp_7_7_"><add_atom name_pattern="out:ppeakp_7_7_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeakp_8_8_"><add_atom name_pattern="out:ppeakp_8_8_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeakp_9_9_"><add_atom name_pattern="out:ppeakp_9_9_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaks_0_0_"><add_atom name_pattern="out:ppeaks_0_0_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaks_10_10_"><add_atom name_pattern="out:ppeaks_10_10_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:ppeaks_11_11_"><add_atom name_pattern="out:ppeaks_11_11_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaks_12_12_"><add_atom name_pattern="out:ppeaks_12_12_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaks_13_13_"><add_atom name_pattern="out:ppeaks_13_13_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaks_14_14_"><add_atom name_pattern="out:ppeaks_14_14_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaks_15_15_"><add_atom name_pattern="out:ppeaks_15_15_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="out:ppeaks_1_1_"><add_atom name_pattern="out:ppeaks_1_1_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaks_2_2_"><add_atom name_pattern="out:ppeaks_2_2_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaks_3_3_"><add_atom name_pattern="out:ppeaks_3_3_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaks_4_4_"><add_atom name_pattern="out:ppeaks_4_4_" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="10" y_low="10" />
+</partition>
+<partition name="out:ppeaks_5_5_"><add_atom name_pattern="out:ppeaks_5_5_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaks_6_6_"><add_atom name_pattern="out:ppeaks_6_6_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:ppeaks_7_7_"><add_atom name_pattern="out:ppeaks_7_7_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="15" y_low="15" />
+</partition>
+<partition name="out:ppeaks_8_8_"><add_atom name_pattern="out:ppeaks_8_8_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="out:ppeaks_9_9_"><add_atom name_pattern="out:ppeaks_9_9_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:prd_0_0_"><add_atom name_pattern="out:prd_0_0_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="15" y_low="15" />
+</partition>
+<partition name="out:pwr_0_0_"><add_atom name_pattern="out:pwr_0_0_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="pclk"><add_atom name_pattern="pclk" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="pirq_0_0_"><add_atom name_pattern="pirq_0_0_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="15" y_low="15" />
+</partition>
+<partition name="preset"><add_atom name_pattern="preset" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="15" y_low="15" />
+</partition>
+<partition name="preset_0_0_"><add_atom name_pattern="preset_0_0_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="15" y_low="15" />
+</partition>
+<partition name="tin_pdata_0_0_"><add_atom name_pattern="tin_pdata_0_0_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pdata_10_10_"><add_atom name_pattern="tin_pdata_10_10_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pdata_11_11_"><add_atom name_pattern="tin_pdata_11_11_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="15" y_low="15" />
+</partition>
+<partition name="tin_pdata_12_12_"><add_atom name_pattern="tin_pdata_12_12_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="15" y_low="15" />
+</partition>
+<partition name="tin_pdata_13_13_"><add_atom name_pattern="tin_pdata_13_13_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pdata_14_14_"><add_atom name_pattern="tin_pdata_14_14_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="15" y_low="15" />
+</partition>
+<partition name="tin_pdata_15_15_"><add_atom name_pattern="tin_pdata_15_15_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pdata_1_1_"><add_atom name_pattern="tin_pdata_1_1_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pdata_2_2_"><add_atom name_pattern="tin_pdata_2_2_" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="15" y_low="15" />
+</partition>
+<partition name="tin_pdata_3_3_"><add_atom name_pattern="tin_pdata_3_3_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pdata_4_4_"><add_atom name_pattern="tin_pdata_4_4_" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="3" y_low="3" />
+</partition>
+<partition name="tin_pdata_5_5_"><add_atom name_pattern="tin_pdata_5_5_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="15" y_low="15" />
+</partition>
+<partition name="tin_pdata_6_6_"><add_atom name_pattern="tin_pdata_6_6_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pdata_7_7_"><add_atom name_pattern="tin_pdata_7_7_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pdata_8_8_"><add_atom name_pattern="tin_pdata_8_8_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pdata_9_9_"><add_atom name_pattern="tin_pdata_9_9_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+</partition_list>
+</vpr_constraints>

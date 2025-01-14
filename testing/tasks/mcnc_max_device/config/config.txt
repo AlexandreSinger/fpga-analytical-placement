@@ -1,0 +1,70 @@
+############################################
+# Configuration file for running experiments
+##############################################
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/blif/wiremap6
+
+# Path to directory of architectures to use
+archs_dir=arch/timing
+
+# Add circuits to list to sweep
+circuit_list_add=alu4.pre-vpr.blif
+circuit_list_add=apex2.pre-vpr.blif
+circuit_list_add=apex4.pre-vpr.blif
+circuit_list_add=bigkey.pre-vpr.blif
+circuit_list_add=clma.pre-vpr.blif
+circuit_list_add=des.pre-vpr.blif
+circuit_list_add=diffeq.pre-vpr.blif
+circuit_list_add=dsip.pre-vpr.blif
+circuit_list_add=elliptic.pre-vpr.blif
+circuit_list_add=ex1010.pre-vpr.blif
+circuit_list_add=ex5p.pre-vpr.blif
+circuit_list_add=frisc.pre-vpr.blif
+circuit_list_add=misex3.pre-vpr.blif
+circuit_list_add=pdc.pre-vpr.blif
+circuit_list_add=s298.pre-vpr.blif
+circuit_list_add=s38417.pre-vpr.blif
+circuit_list_add=s38584.1.pre-vpr.blif
+circuit_list_add=seq.pre-vpr.blif
+circuit_list_add=spla.pre-vpr.blif
+circuit_list_add=tseng.pre-vpr.blif
+
+# Add architectures to list to sweep
+arch_list_add=k6_frac_N10_40nm.xml
+
+circuit_constraint_list_add=(alu4.pre-vpr.blif, constraints=../../../../constraints/alu4_fixed_io.xml)
+circuit_constraint_list_add=(apex2.pre-vpr.blif, constraints=../../../../constraints/apex2_fixed_io.xml)
+circuit_constraint_list_add=(apex4.pre-vpr.blif, constraints=../../../../constraints/apex4_fixed_io.xml)
+circuit_constraint_list_add=(bigkey.pre-vpr.blif, constraints=../../../../constraints/bigkey_fixed_io.xml)
+circuit_constraint_list_add=(clma.pre-vpr.blif, constraints=../../../../constraints/clma_fixed_io.xml)
+circuit_constraint_list_add=(des.pre-vpr.blif, constraints=../../../../constraints/des_fixed_io.xml)
+circuit_constraint_list_add=(diffeq.pre-vpr.blif, constraints=../../../../constraints/diffeq_fixed_io.xml)
+circuit_constraint_list_add=(dsip.pre-vpr.blif, constraints=../../../../constraints/dsip_fixed_io.xml)
+circuit_constraint_list_add=(elliptic.pre-vpr.blif, constraints=../../../../constraints/elliptic_fixed_io.xml)
+circuit_constraint_list_add=(ex1010.pre-vpr.blif, constraints=../../../../constraints/ex1010_fixed_io.xml)
+circuit_constraint_list_add=(ex5p.pre-vpr.blif, constraints=../../../../constraints/ex5p_fixed_io.xml)
+circuit_constraint_list_add=(frisc.pre-vpr.blif, constraints=../../../../constraints/frisc_fixed_io.xml)
+circuit_constraint_list_add=(misex3.pre-vpr.blif, constraints=../../../../constraints/misex3_fixed_io.xml)
+circuit_constraint_list_add=(pdc.pre-vpr.blif, constraints=../../../../constraints/pdc_fixed_io.xml)
+circuit_constraint_list_add=(s298.pre-vpr.blif, constraints=../../../../constraints/s298_fixed_io.xml)
+circuit_constraint_list_add=(s38417.pre-vpr.blif, constraints=../../../../constraints/s38417_fixed_io.xml)
+circuit_constraint_list_add=(s38584.1.pre-vpr.blif, constraints=../../../../constraints/s38584.1_fixed_io.xml)
+circuit_constraint_list_add=(seq.pre-vpr.blif, constraints=../../../../constraints/seq_fixed_io.xml)
+circuit_constraint_list_add=(spla.pre-vpr.blif, constraints=../../../../constraints/spla_fixed_io.xml)
+circuit_constraint_list_add=(tseng.pre-vpr.blif, constraints=../../../../constraints/tseng_fixed_io.xml)
+
+# Parse info and how to parse
+parse_file=vpr_fixed_chan_width.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+# AP:
+script_params=-starting_stage vpr -track_memory_usage --analytical_place --route --route_chan_width 120 --device "mcnc_medium_device"
+# VPR Baseline:
+# script_params=-starting_stage vpr -track_memory_usage --pack --place --route --route_chan_width 120 --device "mcnc_medium_device"
+

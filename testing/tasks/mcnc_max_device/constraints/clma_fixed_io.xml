@@ -1,0 +1,436 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:p__cmnxcp_0"><add_atom name_pattern="out:p__cmnxcp_0" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_14"><add_atom name_pattern="out:p__cmx1ad_14" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmxir_0"><add_atom name_pattern="out:p__cmxir_0" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmnxcp_1"><add_atom name_pattern="out:p__cmnxcp_1" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmndst0p0"><add_atom name_pattern="out:p__cmndst0p0" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_0"><add_atom name_pattern="out:p__cmx0ad_0" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_1"><add_atom name_pattern="out:p__cmx0ad_1" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_12"><add_atom name_pattern="out:p__cmx0ad_12" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_13"><add_atom name_pattern="out:p__cmx0ad_13" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_14"><add_atom name_pattern="out:p__cmx0ad_14" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="7" y_low="7" />
+</partition>
+<partition name="out:p__cmx0ad_15"><add_atom name_pattern="out:p__cmx0ad_15" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_16"><add_atom name_pattern="out:p__cmx0ad_16" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_17"><add_atom name_pattern="out:p__cmx0ad_17" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_18"><add_atom name_pattern="out:p__cmx0ad_18" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_19"><add_atom name_pattern="out:p__cmx0ad_19" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_2"><add_atom name_pattern="out:p__cmx0ad_2" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_20"><add_atom name_pattern="out:p__cmx0ad_20" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_21"><add_atom name_pattern="out:p__cmx0ad_21" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_22"><add_atom name_pattern="out:p__cmx0ad_22" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_23"><add_atom name_pattern="out:p__cmx0ad_23" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_24"><add_atom name_pattern="out:p__cmx0ad_24" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_25"><add_atom name_pattern="out:p__cmx0ad_25" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_26"><add_atom name_pattern="out:p__cmx0ad_26" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_27"><add_atom name_pattern="out:p__cmx0ad_27" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_28"><add_atom name_pattern="out:p__cmx0ad_28" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_29"><add_atom name_pattern="out:p__cmx0ad_29" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_3"><add_atom name_pattern="out:p__cmx0ad_3" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_30"><add_atom name_pattern="out:p__cmx0ad_30" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_31"><add_atom name_pattern="out:p__cmx0ad_31" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_4"><add_atom name_pattern="out:p__cmx0ad_4" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_5"><add_atom name_pattern="out:p__cmx0ad_5" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_6"><add_atom name_pattern="out:p__cmx0ad_6" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx0ad_7"><add_atom name_pattern="out:p__cmx0ad_7" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx1ad_0"><add_atom name_pattern="out:p__cmx1ad_0" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_1"><add_atom name_pattern="out:p__cmx1ad_1" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_12"><add_atom name_pattern="out:p__cmx1ad_12" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_13"><add_atom name_pattern="out:p__cmx1ad_13" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_15"><add_atom name_pattern="out:p__cmx1ad_15" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_16"><add_atom name_pattern="out:p__cmx1ad_16" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_17"><add_atom name_pattern="out:p__cmx1ad_17" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_18"><add_atom name_pattern="out:p__cmx1ad_18" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_19"><add_atom name_pattern="out:p__cmx1ad_19" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_2"><add_atom name_pattern="out:p__cmx1ad_2" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_20"><add_atom name_pattern="out:p__cmx1ad_20" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_21"><add_atom name_pattern="out:p__cmx1ad_21" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_22"><add_atom name_pattern="out:p__cmx1ad_22" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_23"><add_atom name_pattern="out:p__cmx1ad_23" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_24"><add_atom name_pattern="out:p__cmx1ad_24" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_25"><add_atom name_pattern="out:p__cmx1ad_25" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_26"><add_atom name_pattern="out:p__cmx1ad_26" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="8" y_low="8" />
+</partition>
+<partition name="out:p__cmx1ad_27"><add_atom name_pattern="out:p__cmx1ad_27" />
+<add_region subtile="-1" x_high="22" x_low="22" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_28"><add_atom name_pattern="out:p__cmx1ad_28" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="8" y_low="8" />
+</partition>
+<partition name="out:p__cmx1ad_29"><add_atom name_pattern="out:p__cmx1ad_29" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_3"><add_atom name_pattern="out:p__cmx1ad_3" />
+<add_region subtile="-1" x_high="23" x_low="23" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_30"><add_atom name_pattern="out:p__cmx1ad_30" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="8" y_low="8" />
+</partition>
+<partition name="out:p__cmx1ad_31"><add_atom name_pattern="out:p__cmx1ad_31" />
+<add_region subtile="-1" x_high="22" x_low="22" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_4"><add_atom name_pattern="out:p__cmx1ad_4" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_5"><add_atom name_pattern="out:p__cmx1ad_5" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_6"><add_atom name_pattern="out:p__cmx1ad_6" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_7"><add_atom name_pattern="out:p__cmx1ad_7" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_9"><add_atom name_pattern="out:p__cmx0ad_9" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_9"><add_atom name_pattern="out:p__cmx1ad_9" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmxir_1"><add_atom name_pattern="out:p__cmxir_1" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmndst1p0"><add_atom name_pattern="out:p__cmndst1p0" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmxcl_0"><add_atom name_pattern="out:p__cmxcl_0" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmxcl_1"><add_atom name_pattern="out:p__cmxcl_1" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmxig_0"><add_atom name_pattern="out:p__cmxig_0" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmxig_1"><add_atom name_pattern="out:p__cmxig_1" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_10"><add_atom name_pattern="out:p__cmx0ad_10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="out:p__cmx0ad_11"><add_atom name_pattern="out:p__cmx0ad_11" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="out:p__cmx0ad_32"><add_atom name_pattern="out:p__cmx0ad_32" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:p__cmx0ad_33"><add_atom name_pattern="out:p__cmx0ad_33" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_34"><add_atom name_pattern="out:p__cmx0ad_34" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_35"><add_atom name_pattern="out:p__cmx0ad_35" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx0ad_8"><add_atom name_pattern="out:p__cmx0ad_8" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="24" y_low="24" />
+</partition>
+<partition name="out:p__cmx1ad_10"><add_atom name_pattern="out:p__cmx1ad_10" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_11"><add_atom name_pattern="out:p__cmx1ad_11" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_32"><add_atom name_pattern="out:p__cmx1ad_32" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:p__cmx1ad_33"><add_atom name_pattern="out:p__cmx1ad_33" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_34"><add_atom name_pattern="out:p__cmx1ad_34" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="23" y_low="23" />
+</partition>
+<partition name="out:p__cmx1ad_35"><add_atom name_pattern="out:p__cmx1ad_35" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:p__cmx1ad_8"><add_atom name_pattern="out:p__cmx1ad_8" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="pclk"><add_atom name_pattern="pclk" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="24" y_low="24" />
+</partition>
+<partition name="pi15"><add_atom name_pattern="pi15" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="pi16"><add_atom name_pattern="pi16" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="pi17"><add_atom name_pattern="pi17" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="pi18"><add_atom name_pattern="pi18" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="pi19"><add_atom name_pattern="pi19" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="pi20"><add_atom name_pattern="pi20" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="pi21"><add_atom name_pattern="pi21" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="pi22"><add_atom name_pattern="pi22" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="pi23"><add_atom name_pattern="pi23" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="pi232"><add_atom name_pattern="pi232" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="pi233"><add_atom name_pattern="pi233" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="pi234"><add_atom name_pattern="pi234" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="pi235"><add_atom name_pattern="pi235" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="7" y_low="7" />
+</partition>
+<partition name="pi236"><add_atom name_pattern="pi236" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="pi237"><add_atom name_pattern="pi237" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="pi238"><add_atom name_pattern="pi238" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="pi239"><add_atom name_pattern="pi239" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="7" y_low="7" />
+</partition>
+<partition name="pi24"><add_atom name_pattern="pi24" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="pi240"><add_atom name_pattern="pi240" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="pi241"><add_atom name_pattern="pi241" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="pi242"><add_atom name_pattern="pi242" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="pi243"><add_atom name_pattern="pi243" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="pi244"><add_atom name_pattern="pi244" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="pi245"><add_atom name_pattern="pi245" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="pi246"><add_atom name_pattern="pi246" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="pi247"><add_atom name_pattern="pi247" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="pi248"><add_atom name_pattern="pi248" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="pi249"><add_atom name_pattern="pi249" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="pi25"><add_atom name_pattern="pi25" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="pi250"><add_atom name_pattern="pi250" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="7" y_low="7" />
+</partition>
+<partition name="pi251"><add_atom name_pattern="pi251" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="0" y_low="0" />
+</partition>
+<partition name="pi252"><add_atom name_pattern="pi252" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="0" y_low="0" />
+</partition>
+<partition name="pi253"><add_atom name_pattern="pi253" />
+<add_region subtile="-1" x_high="22" x_low="22" y_high="0" y_low="0" />
+</partition>
+<partition name="pi254"><add_atom name_pattern="pi254" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="0" y_low="0" />
+</partition>
+<partition name="pi255"><add_atom name_pattern="pi255" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="0" y_low="0" />
+</partition>
+<partition name="pi26"><add_atom name_pattern="pi26" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="pi27"><add_atom name_pattern="pi27" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="pi49"><add_atom name_pattern="pi49" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="pi50"><add_atom name_pattern="pi50" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="pi51"><add_atom name_pattern="pi51" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="24" y_low="24" />
+</partition>
+<partition name="pi52"><add_atom name_pattern="pi52" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="24" y_low="24" />
+</partition>
+<partition name="pi53"><add_atom name_pattern="pi53" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="24" y_low="24" />
+</partition>
+<partition name="pi54"><add_atom name_pattern="pi54" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="24" y_low="24" />
+</partition>
+<partition name="pi55"><add_atom name_pattern="pi55" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="24" y_low="24" />
+</partition>
+<partition name="pi56"><add_atom name_pattern="pi56" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="24" y_low="24" />
+</partition>
+<partition name="pi57"><add_atom name_pattern="pi57" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="pi58"><add_atom name_pattern="pi58" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="pi59"><add_atom name_pattern="pi59" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="pi60"><add_atom name_pattern="pi60" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="24" y_low="24" />
+</partition>
+<partition name="pi61"><add_atom name_pattern="pi61" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="24" y_low="24" />
+</partition>
+<partition name="pi62"><add_atom name_pattern="pi62" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="pi63"><add_atom name_pattern="pi63" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="24" y_low="24" />
+</partition>
+<partition name="pi64"><add_atom name_pattern="pi64" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="24" y_low="24" />
+</partition>
+<partition name="pi65"><add_atom name_pattern="pi65" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="24" y_low="24" />
+</partition>
+<partition name="pi66"><add_atom name_pattern="pi66" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="pi67"><add_atom name_pattern="pi67" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="pi68"><add_atom name_pattern="pi68" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="24" y_low="24" />
+</partition>
+<partition name="pi69"><add_atom name_pattern="pi69" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="24" y_low="24" />
+</partition>
+<partition name="pi70"><add_atom name_pattern="pi70" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="24" y_low="24" />
+</partition>
+<partition name="pi71"><add_atom name_pattern="pi71" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="24" y_low="24" />
+</partition>
+<partition name="pi72"><add_atom name_pattern="pi72" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+</partition_list>
+</vpr_constraints>

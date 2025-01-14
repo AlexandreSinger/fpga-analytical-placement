@@ -45,7 +45,7 @@ def run_test_main(args):
     print("")
 
     print("=========== Running AP ============")
-    result = subprocess.run([os.path.join(pwd, "run_ap_with_constraint.py"), args.test_suite_name], \
+    result = subprocess.run([os.path.join(pwd, "run_ap_with_constraint.py"), args.test_suite_name, "-j" + str(args.j)], \
                             stdout=None, stderr=subprocess.PIPE)
     if(result.returncode != 0):
         print("run_ap_with_constraint failed: ", result.stderr)

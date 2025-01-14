@@ -1,0 +1,94 @@
+##############################################
+# Configuration file for running experiments
+##############################################
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/verilog
+
+# Path to directory of architectures to use
+archs_dir=arch/timing
+
+# Add architectures to list to sweep
+arch_list_add=k6_frac_N10_frac_chain_mem32K_40nm.xml
+
+# Add circuits to list to sweep
+circuit_list_add=arm_core.v
+circuit_list_add=bgm.v
+circuit_list_add=blob_merge.v
+circuit_list_add=boundtop.v
+circuit_list_add=ch_intrinsics.v
+circuit_list_add=diffeq1.v
+circuit_list_add=diffeq2.v
+circuit_list_add=mkDelayWorker32B.v
+circuit_list_add=mkPktMerge.v
+circuit_list_add=mkSMAdapter4B.v
+circuit_list_add=or1200.v
+circuit_list_add=raygentop.v
+circuit_list_add=sha.v
+circuit_list_add=spree.v
+circuit_list_add=stereovision0.v
+circuit_list_add=stereovision1.v
+circuit_list_add=stereovision2.v
+circuit_list_add=stereovision3.v
+circuit_list_add=LU8PEEng.v
+circuit_list_add=LU32PEEng.v
+circuit_list_add=mcml.v
+
+# Constrain the circuits to their devices
+circuit_constraint_list_add=(stereovision3.v,    device=vtr_extra_small)
+circuit_constraint_list_add=(ch_intrinsics.v,    device=vtr_extra_small)
+circuit_constraint_list_add=(spree.v,            device=vtr_extra_small)
+circuit_constraint_list_add=(boundtop.v,         device=vtr_extra_small)
+circuit_constraint_list_add=(diffeq1.v,          device=vtr_extra_small)
+circuit_constraint_list_add=(diffeq2.v,          device=vtr_extra_small)
+circuit_constraint_list_add=(sha.v,              device=vtr_extra_small)
+circuit_constraint_list_add=(raygentop.v,        device=vtr_extra_small)
+circuit_constraint_list_add=(mkSMAdapter4B.v,    device=vtr_extra_small)
+circuit_constraint_list_add=(or1200.v,           device=vtr_small)
+circuit_constraint_list_add=(blob_merge.v,       device=vtr_small)
+circuit_constraint_list_add=(mkPktMerge.v,       device=vtr_small)
+circuit_constraint_list_add=(stereovision0.v,    device=vtr_medium)
+circuit_constraint_list_add=(arm_core.v,         device=vtr_medium)
+circuit_constraint_list_add=(stereovision1.v,    device=vtr_medium)
+circuit_constraint_list_add=(mkDelayWorker32B.v, device=vtr_large)
+circuit_constraint_list_add=(LU8PEEng.v,         device=vtr_large)
+circuit_constraint_list_add=(bgm.v,              device=vtr_large)
+circuit_constraint_list_add=(stereovision2.v,    device=vtr_extra_large)
+circuit_constraint_list_add=(mcml.v,             device=vtr_extra_large)
+circuit_constraint_list_add=(LU32PEEng.v,        device=vtr_extra_large)
+
+# Constrain the circuits to their channel widths
+#       1.3 * minW
+circuit_constraint_list_add=(stereovision3.v,    route_chan_width=44)
+circuit_constraint_list_add=(ch_intrinsics.v,    route_chan_width=52)
+circuit_constraint_list_add=(spree.v,            route_chan_width=78)
+circuit_constraint_list_add=(boundtop.v,         route_chan_width=50)
+circuit_constraint_list_add=(diffeq1.v,          route_chan_width=60)
+circuit_constraint_list_add=(diffeq2.v,          route_chan_width=60)
+circuit_constraint_list_add=(sha.v,              route_chan_width=86)
+circuit_constraint_list_add=(raygentop.v,        route_chan_width=72)
+circuit_constraint_list_add=(mkSMAdapter4B.v,    route_chan_width=62)
+circuit_constraint_list_add=(or1200.v,           route_chan_width=118)
+circuit_constraint_list_add=(blob_merge.v,       route_chan_width=88)
+circuit_constraint_list_add=(mkPktMerge.v,       route_chan_width=46)
+circuit_constraint_list_add=(stereovision0.v,    route_chan_width=62)
+circuit_constraint_list_add=(arm_core.v,         route_chan_width=132)
+circuit_constraint_list_add=(stereovision1.v,    route_chan_width=110)
+circuit_constraint_list_add=(mkDelayWorker32B.v, route_chan_width=44)
+circuit_constraint_list_add=(LU8PEEng.v,         route_chan_width=114)
+circuit_constraint_list_add=(bgm.v,              route_chan_width=90)
+circuit_constraint_list_add=(stereovision2.v,    route_chan_width=124)
+circuit_constraint_list_add=(mcml.v,             route_chan_width=182)
+circuit_constraint_list_add=(LU32PEEng.v,        route_chan_width=166)
+
+# Parse info and how to parse
+parse_file=vpr_standard.txt
+
+# How to parse QoR info
+qor_parse_file=qor_standard.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+#Script parameters
+script_params=-track_memory_usage -crit_path_router_iterations 100 --write_vpr_constraints constraint.xml

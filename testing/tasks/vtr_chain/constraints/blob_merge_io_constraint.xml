@@ -1,0 +1,412 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:oWriteBlobData~10"><add_atom name_pattern="out:oWriteBlobData~10" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oAvgSizeYaxis~7"><add_atom name_pattern="out:oAvgSizeYaxis~7" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oAvgSizeYaxis~6"><add_atom name_pattern="out:oAvgSizeYaxis~6" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:oAvgSizeYaxis~5"><add_atom name_pattern="out:oAvgSizeYaxis~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:oAvgSizeYaxis~4"><add_atom name_pattern="out:oAvgSizeYaxis~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="out:oAvgSizeYaxis~3"><add_atom name_pattern="out:oAvgSizeYaxis~3" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:oAvgSizeYaxis~2"><add_atom name_pattern="out:oAvgSizeYaxis~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="out:oAvgSizeYaxis~1"><add_atom name_pattern="out:oAvgSizeYaxis~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:oAvgSizeYaxis~0"><add_atom name_pattern="out:oAvgSizeYaxis~0" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oAvgSizeXaxis~7"><add_atom name_pattern="out:oAvgSizeXaxis~7" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oAvgSizeXaxis~6"><add_atom name_pattern="out:oAvgSizeXaxis~6" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="out:oAvgSizeXaxis~5"><add_atom name_pattern="out:oAvgSizeXaxis~5" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oAvgSizeXaxis~4"><add_atom name_pattern="out:oAvgSizeXaxis~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:oAvgSizeXaxis~3"><add_atom name_pattern="out:oAvgSizeXaxis~3" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:oAvgSizeXaxis~2"><add_atom name_pattern="out:oAvgSizeXaxis~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:oAvgSizeXaxis~1"><add_atom name_pattern="out:oAvgSizeXaxis~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:oAvgSizeXaxis~0"><add_atom name_pattern="out:oAvgSizeXaxis~0" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteRequest"><add_atom name_pattern="out:oWriteRequest" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~75"><add_atom name_pattern="out:oWriteBlobData~75" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:oWriteBlobData~74"><add_atom name_pattern="out:oWriteBlobData~74" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:oWriteBlobData~73"><add_atom name_pattern="out:oWriteBlobData~73" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:oWriteBlobData~72"><add_atom name_pattern="out:oWriteBlobData~72" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:oWriteBlobData~71"><add_atom name_pattern="out:oWriteBlobData~71" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="18" y_low="18" />
+</partition>
+<partition name="out:oWriteBlobData~70"><add_atom name_pattern="out:oWriteBlobData~70" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:oWriteBlobData~69"><add_atom name_pattern="out:oWriteBlobData~69" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="18" y_low="18" />
+</partition>
+<partition name="out:oWriteBlobData~68"><add_atom name_pattern="out:oWriteBlobData~68" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="18" y_low="18" />
+</partition>
+<partition name="out:oWriteBlobData~67"><add_atom name_pattern="out:oWriteBlobData~67" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="18" y_low="18" />
+</partition>
+<partition name="out:oWriteBlobData~66"><add_atom name_pattern="out:oWriteBlobData~66" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~65"><add_atom name_pattern="out:oWriteBlobData~65" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~64"><add_atom name_pattern="out:oWriteBlobData~64" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~63"><add_atom name_pattern="out:oWriteBlobData~63" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~62"><add_atom name_pattern="out:oWriteBlobData~62" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~61"><add_atom name_pattern="out:oWriteBlobData~61" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~60"><add_atom name_pattern="out:oWriteBlobData~60" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~59"><add_atom name_pattern="out:oWriteBlobData~59" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~58"><add_atom name_pattern="out:oWriteBlobData~58" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~57"><add_atom name_pattern="out:oWriteBlobData~57" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~56"><add_atom name_pattern="out:oWriteBlobData~56" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~55"><add_atom name_pattern="out:oWriteBlobData~55" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~54"><add_atom name_pattern="out:oWriteBlobData~54" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~30"><add_atom name_pattern="out:oWriteBlobData~30" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~29"><add_atom name_pattern="out:oWriteBlobData~29" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="29" y_low="29" />
+</partition>
+<partition name="out:oWriteBlobData~28"><add_atom name_pattern="out:oWriteBlobData~28" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~27"><add_atom name_pattern="out:oWriteBlobData~27" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~26"><add_atom name_pattern="out:oWriteBlobData~26" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="29" y_low="29" />
+</partition>
+<partition name="out:oWriteBlobData~25"><add_atom name_pattern="out:oWriteBlobData~25" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~24"><add_atom name_pattern="out:oWriteBlobData~24" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~23"><add_atom name_pattern="out:oWriteBlobData~23" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~22"><add_atom name_pattern="out:oWriteBlobData~22" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~21"><add_atom name_pattern="out:oWriteBlobData~21" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~19"><add_atom name_pattern="out:oWriteBlobData~19" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~18"><add_atom name_pattern="out:oWriteBlobData~18" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~17"><add_atom name_pattern="out:oWriteBlobData~17" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~16"><add_atom name_pattern="out:oWriteBlobData~16" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~15"><add_atom name_pattern="out:oWriteBlobData~15" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~14"><add_atom name_pattern="out:oWriteBlobData~14" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~13"><add_atom name_pattern="out:oWriteBlobData~13" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~12"><add_atom name_pattern="out:oWriteBlobData~12" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~11"><add_atom name_pattern="out:oWriteBlobData~11" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~0"><add_atom name_pattern="out:oWriteBlobData~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="out:oReadFifoRequest"><add_atom name_pattern="out:oReadFifoRequest" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~9"><add_atom name_pattern="out:oWriteBlobData~9" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="27" y_low="27" />
+</partition>
+<partition name="out:oWriteBlobData~8"><add_atom name_pattern="out:oWriteBlobData~8" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~7"><add_atom name_pattern="out:oWriteBlobData~7" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="out:oAvgSizeYaxis~10"><add_atom name_pattern="out:oAvgSizeYaxis~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="out:oAvgSizeYaxis~9"><add_atom name_pattern="out:oAvgSizeYaxis~9" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oAvgSizeYaxis~8"><add_atom name_pattern="out:oAvgSizeYaxis~8" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="out:oAvgSizeXaxis~10"><add_atom name_pattern="out:oAvgSizeXaxis~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="28" y_low="28" />
+</partition>
+<partition name="out:oAvgSizeXaxis~9"><add_atom name_pattern="out:oAvgSizeXaxis~9" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:oAvgSizeXaxis~8"><add_atom name_pattern="out:oAvgSizeXaxis~8" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="29" y_low="29" />
+</partition>
+<partition name="out:oWriteBlobData~6"><add_atom name_pattern="out:oWriteBlobData~6" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~5"><add_atom name_pattern="out:oWriteBlobData~5" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~4"><add_atom name_pattern="out:oWriteBlobData~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="22" y_low="22" />
+</partition>
+<partition name="out:oWriteBlobData~3"><add_atom name_pattern="out:oWriteBlobData~3" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="29" y_low="29" />
+</partition>
+<partition name="out:oWriteBlobData~2"><add_atom name_pattern="out:oWriteBlobData~2" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~53"><add_atom name_pattern="out:oWriteBlobData~53" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~52"><add_atom name_pattern="out:oWriteBlobData~52" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:oWriteBlobData~51"><add_atom name_pattern="out:oWriteBlobData~51" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="26" y_low="26" />
+</partition>
+<partition name="out:oWriteBlobData~50"><add_atom name_pattern="out:oWriteBlobData~50" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="27" y_low="27" />
+</partition>
+<partition name="out:oWriteBlobData~49"><add_atom name_pattern="out:oWriteBlobData~49" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~48"><add_atom name_pattern="out:oWriteBlobData~48" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~47"><add_atom name_pattern="out:oWriteBlobData~47" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="29" y_low="29" />
+</partition>
+<partition name="out:oWriteBlobData~46"><add_atom name_pattern="out:oWriteBlobData~46" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="18" y_low="18" />
+</partition>
+<partition name="out:oWriteBlobData~45"><add_atom name_pattern="out:oWriteBlobData~45" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="28" y_low="28" />
+</partition>
+<partition name="out:oWriteBlobData~44"><add_atom name_pattern="out:oWriteBlobData~44" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="25" y_low="25" />
+</partition>
+<partition name="out:oWriteBlobData~43"><add_atom name_pattern="out:oWriteBlobData~43" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="29" y_low="29" />
+</partition>
+<partition name="out:oWriteBlobData~42"><add_atom name_pattern="out:oWriteBlobData~42" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="28" y_low="28" />
+</partition>
+<partition name="out:oWriteBlobData~41"><add_atom name_pattern="out:oWriteBlobData~41" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~40"><add_atom name_pattern="out:oWriteBlobData~40" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~39"><add_atom name_pattern="out:oWriteBlobData~39" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~38"><add_atom name_pattern="out:oWriteBlobData~38" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="29" y_low="29" />
+</partition>
+<partition name="out:oWriteBlobData~37"><add_atom name_pattern="out:oWriteBlobData~37" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="19" y_low="19" />
+</partition>
+<partition name="out:oWriteBlobData~36"><add_atom name_pattern="out:oWriteBlobData~36" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="19" y_low="19" />
+</partition>
+<partition name="out:oWriteBlobData~35"><add_atom name_pattern="out:oWriteBlobData~35" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="21" y_low="21" />
+</partition>
+<partition name="out:oWriteBlobData~34"><add_atom name_pattern="out:oWriteBlobData~34" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="out:oWriteBlobData~33"><add_atom name_pattern="out:oWriteBlobData~33" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="29" y_low="29" />
+</partition>
+<partition name="out:oWriteBlobData~32"><add_atom name_pattern="out:oWriteBlobData~32" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="29" y_low="29" />
+</partition>
+<partition name="out:oWriteBlobData~31"><add_atom name_pattern="out:oWriteBlobData~31" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="28" y_low="28" />
+</partition>
+<partition name="out:oWriteBlobData~20"><add_atom name_pattern="out:oWriteBlobData~20" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:oWriteBlobData~1"><add_atom name_pattern="out:oWriteBlobData~1" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~22"><add_atom name_pattern="iReadFifoData~22" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~23"><add_atom name_pattern="iReadFifoData~23" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="clk"><add_atom name_pattern="clk" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="1" y_low="1" />
+</partition>
+<partition name="iReadFifoData~24"><add_atom name_pattern="iReadFifoData~24" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~25"><add_atom name_pattern="iReadFifoData~25" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="iReset"><add_atom name_pattern="iReset" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~26"><add_atom name_pattern="iReadFifoData~26" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~27"><add_atom name_pattern="iReadFifoData~27" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoEmpty"><add_atom name_pattern="iReadFifoEmpty" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~28"><add_atom name_pattern="iReadFifoData~28" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~29"><add_atom name_pattern="iReadFifoData~29" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~0"><add_atom name_pattern="iReadFifoData~0" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~30"><add_atom name_pattern="iReadFifoData~30" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~31"><add_atom name_pattern="iReadFifoData~31" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~1"><add_atom name_pattern="iReadFifoData~1" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~2"><add_atom name_pattern="iReadFifoData~2" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~3"><add_atom name_pattern="iReadFifoData~3" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~4"><add_atom name_pattern="iReadFifoData~4" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~5"><add_atom name_pattern="iReadFifoData~5" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~6"><add_atom name_pattern="iReadFifoData~6" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~7"><add_atom name_pattern="iReadFifoData~7" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~8"><add_atom name_pattern="iReadFifoData~8" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~9"><add_atom name_pattern="iReadFifoData~9" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~10"><add_atom name_pattern="iReadFifoData~10" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~11"><add_atom name_pattern="iReadFifoData~11" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~12"><add_atom name_pattern="iReadFifoData~12" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~13"><add_atom name_pattern="iReadFifoData~13" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~14"><add_atom name_pattern="iReadFifoData~14" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~15"><add_atom name_pattern="iReadFifoData~15" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~16"><add_atom name_pattern="iReadFifoData~16" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~17"><add_atom name_pattern="iReadFifoData~17" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~18"><add_atom name_pattern="iReadFifoData~18" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~19"><add_atom name_pattern="iReadFifoData~19" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~20"><add_atom name_pattern="iReadFifoData~20" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="iReadFifoData~21"><add_atom name_pattern="iReadFifoData~21" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="0" y_low="0" />
+</partition>
+<partition name="iWriteFifoFull"><add_atom name_pattern="iWriteFifoFull" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+</partition_list>
+</vpr_constraints>

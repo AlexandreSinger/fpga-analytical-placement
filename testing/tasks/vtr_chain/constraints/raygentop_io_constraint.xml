@@ -1,0 +1,1627 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:tm3_sram_addr~15"><add_atom name_pattern="out:tm3_sram_addr~15" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="out:tm3_sram_addr~14"><add_atom name_pattern="out:tm3_sram_addr~14" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="out:tm3_sram_addr~13"><add_atom name_pattern="out:tm3_sram_addr~13" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_addr~12"><add_atom name_pattern="out:tm3_sram_addr~12" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_addr~11"><add_atom name_pattern="out:tm3_sram_addr~11" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="out:tm3_sram_addr~10"><add_atom name_pattern="out:tm3_sram_addr~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="out:tm3_sram_addr~9"><add_atom name_pattern="out:tm3_sram_addr~9" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="out:tm3_sram_addr~8"><add_atom name_pattern="out:tm3_sram_addr~8" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="out:tm3_sram_addr~7"><add_atom name_pattern="out:tm3_sram_addr~7" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="out:tm3_sram_addr~6"><add_atom name_pattern="out:tm3_sram_addr~6" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="out:tm3_sram_addr~5"><add_atom name_pattern="out:tm3_sram_addr~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="out:tm3_sram_addr~4"><add_atom name_pattern="out:tm3_sram_addr~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="out:tm3_sram_addr~3"><add_atom name_pattern="out:tm3_sram_addr~3" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_addr~2"><add_atom name_pattern="out:tm3_sram_addr~2" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_addr~1"><add_atom name_pattern="out:tm3_sram_addr~1" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_addr~0"><add_atom name_pattern="out:tm3_sram_addr~0" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_addr~17"><add_atom name_pattern="out:tm3_sram_addr~17" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="out:tm3_sram_addr~16"><add_atom name_pattern="out:tm3_sram_addr~16" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="out:tm3_sram_data_out~20"><add_atom name_pattern="out:tm3_sram_data_out~20" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="16" y_low="16" />
+</partition>
+<partition name="out:tm3_sram_data_out~33"><add_atom name_pattern="out:tm3_sram_data_out~33" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="out:tm3_sram_data_out~34"><add_atom name_pattern="out:tm3_sram_data_out~34" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="4" y_low="4" />
+</partition>
+<partition name="out:tm3_sram_data_out~35"><add_atom name_pattern="out:tm3_sram_data_out~35" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:tm3_sram_data_out~18"><add_atom name_pattern="out:tm3_sram_data_out~18" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="out:tm3_sram_data_out~19"><add_atom name_pattern="out:tm3_sram_data_out~19" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~37"><add_atom name_pattern="out:tm3_sram_data_out~37" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~16"><add_atom name_pattern="out:tm3_sram_data_out~16" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="5" y_low="5" />
+</partition>
+<partition name="out:tm3_sram_data_out~13"><add_atom name_pattern="out:tm3_sram_data_out~13" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="out:tm3_sram_data_out~14"><add_atom name_pattern="out:tm3_sram_data_out~14" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="out:tm3_sram_data_out~24"><add_atom name_pattern="out:tm3_sram_data_out~24" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="out:tm3_sram_data_out~23"><add_atom name_pattern="out:tm3_sram_data_out~23" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="out:tm3_sram_data_out~31"><add_atom name_pattern="out:tm3_sram_data_out~31" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~32"><add_atom name_pattern="out:tm3_sram_data_out~32" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~15"><add_atom name_pattern="out:tm3_sram_data_out~15" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="out:tm3_sram_data_out~21"><add_atom name_pattern="out:tm3_sram_data_out~21" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="out:tm3_sram_we~2"><add_atom name_pattern="out:tm3_sram_we~2" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_we~3"><add_atom name_pattern="out:tm3_sram_we~3" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_data_out~38"><add_atom name_pattern="out:tm3_sram_data_out~38" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~45"><add_atom name_pattern="out:tm3_sram_data_out~45" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="out:tm3_sram_data_out~46"><add_atom name_pattern="out:tm3_sram_data_out~46" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="5" y_low="5" />
+</partition>
+<partition name="out:tm3_sram_data_out~47"><add_atom name_pattern="out:tm3_sram_data_out~47" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~48"><add_atom name_pattern="out:tm3_sram_data_out~48" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="5" y_low="5" />
+</partition>
+<partition name="out:tm3_sram_data_out~49"><add_atom name_pattern="out:tm3_sram_data_out~49" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~50"><add_atom name_pattern="out:tm3_sram_data_out~50" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="out:tm3_sram_data_out~39"><add_atom name_pattern="out:tm3_sram_data_out~39" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="5" y_low="5" />
+</partition>
+<partition name="out:tm3_sram_data_out~40"><add_atom name_pattern="out:tm3_sram_data_out~40" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~41"><add_atom name_pattern="out:tm3_sram_data_out~41" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~42"><add_atom name_pattern="out:tm3_sram_data_out~42" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="out:tm3_sram_data_out~43"><add_atom name_pattern="out:tm3_sram_data_out~43" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="out:tm3_sram_data_out~44"><add_atom name_pattern="out:tm3_sram_data_out~44" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="out:tm3_sram_we~4"><add_atom name_pattern="out:tm3_sram_we~4" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_data_out~51"><add_atom name_pattern="out:tm3_sram_data_out~51" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~52"><add_atom name_pattern="out:tm3_sram_data_out~52" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="out:tm3_sram_data_out~53"><add_atom name_pattern="out:tm3_sram_data_out~53" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="5" y_low="5" />
+</partition>
+<partition name="out:tm3_sram_data_out~54"><add_atom name_pattern="out:tm3_sram_data_out~54" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_data_out~55"><add_atom name_pattern="out:tm3_sram_data_out~55" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="out:tm3_sram_data_out~56"><add_atom name_pattern="out:tm3_sram_data_out~56" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="out:tm3_sram_data_out~57"><add_atom name_pattern="out:tm3_sram_data_out~57" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="out:tm3_sram_data_out~58"><add_atom name_pattern="out:tm3_sram_data_out~58" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~59"><add_atom name_pattern="out:tm3_sram_data_out~59" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="out:tm3_sram_data_out~17"><add_atom name_pattern="out:tm3_sram_data_out~17" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="out:tm3_sram_data_out~36"><add_atom name_pattern="out:tm3_sram_data_out~36" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="out:tm3_sram_data_out~22"><add_atom name_pattern="out:tm3_sram_data_out~22" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:tm3_sram_data_out~0"><add_atom name_pattern="out:tm3_sram_data_out~0" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="out:tm3_sram_data_out~1"><add_atom name_pattern="out:tm3_sram_data_out~1" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~2"><add_atom name_pattern="out:tm3_sram_data_out~2" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="out:tm3_sram_data_out~3"><add_atom name_pattern="out:tm3_sram_data_out~3" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="out:tm3_sram_data_out~4"><add_atom name_pattern="out:tm3_sram_data_out~4" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~5"><add_atom name_pattern="out:tm3_sram_data_out~5" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="3" y_low="3" />
+</partition>
+<partition name="out:tm3_sram_data_out~6"><add_atom name_pattern="out:tm3_sram_data_out~6" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="4" y_low="4" />
+</partition>
+<partition name="out:tm3_sram_data_out~7"><add_atom name_pattern="out:tm3_sram_data_out~7" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:tm3_sram_data_out~8"><add_atom name_pattern="out:tm3_sram_data_out~8" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="5" y_low="5" />
+</partition>
+<partition name="out:tm3_sram_data_out~9"><add_atom name_pattern="out:tm3_sram_data_out~9" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="4" y_low="4" />
+</partition>
+<partition name="out:tm3_sram_data_out~10"><add_atom name_pattern="out:tm3_sram_data_out~10" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~11"><add_atom name_pattern="out:tm3_sram_data_out~11" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~12"><add_atom name_pattern="out:tm3_sram_data_out~12" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="out:tm3_sram_data_out~27"><add_atom name_pattern="out:tm3_sram_data_out~27" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="out:tm3_sram_data_out~28"><add_atom name_pattern="out:tm3_sram_data_out~28" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:tm3_sram_data_out~29"><add_atom name_pattern="out:tm3_sram_data_out~29" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:tm3_sram_data_out~30"><add_atom name_pattern="out:tm3_sram_data_out~30" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="out:tm3_sram_data_out~60"><add_atom name_pattern="out:tm3_sram_data_out~60" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="5" y_low="5" />
+</partition>
+<partition name="out:tm3_sram_data_out~61"><add_atom name_pattern="out:tm3_sram_data_out~61" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="out:tm3_sram_data_out~62"><add_atom name_pattern="out:tm3_sram_data_out~62" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_data_out~63"><add_atom name_pattern="out:tm3_sram_data_out~63" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="out:tm3_sram_we~7"><add_atom name_pattern="out:tm3_sram_we~7" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_we~6"><add_atom name_pattern="out:tm3_sram_we~6" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_we~5"><add_atom name_pattern="out:tm3_sram_we~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="18" y_low="18" />
+</partition>
+<partition name="out:tm3_sram_data_out~26"><add_atom name_pattern="out:tm3_sram_data_out~26" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_we~0"><add_atom name_pattern="out:tm3_sram_we~0" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:tm3_sram_data_out~25"><add_atom name_pattern="out:tm3_sram_data_out~25" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_we~1"><add_atom name_pattern="out:tm3_sram_we~1" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgwant_addr"><add_atom name_pattern="out:rgwant_addr" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="out:rgread_ready"><add_atom name_pattern="out:rgread_ready" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="out:rgStat~31"><add_atom name_pattern="out:rgStat~31" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="out:tm3_sram_oe~1"><add_atom name_pattern="out:tm3_sram_oe~1" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgwant_data"><add_atom name_pattern="out:rgwant_data" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgwant_CfgData"><add_atom name_pattern="out:rgwant_CfgData" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="out:fbdata~45"><add_atom name_pattern="out:fbdata~45" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="out:fbdata~47"><add_atom name_pattern="out:fbdata~47" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="out:fbdata~46"><add_atom name_pattern="out:fbdata~46" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:fbdata~48"><add_atom name_pattern="out:fbdata~48" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~4"><add_atom name_pattern="out:fbdata~4" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="16" y_low="16" />
+</partition>
+<partition name="out:fbdata~1"><add_atom name_pattern="out:fbdata~1" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~2"><add_atom name_pattern="out:fbdata~2" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~3"><add_atom name_pattern="out:fbdata~3" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~12"><add_atom name_pattern="out:rgData~12" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~13"><add_atom name_pattern="out:rgData~13" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~14"><add_atom name_pattern="out:rgData~14" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgStat~6"><add_atom name_pattern="out:rgStat~6" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~7"><add_atom name_pattern="out:rgStat~7" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~8"><add_atom name_pattern="out:rgStat~8" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~9"><add_atom name_pattern="out:rgStat~9" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~10"><add_atom name_pattern="out:rgStat~10" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~11"><add_atom name_pattern="out:rgStat~11" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~12"><add_atom name_pattern="out:rgStat~12" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~13"><add_atom name_pattern="out:rgStat~13" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~14"><add_atom name_pattern="out:rgStat~14" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~15"><add_atom name_pattern="out:rgStat~15" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="out:rgStat~16"><add_atom name_pattern="out:rgStat~16" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~17"><add_atom name_pattern="out:rgStat~17" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~18"><add_atom name_pattern="out:rgStat~18" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="out:rgStat~19"><add_atom name_pattern="out:rgStat~19" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~20"><add_atom name_pattern="out:rgStat~20" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~21"><add_atom name_pattern="out:rgStat~21" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~22"><add_atom name_pattern="out:rgStat~22" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~23"><add_atom name_pattern="out:rgStat~23" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~24"><add_atom name_pattern="out:rgStat~24" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~30"><add_atom name_pattern="out:rgStat~30" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~27"><add_atom name_pattern="out:rgStat~27" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="1" y_low="1" />
+</partition>
+<partition name="out:rgStat~28"><add_atom name_pattern="out:rgStat~28" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~29"><add_atom name_pattern="out:rgStat~29" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~25"><add_atom name_pattern="out:rgStat~25" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~26"><add_atom name_pattern="out:rgStat~26" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgData~15"><add_atom name_pattern="out:rgData~15" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~16"><add_atom name_pattern="out:rgData~16" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~17"><add_atom name_pattern="out:rgData~17" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~18"><add_atom name_pattern="out:rgData~18" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~19"><add_atom name_pattern="out:rgData~19" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~20"><add_atom name_pattern="out:rgData~20" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~21"><add_atom name_pattern="out:rgData~21" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~22"><add_atom name_pattern="out:rgData~22" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="15" y_low="15" />
+</partition>
+<partition name="out:rgData~23"><add_atom name_pattern="out:rgData~23" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~24"><add_atom name_pattern="out:rgData~24" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~25"><add_atom name_pattern="out:rgData~25" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:rgData~26"><add_atom name_pattern="out:rgData~26" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~27"><add_atom name_pattern="out:rgData~27" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~28"><add_atom name_pattern="out:rgData~28" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="16" y_low="16" />
+</partition>
+<partition name="out:rgData~29"><add_atom name_pattern="out:rgData~29" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~30"><add_atom name_pattern="out:rgData~30" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~31"><add_atom name_pattern="out:rgData~31" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgAddr~0"><add_atom name_pattern="out:rgAddr~0" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgAddr~1"><add_atom name_pattern="out:rgAddr~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="out:rgAddr~2"><add_atom name_pattern="out:rgAddr~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="out:rgAddr~3"><add_atom name_pattern="out:rgAddr~3" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="out:rgWE~0"><add_atom name_pattern="out:rgWE~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:rgWE~1"><add_atom name_pattern="out:rgWE~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:rgWE~2"><add_atom name_pattern="out:rgWE~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:rgAddrValid"><add_atom name_pattern="out:rgAddrValid" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:fbdata~52"><add_atom name_pattern="out:fbdata~52" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="out:fbdata~53"><add_atom name_pattern="out:fbdata~53" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~54"><add_atom name_pattern="out:fbdata~54" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~55"><add_atom name_pattern="out:fbdata~55" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~56"><add_atom name_pattern="out:fbdata~56" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="out:fbdata~57"><add_atom name_pattern="out:fbdata~57" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="out:fbdata~58"><add_atom name_pattern="out:fbdata~58" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~59"><add_atom name_pattern="out:fbdata~59" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="out:fbdata~60"><add_atom name_pattern="out:fbdata~60" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~61"><add_atom name_pattern="out:fbdata~61" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~62"><add_atom name_pattern="out:fbdata~62" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="out:fbdata~63"><add_atom name_pattern="out:fbdata~63" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="out:fbdatavalid"><add_atom name_pattern="out:fbdatavalid" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:raygroup01~0"><add_atom name_pattern="out:raygroup01~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="out:raygroupvalid01"><add_atom name_pattern="out:raygroupvalid01" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:raygroup10~0"><add_atom name_pattern="out:raygroup10~0" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~5"><add_atom name_pattern="out:fbdata~5" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~6"><add_atom name_pattern="out:fbdata~6" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~7"><add_atom name_pattern="out:fbdata~7" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="16" y_low="16" />
+</partition>
+<partition name="out:fbdata~0"><add_atom name_pattern="out:fbdata~0" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~8"><add_atom name_pattern="out:fbdata~8" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="15" y_low="15" />
+</partition>
+<partition name="out:fbdata~9"><add_atom name_pattern="out:fbdata~9" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~10"><add_atom name_pattern="out:fbdata~10" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~11"><add_atom name_pattern="out:fbdata~11" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~12"><add_atom name_pattern="out:fbdata~12" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~13"><add_atom name_pattern="out:fbdata~13" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~14"><add_atom name_pattern="out:fbdata~14" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="15" y_low="15" />
+</partition>
+<partition name="out:fbdata~15"><add_atom name_pattern="out:fbdata~15" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~16"><add_atom name_pattern="out:fbdata~16" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~17"><add_atom name_pattern="out:fbdata~17" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~18"><add_atom name_pattern="out:fbdata~18" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~19"><add_atom name_pattern="out:fbdata~19" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~20"><add_atom name_pattern="out:fbdata~20" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="15" y_low="15" />
+</partition>
+<partition name="out:fbdata~21"><add_atom name_pattern="out:fbdata~21" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~22"><add_atom name_pattern="out:fbdata~22" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~23"><add_atom name_pattern="out:fbdata~23" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~24"><add_atom name_pattern="out:fbdata~24" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~25"><add_atom name_pattern="out:fbdata~25" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~26"><add_atom name_pattern="out:fbdata~26" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="15" y_low="15" />
+</partition>
+<partition name="out:fbdata~27"><add_atom name_pattern="out:fbdata~27" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~28"><add_atom name_pattern="out:fbdata~28" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~29"><add_atom name_pattern="out:fbdata~29" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~30"><add_atom name_pattern="out:fbdata~30" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~31"><add_atom name_pattern="out:fbdata~31" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~32"><add_atom name_pattern="out:fbdata~32" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:fbdata~33"><add_atom name_pattern="out:fbdata~33" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~34"><add_atom name_pattern="out:fbdata~34" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:fbdata~35"><add_atom name_pattern="out:fbdata~35" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:fbdata~36"><add_atom name_pattern="out:fbdata~36" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~37"><add_atom name_pattern="out:fbdata~37" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~38"><add_atom name_pattern="out:fbdata~38" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:fbdata~39"><add_atom name_pattern="out:fbdata~39" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:fbdata~40"><add_atom name_pattern="out:fbdata~40" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:fbdata~41"><add_atom name_pattern="out:fbdata~41" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~42"><add_atom name_pattern="out:fbdata~42" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="out:fbdata~43"><add_atom name_pattern="out:fbdata~43" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:fbdata~44"><add_atom name_pattern="out:fbdata~44" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:rgData~11"><add_atom name_pattern="out:rgData~11" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="16" y_low="16" />
+</partition>
+<partition name="out:rgData~10"><add_atom name_pattern="out:rgData~10" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~9"><add_atom name_pattern="out:rgData~9" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~8"><add_atom name_pattern="out:rgData~8" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~7"><add_atom name_pattern="out:rgData~7" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~6"><add_atom name_pattern="out:rgData~6" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~5"><add_atom name_pattern="out:rgData~5" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~4"><add_atom name_pattern="out:rgData~4" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="17" y_low="17" />
+</partition>
+<partition name="out:rgData~3"><add_atom name_pattern="out:rgData~3" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgData~2"><add_atom name_pattern="out:rgData~2" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~49"><add_atom name_pattern="out:fbdata~49" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="out:rgData~1"><add_atom name_pattern="out:rgData~1" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgStat~5"><add_atom name_pattern="out:rgStat~5" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~4"><add_atom name_pattern="out:rgStat~4" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~3"><add_atom name_pattern="out:rgStat~3" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgData~0"><add_atom name_pattern="out:rgData~0" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:fbdata~50"><add_atom name_pattern="out:fbdata~50" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~2"><add_atom name_pattern="out:rgStat~2" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:raygroupvalid10"><add_atom name_pattern="out:raygroupvalid10" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~1"><add_atom name_pattern="out:rgStat~1" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:fbdata~51"><add_atom name_pattern="out:fbdata~51" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgStat~0"><add_atom name_pattern="out:rgStat~0" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~25"><add_atom name_pattern="out:rgdataout~25" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~29"><add_atom name_pattern="out:rgdataout~29" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgdataout~26"><add_atom name_pattern="out:rgdataout~26" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~28"><add_atom name_pattern="out:rgdataout~28" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="out:rgdataout~36"><add_atom name_pattern="out:rgdataout~36" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~35"><add_atom name_pattern="out:rgdataout~35" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="out:rgdataout~34"><add_atom name_pattern="out:rgdataout~34" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~33"><add_atom name_pattern="out:rgdataout~33" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgdataout~31"><add_atom name_pattern="out:rgdataout~31" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgdataout~32"><add_atom name_pattern="out:rgdataout~32" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="out:rgdataout~17"><add_atom name_pattern="out:rgdataout~17" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgdataout~30"><add_atom name_pattern="out:rgdataout~30" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgdataout~21"><add_atom name_pattern="out:rgdataout~21" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~19"><add_atom name_pattern="out:rgdataout~19" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~20"><add_atom name_pattern="out:rgdataout~20" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="3" y_low="3" />
+</partition>
+<partition name="out:rgdataout~22"><add_atom name_pattern="out:rgdataout~22" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgdataout~24"><add_atom name_pattern="out:rgdataout~24" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgdataout~27"><add_atom name_pattern="out:rgdataout~27" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="out:rgdataout~63"><add_atom name_pattern="out:rgdataout~63" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~62"><add_atom name_pattern="out:rgdataout~62" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="out:rgdataout~61"><add_atom name_pattern="out:rgdataout~61" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~60"><add_atom name_pattern="out:rgdataout~60" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="out:rgdataout~59"><add_atom name_pattern="out:rgdataout~59" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="out:rgdataout~58"><add_atom name_pattern="out:rgdataout~58" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="out:rgdataout~57"><add_atom name_pattern="out:rgdataout~57" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~56"><add_atom name_pattern="out:rgdataout~56" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgdataout~55"><add_atom name_pattern="out:rgdataout~55" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="out:rgdataout~54"><add_atom name_pattern="out:rgdataout~54" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~53"><add_atom name_pattern="out:rgdataout~53" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~52"><add_atom name_pattern="out:rgdataout~52" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="out:rgdataout~51"><add_atom name_pattern="out:rgdataout~51" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="out:rgdataout~50"><add_atom name_pattern="out:rgdataout~50" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~49"><add_atom name_pattern="out:rgdataout~49" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="out:rgdataout~48"><add_atom name_pattern="out:rgdataout~48" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="out:rgdataout~47"><add_atom name_pattern="out:rgdataout~47" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:rgdataout~46"><add_atom name_pattern="out:rgdataout~46" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="out:rgdataout~45"><add_atom name_pattern="out:rgdataout~45" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~44"><add_atom name_pattern="out:rgdataout~44" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="out:rgdataout~43"><add_atom name_pattern="out:rgdataout~43" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~42"><add_atom name_pattern="out:rgdataout~42" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="out:rgdataout~41"><add_atom name_pattern="out:rgdataout~41" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="out:rgdataout~40"><add_atom name_pattern="out:rgdataout~40" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~39"><add_atom name_pattern="out:rgdataout~39" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="3" y_low="3" />
+</partition>
+<partition name="out:rgdataout~38"><add_atom name_pattern="out:rgdataout~38" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="out:rgdataout~37"><add_atom name_pattern="out:rgdataout~37" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="1" y_low="1" />
+</partition>
+<partition name="out:rgdataout~0"><add_atom name_pattern="out:rgdataout~0" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~23"><add_atom name_pattern="out:rgdataout~23" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:rgdataout~18"><add_atom name_pattern="out:rgdataout~18" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~11"><add_atom name_pattern="out:rgdataout~11" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="out:rgdataout~12"><add_atom name_pattern="out:rgdataout~12" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="17" y_low="17" />
+</partition>
+<partition name="out:rgdataout~13"><add_atom name_pattern="out:rgdataout~13" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="1" y_low="1" />
+</partition>
+<partition name="out:rgdataout~14"><add_atom name_pattern="out:rgdataout~14" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:rgdataout~10"><add_atom name_pattern="out:rgdataout~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:rgdataout~9"><add_atom name_pattern="out:rgdataout~9" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~8"><add_atom name_pattern="out:rgdataout~8" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="17" y_low="17" />
+</partition>
+<partition name="out:rgdataout~7"><add_atom name_pattern="out:rgdataout~7" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="3" y_low="3" />
+</partition>
+<partition name="out:rgdataout~6"><add_atom name_pattern="out:rgdataout~6" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="out:rgdataout~5"><add_atom name_pattern="out:rgdataout~5" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:rgdataout~4"><add_atom name_pattern="out:rgdataout~4" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~3"><add_atom name_pattern="out:rgdataout~3" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~2"><add_atom name_pattern="out:rgdataout~2" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~1"><add_atom name_pattern="out:rgdataout~1" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="18" y_low="18" />
+</partition>
+<partition name="out:rgdataout~15"><add_atom name_pattern="out:rgdataout~15" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:rgdataout~16"><add_atom name_pattern="out:rgdataout~16" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:raygroup01~1"><add_atom name_pattern="out:raygroup01~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="out:tm3_sram_adsp"><add_atom name_pattern="out:tm3_sram_adsp" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:tm3_sram_oe~0"><add_atom name_pattern="out:tm3_sram_oe~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="1" y_low="1" />
+</partition>
+<partition name="out:raygroup10~1"><add_atom name_pattern="out:raygroup10~1" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:tm3_sram_addr~18"><add_atom name_pattern="out:tm3_sram_addr~18" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="rgCfgData~6"><add_atom name_pattern="rgCfgData~6" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~7"><add_atom name_pattern="rgCfgData~7" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~8"><add_atom name_pattern="rgCfgData~8" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~0"><add_atom name_pattern="rgCfgData~0" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~1"><add_atom name_pattern="rgCfgData~1" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~2"><add_atom name_pattern="rgCfgData~2" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~3"><add_atom name_pattern="rgCfgData~3" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~4"><add_atom name_pattern="rgCfgData~4" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~5"><add_atom name_pattern="rgCfgData~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="rgCfgData~9"><add_atom name_pattern="rgCfgData~9" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~10"><add_atom name_pattern="rgCfgData~10" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="rgdatain~2"><add_atom name_pattern="rgdatain~2" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="16" y_low="16" />
+</partition>
+<partition name="rgdatain~3"><add_atom name_pattern="rgdatain~3" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="rgdatain~4"><add_atom name_pattern="rgdatain~4" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="rgdatain~5"><add_atom name_pattern="rgdatain~5" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~6"><add_atom name_pattern="rgdatain~6" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="4" y_low="4" />
+</partition>
+<partition name="rgdatain~7"><add_atom name_pattern="rgdatain~7" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="rgdatain~8"><add_atom name_pattern="rgdatain~8" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~9"><add_atom name_pattern="rgdatain~9" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="rgaddr_ready"><add_atom name_pattern="rgaddr_ready" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCont~15"><add_atom name_pattern="rgCont~15" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="rgCont~14"><add_atom name_pattern="rgCont~14" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="rgCont~13"><add_atom name_pattern="rgCont~13" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="rgCont~12"><add_atom name_pattern="rgCont~12" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="rgCont~11"><add_atom name_pattern="rgCont~11" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="rgCont~10"><add_atom name_pattern="rgCont~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="rgCont~9"><add_atom name_pattern="rgCont~9" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="rgCont~8"><add_atom name_pattern="rgCont~8" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="rgCont~7"><add_atom name_pattern="rgCont~7" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="rgCont~6"><add_atom name_pattern="rgCont~6" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="rgCont~5"><add_atom name_pattern="rgCont~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="rgCont~4"><add_atom name_pattern="rgCont~4" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="rgCont~3"><add_atom name_pattern="rgCont~3" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="rgCont~2"><add_atom name_pattern="rgCont~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="rgdatain~33"><add_atom name_pattern="rgdatain~33" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="rgdatain~32"><add_atom name_pattern="rgdatain~32" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~31"><add_atom name_pattern="rgdatain~31" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~30"><add_atom name_pattern="rgdatain~30" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~29"><add_atom name_pattern="rgdatain~29" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="17" y_low="17" />
+</partition>
+<partition name="rgdatain~28"><add_atom name_pattern="rgdatain~28" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="15" y_low="15" />
+</partition>
+<partition name="rgdatain~27"><add_atom name_pattern="rgdatain~27" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="rgdatain~26"><add_atom name_pattern="rgdatain~26" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~25"><add_atom name_pattern="rgdatain~25" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~24"><add_atom name_pattern="rgdatain~24" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="rgdatain~23"><add_atom name_pattern="rgdatain~23" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="rgdatain~22"><add_atom name_pattern="rgdatain~22" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="rgdatain~37"><add_atom name_pattern="rgdatain~37" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~38"><add_atom name_pattern="rgdatain~38" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~39"><add_atom name_pattern="rgdatain~39" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="rgdatain~40"><add_atom name_pattern="rgdatain~40" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~41"><add_atom name_pattern="rgdatain~41" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~42"><add_atom name_pattern="rgdatain~42" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="rgdatain~43"><add_atom name_pattern="rgdatain~43" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="rgdatain~44"><add_atom name_pattern="rgdatain~44" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="15" y_low="15" />
+</partition>
+<partition name="rgdatain~45"><add_atom name_pattern="rgdatain~45" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="rgdatain~46"><add_atom name_pattern="rgdatain~46" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="rgdatain~47"><add_atom name_pattern="rgdatain~47" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="4" y_low="4" />
+</partition>
+<partition name="rgdatain~48"><add_atom name_pattern="rgdatain~48" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="rgdatain~49"><add_atom name_pattern="rgdatain~49" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="rgdatain~50"><add_atom name_pattern="rgdatain~50" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="rgdatain~51"><add_atom name_pattern="rgdatain~51" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="3" y_low="3" />
+</partition>
+<partition name="rgdatain~52"><add_atom name_pattern="rgdatain~52" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~53"><add_atom name_pattern="rgdatain~53" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~54"><add_atom name_pattern="rgdatain~54" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="rgdatain~55"><add_atom name_pattern="rgdatain~55" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="rgdatain~56"><add_atom name_pattern="rgdatain~56" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="rgdatain~57"><add_atom name_pattern="rgdatain~57" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="rgdatain~58"><add_atom name_pattern="rgdatain~58" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~59"><add_atom name_pattern="rgdatain~59" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="rgdatain~60"><add_atom name_pattern="rgdatain~60" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="4" y_low="4" />
+</partition>
+<partition name="rgdatain~61"><add_atom name_pattern="rgdatain~61" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~62"><add_atom name_pattern="rgdatain~62" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~63"><add_atom name_pattern="rgdatain~63" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="rgaddrin~0"><add_atom name_pattern="rgaddrin~0" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="rgaddrin~1"><add_atom name_pattern="rgaddrin~1" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="rgaddrin~2"><add_atom name_pattern="rgaddrin~2" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="rgaddrin~3"><add_atom name_pattern="rgaddrin~3" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="rgaddrin~4"><add_atom name_pattern="rgaddrin~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="rgaddrin~5"><add_atom name_pattern="rgaddrin~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="rgaddrin~6"><add_atom name_pattern="rgaddrin~6" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="rgaddrin~7"><add_atom name_pattern="rgaddrin~7" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="rgaddrin~8"><add_atom name_pattern="rgaddrin~8" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="rgaddrin~9"><add_atom name_pattern="rgaddrin~9" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="rgaddrin~10"><add_atom name_pattern="rgaddrin~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="rgaddrin~11"><add_atom name_pattern="rgaddrin~11" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="rgaddrin~12"><add_atom name_pattern="rgaddrin~12" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="rgaddrin~13"><add_atom name_pattern="rgaddrin~13" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="rgaddrin~14"><add_atom name_pattern="rgaddrin~14" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="rgaddrin~15"><add_atom name_pattern="rgaddrin~15" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="rgaddrin~16"><add_atom name_pattern="rgaddrin~16" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="rgaddrin~17"><add_atom name_pattern="rgaddrin~17" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCont~0"><add_atom name_pattern="rgCont~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="rgCont~1"><add_atom name_pattern="rgCont~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="rgdata_ready"><add_atom name_pattern="rgdata_ready" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="rgwant_read"><add_atom name_pattern="rgwant_read" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="rgdatain~0"><add_atom name_pattern="rgdatain~0" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="rgdatain~1"><add_atom name_pattern="rgdatain~1" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="rgdatain~21"><add_atom name_pattern="rgdatain~21" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="rgdatain~20"><add_atom name_pattern="rgdatain~20" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="19" y_low="19" />
+</partition>
+<partition name="rgdatain~19"><add_atom name_pattern="rgdatain~19" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~18"><add_atom name_pattern="rgdatain~18" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="rgdatain~17"><add_atom name_pattern="rgdatain~17" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~16"><add_atom name_pattern="rgdatain~16" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="4" y_low="4" />
+</partition>
+<partition name="rgdatain~15"><add_atom name_pattern="rgdatain~15" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="17" y_low="17" />
+</partition>
+<partition name="rgdatain~14"><add_atom name_pattern="rgdatain~14" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="16" y_low="16" />
+</partition>
+<partition name="rgdatain~13"><add_atom name_pattern="rgdatain~13" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~12"><add_atom name_pattern="rgdatain~12" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="rgdatain~11"><add_atom name_pattern="rgdatain~11" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="rgdatain~10"><add_atom name_pattern="rgdatain~10" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="rgCfgData~11"><add_atom name_pattern="rgCfgData~11" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~12"><add_atom name_pattern="rgCfgData~12" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="16" y_low="16" />
+</partition>
+<partition name="rgCfgData~13"><add_atom name_pattern="rgCfgData~13" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~14"><add_atom name_pattern="rgCfgData~14" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~15"><add_atom name_pattern="rgCfgData~15" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~16"><add_atom name_pattern="rgCfgData~16" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~17"><add_atom name_pattern="rgCfgData~17" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="rgCfgData~18"><add_atom name_pattern="rgCfgData~18" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="rgCfgData~19"><add_atom name_pattern="rgCfgData~19" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~20"><add_atom name_pattern="rgCfgData~20" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~21"><add_atom name_pattern="rgCfgData~21" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="rgCfgData~22"><add_atom name_pattern="rgCfgData~22" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~23"><add_atom name_pattern="rgCfgData~23" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="15" y_low="15" />
+</partition>
+<partition name="rgCfgData~24"><add_atom name_pattern="rgCfgData~24" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~25"><add_atom name_pattern="rgCfgData~25" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="rgCfgData~26"><add_atom name_pattern="rgCfgData~26" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~27"><add_atom name_pattern="rgCfgData~27" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="rgCfgData~28"><add_atom name_pattern="rgCfgData~28" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~29"><add_atom name_pattern="rgCfgData~29" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="rgCfgData~30"><add_atom name_pattern="rgCfgData~30" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData~31"><add_atom name_pattern="rgCfgData~31" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="rgCfgData_ready"><add_atom name_pattern="rgCfgData_ready" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="tm3_sram_data_in~0"><add_atom name_pattern="tm3_sram_data_in~0" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~1"><add_atom name_pattern="tm3_sram_data_in~1" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="18" y_low="18" />
+</partition>
+<partition name="tm3_sram_data_in~2"><add_atom name_pattern="tm3_sram_data_in~2" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~3"><add_atom name_pattern="tm3_sram_data_in~3" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~4"><add_atom name_pattern="tm3_sram_data_in~4" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~5"><add_atom name_pattern="tm3_sram_data_in~5" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="4" y_low="4" />
+</partition>
+<partition name="tm3_sram_data_in~6"><add_atom name_pattern="tm3_sram_data_in~6" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="tm3_sram_data_in~7"><add_atom name_pattern="tm3_sram_data_in~7" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="3" y_low="3" />
+</partition>
+<partition name="tm3_sram_data_in~8"><add_atom name_pattern="tm3_sram_data_in~8" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="17" y_low="17" />
+</partition>
+<partition name="tm3_sram_data_in~9"><add_atom name_pattern="tm3_sram_data_in~9" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~10"><add_atom name_pattern="tm3_sram_data_in~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="tm3_sram_data_in~11"><add_atom name_pattern="tm3_sram_data_in~11" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="tm3_sram_data_in~12"><add_atom name_pattern="tm3_sram_data_in~12" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="17" y_low="17" />
+</partition>
+<partition name="tm3_sram_data_in~13"><add_atom name_pattern="tm3_sram_data_in~13" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="1" y_low="1" />
+</partition>
+<partition name="tm3_sram_data_in~14"><add_atom name_pattern="tm3_sram_data_in~14" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="tm3_sram_data_in~15"><add_atom name_pattern="tm3_sram_data_in~15" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~16"><add_atom name_pattern="tm3_sram_data_in~16" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="tm3_sram_data_in~17"><add_atom name_pattern="tm3_sram_data_in~17" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="19" y_low="19" />
+</partition>
+<partition name="tm3_sram_data_in~18"><add_atom name_pattern="tm3_sram_data_in~18" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~19"><add_atom name_pattern="tm3_sram_data_in~19" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~20"><add_atom name_pattern="tm3_sram_data_in~20" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="3" y_low="3" />
+</partition>
+<partition name="tm3_sram_data_in~21"><add_atom name_pattern="tm3_sram_data_in~21" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~22"><add_atom name_pattern="tm3_sram_data_in~22" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="tm3_sram_data_in~23"><add_atom name_pattern="tm3_sram_data_in~23" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="tm3_sram_data_in~24"><add_atom name_pattern="tm3_sram_data_in~24" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="tm3_sram_data_in~25"><add_atom name_pattern="tm3_sram_data_in~25" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~26"><add_atom name_pattern="tm3_sram_data_in~26" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~27"><add_atom name_pattern="tm3_sram_data_in~27" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="tm3_sram_data_in~28"><add_atom name_pattern="tm3_sram_data_in~28" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="tm3_sram_data_in~29"><add_atom name_pattern="tm3_sram_data_in~29" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="tm3_sram_data_in~30"><add_atom name_pattern="tm3_sram_data_in~30" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="tm3_sram_data_in~31"><add_atom name_pattern="tm3_sram_data_in~31" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="rgdatain~36"><add_atom name_pattern="rgdatain~36" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="rgdatain~35"><add_atom name_pattern="rgdatain~35" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="17" y_low="17" />
+</partition>
+<partition name="rgdatain~34"><add_atom name_pattern="rgdatain~34" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="5" y_low="5" />
+</partition>
+<partition name="tm3_sram_data_in~52"><add_atom name_pattern="tm3_sram_data_in~52" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="tm3_sram_data_in~51"><add_atom name_pattern="tm3_sram_data_in~51" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="tm3_sram_data_in~50"><add_atom name_pattern="tm3_sram_data_in~50" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~49"><add_atom name_pattern="tm3_sram_data_in~49" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="tm3_sram_data_in~48"><add_atom name_pattern="tm3_sram_data_in~48" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="tm3_sram_data_in~47"><add_atom name_pattern="tm3_sram_data_in~47" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="tm3_sram_data_in~46"><add_atom name_pattern="tm3_sram_data_in~46" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="tm3_sram_data_in~45"><add_atom name_pattern="tm3_sram_data_in~45" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~44"><add_atom name_pattern="tm3_sram_data_in~44" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="tm3_sram_data_in~43"><add_atom name_pattern="tm3_sram_data_in~43" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~42"><add_atom name_pattern="tm3_sram_data_in~42" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="tm3_sram_data_in~41"><add_atom name_pattern="tm3_sram_data_in~41" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="tm3_sram_data_in~40"><add_atom name_pattern="tm3_sram_data_in~40" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~39"><add_atom name_pattern="tm3_sram_data_in~39" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="3" y_low="3" />
+</partition>
+<partition name="tm3_sram_data_in~38"><add_atom name_pattern="tm3_sram_data_in~38" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="tm3_sram_data_in~37"><add_atom name_pattern="tm3_sram_data_in~37" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="1" y_low="1" />
+</partition>
+<partition name="tm3_sram_data_in~36"><add_atom name_pattern="tm3_sram_data_in~36" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~35"><add_atom name_pattern="tm3_sram_data_in~35" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="tm3_sram_data_in~34"><add_atom name_pattern="tm3_sram_data_in~34" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~33"><add_atom name_pattern="tm3_sram_data_in~33" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="tm3_sram_data_in~32"><add_atom name_pattern="tm3_sram_data_in~32" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="tm3_sram_data_in~55"><add_atom name_pattern="tm3_sram_data_in~55" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="tm3_sram_data_in~54"><add_atom name_pattern="tm3_sram_data_in~54" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~53"><add_atom name_pattern="tm3_sram_data_in~53" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~11"><add_atom name_pattern="rgResultData~11" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~10"><add_atom name_pattern="rgResultData~10" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~9"><add_atom name_pattern="rgResultData~9" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~8"><add_atom name_pattern="rgResultData~8" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="rgResultData~7"><add_atom name_pattern="rgResultData~7" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="rgResultData~6"><add_atom name_pattern="rgResultData~6" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~5"><add_atom name_pattern="rgResultData~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="rgResultData~4"><add_atom name_pattern="rgResultData~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="rgResultData~3"><add_atom name_pattern="rgResultData~3" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="rgResultData~2"><add_atom name_pattern="rgResultData~2" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~1"><add_atom name_pattern="rgResultData~1" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~0"><add_atom name_pattern="rgResultData~0" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="rgDone"><add_atom name_pattern="rgDone" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="globalreset"><add_atom name_pattern="globalreset" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="busy10"><add_atom name_pattern="busy10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="busy01"><add_atom name_pattern="busy01" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="fbnextscanline"><add_atom name_pattern="fbnextscanline" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="clk"><add_atom name_pattern="clk" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="tm3_sram_data_in~63"><add_atom name_pattern="tm3_sram_data_in~63" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~62"><add_atom name_pattern="tm3_sram_data_in~62" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="tm3_sram_data_in~61"><add_atom name_pattern="tm3_sram_data_in~61" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~60"><add_atom name_pattern="tm3_sram_data_in~60" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="tm3_sram_data_in~59"><add_atom name_pattern="tm3_sram_data_in~59" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="tm3_sram_data_in~58"><add_atom name_pattern="tm3_sram_data_in~58" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="tm3_sram_data_in~57"><add_atom name_pattern="tm3_sram_data_in~57" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="tm3_sram_data_in~56"><add_atom name_pattern="tm3_sram_data_in~56" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="rgResultData~31"><add_atom name_pattern="rgResultData~31" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="rgResultData~30"><add_atom name_pattern="rgResultData~30" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~29"><add_atom name_pattern="rgResultData~29" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~28"><add_atom name_pattern="rgResultData~28" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="rgResultData~27"><add_atom name_pattern="rgResultData~27" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~26"><add_atom name_pattern="rgResultData~26" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="rgResultData~25"><add_atom name_pattern="rgResultData~25" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="rgResultData~24"><add_atom name_pattern="rgResultData~24" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~23"><add_atom name_pattern="rgResultData~23" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~22"><add_atom name_pattern="rgResultData~22" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="rgResultData~21"><add_atom name_pattern="rgResultData~21" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="rgResultData~20"><add_atom name_pattern="rgResultData~20" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="rgResultData~19"><add_atom name_pattern="rgResultData~19" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="rgResultData~18"><add_atom name_pattern="rgResultData~18" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~17"><add_atom name_pattern="rgResultData~17" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="rgResultData~16"><add_atom name_pattern="rgResultData~16" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="rgResultData~15"><add_atom name_pattern="rgResultData~15" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="rgResultData~14"><add_atom name_pattern="rgResultData~14" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="rgResultData~13"><add_atom name_pattern="rgResultData~13" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="rgResultData~12"><add_atom name_pattern="rgResultData~12" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+</partition_list>
+</vpr_constraints>

@@ -1,0 +1,313 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:puport_0_0_"><add_atom name_pattern="out:puport_0_0_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_10_10_"><add_atom name_pattern="out:puport_10_10_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_11_11_"><add_atom name_pattern="out:puport_11_11_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_1_1_"><add_atom name_pattern="out:puport_1_1_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_2_2_"><add_atom name_pattern="out:puport_2_2_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="out:puport_3_3_"><add_atom name_pattern="out:puport_3_3_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_4_4_"><add_atom name_pattern="out:puport_4_4_" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_5_5_"><add_atom name_pattern="out:puport_5_5_" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_6_6_"><add_atom name_pattern="out:puport_6_6_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_7_7_"><add_atom name_pattern="out:puport_7_7_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_8_8_"><add_atom name_pattern="out:puport_8_8_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:puport_9_9_"><add_atom name_pattern="out:puport_9_9_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pxport_0_0_"><add_atom name_pattern="out:pxport_0_0_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pxport_10_10_"><add_atom name_pattern="out:pxport_10_10_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="out:pxport_11_11_"><add_atom name_pattern="out:pxport_11_11_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pxport_1_1_"><add_atom name_pattern="out:pxport_1_1_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pxport_2_2_"><add_atom name_pattern="out:pxport_2_2_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pxport_3_3_"><add_atom name_pattern="out:pxport_3_3_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pxport_4_4_"><add_atom name_pattern="out:pxport_4_4_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pxport_5_5_"><add_atom name_pattern="out:pxport_5_5_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pxport_6_6_"><add_atom name_pattern="out:pxport_6_6_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="2" y_low="2" />
+</partition>
+<partition name="out:pxport_7_7_"><add_atom name_pattern="out:pxport_7_7_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pxport_8_8_"><add_atom name_pattern="out:pxport_8_8_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pxport_9_9_"><add_atom name_pattern="out:pxport_9_9_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="6" y_low="6" />
+</partition>
+<partition name="out:pyport_0_0_"><add_atom name_pattern="out:pyport_0_0_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pyport_10_10_"><add_atom name_pattern="out:pyport_10_10_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="out:pyport_11_11_"><add_atom name_pattern="out:pyport_11_11_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pyport_1_1_"><add_atom name_pattern="out:pyport_1_1_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pyport_2_2_"><add_atom name_pattern="out:pyport_2_2_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pyport_3_3_"><add_atom name_pattern="out:pyport_3_3_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pyport_4_4_"><add_atom name_pattern="out:pyport_4_4_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pyport_5_5_"><add_atom name_pattern="out:pyport_5_5_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="out:pyport_6_6_"><add_atom name_pattern="out:pyport_6_6_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pyport_7_7_"><add_atom name_pattern="out:pyport_7_7_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="9" y_low="9" />
+</partition>
+<partition name="out:pyport_8_8_"><add_atom name_pattern="out:pyport_8_8_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pyport_9_9_"><add_atom name_pattern="out:pyport_9_9_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="10" y_low="10" />
+</partition>
+<partition name="out:pdn"><add_atom name_pattern="out:pdn" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pnext_0_0_"><add_atom name_pattern="out:pnext_0_0_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:pover_0_0_"><add_atom name_pattern="out:pover_0_0_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="paport_0_0_"><add_atom name_pattern="paport_0_0_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_10_10_"><add_atom name_pattern="paport_10_10_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_11_11_"><add_atom name_pattern="paport_11_11_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="paport_1_1_"><add_atom name_pattern="paport_1_1_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_2_2_"><add_atom name_pattern="paport_2_2_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_3_3_"><add_atom name_pattern="paport_3_3_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_4_4_"><add_atom name_pattern="paport_4_4_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_5_5_"><add_atom name_pattern="paport_5_5_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_6_6_"><add_atom name_pattern="paport_6_6_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_7_7_"><add_atom name_pattern="paport_7_7_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_8_8_"><add_atom name_pattern="paport_8_8_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="10" y_low="10" />
+</partition>
+<partition name="paport_9_9_"><add_atom name_pattern="paport_9_9_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="10" y_low="10" />
+</partition>
+<partition name="pclk"><add_atom name_pattern="pclk" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="10" y_low="10" />
+</partition>
+<partition name="pdxport_0_0_"><add_atom name_pattern="pdxport_0_0_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="10" y_low="10" />
+</partition>
+<partition name="pdxport_10_10_"><add_atom name_pattern="pdxport_10_10_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="pdxport_11_11_"><add_atom name_pattern="pdxport_11_11_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="10" y_low="10" />
+</partition>
+<partition name="pdxport_1_1_"><add_atom name_pattern="pdxport_1_1_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="10" y_low="10" />
+</partition>
+<partition name="pdxport_2_2_"><add_atom name_pattern="pdxport_2_2_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="10" y_low="10" />
+</partition>
+<partition name="pdxport_3_3_"><add_atom name_pattern="pdxport_3_3_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="10" y_low="10" />
+</partition>
+<partition name="pdxport_4_4_"><add_atom name_pattern="pdxport_4_4_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="10" y_low="10" />
+</partition>
+<partition name="pdxport_5_5_"><add_atom name_pattern="pdxport_5_5_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="pdxport_6_6_"><add_atom name_pattern="pdxport_6_6_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="pdxport_7_7_"><add_atom name_pattern="pdxport_7_7_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="9" y_low="9" />
+</partition>
+<partition name="pdxport_8_8_"><add_atom name_pattern="pdxport_8_8_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="5" y_low="5" />
+</partition>
+<partition name="pdxport_9_9_"><add_atom name_pattern="pdxport_9_9_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="pready_0_0_"><add_atom name_pattern="pready_0_0_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="10" y_low="10" />
+</partition>
+<partition name="preset"><add_atom name_pattern="preset" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="10" y_low="10" />
+</partition>
+<partition name="preset_0_0_"><add_atom name_pattern="preset_0_0_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_puport_0_0_"><add_atom name_pattern="tin_puport_0_0_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_puport_10_10_"><add_atom name_pattern="tin_puport_10_10_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_puport_11_11_"><add_atom name_pattern="tin_puport_11_11_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_puport_1_1_"><add_atom name_pattern="tin_puport_1_1_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_puport_2_2_"><add_atom name_pattern="tin_puport_2_2_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="tin_puport_3_3_"><add_atom name_pattern="tin_puport_3_3_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_puport_4_4_"><add_atom name_pattern="tin_puport_4_4_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="tin_puport_5_5_"><add_atom name_pattern="tin_puport_5_5_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="tin_puport_6_6_"><add_atom name_pattern="tin_puport_6_6_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_puport_7_7_"><add_atom name_pattern="tin_puport_7_7_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_puport_8_8_"><add_atom name_pattern="tin_puport_8_8_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_puport_9_9_"><add_atom name_pattern="tin_puport_9_9_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="6" y_low="6" />
+</partition>
+<partition name="tin_pxport_0_0_"><add_atom name_pattern="tin_pxport_0_0_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pxport_10_10_"><add_atom name_pattern="tin_pxport_10_10_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pxport_11_11_"><add_atom name_pattern="tin_pxport_11_11_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pxport_1_1_"><add_atom name_pattern="tin_pxport_1_1_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pxport_2_2_"><add_atom name_pattern="tin_pxport_2_2_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pxport_3_3_"><add_atom name_pattern="tin_pxport_3_3_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pxport_4_4_"><add_atom name_pattern="tin_pxport_4_4_" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pxport_5_5_"><add_atom name_pattern="tin_pxport_5_5_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pxport_6_6_"><add_atom name_pattern="tin_pxport_6_6_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pxport_7_7_"><add_atom name_pattern="tin_pxport_7_7_" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pxport_8_8_"><add_atom name_pattern="tin_pxport_8_8_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="tin_pxport_9_9_"><add_atom name_pattern="tin_pxport_9_9_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="6" y_low="6" />
+</partition>
+<partition name="tin_pyport_0_0_"><add_atom name_pattern="tin_pyport_0_0_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="tin_pyport_10_10_"><add_atom name_pattern="tin_pyport_10_10_" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pyport_11_11_"><add_atom name_pattern="tin_pyport_11_11_" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pyport_1_1_"><add_atom name_pattern="tin_pyport_1_1_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pyport_2_2_"><add_atom name_pattern="tin_pyport_2_2_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pyport_3_3_"><add_atom name_pattern="tin_pyport_3_3_" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pyport_4_4_"><add_atom name_pattern="tin_pyport_4_4_" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="tin_pyport_5_5_"><add_atom name_pattern="tin_pyport_5_5_" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pyport_6_6_"><add_atom name_pattern="tin_pyport_6_6_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="tin_pyport_7_7_"><add_atom name_pattern="tin_pyport_7_7_" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="10" y_low="10" />
+</partition>
+<partition name="tin_pyport_8_8_"><add_atom name_pattern="tin_pyport_8_8_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="4" y_low="4" />
+</partition>
+<partition name="tin_pyport_9_9_"><add_atom name_pattern="tin_pyport_9_9_" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="7" y_low="7" />
+</partition>
+</partition_list>
+</vpr_constraints>

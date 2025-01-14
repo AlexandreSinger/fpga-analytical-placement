@@ -1,0 +1,34 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:s298_out_0_"><add_atom name_pattern="out:s298_out_0_" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:s298_out_4_"><add_atom name_pattern="out:s298_out_4_" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:s298_out_1_"><add_atom name_pattern="out:s298_out_1_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:s298_out_2_"><add_atom name_pattern="out:s298_out_2_" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:s298_out_3_"><add_atom name_pattern="out:s298_out_3_" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:s298_out_5_"><add_atom name_pattern="out:s298_out_5_" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="clock"><add_atom name_pattern="clock" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="s298_in_0_"><add_atom name_pattern="s298_in_0_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="s298_in_1_"><add_atom name_pattern="s298_in_1_" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="s298_in_2_"><add_atom name_pattern="s298_in_2_" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+</partition_list>
+</vpr_constraints>

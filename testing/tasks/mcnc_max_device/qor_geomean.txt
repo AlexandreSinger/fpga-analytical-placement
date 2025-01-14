@@ -1,0 +1,2 @@
+run	vpr_status	total_wirelength	crit_path_delay	ap_runtime	pack_runtime	place_runtime	route_runtime	total_runtime	num_clb	date	revision
+5	success	21472.84309984041	7.133336050346638	14.996365486165674	-1	-1	0.7547991445534532	22.138073925358306	178.34290059963232	2024-10-17	

@@ -2,6 +2,7 @@
 
 import argparse
 import os
+import re
 import shutil
 import sys
 import xml.etree.ElementTree as ET
@@ -13,6 +14,11 @@ def command_parser():
     default_input_path = os.path.join(os.getcwd(), "tests")
     parser.add_argument("-input_path", default=default_input_path, type=str, help="path of the input directory")
     return parser
+
+def get_circuit_basename(circuit):
+    # Define a regex to capture the base name (i.e., everything up to the first known suffix)
+    match = re.match(r'^(.*?)(?:\.pre-vpr.blif|\.v)?$', circuit)
+    return match.group(1) if match else circuit
 
 # the pre-vpr.blif file's input and output section is stored in two sets for constraint file atom name matching. Input is kept if the name matches exactly; Output is kept if and only if the name of atom in constraint file's first four chars are "out:" and the name comes after matches blif output section name exactly. 
 def modify_constraint(blif_path, constraint_input_path, constraint_output_path):
@@ -77,7 +83,15 @@ def run_test_main(args):
         input_arch_dir_path = os.path.join(test_suite_input_path, arch)
         if not os.path.isdir(input_arch_dir_path):
             continue
+        # Create a folder to hold the constraints
+        constraints_folder = os.path.join(input_arch_dir_path, "constraints")
+        if os.path.exists(constraints_folder):
+            shutil.rmtree(constraints_folder)
+        os.mkdir(constraints_folder)
         for circuit in os.listdir(input_arch_dir_path):
+            # Bit of a hack. Should use config to get the list of circuits.
+            if circuit == "constraints":
+                continue
             print(f"\tGenerating fixed IO for: {circuit}")
             input_circuit_dir_path = os.path.join(input_arch_dir_path, circuit)
             common_path = os.path.join(input_circuit_dir_path, "common")
@@ -91,6 +105,11 @@ def run_test_main(args):
                 print(f"Error: Files missing for {arch} {circuit}!")
                 return False
             modify_constraint(blif_path, constraint_input_path, constraint_output_path)
+            # Save the constraint into a folder to collect all the constraints
+            # together. This makes making tasks easier.
+            circuit_basename = get_circuit_basename(circuit)
+            shutil.copyfile(constraint_output_path, os.path.join(constraints_folder, circuit_basename + "_io_constraint.xml"))
+
     print("All fixed IO files generated successfully.")
     return True
 
