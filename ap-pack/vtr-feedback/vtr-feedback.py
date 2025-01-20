@@ -16,6 +16,11 @@ def command_parser(prog=None):
             epilog="",
     )
 
+    parser.add_argument(
+            "test_suite_name",
+            help="Name of the test suite being run, given by a configuration file",
+    )
+
     default_vtr_dir = os.path.expanduser("~") + "/vtr-verilog-to-routing"
     parser.add_argument(
             "-vtr_dir",
@@ -30,6 +35,13 @@ def command_parser(prog=None):
             default=default_configs_dir,
             type=str,
             metavar="CONFIGS_DIR",
+    )
+
+    parser.add_argument(
+            "-num_iter",
+            default=3,
+            type=int,
+            metavar="NUM_ITER",
     )
     
     return parser
@@ -241,7 +253,8 @@ def run_vtr_feedback(arg_list, prog=None):
 
     # Run the first pass to generate the files needed to run VPR and the first
     # (default) flat placement file.
-    success = run_first_pass(os.path.join(args.configs_dir, "alu4_config.txt"),
+    test_suite_config_name = args.test_suite_name + "_config.txt"
+    success = run_first_pass(os.path.join(args.configs_dir, test_suite_config_name),
                              output_dir_path,
                              args.vtr_dir)
     if not success:
@@ -256,7 +269,7 @@ def run_vtr_feedback(arg_list, prog=None):
         return
 
     # Run the iterations
-    total_num_iterations = 3
+    total_num_iterations = args.num_iter
     for iter_num in range(total_num_iterations):
         success = run_single_iter(iter_num + 1, common_files_dir_path)
         if not success:
