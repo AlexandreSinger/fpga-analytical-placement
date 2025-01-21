@@ -214,12 +214,15 @@ def parse_single_iter(iter_log_file_path, iter_num):
             parse_log_file(iter_log_file_path, r"\s*Packing took (.*) seconds"),
             parse_log_file(iter_log_file_path, r"Device Utilization: (.*) \(target"),
             parse_log_file(iter_log_file_path, r"Total wirelength:\s*(\d+),"),
-            parse_log_file(iter_log_file_path, r"Final critical path delay \(least slack\): (.*) ns")
+            parse_log_file(iter_log_file_path, r"Final critical path delay \(least slack\): (.*) ns"),
+            parse_log_file(iter_log_file_path, r"Percent of clusters with reconstruction errors: (.*)"),
+            parse_log_file(iter_log_file_path, r"Percent of atoms misplaced from the flat placement: (.*)"),
+            parse_log_file(iter_log_file_path, r"Average atom displacement of initial placement from flat placement: (.*)")
             ]
 
 # Parse the per-iteration results into a csv file.
 def parse_iter_results(output_dir_path, per_iter_qor_csv_file_path, total_num_iterations):
-    qor_data = [['iter_num', 'pack_time(s)', 'device_util', 'total_wl', 'CPD(ns)']]
+    qor_data = [['iter_num', 'pack_time(s)', 'device_util', 'total_wl', 'CPD(ns)', 'percent_cluster_errors', 'percent_atoms_displaced', 'average_atom_displacement']]
 
     first_pass_log_file = os.path.join(output_dir_path, "common_files", "first_pass_vpr_stdout.log")
     qor_data.append(parse_single_iter(first_pass_log_file, 0))
