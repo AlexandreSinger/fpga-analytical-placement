@@ -89,5 +89,5 @@ qor_parse_file=qor_standard.txt
 pass_requirements_file=pass_requirements.txt
 
 # Pass the script params while writing the vpr constraints.
-script_params=-starting_stage vpr -track_memory_usage --write_vpr_constraints constraint.xml --write_flat_place placement.fplace
+script_params=-starting_stage vpr -track_memory_usage --write_flat_place placement.fplace
 
