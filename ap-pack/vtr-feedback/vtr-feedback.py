@@ -307,7 +307,8 @@ def parse_single_iter(iter_log_file_path, iter_num):
             parse_log_file(iter_log_file_path, r"Final critical path delay \(least slack\): (.*) ns"),
             parse_log_file(iter_log_file_path, r"Percent of clusters with reconstruction errors: (.*)"),
             parse_log_file(iter_log_file_path, r"Percent of atoms misplaced from the flat placement: (.*)"),
-            parse_log_file(iter_log_file_path, r"Average atom displacement of initial placement from flat placement: (.*)")
+            parse_log_file(iter_log_file_path, r"Average atom displacement of initial placement from flat placement: (.*)"),
+            parse_log_file(iter_log_file_path, r"Max atom displacement of initial placement from flat placement: (.*)")
             ]
 
 # Parse the results of a single iteration run of a circuit into a csv file.
@@ -316,7 +317,7 @@ def parse_circuit_iter_results(output_dir_path,
                                circuit_per_iter_qor_csv_file_path,
                                total_num_iterations):
     # Create the header of the CSV file.
-    qor_data = [['iter_num', 'pack_time(s)', 'device_util', 'total_wl', 'CPD(ns)', 'percent_cluster_errors', 'percent_atoms_displaced', 'average_atom_displacement']]
+    qor_data = [['iter_num', 'pack_time(s)', 'device_util', 'total_wl', 'CPD(ns)', 'percent_cluster_errors', 'percent_atoms_displaced', 'average_atom_displacement', 'max_atom_displacement']]
     # Get the log file for the first pass for this circuit.
     first_pass_log_file = os.path.join(output_dir_path,
                                        "common_files",
