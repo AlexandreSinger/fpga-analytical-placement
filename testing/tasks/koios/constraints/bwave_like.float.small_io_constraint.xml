@@ -1,0 +1,604 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:get_instr_addr~9"><add_atom name_pattern="out:get_instr_addr~9" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr_addr~8"><add_atom name_pattern="out:get_instr_addr~8" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr_addr~7"><add_atom name_pattern="out:get_instr_addr~7" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr_addr~6"><add_atom name_pattern="out:get_instr_addr~6" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr_addr~5"><add_atom name_pattern="out:get_instr_addr~5" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr_addr~4"><add_atom name_pattern="out:get_instr_addr~4" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr_addr~3"><add_atom name_pattern="out:get_instr_addr~3" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr_addr~2"><add_atom name_pattern="out:get_instr_addr~2" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr_addr~1"><add_atom name_pattern="out:get_instr_addr~1" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr_addr~0"><add_atom name_pattern="out:get_instr_addr~0" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="0" y_low="0" />
+</partition>
+<partition name="out:get_instr"><add_atom name_pattern="out:get_instr" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_write_enable"><add_atom name_pattern="out:dram_write_enable" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~9"><add_atom name_pattern="out:dram_addr~9" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~8"><add_atom name_pattern="out:dram_addr~8" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~7"><add_atom name_pattern="out:dram_addr~7" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~6"><add_atom name_pattern="out:dram_addr~6" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~5"><add_atom name_pattern="out:dram_addr~5" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~4"><add_atom name_pattern="out:dram_addr~4" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~3"><add_atom name_pattern="out:dram_addr~3" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~2"><add_atom name_pattern="out:dram_addr~2" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~1"><add_atom name_pattern="out:dram_addr~1" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="0" y_low="0" />
+</partition>
+<partition name="out:dram_addr~0"><add_atom name_pattern="out:dram_addr~0" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~63"><add_atom name_pattern="out:output_data_DRAM~63" />
+<add_region subtile="-1" x_high="61" x_low="61" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~62"><add_atom name_pattern="out:output_data_DRAM~62" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~61"><add_atom name_pattern="out:output_data_DRAM~61" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~60"><add_atom name_pattern="out:output_data_DRAM~60" />
+<add_region subtile="-1" x_high="61" x_low="61" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~59"><add_atom name_pattern="out:output_data_DRAM~59" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~58"><add_atom name_pattern="out:output_data_DRAM~58" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~57"><add_atom name_pattern="out:output_data_DRAM~57" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~56"><add_atom name_pattern="out:output_data_DRAM~56" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~55"><add_atom name_pattern="out:output_data_DRAM~55" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~54"><add_atom name_pattern="out:output_data_DRAM~54" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~53"><add_atom name_pattern="out:output_data_DRAM~53" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~52"><add_atom name_pattern="out:output_data_DRAM~52" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~51"><add_atom name_pattern="out:output_data_DRAM~51" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~50"><add_atom name_pattern="out:output_data_DRAM~50" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~49"><add_atom name_pattern="out:output_data_DRAM~49" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~48"><add_atom name_pattern="out:output_data_DRAM~48" />
+<add_region subtile="-1" x_high="72" x_low="72" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~47"><add_atom name_pattern="out:output_data_DRAM~47" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~46"><add_atom name_pattern="out:output_data_DRAM~46" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~45"><add_atom name_pattern="out:output_data_DRAM~45" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~44"><add_atom name_pattern="out:output_data_DRAM~44" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~43"><add_atom name_pattern="out:output_data_DRAM~43" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~42"><add_atom name_pattern="out:output_data_DRAM~42" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~41"><add_atom name_pattern="out:output_data_DRAM~41" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~40"><add_atom name_pattern="out:output_data_DRAM~40" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~39"><add_atom name_pattern="out:output_data_DRAM~39" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~38"><add_atom name_pattern="out:output_data_DRAM~38" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~37"><add_atom name_pattern="out:output_data_DRAM~37" />
+<add_region subtile="-1" x_high="69" x_low="69" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~36"><add_atom name_pattern="out:output_data_DRAM~36" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~35"><add_atom name_pattern="out:output_data_DRAM~35" />
+<add_region subtile="-1" x_high="71" x_low="71" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~34"><add_atom name_pattern="out:output_data_DRAM~34" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~33"><add_atom name_pattern="out:output_data_DRAM~33" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~32"><add_atom name_pattern="out:output_data_DRAM~32" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~31"><add_atom name_pattern="out:output_data_DRAM~31" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~30"><add_atom name_pattern="out:output_data_DRAM~30" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~29"><add_atom name_pattern="out:output_data_DRAM~29" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~28"><add_atom name_pattern="out:output_data_DRAM~28" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~27"><add_atom name_pattern="out:output_data_DRAM~27" />
+<add_region subtile="-1" x_high="61" x_low="61" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~26"><add_atom name_pattern="out:output_data_DRAM~26" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~25"><add_atom name_pattern="out:output_data_DRAM~25" />
+<add_region subtile="-1" x_high="61" x_low="61" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~24"><add_atom name_pattern="out:output_data_DRAM~24" />
+<add_region subtile="-1" x_high="61" x_low="61" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~23"><add_atom name_pattern="out:output_data_DRAM~23" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~22"><add_atom name_pattern="out:output_data_DRAM~22" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~21"><add_atom name_pattern="out:output_data_DRAM~21" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~20"><add_atom name_pattern="out:output_data_DRAM~20" />
+<add_region subtile="-1" x_high="71" x_low="71" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~19"><add_atom name_pattern="out:output_data_DRAM~19" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~18"><add_atom name_pattern="out:output_data_DRAM~18" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~17"><add_atom name_pattern="out:output_data_DRAM~17" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~16"><add_atom name_pattern="out:output_data_DRAM~16" />
+<add_region subtile="-1" x_high="69" x_low="69" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~15"><add_atom name_pattern="out:output_data_DRAM~15" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~14"><add_atom name_pattern="out:output_data_DRAM~14" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~13"><add_atom name_pattern="out:output_data_DRAM~13" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~12"><add_atom name_pattern="out:output_data_DRAM~12" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~11"><add_atom name_pattern="out:output_data_DRAM~11" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~10"><add_atom name_pattern="out:output_data_DRAM~10" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~9"><add_atom name_pattern="out:output_data_DRAM~9" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~8"><add_atom name_pattern="out:output_data_DRAM~8" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~7"><add_atom name_pattern="out:output_data_DRAM~7" />
+<add_region subtile="-1" x_high="49" x_low="49" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~6"><add_atom name_pattern="out:output_data_DRAM~6" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~5"><add_atom name_pattern="out:output_data_DRAM~5" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~4"><add_atom name_pattern="out:output_data_DRAM~4" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~3"><add_atom name_pattern="out:output_data_DRAM~3" />
+<add_region subtile="-1" x_high="72" x_low="72" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~2"><add_atom name_pattern="out:output_data_DRAM~2" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~1"><add_atom name_pattern="out:output_data_DRAM~1" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="0" y_low="0" />
+</partition>
+<partition name="out:output_data_DRAM~0"><add_atom name_pattern="out:output_data_DRAM~0" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="0" y_low="0" />
+</partition>
+<partition name="clk"><add_atom name_pattern="clk" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~36"><add_atom name_pattern="instruction~36" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~35"><add_atom name_pattern="instruction~35" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~34"><add_atom name_pattern="instruction~34" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~33"><add_atom name_pattern="instruction~33" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~32"><add_atom name_pattern="instruction~32" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~31"><add_atom name_pattern="instruction~31" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~30"><add_atom name_pattern="instruction~30" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~29"><add_atom name_pattern="instruction~29" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~27"><add_atom name_pattern="instruction~27" />
+<add_region subtile="-1" x_high="74" x_low="74" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~26"><add_atom name_pattern="instruction~26" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~25"><add_atom name_pattern="instruction~25" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~23"><add_atom name_pattern="instruction~23" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~22"><add_atom name_pattern="instruction~22" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~21"><add_atom name_pattern="instruction~21" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~19"><add_atom name_pattern="instruction~19" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~18"><add_atom name_pattern="instruction~18" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~17"><add_atom name_pattern="instruction~17" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~16"><add_atom name_pattern="instruction~16" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~13"><add_atom name_pattern="instruction~13" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~12"><add_atom name_pattern="instruction~12" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~10"><add_atom name_pattern="instruction~10" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~9"><add_atom name_pattern="instruction~9" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~8"><add_atom name_pattern="instruction~8" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~7"><add_atom name_pattern="instruction~7" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~6"><add_atom name_pattern="instruction~6" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~4"><add_atom name_pattern="instruction~4" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~3"><add_atom name_pattern="instruction~3" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~2"><add_atom name_pattern="instruction~2" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~1"><add_atom name_pattern="instruction~1" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~0"><add_atom name_pattern="instruction~0" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="0" y_low="0" />
+</partition>
+<partition name="reset_npu"><add_atom name_pattern="reset_npu" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~5"><add_atom name_pattern="instruction~5" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~11"><add_atom name_pattern="instruction~11" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~14"><add_atom name_pattern="instruction~14" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~63"><add_atom name_pattern="input_data_DRAM~63" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~15"><add_atom name_pattern="instruction~15" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~62"><add_atom name_pattern="input_data_DRAM~62" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~61"><add_atom name_pattern="input_data_DRAM~61" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~60"><add_atom name_pattern="input_data_DRAM~60" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~59"><add_atom name_pattern="input_data_DRAM~59" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~58"><add_atom name_pattern="input_data_DRAM~58" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~57"><add_atom name_pattern="input_data_DRAM~57" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~56"><add_atom name_pattern="input_data_DRAM~56" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~55"><add_atom name_pattern="input_data_DRAM~55" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~54"><add_atom name_pattern="input_data_DRAM~54" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~53"><add_atom name_pattern="input_data_DRAM~53" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~52"><add_atom name_pattern="input_data_DRAM~52" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~51"><add_atom name_pattern="input_data_DRAM~51" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~50"><add_atom name_pattern="input_data_DRAM~50" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~49"><add_atom name_pattern="input_data_DRAM~49" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~48"><add_atom name_pattern="input_data_DRAM~48" />
+<add_region subtile="-1" x_high="93" x_low="93" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~47"><add_atom name_pattern="input_data_DRAM~47" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~46"><add_atom name_pattern="input_data_DRAM~46" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~45"><add_atom name_pattern="input_data_DRAM~45" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~44"><add_atom name_pattern="input_data_DRAM~44" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~43"><add_atom name_pattern="input_data_DRAM~43" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~42"><add_atom name_pattern="input_data_DRAM~42" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~41"><add_atom name_pattern="input_data_DRAM~41" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~20"><add_atom name_pattern="instruction~20" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~40"><add_atom name_pattern="input_data_DRAM~40" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~39"><add_atom name_pattern="input_data_DRAM~39" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~38"><add_atom name_pattern="input_data_DRAM~38" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~37"><add_atom name_pattern="input_data_DRAM~37" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~36"><add_atom name_pattern="input_data_DRAM~36" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~35"><add_atom name_pattern="input_data_DRAM~35" />
+<add_region subtile="-1" x_high="93" x_low="93" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~34"><add_atom name_pattern="input_data_DRAM~34" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~33"><add_atom name_pattern="input_data_DRAM~33" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~32"><add_atom name_pattern="input_data_DRAM~32" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~31"><add_atom name_pattern="input_data_DRAM~31" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~30"><add_atom name_pattern="input_data_DRAM~30" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~29"><add_atom name_pattern="input_data_DRAM~29" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~28"><add_atom name_pattern="input_data_DRAM~28" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~27"><add_atom name_pattern="input_data_DRAM~27" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~26"><add_atom name_pattern="input_data_DRAM~26" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~25"><add_atom name_pattern="input_data_DRAM~25" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~24"><add_atom name_pattern="input_data_DRAM~24" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~23"><add_atom name_pattern="input_data_DRAM~23" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~22"><add_atom name_pattern="input_data_DRAM~22" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~21"><add_atom name_pattern="input_data_DRAM~21" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~20"><add_atom name_pattern="input_data_DRAM~20" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~19"><add_atom name_pattern="input_data_DRAM~19" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~24"><add_atom name_pattern="instruction~24" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~18"><add_atom name_pattern="input_data_DRAM~18" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~17"><add_atom name_pattern="input_data_DRAM~17" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~16"><add_atom name_pattern="input_data_DRAM~16" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~15"><add_atom name_pattern="input_data_DRAM~15" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~14"><add_atom name_pattern="input_data_DRAM~14" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~13"><add_atom name_pattern="input_data_DRAM~13" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~12"><add_atom name_pattern="input_data_DRAM~12" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~11"><add_atom name_pattern="input_data_DRAM~11" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~10"><add_atom name_pattern="input_data_DRAM~10" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~9"><add_atom name_pattern="input_data_DRAM~9" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~8"><add_atom name_pattern="input_data_DRAM~8" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~7"><add_atom name_pattern="input_data_DRAM~7" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~6"><add_atom name_pattern="input_data_DRAM~6" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~5"><add_atom name_pattern="input_data_DRAM~5" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~4"><add_atom name_pattern="input_data_DRAM~4" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~3"><add_atom name_pattern="input_data_DRAM~3" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~2"><add_atom name_pattern="input_data_DRAM~2" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~28"><add_atom name_pattern="instruction~28" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~1"><add_atom name_pattern="input_data_DRAM~1" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="0" y_low="0" />
+</partition>
+<partition name="input_data_DRAM~0"><add_atom name_pattern="input_data_DRAM~0" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~47"><add_atom name_pattern="instruction~47" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~46"><add_atom name_pattern="instruction~46" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~45"><add_atom name_pattern="instruction~45" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~44"><add_atom name_pattern="instruction~44" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~43"><add_atom name_pattern="instruction~43" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~42"><add_atom name_pattern="instruction~42" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~41"><add_atom name_pattern="instruction~41" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~40"><add_atom name_pattern="instruction~40" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~39"><add_atom name_pattern="instruction~39" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~38"><add_atom name_pattern="instruction~38" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="0" y_low="0" />
+</partition>
+<partition name="instruction~37"><add_atom name_pattern="instruction~37" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="0" y_low="0" />
+</partition>
+</partition_list>
+</vpr_constraints>

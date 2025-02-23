@@ -1,0 +1,751 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:bram_rdata_ext~17"><add_atom name_pattern="out:bram_rdata_ext~17" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~23"><add_atom name_pattern="out:bram_rdata_ext~23" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~20"><add_atom name_pattern="out:bram_rdata_ext~20" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~19"><add_atom name_pattern="out:bram_rdata_ext~19" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~22"><add_atom name_pattern="out:bram_rdata_ext~22" />
+<add_region subtile="-1" x_high="49" x_low="49" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~18"><add_atom name_pattern="out:bram_rdata_ext~18" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~21"><add_atom name_pattern="out:bram_rdata_ext~21" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~27"><add_atom name_pattern="out:bram_rdata_ext~27" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~25"><add_atom name_pattern="out:bram_rdata_ext~25" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~24"><add_atom name_pattern="out:bram_rdata_ext~24" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~26"><add_atom name_pattern="out:bram_rdata_ext~26" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~28"><add_atom name_pattern="out:bram_rdata_ext~28" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~34"><add_atom name_pattern="out:bram_rdata_ext~34" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~33"><add_atom name_pattern="out:bram_rdata_ext~33" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~32"><add_atom name_pattern="out:bram_rdata_ext~32" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~31"><add_atom name_pattern="out:bram_rdata_ext~31" />
+<add_region subtile="-1" x_high="49" x_low="49" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~30"><add_atom name_pattern="out:bram_rdata_ext~30" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~29"><add_atom name_pattern="out:bram_rdata_ext~29" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~14"><add_atom name_pattern="out:bram_rdata_ext~14" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~13"><add_atom name_pattern="out:bram_rdata_ext~13" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~12"><add_atom name_pattern="out:bram_rdata_ext~12" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~11"><add_atom name_pattern="out:bram_rdata_ext~11" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~10"><add_atom name_pattern="out:bram_rdata_ext~10" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~9"><add_atom name_pattern="out:bram_rdata_ext~9" />
+<add_region subtile="-1" x_high="51" x_low="51" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~8"><add_atom name_pattern="out:bram_rdata_ext~8" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~16"><add_atom name_pattern="out:bram_rdata_ext~16" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~15"><add_atom name_pattern="out:bram_rdata_ext~15" />
+<add_region subtile="-1" x_high="52" x_low="52" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~35"><add_atom name_pattern="out:bram_rdata_ext~35" />
+<add_region subtile="-1" x_high="52" x_low="52" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~43"><add_atom name_pattern="out:bram_rdata_ext~43" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~41"><add_atom name_pattern="out:bram_rdata_ext~41" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~37"><add_atom name_pattern="out:bram_rdata_ext~37" />
+<add_region subtile="-1" x_high="52" x_low="52" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~42"><add_atom name_pattern="out:bram_rdata_ext~42" />
+<add_region subtile="-1" x_high="49" x_low="49" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~38"><add_atom name_pattern="out:bram_rdata_ext~38" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~39"><add_atom name_pattern="out:bram_rdata_ext~39" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~36"><add_atom name_pattern="out:bram_rdata_ext~36" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~40"><add_atom name_pattern="out:bram_rdata_ext~40" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~54"><add_atom name_pattern="out:bram_rdata_ext~54" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~58"><add_atom name_pattern="out:bram_rdata_ext~58" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~62"><add_atom name_pattern="out:bram_rdata_ext~62" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~56"><add_atom name_pattern="out:bram_rdata_ext~56" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~60"><add_atom name_pattern="out:bram_rdata_ext~60" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~53"><add_atom name_pattern="out:bram_rdata_ext~53" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~57"><add_atom name_pattern="out:bram_rdata_ext~57" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~61"><add_atom name_pattern="out:bram_rdata_ext~61" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~55"><add_atom name_pattern="out:bram_rdata_ext~55" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~59"><add_atom name_pattern="out:bram_rdata_ext~59" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~63"><add_atom name_pattern="out:bram_rdata_ext~63" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~44"><add_atom name_pattern="out:bram_rdata_ext~44" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~45"><add_atom name_pattern="out:bram_rdata_ext~45" />
+<add_region subtile="-1" x_high="49" x_low="49" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~46"><add_atom name_pattern="out:bram_rdata_ext~46" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~47"><add_atom name_pattern="out:bram_rdata_ext~47" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~48"><add_atom name_pattern="out:bram_rdata_ext~48" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~49"><add_atom name_pattern="out:bram_rdata_ext~49" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~50"><add_atom name_pattern="out:bram_rdata_ext~50" />
+<add_region subtile="-1" x_high="28" x_low="28" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~51"><add_atom name_pattern="out:bram_rdata_ext~51" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~52"><add_atom name_pattern="out:bram_rdata_ext~52" />
+<add_region subtile="-1" x_high="50" x_low="50" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PREADY"><add_atom name_pattern="out:PREADY" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~0"><add_atom name_pattern="out:bram_rdata_ext~0" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~3"><add_atom name_pattern="out:bram_rdata_ext~3" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~1"><add_atom name_pattern="out:bram_rdata_ext~1" />
+<add_region subtile="-1" x_high="51" x_low="51" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~2"><add_atom name_pattern="out:bram_rdata_ext~2" />
+<add_region subtile="-1" x_high="51" x_low="51" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~4"><add_atom name_pattern="out:bram_rdata_ext~4" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~5"><add_atom name_pattern="out:bram_rdata_ext~5" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~6"><add_atom name_pattern="out:bram_rdata_ext~6" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="out:bram_rdata_ext~7"><add_atom name_pattern="out:bram_rdata_ext~7" />
+<add_region subtile="-1" x_high="49" x_low="49" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~22"><add_atom name_pattern="out:PRDATA~22" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~21"><add_atom name_pattern="out:PRDATA~21" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~20"><add_atom name_pattern="out:PRDATA~20" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~19"><add_atom name_pattern="out:PRDATA~19" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~18"><add_atom name_pattern="out:PRDATA~18" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~17"><add_atom name_pattern="out:PRDATA~17" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~16"><add_atom name_pattern="out:PRDATA~16" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~15"><add_atom name_pattern="out:PRDATA~15" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~14"><add_atom name_pattern="out:PRDATA~14" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~13"><add_atom name_pattern="out:PRDATA~13" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~12"><add_atom name_pattern="out:PRDATA~12" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~11"><add_atom name_pattern="out:PRDATA~11" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~10"><add_atom name_pattern="out:PRDATA~10" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~9"><add_atom name_pattern="out:PRDATA~9" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~8"><add_atom name_pattern="out:PRDATA~8" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~7"><add_atom name_pattern="out:PRDATA~7" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~6"><add_atom name_pattern="out:PRDATA~6" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~5"><add_atom name_pattern="out:PRDATA~5" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~4"><add_atom name_pattern="out:PRDATA~4" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~27"><add_atom name_pattern="out:PRDATA~27" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~26"><add_atom name_pattern="out:PRDATA~26" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~25"><add_atom name_pattern="out:PRDATA~25" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~24"><add_atom name_pattern="out:PRDATA~24" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~23"><add_atom name_pattern="out:PRDATA~23" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~31"><add_atom name_pattern="out:PRDATA~31" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~30"><add_atom name_pattern="out:PRDATA~30" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~29"><add_atom name_pattern="out:PRDATA~29" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~28"><add_atom name_pattern="out:PRDATA~28" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~2"><add_atom name_pattern="out:PRDATA~2" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~3"><add_atom name_pattern="out:PRDATA~3" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~1"><add_atom name_pattern="out:PRDATA~1" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="0" y_low="0" />
+</partition>
+<partition name="out:PRDATA~0"><add_atom name_pattern="out:PRDATA~0" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~4"><add_atom name_pattern="PWDATA~4" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~5"><add_atom name_pattern="PWDATA~5" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~17"><add_atom name_pattern="PWDATA~17" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~6"><add_atom name_pattern="PWDATA~6" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~18"><add_atom name_pattern="PWDATA~18" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~7"><add_atom name_pattern="PWDATA~7" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~8"><add_atom name_pattern="PWDATA~8" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~19"><add_atom name_pattern="PWDATA~19" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="0" y_low="0" />
+</partition>
+<partition name="clk"><add_atom name_pattern="clk" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="89" y_low="89" />
+</partition>
+<partition name="PWDATA~12"><add_atom name_pattern="PWDATA~12" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~13"><add_atom name_pattern="PWDATA~13" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~14"><add_atom name_pattern="PWDATA~14" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~23"><add_atom name_pattern="PWDATA~23" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~15"><add_atom name_pattern="PWDATA~15" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~16"><add_atom name_pattern="PWDATA~16" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~3"><add_atom name_pattern="PWDATA~3" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~11"><add_atom name_pattern="PWDATA~11" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~10"><add_atom name_pattern="PWDATA~10" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~9"><add_atom name_pattern="PWDATA~9" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="0" y_low="0" />
+</partition>
+<partition name="PWRITE"><add_atom name_pattern="PWRITE" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="0" y_low="0" />
+</partition>
+<partition name="clk_mem"><add_atom name_pattern="clk_mem" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="PSEL"><add_atom name_pattern="PSEL" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="0" y_low="0" />
+</partition>
+<partition name="resetn"><add_atom name_pattern="resetn" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="0" y_low="0" />
+</partition>
+<partition name="pe_resetn"><add_atom name_pattern="pe_resetn" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="0" y_low="0" />
+</partition>
+<partition name="PENABLE"><add_atom name_pattern="PENABLE" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="0" y_low="0" />
+</partition>
+<partition name="PADDR~0"><add_atom name_pattern="PADDR~0" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="0" y_low="0" />
+</partition>
+<partition name="PADDR~4"><add_atom name_pattern="PADDR~4" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~0"><add_atom name_pattern="PWDATA~0" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~1"><add_atom name_pattern="PWDATA~1" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~20"><add_atom name_pattern="PWDATA~20" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="0" y_low="0" />
+</partition>
+<partition name="PADDR~1"><add_atom name_pattern="PADDR~1" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~2"><add_atom name_pattern="PWDATA~2" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="0" y_low="0" />
+</partition>
+<partition name="PADDR~2"><add_atom name_pattern="PADDR~2" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~21"><add_atom name_pattern="PWDATA~21" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="0" y_low="0" />
+</partition>
+<partition name="PADDR~7"><add_atom name_pattern="PADDR~7" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="0" y_low="0" />
+</partition>
+<partition name="PADDR~5"><add_atom name_pattern="PADDR~5" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="0" y_low="0" />
+</partition>
+<partition name="PADDR~6"><add_atom name_pattern="PADDR~6" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~22"><add_atom name_pattern="PWDATA~22" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="0" y_low="0" />
+</partition>
+<partition name="PADDR~3"><add_atom name_pattern="PADDR~3" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~60"><add_atom name_pattern="bram_wdata_ext~60" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~59"><add_atom name_pattern="bram_wdata_ext~59" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~58"><add_atom name_pattern="bram_wdata_ext~58" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~57"><add_atom name_pattern="bram_wdata_ext~57" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~56"><add_atom name_pattern="bram_wdata_ext~56" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~55"><add_atom name_pattern="bram_wdata_ext~55" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~54"><add_atom name_pattern="bram_wdata_ext~54" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~53"><add_atom name_pattern="bram_wdata_ext~53" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~52"><add_atom name_pattern="bram_wdata_ext~52" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~51"><add_atom name_pattern="bram_wdata_ext~51" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~50"><add_atom name_pattern="bram_wdata_ext~50" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_we_ext~1"><add_atom name_pattern="bram_we_ext~1" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_we_ext~0"><add_atom name_pattern="bram_we_ext~0" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~63"><add_atom name_pattern="bram_wdata_ext~63" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~62"><add_atom name_pattern="bram_wdata_ext~62" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~61"><add_atom name_pattern="bram_wdata_ext~61" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_we_ext~3"><add_atom name_pattern="bram_we_ext~3" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_we_ext~2"><add_atom name_pattern="bram_we_ext~2" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~48"><add_atom name_pattern="bram_wdata_ext~48" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~49"><add_atom name_pattern="bram_wdata_ext~49" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~38"><add_atom name_pattern="bram_wdata_ext~38" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~37"><add_atom name_pattern="bram_wdata_ext~37" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~36"><add_atom name_pattern="bram_wdata_ext~36" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~35"><add_atom name_pattern="bram_wdata_ext~35" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~34"><add_atom name_pattern="bram_wdata_ext~34" />
+<add_region subtile="-1" x_high="51" x_low="51" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~33"><add_atom name_pattern="bram_wdata_ext~33" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~32"><add_atom name_pattern="bram_wdata_ext~32" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~31"><add_atom name_pattern="bram_wdata_ext~31" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~30"><add_atom name_pattern="bram_wdata_ext~30" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~29"><add_atom name_pattern="bram_wdata_ext~29" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~28"><add_atom name_pattern="bram_wdata_ext~28" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~43"><add_atom name_pattern="bram_wdata_ext~43" />
+<add_region subtile="-1" x_high="52" x_low="52" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~42"><add_atom name_pattern="bram_wdata_ext~42" />
+<add_region subtile="-1" x_high="52" x_low="52" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~41"><add_atom name_pattern="bram_wdata_ext~41" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~40"><add_atom name_pattern="bram_wdata_ext~40" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~39"><add_atom name_pattern="bram_wdata_ext~39" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~47"><add_atom name_pattern="bram_wdata_ext~47" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~46"><add_atom name_pattern="bram_wdata_ext~46" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="89" y_low="89" />
+</partition>
+<partition name="bram_wdata_ext~45"><add_atom name_pattern="bram_wdata_ext~45" />
+<add_region subtile="-1" x_high="52" x_low="52" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~44"><add_atom name_pattern="bram_wdata_ext~44" />
+<add_region subtile="-1" x_high="50" x_low="50" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~26"><add_atom name_pattern="bram_wdata_ext~26" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~27"><add_atom name_pattern="bram_wdata_ext~27" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~16"><add_atom name_pattern="bram_wdata_ext~16" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~15"><add_atom name_pattern="bram_wdata_ext~15" />
+<add_region subtile="-1" x_high="52" x_low="52" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~14"><add_atom name_pattern="bram_wdata_ext~14" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~13"><add_atom name_pattern="bram_wdata_ext~13" />
+<add_region subtile="-1" x_high="51" x_low="51" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~12"><add_atom name_pattern="bram_wdata_ext~12" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~11"><add_atom name_pattern="bram_wdata_ext~11" />
+<add_region subtile="-1" x_high="52" x_low="52" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~10"><add_atom name_pattern="bram_wdata_ext~10" />
+<add_region subtile="-1" x_high="51" x_low="51" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~9"><add_atom name_pattern="bram_wdata_ext~9" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~8"><add_atom name_pattern="bram_wdata_ext~8" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~7"><add_atom name_pattern="bram_wdata_ext~7" />
+<add_region subtile="-1" x_high="51" x_low="51" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~6"><add_atom name_pattern="bram_wdata_ext~6" />
+<add_region subtile="-1" x_high="51" x_low="51" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~21"><add_atom name_pattern="bram_wdata_ext~21" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="89" y_low="89" />
+</partition>
+<partition name="bram_wdata_ext~20"><add_atom name_pattern="bram_wdata_ext~20" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~19"><add_atom name_pattern="bram_wdata_ext~19" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~18"><add_atom name_pattern="bram_wdata_ext~18" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~17"><add_atom name_pattern="bram_wdata_ext~17" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~25"><add_atom name_pattern="bram_wdata_ext~25" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="89" y_low="89" />
+</partition>
+<partition name="bram_wdata_ext~24"><add_atom name_pattern="bram_wdata_ext~24" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="89" y_low="89" />
+</partition>
+<partition name="bram_wdata_ext~23"><add_atom name_pattern="bram_wdata_ext~23" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~22"><add_atom name_pattern="bram_wdata_ext~22" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~4"><add_atom name_pattern="bram_wdata_ext~4" />
+<add_region subtile="-1" x_high="50" x_low="50" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~5"><add_atom name_pattern="bram_wdata_ext~5" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~4"><add_atom name_pattern="bram_addr_ext~4" />
+<add_region subtile="-1" x_high="50" x_low="50" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~3"><add_atom name_pattern="bram_addr_ext~3" />
+<add_region subtile="-1" x_high="49" x_low="49" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~2"><add_atom name_pattern="bram_addr_ext~2" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~1"><add_atom name_pattern="bram_addr_ext~1" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~0"><add_atom name_pattern="bram_addr_ext~0" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_select~7"><add_atom name_pattern="bram_select~7" />
+<add_region subtile="-1" x_high="50" x_low="50" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_select~6"><add_atom name_pattern="bram_select~6" />
+<add_region subtile="-1" x_high="50" x_low="50" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_select~5"><add_atom name_pattern="bram_select~5" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_select~4"><add_atom name_pattern="bram_select~4" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_select~3"><add_atom name_pattern="bram_select~3" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_select~2"><add_atom name_pattern="bram_select~2" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~9"><add_atom name_pattern="bram_addr_ext~9" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~8"><add_atom name_pattern="bram_addr_ext~8" />
+<add_region subtile="-1" x_high="50" x_low="50" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~7"><add_atom name_pattern="bram_addr_ext~7" />
+<add_region subtile="-1" x_high="50" x_low="50" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~6"><add_atom name_pattern="bram_addr_ext~6" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_addr_ext~5"><add_atom name_pattern="bram_addr_ext~5" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~3"><add_atom name_pattern="bram_wdata_ext~3" />
+<add_region subtile="-1" x_high="49" x_low="49" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~2"><add_atom name_pattern="bram_wdata_ext~2" />
+<add_region subtile="-1" x_high="49" x_low="49" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~1"><add_atom name_pattern="bram_wdata_ext~1" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_wdata_ext~0"><add_atom name_pattern="bram_wdata_ext~0" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_select~0"><add_atom name_pattern="bram_select~0" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="0" y_low="0" />
+</partition>
+<partition name="bram_select~1"><add_atom name_pattern="bram_select~1" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~6"><add_atom name_pattern="scalar_inp~6" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="89" y_low="89" />
+</partition>
+<partition name="scalar_inp~5"><add_atom name_pattern="scalar_inp~5" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~4"><add_atom name_pattern="scalar_inp~4" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="89" y_low="89" />
+</partition>
+<partition name="scalar_inp~3"><add_atom name_pattern="scalar_inp~3" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~2"><add_atom name_pattern="scalar_inp~2" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="89" y_low="89" />
+</partition>
+<partition name="scalar_inp~1"><add_atom name_pattern="scalar_inp~1" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~0"><add_atom name_pattern="scalar_inp~0" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~31"><add_atom name_pattern="PWDATA~31" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~30"><add_atom name_pattern="PWDATA~30" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~29"><add_atom name_pattern="PWDATA~29" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~28"><add_atom name_pattern="PWDATA~28" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~12"><add_atom name_pattern="scalar_inp~12" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~11"><add_atom name_pattern="scalar_inp~11" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~10"><add_atom name_pattern="scalar_inp~10" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~9"><add_atom name_pattern="scalar_inp~9" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="89" y_low="89" />
+</partition>
+<partition name="scalar_inp~8"><add_atom name_pattern="scalar_inp~8" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="89" y_low="89" />
+</partition>
+<partition name="scalar_inp~7"><add_atom name_pattern="scalar_inp~7" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="89" y_low="89" />
+</partition>
+<partition name="op~1"><add_atom name_pattern="op~1" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="0" y_low="0" />
+</partition>
+<partition name="op~0"><add_atom name_pattern="op~0" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="0" y_low="0" />
+</partition>
+<partition name="mode"><add_atom name_pattern="mode" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~13"><add_atom name_pattern="scalar_inp~13" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~14"><add_atom name_pattern="scalar_inp~14" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="0" y_low="0" />
+</partition>
+<partition name="scalar_inp~15"><add_atom name_pattern="scalar_inp~15" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~24"><add_atom name_pattern="PWDATA~24" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~25"><add_atom name_pattern="PWDATA~25" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~26"><add_atom name_pattern="PWDATA~26" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="0" y_low="0" />
+</partition>
+<partition name="PWDATA~27"><add_atom name_pattern="PWDATA~27" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="0" y_low="0" />
+</partition>
+</partition_list>
+</vpr_constraints>
