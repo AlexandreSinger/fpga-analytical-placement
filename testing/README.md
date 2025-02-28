@@ -1,13 +1,51 @@
 # QuickStart
 
 The full AP flow can be run using the `test_ap.py` script. For example:
+```sh
+./test_ap.py alu4
 ```
-test_ap.py alu4
+This runs the full AP flow on the alu4 MCNC circuit. It will perform three steps:
+
+1. It will run the get_intermediate_fules.py script. This will run the default
+   VTR flow on the config file specified and pre-generate necessary information
+   which will be used to run the AP flow.
+
+2. It will run the generate_fix_io.py script. This takes the placement produced
+   in the last step and pulls out the placement of the IOs. These are fixed into
+   place using placement constraints.
+
+3. It will run the test_ap.py script. This will run the AP flow using the fixed
+   IO from step 2 and any precomputed data (like the .blif file created by Yosys)
+   from step 1.
+
+`test_ap.py` also takes options for using multiple cores of using different VTR
+directories. Use the help option for more information.
+
+# Tasks
+
+The tasks folder contains completely isolated AP tasks for different benchmarks
+that we care about. These tasks are run using the standard `run_vtr_task` script
+and are completely self contained.
+
+Each task has a fixed device size and fixed channel widths which were selected
+by running the default VTR flow on these circuits and choosing device sizes and
+channel widths which had a small amount of head room for the AP flow to make
+interesting decisions.
+
+Each task contains placement constraints on the IO which were generated using
+the scripts in this folder.
+
+Example of running one of the tasks:
+```sh
+source VTR_PATH/.venv/bin/activate
+
+VTR_PATH/vtr_flow/scripts/run_vtr_task.py mcnc -j4
 ```
-This runs the full AP flow on the alu4 MCNC circuit.
 
-In order to run this properly, you need a VTR repository on the `AlexandreSinger/vtr-verilog-to-routing:feature-analytical-placer` branch.
+At the bottom of each config file is script params to run the AP flow or the
+standard VTR flow (with the standard VTR flow commented out).
 
+These tasks allow for completely clean AP runs in isolation.
 
 # get_intermediate_files.py manual
 Before running the script, create `<test_suite_name>_config.txt` for the corresponding test suite under the `configs` directory. An example config file would be `~/vtr-verilog-to-routing/vtr_flow/tasks/regression_tests/vtr_reg_basic/basic_no_timing/config/config.txt`. The config file contains lists of architecture description and test files, and more. 
