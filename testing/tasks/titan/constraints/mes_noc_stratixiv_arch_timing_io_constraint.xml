@@ -1,0 +1,19 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:uart_tx_out"><add_atom name_pattern="out:uart_tx_out" />
+<add_region subtile="-1" x_high="117" x_low="117" y_high="1" y_low="1" />
+</partition>
+<partition name="out:failure_out"><add_atom name_pattern="out:failure_out" />
+<add_region subtile="-1" x_high="110" x_low="110" y_high="1" y_low="1" />
+</partition>
+<partition name="clk"><add_atom name_pattern="clk" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="1" y_low="1" />
+</partition>
+<partition name="rst_n"><add_atom name_pattern="rst_n" />
+<add_region subtile="-1" x_high="115" x_low="115" y_high="1" y_low="1" />
+</partition>
+<partition name="uart_rx_in"><add_atom name_pattern="uart_rx_in" />
+<add_region subtile="-1" x_high="137" x_low="137" y_high="1" y_low="1" />
+</partition>
+</partition_list>
+</vpr_constraints>

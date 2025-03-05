@@ -1,0 +1,934 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:spc_pcx_req_pq[0]"><add_atom name_pattern="out:spc_pcx_req_pq[0]" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_req_pq[1]"><add_atom name_pattern="out:spc_pcx_req_pq[1]" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_req_pq[2]"><add_atom name_pattern="out:spc_pcx_req_pq[2]" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_req_pq[3]"><add_atom name_pattern="out:spc_pcx_req_pq[3]" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_req_pq[4]"><add_atom name_pattern="out:spc_pcx_req_pq[4]" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_atom_pq"><add_atom name_pattern="out:spc_pcx_atom_pq" />
+<add_region subtile="-1" x_high="61" x_low="61" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[0]"><add_atom name_pattern="out:spc_pcx_data_pa[0]" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[1]"><add_atom name_pattern="out:spc_pcx_data_pa[1]" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[2]"><add_atom name_pattern="out:spc_pcx_data_pa[2]" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[3]"><add_atom name_pattern="out:spc_pcx_data_pa[3]" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[4]"><add_atom name_pattern="out:spc_pcx_data_pa[4]" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[5]"><add_atom name_pattern="out:spc_pcx_data_pa[5]" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[6]"><add_atom name_pattern="out:spc_pcx_data_pa[6]" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[7]"><add_atom name_pattern="out:spc_pcx_data_pa[7]" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[8]"><add_atom name_pattern="out:spc_pcx_data_pa[8]" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[9]"><add_atom name_pattern="out:spc_pcx_data_pa[9]" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[10]"><add_atom name_pattern="out:spc_pcx_data_pa[10]" />
+<add_region subtile="-1" x_high="26" x_low="26" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[11]"><add_atom name_pattern="out:spc_pcx_data_pa[11]" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[12]"><add_atom name_pattern="out:spc_pcx_data_pa[12]" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[13]"><add_atom name_pattern="out:spc_pcx_data_pa[13]" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[14]"><add_atom name_pattern="out:spc_pcx_data_pa[14]" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[15]"><add_atom name_pattern="out:spc_pcx_data_pa[15]" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[16]"><add_atom name_pattern="out:spc_pcx_data_pa[16]" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[17]"><add_atom name_pattern="out:spc_pcx_data_pa[17]" />
+<add_region subtile="-1" x_high="28" x_low="28" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[18]"><add_atom name_pattern="out:spc_pcx_data_pa[18]" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[19]"><add_atom name_pattern="out:spc_pcx_data_pa[19]" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[20]"><add_atom name_pattern="out:spc_pcx_data_pa[20]" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[21]"><add_atom name_pattern="out:spc_pcx_data_pa[21]" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[22]"><add_atom name_pattern="out:spc_pcx_data_pa[22]" />
+<add_region subtile="-1" x_high="27" x_low="27" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[23]"><add_atom name_pattern="out:spc_pcx_data_pa[23]" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[24]"><add_atom name_pattern="out:spc_pcx_data_pa[24]" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[25]"><add_atom name_pattern="out:spc_pcx_data_pa[25]" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[26]"><add_atom name_pattern="out:spc_pcx_data_pa[26]" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[27]"><add_atom name_pattern="out:spc_pcx_data_pa[27]" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[28]"><add_atom name_pattern="out:spc_pcx_data_pa[28]" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[29]"><add_atom name_pattern="out:spc_pcx_data_pa[29]" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[30]"><add_atom name_pattern="out:spc_pcx_data_pa[30]" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[31]"><add_atom name_pattern="out:spc_pcx_data_pa[31]" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[32]"><add_atom name_pattern="out:spc_pcx_data_pa[32]" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[33]"><add_atom name_pattern="out:spc_pcx_data_pa[33]" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[34]"><add_atom name_pattern="out:spc_pcx_data_pa[34]" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[35]"><add_atom name_pattern="out:spc_pcx_data_pa[35]" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[36]"><add_atom name_pattern="out:spc_pcx_data_pa[36]" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[37]"><add_atom name_pattern="out:spc_pcx_data_pa[37]" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[38]"><add_atom name_pattern="out:spc_pcx_data_pa[38]" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[39]"><add_atom name_pattern="out:spc_pcx_data_pa[39]" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[40]"><add_atom name_pattern="out:spc_pcx_data_pa[40]" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[41]"><add_atom name_pattern="out:spc_pcx_data_pa[41]" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[42]"><add_atom name_pattern="out:spc_pcx_data_pa[42]" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[43]"><add_atom name_pattern="out:spc_pcx_data_pa[43]" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[44]"><add_atom name_pattern="out:spc_pcx_data_pa[44]" />
+<add_region subtile="-1" x_high="25" x_low="25" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[45]"><add_atom name_pattern="out:spc_pcx_data_pa[45]" />
+<add_region subtile="-1" x_high="25" x_low="25" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[46]"><add_atom name_pattern="out:spc_pcx_data_pa[46]" />
+<add_region subtile="-1" x_high="23" x_low="23" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[47]"><add_atom name_pattern="out:spc_pcx_data_pa[47]" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[48]"><add_atom name_pattern="out:spc_pcx_data_pa[48]" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[49]"><add_atom name_pattern="out:spc_pcx_data_pa[49]" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[50]"><add_atom name_pattern="out:spc_pcx_data_pa[50]" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[51]"><add_atom name_pattern="out:spc_pcx_data_pa[51]" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[52]"><add_atom name_pattern="out:spc_pcx_data_pa[52]" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[53]"><add_atom name_pattern="out:spc_pcx_data_pa[53]" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[54]"><add_atom name_pattern="out:spc_pcx_data_pa[54]" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[55]"><add_atom name_pattern="out:spc_pcx_data_pa[55]" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[56]"><add_atom name_pattern="out:spc_pcx_data_pa[56]" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[57]"><add_atom name_pattern="out:spc_pcx_data_pa[57]" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[58]"><add_atom name_pattern="out:spc_pcx_data_pa[58]" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[59]"><add_atom name_pattern="out:spc_pcx_data_pa[59]" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[60]"><add_atom name_pattern="out:spc_pcx_data_pa[60]" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[61]"><add_atom name_pattern="out:spc_pcx_data_pa[61]" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[62]"><add_atom name_pattern="out:spc_pcx_data_pa[62]" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[63]"><add_atom name_pattern="out:spc_pcx_data_pa[63]" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[64]"><add_atom name_pattern="out:spc_pcx_data_pa[64]" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[65]"><add_atom name_pattern="out:spc_pcx_data_pa[65]" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[66]"><add_atom name_pattern="out:spc_pcx_data_pa[66]" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[67]"><add_atom name_pattern="out:spc_pcx_data_pa[67]" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[68]"><add_atom name_pattern="out:spc_pcx_data_pa[68]" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[69]"><add_atom name_pattern="out:spc_pcx_data_pa[69]" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[70]"><add_atom name_pattern="out:spc_pcx_data_pa[70]" />
+<add_region subtile="-1" x_high="70" x_low="70" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[71]"><add_atom name_pattern="out:spc_pcx_data_pa[71]" />
+<add_region subtile="-1" x_high="69" x_low="69" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[72]"><add_atom name_pattern="out:spc_pcx_data_pa[72]" />
+<add_region subtile="-1" x_high="69" x_low="69" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[73]"><add_atom name_pattern="out:spc_pcx_data_pa[73]" />
+<add_region subtile="-1" x_high="74" x_low="74" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[74]"><add_atom name_pattern="out:spc_pcx_data_pa[74]" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[75]"><add_atom name_pattern="out:spc_pcx_data_pa[75]" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[76]"><add_atom name_pattern="out:spc_pcx_data_pa[76]" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[77]"><add_atom name_pattern="out:spc_pcx_data_pa[77]" />
+<add_region subtile="-1" x_high="72" x_low="72" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[78]"><add_atom name_pattern="out:spc_pcx_data_pa[78]" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[79]"><add_atom name_pattern="out:spc_pcx_data_pa[79]" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[80]"><add_atom name_pattern="out:spc_pcx_data_pa[80]" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[81]"><add_atom name_pattern="out:spc_pcx_data_pa[81]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[82]"><add_atom name_pattern="out:spc_pcx_data_pa[82]" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[83]"><add_atom name_pattern="out:spc_pcx_data_pa[83]" />
+<add_region subtile="-1" x_high="74" x_low="74" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[84]"><add_atom name_pattern="out:spc_pcx_data_pa[84]" />
+<add_region subtile="-1" x_high="70" x_low="70" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[85]"><add_atom name_pattern="out:spc_pcx_data_pa[85]" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[86]"><add_atom name_pattern="out:spc_pcx_data_pa[86]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[87]"><add_atom name_pattern="out:spc_pcx_data_pa[87]" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[88]"><add_atom name_pattern="out:spc_pcx_data_pa[88]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[89]"><add_atom name_pattern="out:spc_pcx_data_pa[89]" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[90]"><add_atom name_pattern="out:spc_pcx_data_pa[90]" />
+<add_region subtile="-1" x_high="72" x_low="72" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[91]"><add_atom name_pattern="out:spc_pcx_data_pa[91]" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[92]"><add_atom name_pattern="out:spc_pcx_data_pa[92]" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[93]"><add_atom name_pattern="out:spc_pcx_data_pa[93]" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[94]"><add_atom name_pattern="out:spc_pcx_data_pa[94]" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[95]"><add_atom name_pattern="out:spc_pcx_data_pa[95]" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[96]"><add_atom name_pattern="out:spc_pcx_data_pa[96]" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[97]"><add_atom name_pattern="out:spc_pcx_data_pa[97]" />
+<add_region subtile="-1" x_high="71" x_low="71" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[98]"><add_atom name_pattern="out:spc_pcx_data_pa[98]" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[99]"><add_atom name_pattern="out:spc_pcx_data_pa[99]" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[100]"><add_atom name_pattern="out:spc_pcx_data_pa[100]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[101]"><add_atom name_pattern="out:spc_pcx_data_pa[101]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[102]"><add_atom name_pattern="out:spc_pcx_data_pa[102]" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[103]"><add_atom name_pattern="out:spc_pcx_data_pa[103]" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[104]"><add_atom name_pattern="out:spc_pcx_data_pa[104]" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="72" y_low="72" />
+</partition>
+<partition name="out:spc_pcx_data_pa[105]"><add_atom name_pattern="out:spc_pcx_data_pa[105]" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[106]"><add_atom name_pattern="out:spc_pcx_data_pa[106]" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[107]"><add_atom name_pattern="out:spc_pcx_data_pa[107]" />
+<add_region subtile="-1" x_high="93" x_low="93" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[108]"><add_atom name_pattern="out:spc_pcx_data_pa[108]" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[109]"><add_atom name_pattern="out:spc_pcx_data_pa[109]" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[110]"><add_atom name_pattern="out:spc_pcx_data_pa[110]" />
+<add_region subtile="-1" x_high="22" x_low="22" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[111]"><add_atom name_pattern="out:spc_pcx_data_pa[111]" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[112]"><add_atom name_pattern="out:spc_pcx_data_pa[112]" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[113]"><add_atom name_pattern="out:spc_pcx_data_pa[113]" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[114]"><add_atom name_pattern="out:spc_pcx_data_pa[114]" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[115]"><add_atom name_pattern="out:spc_pcx_data_pa[115]" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[116]"><add_atom name_pattern="out:spc_pcx_data_pa[116]" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[117]"><add_atom name_pattern="out:spc_pcx_data_pa[117]" />
+<add_region subtile="-1" x_high="71" x_low="71" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[118]"><add_atom name_pattern="out:spc_pcx_data_pa[118]" />
+<add_region subtile="-1" x_high="26" x_low="26" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[119]"><add_atom name_pattern="out:spc_pcx_data_pa[119]" />
+<add_region subtile="-1" x_high="27" x_low="27" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[120]"><add_atom name_pattern="out:spc_pcx_data_pa[120]" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[121]"><add_atom name_pattern="out:spc_pcx_data_pa[121]" />
+<add_region subtile="-1" x_high="28" x_low="28" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[122]"><add_atom name_pattern="out:spc_pcx_data_pa[122]" />
+<add_region subtile="-1" x_high="87" x_low="87" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_pcx_data_pa[123]"><add_atom name_pattern="out:spc_pcx_data_pa[123]" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="1" y_low="1" />
+</partition>
+<partition name="out:tst_ctu_mbist_done"><add_atom name_pattern="out:tst_ctu_mbist_done" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="1" y_low="1" />
+</partition>
+<partition name="out:tst_ctu_mbist_fail"><add_atom name_pattern="out:tst_ctu_mbist_fail" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_sscan_so"><add_atom name_pattern="out:spc_sscan_so" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_scanout0"><add_atom name_pattern="out:spc_scanout0" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_scanout1"><add_atom name_pattern="out:spc_scanout1" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="69" y_low="69" />
+</partition>
+<partition name="out:spc_efc_ifuse_data"><add_atom name_pattern="out:spc_efc_ifuse_data" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="1" y_low="1" />
+</partition>
+<partition name="out:spc_efc_dfuse_data"><add_atom name_pattern="out:spc_efc_dfuse_data" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="1" y_low="1" />
+</partition>
+<partition name="pcx_spc_grant_px[0]"><add_atom name_pattern="pcx_spc_grant_px[0]" />
+<add_region subtile="-1" x_high="24" x_low="24" y_high="72" y_low="72" />
+</partition>
+<partition name="pcx_spc_grant_px[1]"><add_atom name_pattern="pcx_spc_grant_px[1]" />
+<add_region subtile="-1" x_high="23" x_low="23" y_high="1" y_low="1" />
+</partition>
+<partition name="pcx_spc_grant_px[2]"><add_atom name_pattern="pcx_spc_grant_px[2]" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="1" y_low="1" />
+</partition>
+<partition name="pcx_spc_grant_px[3]"><add_atom name_pattern="pcx_spc_grant_px[3]" />
+<add_region subtile="-1" x_high="22" x_low="22" y_high="1" y_low="1" />
+</partition>
+<partition name="pcx_spc_grant_px[4]"><add_atom name_pattern="pcx_spc_grant_px[4]" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[0]"><add_atom name_pattern="cpx_spc_data_cx2[0]" />
+<add_region subtile="-1" x_high="69" x_low="69" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[1]"><add_atom name_pattern="cpx_spc_data_cx2[1]" />
+<add_region subtile="-1" x_high="69" x_low="69" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[2]"><add_atom name_pattern="cpx_spc_data_cx2[2]" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[3]"><add_atom name_pattern="cpx_spc_data_cx2[3]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[4]"><add_atom name_pattern="cpx_spc_data_cx2[4]" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[5]"><add_atom name_pattern="cpx_spc_data_cx2[5]" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[6]"><add_atom name_pattern="cpx_spc_data_cx2[6]" />
+<add_region subtile="-1" x_high="71" x_low="71" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[7]"><add_atom name_pattern="cpx_spc_data_cx2[7]" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[8]"><add_atom name_pattern="cpx_spc_data_cx2[8]" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[9]"><add_atom name_pattern="cpx_spc_data_cx2[9]" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[10]"><add_atom name_pattern="cpx_spc_data_cx2[10]" />
+<add_region subtile="-1" x_high="61" x_low="61" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[11]"><add_atom name_pattern="cpx_spc_data_cx2[11]" />
+<add_region subtile="-1" x_high="48" x_low="48" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[12]"><add_atom name_pattern="cpx_spc_data_cx2[12]" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[13]"><add_atom name_pattern="cpx_spc_data_cx2[13]" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[14]"><add_atom name_pattern="cpx_spc_data_cx2[14]" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[15]"><add_atom name_pattern="cpx_spc_data_cx2[15]" />
+<add_region subtile="-1" x_high="44" x_low="44" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[16]"><add_atom name_pattern="cpx_spc_data_cx2[16]" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[17]"><add_atom name_pattern="cpx_spc_data_cx2[17]" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[18]"><add_atom name_pattern="cpx_spc_data_cx2[18]" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[19]"><add_atom name_pattern="cpx_spc_data_cx2[19]" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[20]"><add_atom name_pattern="cpx_spc_data_cx2[20]" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[21]"><add_atom name_pattern="cpx_spc_data_cx2[21]" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[22]"><add_atom name_pattern="cpx_spc_data_cx2[22]" />
+<add_region subtile="-1" x_high="56" x_low="56" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[23]"><add_atom name_pattern="cpx_spc_data_cx2[23]" />
+<add_region subtile="-1" x_high="28" x_low="28" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[24]"><add_atom name_pattern="cpx_spc_data_cx2[24]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[25]"><add_atom name_pattern="cpx_spc_data_cx2[25]" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[26]"><add_atom name_pattern="cpx_spc_data_cx2[26]" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[27]"><add_atom name_pattern="cpx_spc_data_cx2[27]" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[28]"><add_atom name_pattern="cpx_spc_data_cx2[28]" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[29]"><add_atom name_pattern="cpx_spc_data_cx2[29]" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[30]"><add_atom name_pattern="cpx_spc_data_cx2[30]" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[31]"><add_atom name_pattern="cpx_spc_data_cx2[31]" />
+<add_region subtile="-1" x_high="70" x_low="70" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[32]"><add_atom name_pattern="cpx_spc_data_cx2[32]" />
+<add_region subtile="-1" x_high="25" x_low="25" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[33]"><add_atom name_pattern="cpx_spc_data_cx2[33]" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[34]"><add_atom name_pattern="cpx_spc_data_cx2[34]" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[35]"><add_atom name_pattern="cpx_spc_data_cx2[35]" />
+<add_region subtile="-1" x_high="28" x_low="28" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[36]"><add_atom name_pattern="cpx_spc_data_cx2[36]" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[37]"><add_atom name_pattern="cpx_spc_data_cx2[37]" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[38]"><add_atom name_pattern="cpx_spc_data_cx2[38]" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[39]"><add_atom name_pattern="cpx_spc_data_cx2[39]" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[40]"><add_atom name_pattern="cpx_spc_data_cx2[40]" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[41]"><add_atom name_pattern="cpx_spc_data_cx2[41]" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[42]"><add_atom name_pattern="cpx_spc_data_cx2[42]" />
+<add_region subtile="-1" x_high="31" x_low="31" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[43]"><add_atom name_pattern="cpx_spc_data_cx2[43]" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[44]"><add_atom name_pattern="cpx_spc_data_cx2[44]" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[45]"><add_atom name_pattern="cpx_spc_data_cx2[45]" />
+<add_region subtile="-1" x_high="74" x_low="74" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[46]"><add_atom name_pattern="cpx_spc_data_cx2[46]" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[47]"><add_atom name_pattern="cpx_spc_data_cx2[47]" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[48]"><add_atom name_pattern="cpx_spc_data_cx2[48]" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[49]"><add_atom name_pattern="cpx_spc_data_cx2[49]" />
+<add_region subtile="-1" x_high="98" x_low="98" y_high="21" y_low="21" />
+</partition>
+<partition name="cpx_spc_data_cx2[50]"><add_atom name_pattern="cpx_spc_data_cx2[50]" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[51]"><add_atom name_pattern="cpx_spc_data_cx2[51]" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[52]"><add_atom name_pattern="cpx_spc_data_cx2[52]" />
+<add_region subtile="-1" x_high="61" x_low="61" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[53]"><add_atom name_pattern="cpx_spc_data_cx2[53]" />
+<add_region subtile="-1" x_high="27" x_low="27" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[54]"><add_atom name_pattern="cpx_spc_data_cx2[54]" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[55]"><add_atom name_pattern="cpx_spc_data_cx2[55]" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[56]"><add_atom name_pattern="cpx_spc_data_cx2[56]" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[57]"><add_atom name_pattern="cpx_spc_data_cx2[57]" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[58]"><add_atom name_pattern="cpx_spc_data_cx2[58]" />
+<add_region subtile="-1" x_high="29" x_low="29" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[59]"><add_atom name_pattern="cpx_spc_data_cx2[59]" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[60]"><add_atom name_pattern="cpx_spc_data_cx2[60]" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[61]"><add_atom name_pattern="cpx_spc_data_cx2[61]" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[62]"><add_atom name_pattern="cpx_spc_data_cx2[62]" />
+<add_region subtile="-1" x_high="27" x_low="27" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[63]"><add_atom name_pattern="cpx_spc_data_cx2[63]" />
+<add_region subtile="-1" x_high="26" x_low="26" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[64]"><add_atom name_pattern="cpx_spc_data_cx2[64]" />
+<add_region subtile="-1" x_high="94" x_low="94" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[65]"><add_atom name_pattern="cpx_spc_data_cx2[65]" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[66]"><add_atom name_pattern="cpx_spc_data_cx2[66]" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[67]"><add_atom name_pattern="cpx_spc_data_cx2[67]" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[68]"><add_atom name_pattern="cpx_spc_data_cx2[68]" />
+<add_region subtile="-1" x_high="87" x_low="87" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[69]"><add_atom name_pattern="cpx_spc_data_cx2[69]" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[70]"><add_atom name_pattern="cpx_spc_data_cx2[70]" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[71]"><add_atom name_pattern="cpx_spc_data_cx2[71]" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[72]"><add_atom name_pattern="cpx_spc_data_cx2[72]" />
+<add_region subtile="-1" x_high="54" x_low="54" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[73]"><add_atom name_pattern="cpx_spc_data_cx2[73]" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[74]"><add_atom name_pattern="cpx_spc_data_cx2[74]" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[75]"><add_atom name_pattern="cpx_spc_data_cx2[75]" />
+<add_region subtile="-1" x_high="26" x_low="26" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[76]"><add_atom name_pattern="cpx_spc_data_cx2[76]" />
+<add_region subtile="-1" x_high="53" x_low="53" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[77]"><add_atom name_pattern="cpx_spc_data_cx2[77]" />
+<add_region subtile="-1" x_high="71" x_low="71" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[78]"><add_atom name_pattern="cpx_spc_data_cx2[78]" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[79]"><add_atom name_pattern="cpx_spc_data_cx2[79]" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[80]"><add_atom name_pattern="cpx_spc_data_cx2[80]" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[81]"><add_atom name_pattern="cpx_spc_data_cx2[81]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[82]"><add_atom name_pattern="cpx_spc_data_cx2[82]" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[83]"><add_atom name_pattern="cpx_spc_data_cx2[83]" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[84]"><add_atom name_pattern="cpx_spc_data_cx2[84]" />
+<add_region subtile="-1" x_high="96" x_low="96" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[85]"><add_atom name_pattern="cpx_spc_data_cx2[85]" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[86]"><add_atom name_pattern="cpx_spc_data_cx2[86]" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[87]"><add_atom name_pattern="cpx_spc_data_cx2[87]" />
+<add_region subtile="-1" x_high="87" x_low="87" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[88]"><add_atom name_pattern="cpx_spc_data_cx2[88]" />
+<add_region subtile="-1" x_high="72" x_low="72" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[89]"><add_atom name_pattern="cpx_spc_data_cx2[89]" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[90]"><add_atom name_pattern="cpx_spc_data_cx2[90]" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[91]"><add_atom name_pattern="cpx_spc_data_cx2[91]" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[92]"><add_atom name_pattern="cpx_spc_data_cx2[92]" />
+<add_region subtile="-1" x_high="95" x_low="95" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[93]"><add_atom name_pattern="cpx_spc_data_cx2[93]" />
+<add_region subtile="-1" x_high="94" x_low="94" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[94]"><add_atom name_pattern="cpx_spc_data_cx2[94]" />
+<add_region subtile="-1" x_high="65" x_low="65" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[95]"><add_atom name_pattern="cpx_spc_data_cx2[95]" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[96]"><add_atom name_pattern="cpx_spc_data_cx2[96]" />
+<add_region subtile="-1" x_high="61" x_low="61" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[97]"><add_atom name_pattern="cpx_spc_data_cx2[97]" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[98]"><add_atom name_pattern="cpx_spc_data_cx2[98]" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[99]"><add_atom name_pattern="cpx_spc_data_cx2[99]" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[100]"><add_atom name_pattern="cpx_spc_data_cx2[100]" />
+<add_region subtile="-1" x_high="55" x_low="55" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[101]"><add_atom name_pattern="cpx_spc_data_cx2[101]" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[102]"><add_atom name_pattern="cpx_spc_data_cx2[102]" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[103]"><add_atom name_pattern="cpx_spc_data_cx2[103]" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[104]"><add_atom name_pattern="cpx_spc_data_cx2[104]" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[105]"><add_atom name_pattern="cpx_spc_data_cx2[105]" />
+<add_region subtile="-1" x_high="95" x_low="95" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[106]"><add_atom name_pattern="cpx_spc_data_cx2[106]" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[107]"><add_atom name_pattern="cpx_spc_data_cx2[107]" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[108]"><add_atom name_pattern="cpx_spc_data_cx2[108]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[109]"><add_atom name_pattern="cpx_spc_data_cx2[109]" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[110]"><add_atom name_pattern="cpx_spc_data_cx2[110]" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[111]"><add_atom name_pattern="cpx_spc_data_cx2[111]" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[112]"><add_atom name_pattern="cpx_spc_data_cx2[112]" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[113]"><add_atom name_pattern="cpx_spc_data_cx2[113]" />
+<add_region subtile="-1" x_high="58" x_low="58" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[114]"><add_atom name_pattern="cpx_spc_data_cx2[114]" />
+<add_region subtile="-1" x_high="60" x_low="60" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[115]"><add_atom name_pattern="cpx_spc_data_cx2[115]" />
+<add_region subtile="-1" x_high="93" x_low="93" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[116]"><add_atom name_pattern="cpx_spc_data_cx2[116]" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[117]"><add_atom name_pattern="cpx_spc_data_cx2[117]" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[118]"><add_atom name_pattern="cpx_spc_data_cx2[118]" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[119]"><add_atom name_pattern="cpx_spc_data_cx2[119]" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[120]"><add_atom name_pattern="cpx_spc_data_cx2[120]" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[121]"><add_atom name_pattern="cpx_spc_data_cx2[121]" />
+<add_region subtile="-1" x_high="67" x_low="67" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[122]"><add_atom name_pattern="cpx_spc_data_cx2[122]" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[123]"><add_atom name_pattern="cpx_spc_data_cx2[123]" />
+<add_region subtile="-1" x_high="72" x_low="72" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[124]"><add_atom name_pattern="cpx_spc_data_cx2[124]" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[125]"><add_atom name_pattern="cpx_spc_data_cx2[125]" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[126]"><add_atom name_pattern="cpx_spc_data_cx2[126]" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[127]"><add_atom name_pattern="cpx_spc_data_cx2[127]" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[128]"><add_atom name_pattern="cpx_spc_data_cx2[128]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[129]"><add_atom name_pattern="cpx_spc_data_cx2[129]" />
+<add_region subtile="-1" x_high="74" x_low="74" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[130]"><add_atom name_pattern="cpx_spc_data_cx2[130]" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[131]"><add_atom name_pattern="cpx_spc_data_cx2[131]" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[132]"><add_atom name_pattern="cpx_spc_data_cx2[132]" />
+<add_region subtile="-1" x_high="68" x_low="68" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[133]"><add_atom name_pattern="cpx_spc_data_cx2[133]" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[134]"><add_atom name_pattern="cpx_spc_data_cx2[134]" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[135]"><add_atom name_pattern="cpx_spc_data_cx2[135]" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[136]"><add_atom name_pattern="cpx_spc_data_cx2[136]" />
+<add_region subtile="-1" x_high="87" x_low="87" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[137]"><add_atom name_pattern="cpx_spc_data_cx2[137]" />
+<add_region subtile="-1" x_high="70" x_low="70" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[138]"><add_atom name_pattern="cpx_spc_data_cx2[138]" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[139]"><add_atom name_pattern="cpx_spc_data_cx2[139]" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[140]"><add_atom name_pattern="cpx_spc_data_cx2[140]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[141]"><add_atom name_pattern="cpx_spc_data_cx2[141]" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[142]"><add_atom name_pattern="cpx_spc_data_cx2[142]" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="1" y_low="1" />
+</partition>
+<partition name="cpx_spc_data_cx2[143]"><add_atom name_pattern="cpx_spc_data_cx2[143]" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="72" y_low="72" />
+</partition>
+<partition name="cpx_spc_data_cx2[144]"><add_atom name_pattern="cpx_spc_data_cx2[144]" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="1" y_low="1" />
+</partition>
+<partition name="const_cpuid[0]"><add_atom name_pattern="const_cpuid[0]" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="1" y_low="1" />
+</partition>
+<partition name="const_cpuid[1]"><add_atom name_pattern="const_cpuid[1]" />
+<add_region subtile="-1" x_high="62" x_low="62" y_high="1" y_low="1" />
+</partition>
+<partition name="const_cpuid[2]"><add_atom name_pattern="const_cpuid[2]" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="1" y_low="1" />
+</partition>
+<partition name="const_cpuid[3]"><add_atom name_pattern="const_cpuid[3]" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="72" y_low="72" />
+</partition>
+<partition name="const_maskid[0]"><add_atom name_pattern="const_maskid[0]" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="72" y_low="72" />
+</partition>
+<partition name="const_maskid[1]"><add_atom name_pattern="const_maskid[1]" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="72" y_low="72" />
+</partition>
+<partition name="const_maskid[2]"><add_atom name_pattern="const_maskid[2]" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="72" y_low="72" />
+</partition>
+<partition name="const_maskid[3]"><add_atom name_pattern="const_maskid[3]" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="72" y_low="72" />
+</partition>
+<partition name="const_maskid[4]"><add_atom name_pattern="const_maskid[4]" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="72" y_low="72" />
+</partition>
+<partition name="const_maskid[5]"><add_atom name_pattern="const_maskid[5]" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="72" y_low="72" />
+</partition>
+<partition name="const_maskid[6]"><add_atom name_pattern="const_maskid[6]" />
+<add_region subtile="-1" x_high="30" x_low="30" y_high="72" y_low="72" />
+</partition>
+<partition name="const_maskid[7]"><add_atom name_pattern="const_maskid[7]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="72" y_low="72" />
+</partition>
+<partition name="ctu_tst_mbist_enable"><add_atom name_pattern="ctu_tst_mbist_enable" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="1" y_low="1" />
+</partition>
+<partition name="ctu_tst_macrotest"><add_atom name_pattern="ctu_tst_macrotest" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="1" y_low="1" />
+</partition>
+<partition name="ctu_tst_scan_disable"><add_atom name_pattern="ctu_tst_scan_disable" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="72" y_low="72" />
+</partition>
+<partition name="ctu_tst_short_chain"><add_atom name_pattern="ctu_tst_short_chain" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="1" y_low="1" />
+</partition>
+<partition name="global_shift_enable"><add_atom name_pattern="global_shift_enable" />
+<add_region subtile="-1" x_high="64" x_low="64" y_high="1" y_low="1" />
+</partition>
+<partition name="ctu_tst_scanmode"><add_atom name_pattern="ctu_tst_scanmode" />
+<add_region subtile="-1" x_high="59" x_low="59" y_high="1" y_low="1" />
+</partition>
+<partition name="gclk"><add_atom name_pattern="gclk" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="45" y_low="45" />
+</partition>
+<partition name="cmp_grst_l"><add_atom name_pattern="cmp_grst_l" />
+<add_region subtile="-1" x_high="96" x_low="96" y_high="1" y_low="1" />
+</partition>
+<partition name="cmp_arst_l"><add_atom name_pattern="cmp_arst_l" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="72" y_low="72" />
+</partition>
+<partition name="ctu_tst_pre_grst_l"><add_atom name_pattern="ctu_tst_pre_grst_l" />
+<add_region subtile="-1" x_high="63" x_low="63" y_high="1" y_low="1" />
+</partition>
+<partition name="gdbginit_l"><add_atom name_pattern="gdbginit_l" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="72" y_low="72" />
+</partition>
+</partition_list>
+</vpr_constraints>

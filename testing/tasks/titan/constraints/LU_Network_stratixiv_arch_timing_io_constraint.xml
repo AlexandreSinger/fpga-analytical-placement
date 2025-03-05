@@ -1,0 +1,814 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="__out__M1_DDR2_dq[0]"><add_atom name_pattern="out:__out__M1_DDR2_dq[0]" />
+<add_region subtile="-1" x_high="122" x_low="122" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[1]"><add_atom name_pattern="out:__out__M1_DDR2_dq[1]" />
+<add_region subtile="-1" x_high="108" x_low="108" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[2]"><add_atom name_pattern="out:__out__M1_DDR2_dq[2]" />
+<add_region subtile="-1" x_high="103" x_low="103" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[3]"><add_atom name_pattern="out:__out__M1_DDR2_dq[3]" />
+<add_region subtile="-1" x_high="104" x_low="104" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[4]"><add_atom name_pattern="out:__out__M1_DDR2_dq[4]" />
+<add_region subtile="-1" x_high="119" x_low="119" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[5]"><add_atom name_pattern="out:__out__M1_DDR2_dq[5]" />
+<add_region subtile="-1" x_high="109" x_low="109" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[6]"><add_atom name_pattern="out:__out__M1_DDR2_dq[6]" />
+<add_region subtile="-1" x_high="109" x_low="109" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[7]"><add_atom name_pattern="out:__out__M1_DDR2_dq[7]" />
+<add_region subtile="-1" x_high="117" x_low="117" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[8]"><add_atom name_pattern="out:__out__M1_DDR2_dq[8]" />
+<add_region subtile="-1" x_high="128" x_low="128" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[9]"><add_atom name_pattern="out:__out__M1_DDR2_dq[9]" />
+<add_region subtile="-1" x_high="128" x_low="128" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[10]"><add_atom name_pattern="out:__out__M1_DDR2_dq[10]" />
+<add_region subtile="-1" x_high="127" x_low="127" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[11]"><add_atom name_pattern="out:__out__M1_DDR2_dq[11]" />
+<add_region subtile="-1" x_high="124" x_low="124" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[12]"><add_atom name_pattern="out:__out__M1_DDR2_dq[12]" />
+<add_region subtile="-1" x_high="138" x_low="138" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[13]"><add_atom name_pattern="out:__out__M1_DDR2_dq[13]" />
+<add_region subtile="-1" x_high="138" x_low="138" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[14]"><add_atom name_pattern="out:__out__M1_DDR2_dq[14]" />
+<add_region subtile="-1" x_high="137" x_low="137" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[15]"><add_atom name_pattern="out:__out__M1_DDR2_dq[15]" />
+<add_region subtile="-1" x_high="137" x_low="137" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[16]"><add_atom name_pattern="out:__out__M1_DDR2_dq[16]" />
+<add_region subtile="-1" x_high="133" x_low="133" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[17]"><add_atom name_pattern="out:__out__M1_DDR2_dq[17]" />
+<add_region subtile="-1" x_high="133" x_low="133" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[18]"><add_atom name_pattern="out:__out__M1_DDR2_dq[18]" />
+<add_region subtile="-1" x_high="132" x_low="132" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[19]"><add_atom name_pattern="out:__out__M1_DDR2_dq[19]" />
+<add_region subtile="-1" x_high="132" x_low="132" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[20]"><add_atom name_pattern="out:__out__M1_DDR2_dq[20]" />
+<add_region subtile="-1" x_high="127" x_low="127" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[21]"><add_atom name_pattern="out:__out__M1_DDR2_dq[21]" />
+<add_region subtile="-1" x_high="142" x_low="142" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[22]"><add_atom name_pattern="out:__out__M1_DDR2_dq[22]" />
+<add_region subtile="-1" x_high="129" x_low="129" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[23]"><add_atom name_pattern="out:__out__M1_DDR2_dq[23]" />
+<add_region subtile="-1" x_high="141" x_low="141" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[24]"><add_atom name_pattern="out:__out__M1_DDR2_dq[24]" />
+<add_region subtile="-1" x_high="111" x_low="111" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[25]"><add_atom name_pattern="out:__out__M1_DDR2_dq[25]" />
+<add_region subtile="-1" x_high="112" x_low="112" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[26]"><add_atom name_pattern="out:__out__M1_DDR2_dq[26]" />
+<add_region subtile="-1" x_high="113" x_low="113" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[27]"><add_atom name_pattern="out:__out__M1_DDR2_dq[27]" />
+<add_region subtile="-1" x_high="112" x_low="112" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[28]"><add_atom name_pattern="out:__out__M1_DDR2_dq[28]" />
+<add_region subtile="-1" x_high="136" x_low="136" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[29]"><add_atom name_pattern="out:__out__M1_DDR2_dq[29]" />
+<add_region subtile="-1" x_high="142" x_low="142" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[30]"><add_atom name_pattern="out:__out__M1_DDR2_dq[30]" />
+<add_region subtile="-1" x_high="140" x_low="140" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[31]"><add_atom name_pattern="out:__out__M1_DDR2_dq[31]" />
+<add_region subtile="-1" x_high="141" x_low="141" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[32]"><add_atom name_pattern="out:__out__M1_DDR2_dq[32]" />
+<add_region subtile="-1" x_high="102" x_low="102" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[33]"><add_atom name_pattern="out:__out__M1_DDR2_dq[33]" />
+<add_region subtile="-1" x_high="103" x_low="103" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[34]"><add_atom name_pattern="out:__out__M1_DDR2_dq[34]" />
+<add_region subtile="-1" x_high="110" x_low="110" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[35]"><add_atom name_pattern="out:__out__M1_DDR2_dq[35]" />
+<add_region subtile="-1" x_high="110" x_low="110" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[36]"><add_atom name_pattern="out:__out__M1_DDR2_dq[36]" />
+<add_region subtile="-1" x_high="126" x_low="126" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[37]"><add_atom name_pattern="out:__out__M1_DDR2_dq[37]" />
+<add_region subtile="-1" x_high="123" x_low="123" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[38]"><add_atom name_pattern="out:__out__M1_DDR2_dq[38]" />
+<add_region subtile="-1" x_high="126" x_low="126" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[39]"><add_atom name_pattern="out:__out__M1_DDR2_dq[39]" />
+<add_region subtile="-1" x_high="129" x_low="129" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[40]"><add_atom name_pattern="out:__out__M1_DDR2_dq[40]" />
+<add_region subtile="-1" x_high="121" x_low="121" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[41]"><add_atom name_pattern="out:__out__M1_DDR2_dq[41]" />
+<add_region subtile="-1" x_high="121" x_low="121" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[42]"><add_atom name_pattern="out:__out__M1_DDR2_dq[42]" />
+<add_region subtile="-1" x_high="105" x_low="105" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[43]"><add_atom name_pattern="out:__out__M1_DDR2_dq[43]" />
+<add_region subtile="-1" x_high="123" x_low="123" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[44]"><add_atom name_pattern="out:__out__M1_DDR2_dq[44]" />
+<add_region subtile="-1" x_high="105" x_low="105" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[45]"><add_atom name_pattern="out:__out__M1_DDR2_dq[45]" />
+<add_region subtile="-1" x_high="98" x_low="98" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[46]"><add_atom name_pattern="out:__out__M1_DDR2_dq[46]" />
+<add_region subtile="-1" x_high="108" x_low="108" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[47]"><add_atom name_pattern="out:__out__M1_DDR2_dq[47]" />
+<add_region subtile="-1" x_high="98" x_low="98" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[48]"><add_atom name_pattern="out:__out__M1_DDR2_dq[48]" />
+<add_region subtile="-1" x_high="139" x_low="139" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[49]"><add_atom name_pattern="out:__out__M1_DDR2_dq[49]" />
+<add_region subtile="-1" x_high="139" x_low="139" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[50]"><add_atom name_pattern="out:__out__M1_DDR2_dq[50]" />
+<add_region subtile="-1" x_high="135" x_low="135" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[51]"><add_atom name_pattern="out:__out__M1_DDR2_dq[51]" />
+<add_region subtile="-1" x_high="136" x_low="136" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[52]"><add_atom name_pattern="out:__out__M1_DDR2_dq[52]" />
+<add_region subtile="-1" x_high="114" x_low="114" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[53]"><add_atom name_pattern="out:__out__M1_DDR2_dq[53]" />
+<add_region subtile="-1" x_high="118" x_low="118" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[54]"><add_atom name_pattern="out:__out__M1_DDR2_dq[54]" />
+<add_region subtile="-1" x_high="119" x_low="119" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[55]"><add_atom name_pattern="out:__out__M1_DDR2_dq[55]" />
+<add_region subtile="-1" x_high="104" x_low="104" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[56]"><add_atom name_pattern="out:__out__M1_DDR2_dq[56]" />
+<add_region subtile="-1" x_high="106" x_low="106" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[57]"><add_atom name_pattern="out:__out__M1_DDR2_dq[57]" />
+<add_region subtile="-1" x_high="106" x_low="106" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[58]"><add_atom name_pattern="out:__out__M1_DDR2_dq[58]" />
+<add_region subtile="-1" x_high="102" x_low="102" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[59]"><add_atom name_pattern="out:__out__M1_DDR2_dq[59]" />
+<add_region subtile="-1" x_high="99" x_low="99" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[60]"><add_atom name_pattern="out:__out__M1_DDR2_dq[60]" />
+<add_region subtile="-1" x_high="140" x_low="140" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[61]"><add_atom name_pattern="out:__out__M1_DDR2_dq[61]" />
+<add_region subtile="-1" x_high="116" x_low="116" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[62]"><add_atom name_pattern="out:__out__M1_DDR2_dq[62]" />
+<add_region subtile="-1" x_high="125" x_low="125" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dq[63]"><add_atom name_pattern="out:__out__M1_DDR2_dq[63]" />
+<add_region subtile="-1" x_high="116" x_low="116" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqs[0]"><add_atom name_pattern="out:__out__M1_DDR2_dqs[0]" />
+<add_region subtile="-1" x_high="114" x_low="114" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqs[1]"><add_atom name_pattern="out:__out__M1_DDR2_dqs[1]" />
+<add_region subtile="-1" x_high="117" x_low="117" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqs[2]"><add_atom name_pattern="out:__out__M1_DDR2_dqs[2]" />
+<add_region subtile="-1" x_high="134" x_low="134" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqs[3]"><add_atom name_pattern="out:__out__M1_DDR2_dqs[3]" />
+<add_region subtile="-1" x_high="111" x_low="111" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqs[4]"><add_atom name_pattern="out:__out__M1_DDR2_dqs[4]" />
+<add_region subtile="-1" x_high="115" x_low="115" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqs[5]"><add_atom name_pattern="out:__out__M1_DDR2_dqs[5]" />
+<add_region subtile="-1" x_high="135" x_low="135" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqs[6]"><add_atom name_pattern="out:__out__M1_DDR2_dqs[6]" />
+<add_region subtile="-1" x_high="134" x_low="134" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqs[7]"><add_atom name_pattern="out:__out__M1_DDR2_dqs[7]" />
+<add_region subtile="-1" x_high="107" x_low="107" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqsn[0]"><add_atom name_pattern="out:__out__M1_DDR2_dqsn[0]" />
+<add_region subtile="-1" x_high="118" x_low="118" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqsn[1]"><add_atom name_pattern="out:__out__M1_DDR2_dqsn[1]" />
+<add_region subtile="-1" x_high="120" x_low="120" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqsn[2]"><add_atom name_pattern="out:__out__M1_DDR2_dqsn[2]" />
+<add_region subtile="-1" x_high="130" x_low="130" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqsn[3]"><add_atom name_pattern="out:__out__M1_DDR2_dqsn[3]" />
+<add_region subtile="-1" x_high="113" x_low="113" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqsn[4]"><add_atom name_pattern="out:__out__M1_DDR2_dqsn[4]" />
+<add_region subtile="-1" x_high="115" x_low="115" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqsn[5]"><add_atom name_pattern="out:__out__M1_DDR2_dqsn[5]" />
+<add_region subtile="-1" x_high="120" x_low="120" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqsn[6]"><add_atom name_pattern="out:__out__M1_DDR2_dqsn[6]" />
+<add_region subtile="-1" x_high="130" x_low="130" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_dqsn[7]"><add_atom name_pattern="out:__out__M1_DDR2_dqsn[7]" />
+<add_region subtile="-1" x_high="107" x_low="107" y_high="1" y_low="1" />
+</partition>
+<partition name="M1_DDR2_dm[7]"><add_atom name_pattern="out:M1_DDR2_dm[7]" />
+<add_region subtile="-1" x_high="122" x_low="122" y_high="1" y_low="1" />
+</partition>
+<partition name="M1_DDR2_dm[6]"><add_atom name_pattern="out:M1_DDR2_dm[6]" />
+<add_region subtile="-1" x_high="124" x_low="124" y_high="1" y_low="1" />
+</partition>
+<partition name="M1_DDR2_dm[5]"><add_atom name_pattern="out:M1_DDR2_dm[5]" />
+<add_region subtile="-1" x_high="125" x_low="125" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_dm[0]"><add_atom name_pattern="out:M1_DDR2_dm[0]" />
+<add_region subtile="-1" x_high="100" x_low="100" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_dm[1]"><add_atom name_pattern="out:M1_DDR2_dm[1]" />
+<add_region subtile="-1" x_high="158" x_low="158" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_dm[2]"><add_atom name_pattern="out:M1_DDR2_dm[2]" />
+<add_region subtile="-1" x_high="146" x_low="146" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_dm[3]"><add_atom name_pattern="out:M1_DDR2_dm[3]" />
+<add_region subtile="-1" x_high="144" x_low="144" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_dm[4]"><add_atom name_pattern="out:M1_DDR2_dm[4]" />
+<add_region subtile="-1" x_high="145" x_low="145" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|extra_output_pad_gen[0].delayed_data_1"><add_atom name_pattern="RDN" />
+<add_region subtile="-1" x_high="146" x_low="146" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|extra_output_pad_gen[0].delayed_data_1"><add_atom name_pattern="RUP" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[1].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[1]" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[2].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[2]" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[3].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[3]" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[4].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[4]" />
+<add_region subtile="-1" x_high="155" x_low="155" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[5].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[5]" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[6].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[6]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[7].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[7]" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[0].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[8]" />
+<add_region subtile="-1" x_high="147" x_low="147" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[1].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[9]" />
+<add_region subtile="-1" x_high="164" x_low="164" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[2].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[10]" />
+<add_region subtile="-1" x_high="167" x_low="167" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[3].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[11]" />
+<add_region subtile="-1" x_high="93" x_low="93" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[4].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[12]" />
+<add_region subtile="-1" x_high="170" x_low="170" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[5].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[13]" />
+<add_region subtile="-1" x_high="158" x_low="158" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[6].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[14]" />
+<add_region subtile="-1" x_high="172" x_low="172" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[7].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[15]" />
+<add_region subtile="-1" x_high="171" x_low="171" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[0].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[16]" />
+<add_region subtile="-1" x_high="153" x_low="153" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[1].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[17]" />
+<add_region subtile="-1" x_high="153" x_low="153" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[2].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[18]" />
+<add_region subtile="-1" x_high="148" x_low="148" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[3].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[19]" />
+<add_region subtile="-1" x_high="156" x_low="156" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[4].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[20]" />
+<add_region subtile="-1" x_high="94" x_low="94" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[5].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[21]" />
+<add_region subtile="-1" x_high="170" x_low="170" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[6].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[22]" />
+<add_region subtile="-1" x_high="169" x_low="169" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[7].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[23]" />
+<add_region subtile="-1" x_high="168" x_low="168" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[0].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[24]" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[1].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[25]" />
+<add_region subtile="-1" x_high="76" x_low="76" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[2].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[26]" />
+<add_region subtile="-1" x_high="77" x_low="77" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[3].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[27]" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[4].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[28]" />
+<add_region subtile="-1" x_high="167" x_low="167" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[5].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[29]" />
+<add_region subtile="-1" x_high="162" x_low="162" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[6].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[30]" />
+<add_region subtile="-1" x_high="168" x_low="168" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[7].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[31]" />
+<add_region subtile="-1" x_high="165" x_low="165" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[0].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[32]" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[1].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[33]" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[2].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[34]" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[3].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[35]" />
+<add_region subtile="-1" x_high="75" x_low="75" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[4].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[36]" />
+<add_region subtile="-1" x_high="166" x_low="166" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[5].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[37]" />
+<add_region subtile="-1" x_high="95" x_low="95" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[6].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[38]" />
+<add_region subtile="-1" x_high="166" x_low="166" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[7].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[39]" />
+<add_region subtile="-1" x_high="165" x_low="165" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[0].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[40]" />
+<add_region subtile="-1" x_high="156" x_low="156" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[1].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[41]" />
+<add_region subtile="-1" x_high="157" x_low="157" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[2].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[42]" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[3].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[43]" />
+<add_region subtile="-1" x_high="163" x_low="163" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[4].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[44]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[5].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[45]" />
+<add_region subtile="-1" x_high="74" x_low="74" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[6].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[46]" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[7].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[47]" />
+<add_region subtile="-1" x_high="74" x_low="74" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[0].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[48]" />
+<add_region subtile="-1" x_high="159" x_low="159" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[1].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[49]" />
+<add_region subtile="-1" x_high="159" x_low="159" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[2].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[50]" />
+<add_region subtile="-1" x_high="171" x_low="171" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[3].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[51]" />
+<add_region subtile="-1" x_high="172" x_low="172" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[4].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[52]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[5].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[53]" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[6].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[54]" />
+<add_region subtile="-1" x_high="155" x_low="155" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[7].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[55]" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[0].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[56]" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[1].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[57]" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[2].delayed_data_1"><add_atom name_pattern="__in__M1_DDR2_dq[58]" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="1" y_low="1" />
+</partition>
+<partition name="__out__M1_DDR2_clk[0]"><add_atom name_pattern="out:__out__M1_DDR2_clk[0]" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="220" y_low="220" />
+</partition>
+<partition name="__out__M1_DDR2_clk[1]"><add_atom name_pattern="out:__out__M1_DDR2_clk[1]" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="220" y_low="220" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[3].predelayed_data"><add_atom name_pattern="__in__M1_DDR2_dq[59]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[4].predelayed_oe"><add_atom name_pattern="__in__M1_DDR2_dqs[2]" />
+<add_region subtile="-1" x_high="185" x_low="185" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|pad_gen[4].predelayed_oe"><add_atom name_pattern="__in__M1_DDR2_dqs[3]" />
+<add_region subtile="-1" x_high="163" x_low="163" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout_predelay"><add_atom name_pattern="__in__M1_DDR2_dqs[1]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout_predelay"><add_atom name_pattern="__in__M1_DDR2_dqs[4]" />
+<add_region subtile="-1" x_high="87" x_low="87" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout_predelay"><add_atom name_pattern="__in__M1_DDR2_dqs[5]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout_predelay"><add_atom name_pattern="__in__M1_DDR2_dqs[6]" />
+<add_region subtile="-1" x_high="162" x_low="162" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout_predelay"><add_atom name_pattern="__in__M1_DDR2_dqs[7]" />
+<add_region subtile="-1" x_high="66" x_low="66" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout_predelay"><add_atom name_pattern="__in__M1_DDR2_dqs[0]" />
+<add_region subtile="-1" x_high="161" x_low="161" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqs_enable_predelay"><add_atom name_pattern="__in__M1_DDR2_dqsn[7]" />
+<add_region subtile="-1" x_high="57" x_low="57" y_high="1" y_low="1" />
+</partition>
+<partition name="M1_DDR2_addr[0]"><add_atom name_pattern="out:M1_DDR2_addr[0]" />
+<add_region subtile="-1" x_high="45" x_low="45" y_high="1" y_low="1" />
+</partition>
+<partition name="M1_DDR2_addr[1]"><add_atom name_pattern="out:M1_DDR2_addr[1]" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="1" y_low="1" />
+</partition>
+<partition name="M1_DDR2_addr[2]"><add_atom name_pattern="out:M1_DDR2_addr[2]" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="1" y_low="1" />
+</partition>
+<partition name="M1_DDR2_addr[3]"><add_atom name_pattern="out:M1_DDR2_addr[3]" />
+<add_region subtile="-1" x_high="107" x_low="107" y_high="220" y_low="220" />
+</partition>
+<partition name="M1_DDR2_addr[4]"><add_atom name_pattern="out:M1_DDR2_addr[4]" />
+<add_region subtile="-1" x_high="41" x_low="41" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[3].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqs_enable"><add_atom name_pattern="__in__M1_DDR2_dqsn[3]" />
+<add_region subtile="-1" x_high="42" x_low="42" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[0].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|ddr_data[0]"><add_atom name_pattern="__in__M1_DDR2_dq[0]" />
+<add_region subtile="-1" x_high="189" x_low="189" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|ddr_data[4]"><add_atom name_pattern="__in__M1_DDR2_dq[60]" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|ddr_data[7]"><add_atom name_pattern="__in__M1_DDR2_dq[63]" />
+<add_region subtile="-1" x_high="43" x_low="43" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[2].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqs_enable"><add_atom name_pattern="__in__M1_DDR2_dqsn[0]" />
+<add_region subtile="-1" x_high="191" x_low="191" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|ddr_data[5]"><add_atom name_pattern="__in__M1_DDR2_dq[61]" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[7].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|ddr_data[6]"><add_atom name_pattern="__in__M1_DDR2_dq[62]" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[5].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout"><add_atom name_pattern="__in__M1_DDR2_dqsn[5]" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[6].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout"><add_atom name_pattern="__in__M1_DDR2_dqsn[6]" />
+<add_region subtile="-1" x_high="193" x_low="193" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[4].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout"><add_atom name_pattern="__in__M1_DDR2_dqsn[4]" />
+<add_region subtile="-1" x_high="39" x_low="39" y_high="1" y_low="1" />
+</partition>
+<partition name="ddr:ddr_inst|ddr_0002:ddr_inst|ddr_p0:p0|ddr_p0_memphy:umemphy|ddr_p0_new_io_pads:uio_pads|ddr_p0_altdqdqs:dq_ddio[1].ubidir_dq_dqs|altdq_dqs2_ddio_3reg_stratixiv:altdq_dqs2_inst|dqsbusout"><add_atom name_pattern="__in__M1_DDR2_dqsn[1]" />
+<add_region subtile="-1" x_high="40" x_low="40" y_high="1" y_low="1" />
+</partition>
+<partition name="out:GCLKOUT_FPGA"><add_atom name_pattern="out:GCLKOUT_FPGA" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_A[1]"><add_atom name_pattern="out:OTG_A[1]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="4" y_low="4" />
+</partition>
+<partition name="out:OTG_A[2]"><add_atom name_pattern="out:OTG_A[2]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="216" y_low="216" />
+</partition>
+<partition name="out:OTG_A[3]"><add_atom name_pattern="out:OTG_A[3]" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_A[4]"><add_atom name_pattern="out:OTG_A[4]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="14" y_low="14" />
+</partition>
+<partition name="out:OTG_A[5]"><add_atom name_pattern="out:OTG_A[5]" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_A[6]"><add_atom name_pattern="out:OTG_A[6]" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_A[7]"><add_atom name_pattern="out:OTG_A[7]" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_A[8]"><add_atom name_pattern="out:OTG_A[8]" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_A[9]"><add_atom name_pattern="out:OTG_A[9]" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_A[10]"><add_atom name_pattern="out:OTG_A[10]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="186" y_low="186" />
+</partition>
+<partition name="out:OTG_A[11]"><add_atom name_pattern="out:OTG_A[11]" />
+<add_region subtile="-1" x_high="196" x_low="196" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_A[12]"><add_atom name_pattern="out:OTG_A[12]" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_A[13]"><add_atom name_pattern="out:OTG_A[13]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="208" y_low="208" />
+</partition>
+<partition name="out:OTG_A[14]"><add_atom name_pattern="out:OTG_A[14]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="209" y_low="209" />
+</partition>
+<partition name="out:OTG_A[15]"><add_atom name_pattern="out:OTG_A[15]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="117" y_low="117" />
+</partition>
+<partition name="out:OTG_A[16]"><add_atom name_pattern="out:OTG_A[16]" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="220" y_low="220" />
+</partition>
+<partition name="out:OTG_A[17]"><add_atom name_pattern="out:OTG_A[17]" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_CS_n"><add_atom name_pattern="out:OTG_CS_n" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="50" y_low="50" />
+</partition>
+<partition name="out:OTG_DC_DACK"><add_atom name_pattern="out:OTG_DC_DACK" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_HC_DACK"><add_atom name_pattern="out:OTG_HC_DACK" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="1" y_low="1" />
+</partition>
+<partition name="out:OTG_OE_n"><add_atom name_pattern="out:OTG_OE_n" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="219" y_low="219" />
+</partition>
+<partition name="out:OTG_RESET_n"><add_atom name_pattern="out:OTG_RESET_n" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="220" y_low="220" />
+</partition>
+<partition name="out:OTG_WE_n"><add_atom name_pattern="out:OTG_WE_n" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_addr[5]"><add_atom name_pattern="out:M1_DDR2_addr[5]" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_addr[6]"><add_atom name_pattern="out:M1_DDR2_addr[6]" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_addr[7]"><add_atom name_pattern="out:M1_DDR2_addr[7]" />
+<add_region subtile="-1" x_high="108" x_low="108" y_high="220" y_low="220" />
+</partition>
+<partition name="out:M1_DDR2_addr[8]"><add_atom name_pattern="out:M1_DDR2_addr[8]" />
+<add_region subtile="-1" x_high="108" x_low="108" y_high="220" y_low="220" />
+</partition>
+<partition name="out:M1_DDR2_addr[9]"><add_atom name_pattern="out:M1_DDR2_addr[9]" />
+<add_region subtile="-1" x_high="107" x_low="107" y_high="220" y_low="220" />
+</partition>
+<partition name="out:M1_DDR2_addr[10]"><add_atom name_pattern="out:M1_DDR2_addr[10]" />
+<add_region subtile="-1" x_high="106" x_low="106" y_high="220" y_low="220" />
+</partition>
+<partition name="out:M1_DDR2_addr[11]"><add_atom name_pattern="out:M1_DDR2_addr[11]" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_addr[12]"><add_atom name_pattern="out:M1_DDR2_addr[12]" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_addr[13]"><add_atom name_pattern="out:M1_DDR2_addr[13]" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_addr[14]"><add_atom name_pattern="out:M1_DDR2_addr[14]" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_addr[15]"><add_atom name_pattern="out:M1_DDR2_addr[15]" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_ba[0]"><add_atom name_pattern="out:M1_DDR2_ba[0]" />
+<add_region subtile="-1" x_high="34" x_low="34" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_ba[1]"><add_atom name_pattern="out:M1_DDR2_ba[1]" />
+<add_region subtile="-1" x_high="37" x_low="37" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_ba[2]"><add_atom name_pattern="out:M1_DDR2_ba[2]" />
+<add_region subtile="-1" x_high="35" x_low="35" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_cas_n"><add_atom name_pattern="out:M1_DDR2_cas_n" />
+<add_region subtile="-1" x_high="36" x_low="36" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_cke[0]"><add_atom name_pattern="out:M1_DDR2_cke[0]" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_cke[1]"><add_atom name_pattern="out:M1_DDR2_cke[1]" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_cs_n[0]"><add_atom name_pattern="out:M1_DDR2_cs_n[0]" />
+<add_region subtile="-1" x_high="32" x_low="32" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_cs_n[1]"><add_atom name_pattern="out:M1_DDR2_cs_n[1]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="88" y_low="88" />
+</partition>
+<partition name="out:M1_DDR2_odt[0]"><add_atom name_pattern="out:M1_DDR2_odt[0]" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_odt[1]"><add_atom name_pattern="out:M1_DDR2_odt[1]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="102" y_low="102" />
+</partition>
+<partition name="out:M1_DDR2_ras_n"><add_atom name_pattern="out:M1_DDR2_ras_n" />
+<add_region subtile="-1" x_high="38" x_low="38" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_SA[0]"><add_atom name_pattern="out:M1_DDR2_SA[0]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="76" y_low="76" />
+</partition>
+<partition name="out:M1_DDR2_SA[1]"><add_atom name_pattern="out:M1_DDR2_SA[1]" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="1" y_low="1" />
+</partition>
+<partition name="out:M1_DDR2_SCL"><add_atom name_pattern="out:M1_DDR2_SCL" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="214" y_low="214" />
+</partition>
+<partition name="out:M1_DDR2_we_n"><add_atom name_pattern="out:M1_DDR2_we_n" />
+<add_region subtile="-1" x_high="33" x_low="33" y_high="1" y_low="1" />
+</partition>
+<partition name="out:CSENSE_ADC_FO"><add_atom name_pattern="out:CSENSE_ADC_FO" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="220" y_low="220" />
+</partition>
+<partition name="out:CSENSE_CS_n[0]"><add_atom name_pattern="out:CSENSE_CS_n[0]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="218" y_low="218" />
+</partition>
+<partition name="out:CSENSE_CS_n[1]"><add_atom name_pattern="out:CSENSE_CS_n[1]" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="1" y_low="1" />
+</partition>
+<partition name="out:CSENSE_SCK"><add_atom name_pattern="out:CSENSE_SCK" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="1" y_low="1" />
+</partition>
+<partition name="out:CSENSE_SDI"><add_atom name_pattern="out:CSENSE_SDI" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="220" y_low="220" />
+</partition>
+<partition name="out:__out__OTG_D[0]"><add_atom name_pattern="out:__out__OTG_D[0]" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[1]"><add_atom name_pattern="out:__out__OTG_D[1]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="26" y_low="26" />
+</partition>
+<partition name="out:__out__OTG_D[2]"><add_atom name_pattern="out:__out__OTG_D[2]" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[3]"><add_atom name_pattern="out:__out__OTG_D[3]" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[4]"><add_atom name_pattern="out:__out__OTG_D[4]" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[5]"><add_atom name_pattern="out:__out__OTG_D[5]" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[6]"><add_atom name_pattern="out:__out__OTG_D[6]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="185" y_low="185" />
+</partition>
+<partition name="out:__out__OTG_D[7]"><add_atom name_pattern="out:__out__OTG_D[7]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="122" y_low="122" />
+</partition>
+<partition name="out:__out__OTG_D[8]"><add_atom name_pattern="out:__out__OTG_D[8]" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[9]"><add_atom name_pattern="out:__out__OTG_D[9]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="219" y_low="219" />
+</partition>
+<partition name="out:__out__OTG_D[10]"><add_atom name_pattern="out:__out__OTG_D[10]" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[11]"><add_atom name_pattern="out:__out__OTG_D[11]" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[12]"><add_atom name_pattern="out:__out__OTG_D[12]" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[13]"><add_atom name_pattern="out:__out__OTG_D[13]" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="220" y_low="220" />
+</partition>
+<partition name="out:__out__OTG_D[14]"><add_atom name_pattern="out:__out__OTG_D[14]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="106" y_low="106" />
+</partition>
+<partition name="out:__out__OTG_D[15]"><add_atom name_pattern="out:__out__OTG_D[15]" />
+<add_region subtile="-1" x_high="195" x_low="195" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[16]"><add_atom name_pattern="out:__out__OTG_D[16]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="211" y_low="211" />
+</partition>
+<partition name="out:__out__OTG_D[17]"><add_atom name_pattern="out:__out__OTG_D[17]" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[18]"><add_atom name_pattern="out:__out__OTG_D[18]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="201" y_low="201" />
+</partition>
+<partition name="out:__out__OTG_D[19]"><add_atom name_pattern="out:__out__OTG_D[19]" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[20]"><add_atom name_pattern="out:__out__OTG_D[20]" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[21]"><add_atom name_pattern="out:__out__OTG_D[21]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="24" y_low="24" />
+</partition>
+<partition name="out:__out__OTG_D[22]"><add_atom name_pattern="out:__out__OTG_D[22]" />
+<add_region subtile="-1" x_high="20" x_low="20" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[23]"><add_atom name_pattern="out:__out__OTG_D[23]" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[24]"><add_atom name_pattern="out:__out__OTG_D[24]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="15" y_low="15" />
+</partition>
+<partition name="out:__out__OTG_D[25]"><add_atom name_pattern="out:__out__OTG_D[25]" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[26]"><add_atom name_pattern="out:__out__OTG_D[26]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="53" y_low="53" />
+</partition>
+<partition name="out:__out__OTG_D[27]"><add_atom name_pattern="out:__out__OTG_D[27]" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[28]"><add_atom name_pattern="out:__out__OTG_D[28]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="211" y_low="211" />
+</partition>
+<partition name="out:__out__OTG_D[29]"><add_atom name_pattern="out:__out__OTG_D[29]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="210" y_low="210" />
+</partition>
+<partition name="out:__out__OTG_D[30]"><add_atom name_pattern="out:__out__OTG_D[30]" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="1" y_low="1" />
+</partition>
+<partition name="out:__out__OTG_D[31]"><add_atom name_pattern="out:__out__OTG_D[31]" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="216" y_low="216" />
+</partition>
+<partition name="out:__out__M1_DDR2_clk_n[0]"><add_atom name_pattern="out:__out__M1_DDR2_clk_n[0]" />
+<add_region subtile="-1" x_high="46" x_low="46" y_high="220" y_low="220" />
+</partition>
+<partition name="out:__out__M1_DDR2_clk_n[1]"><add_atom name_pattern="out:__out__M1_DDR2_clk_n[1]" />
+<add_region subtile="-1" x_high="47" x_low="47" y_high="220" y_low="220" />
+</partition>
+<partition name="out:__out__M1_DDR2_SDA"><add_atom name_pattern="out:__out__M1_DDR2_SDA" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="1" y_low="1" />
+</partition>
+<partition name="OSC_50_BANK2"><add_atom name_pattern="OSC_50_BANK2" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="1" y_low="1" />
+</partition>
+<partition name="OSC_50_BANK4"><add_atom name_pattern="OSC_50_BANK4" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="1" y_low="1" />
+</partition>
+<partition name="OSC_50_BANK6"><add_atom name_pattern="OSC_50_BANK6" />
+<add_region subtile="-1" x_high="21" x_low="21" y_high="1" y_low="1" />
+</partition>
+<partition name="__in__M1_DDR2_dqsn[2]"><add_atom name_pattern="__in__M1_DDR2_dqsn[2]" />
+<add_region subtile="-1" x_high="194" x_low="194" y_high="1" y_low="1" />
+</partition>
+</partition_list>
+</vpr_constraints>

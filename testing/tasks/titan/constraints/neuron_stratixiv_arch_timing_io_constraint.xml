@@ -1,0 +1,235 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:ports2avalon_0_usb_writedata_want"><add_atom name_pattern="out:ports2avalon_0_usb_writedata_want" />
+<add_region subtile="-1" x_high="93" x_low="93" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[0]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[0]" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[1]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[1]" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[2]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[2]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[3]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[3]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[4]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[4]" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[5]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[5]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[6]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[6]" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[7]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[7]" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[8]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[8]" />
+<add_region subtile="-1" x_high="87" x_low="87" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[9]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[9]" />
+<add_region subtile="-1" x_high="91" x_low="91" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[10]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[10]" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[11]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[11]" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[12]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[12]" />
+<add_region subtile="-1" x_high="87" x_low="87" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[13]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[13]" />
+<add_region subtile="-1" x_high="92" x_low="92" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[14]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[14]" />
+<add_region subtile="-1" x_high="97" x_low="97" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[15]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[15]" />
+<add_region subtile="-1" x_high="94" x_low="94" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[16]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[16]" />
+<add_region subtile="-1" x_high="95" x_low="95" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[17]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[17]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[18]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[18]" />
+<add_region subtile="-1" x_high="87" x_low="87" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[19]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[19]" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[20]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[20]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[21]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[21]" />
+<add_region subtile="-1" x_high="95" x_low="95" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[22]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[22]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[23]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[23]" />
+<add_region subtile="-1" x_high="96" x_low="96" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[24]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[24]" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[25]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[25]" />
+<add_region subtile="-1" x_high="97" x_low="97" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[26]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[26]" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[27]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[27]" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[28]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[28]" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[29]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[29]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[30]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[30]" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata[31]"><add_atom name_pattern="out:ports2avalon_0_usb_readdata[31]" />
+<add_region subtile="-1" x_high="93" x_low="93" y_high="1" y_low="1" />
+</partition>
+<partition name="out:ports2avalon_0_usb_readdata_ready"><add_atom name_pattern="out:ports2avalon_0_usb_readdata_ready" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="109" y_low="109" />
+</partition>
+<partition name="out:ports2avalon_0_usb_address_want"><add_atom name_pattern="out:ports2avalon_0_usb_address_want" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="1" y_low="1" />
+</partition>
+<partition name="reset_reset_n"><add_atom name_pattern="reset_reset_n" />
+<add_region subtile="-1" x_high="70" x_low="70" y_high="1" y_low="1" />
+</partition>
+<partition name="clk_clk"><add_atom name_pattern="clk_clk" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_address[2]"><add_atom name_pattern="ports2avalon_0_usb_address[2]" />
+<add_region subtile="-1" x_high="98" x_low="98" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_address[3]"><add_atom name_pattern="ports2avalon_0_usb_address[3]" />
+<add_region subtile="-1" x_high="96" x_low="96" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_address[4]"><add_atom name_pattern="ports2avalon_0_usb_address[4]" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_address[5]"><add_atom name_pattern="ports2avalon_0_usb_address[5]" />
+<add_region subtile="-1" x_high="98" x_low="98" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_address[6]"><add_atom name_pattern="ports2avalon_0_usb_address[6]" />
+<add_region subtile="-1" x_high="94" x_low="94" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_address_ready"><add_atom name_pattern="ports2avalon_0_usb_address_ready" />
+<add_region subtile="-1" x_high="87" x_low="87" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[0]"><add_atom name_pattern="ports2avalon_0_usb_writedata[0]" />
+<add_region subtile="-1" x_high="72" x_low="72" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[1]"><add_atom name_pattern="ports2avalon_0_usb_writedata[1]" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="109" y_low="109" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[2]"><add_atom name_pattern="ports2avalon_0_usb_writedata[2]" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="109" y_low="109" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[3]"><add_atom name_pattern="ports2avalon_0_usb_writedata[3]" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[4]"><add_atom name_pattern="ports2avalon_0_usb_writedata[4]" />
+<add_region subtile="-1" x_high="88" x_low="88" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[5]"><add_atom name_pattern="ports2avalon_0_usb_writedata[5]" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[6]"><add_atom name_pattern="ports2avalon_0_usb_writedata[6]" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[7]"><add_atom name_pattern="ports2avalon_0_usb_writedata[7]" />
+<add_region subtile="-1" x_high="72" x_low="72" y_high="109" y_low="109" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[8]"><add_atom name_pattern="ports2avalon_0_usb_writedata[8]" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[9]"><add_atom name_pattern="ports2avalon_0_usb_writedata[9]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[10]"><add_atom name_pattern="ports2avalon_0_usb_writedata[10]" />
+<add_region subtile="-1" x_high="84" x_low="84" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[11]"><add_atom name_pattern="ports2avalon_0_usb_writedata[11]" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[12]"><add_atom name_pattern="ports2avalon_0_usb_writedata[12]" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[13]"><add_atom name_pattern="ports2avalon_0_usb_writedata[13]" />
+<add_region subtile="-1" x_high="81" x_low="81" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[14]"><add_atom name_pattern="ports2avalon_0_usb_writedata[14]" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[15]"><add_atom name_pattern="ports2avalon_0_usb_writedata[15]" />
+<add_region subtile="-1" x_high="80" x_low="80" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[16]"><add_atom name_pattern="ports2avalon_0_usb_writedata[16]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[17]"><add_atom name_pattern="ports2avalon_0_usb_writedata[17]" />
+<add_region subtile="-1" x_high="78" x_low="78" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[18]"><add_atom name_pattern="ports2avalon_0_usb_writedata[18]" />
+<add_region subtile="-1" x_high="71" x_low="71" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[19]"><add_atom name_pattern="ports2avalon_0_usb_writedata[19]" />
+<add_region subtile="-1" x_high="83" x_low="83" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[20]"><add_atom name_pattern="ports2avalon_0_usb_writedata[20]" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[21]"><add_atom name_pattern="ports2avalon_0_usb_writedata[21]" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="109" y_low="109" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[22]"><add_atom name_pattern="ports2avalon_0_usb_writedata[22]" />
+<add_region subtile="-1" x_high="82" x_low="82" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[23]"><add_atom name_pattern="ports2avalon_0_usb_writedata[23]" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[24]"><add_atom name_pattern="ports2avalon_0_usb_writedata[24]" />
+<add_region subtile="-1" x_high="95" x_low="95" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[25]"><add_atom name_pattern="ports2avalon_0_usb_writedata[25]" />
+<add_region subtile="-1" x_high="85" x_low="85" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[26]"><add_atom name_pattern="ports2avalon_0_usb_writedata[26]" />
+<add_region subtile="-1" x_high="93" x_low="93" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[27]"><add_atom name_pattern="ports2avalon_0_usb_writedata[27]" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[28]"><add_atom name_pattern="ports2avalon_0_usb_writedata[28]" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[29]"><add_atom name_pattern="ports2avalon_0_usb_writedata[29]" />
+<add_region subtile="-1" x_high="86" x_low="86" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[30]"><add_atom name_pattern="ports2avalon_0_usb_writedata[30]" />
+<add_region subtile="-1" x_high="73" x_low="73" y_high="109" y_low="109" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata[31]"><add_atom name_pattern="ports2avalon_0_usb_writedata[31]" />
+<add_region subtile="-1" x_high="79" x_low="79" y_high="1" y_low="1" />
+</partition>
+<partition name="ports2avalon_0_usb_writedata_ready"><add_atom name_pattern="ports2avalon_0_usb_writedata_ready" />
+<add_region subtile="-1" x_high="89" x_low="89" y_high="109" y_low="109" />
+</partition>
+<partition name="ports2avalon_0_usb_readdata_want"><add_atom name_pattern="ports2avalon_0_usb_readdata_want" />
+<add_region subtile="-1" x_high="90" x_low="90" y_high="109" y_low="109" />
+</partition>
+</partition_list>
+</vpr_constraints>
