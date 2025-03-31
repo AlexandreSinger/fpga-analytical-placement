@@ -71,7 +71,7 @@ circuit_constraint_list_add=(bwave_like.float.large.v, device=koios_medium)
 circuit_constraint_list_add=(tpu_like.large.os.v,      device=koios_large)
 circuit_constraint_list_add=(tpu_like.large.ws.v,      device=koios_large)
 circuit_constraint_list_add=(dla_like.large.v,         device=koios_large)
-circuit_constraint_list_add=(tdarknet_like.large.v,    device=koios_extra_large)
+circuit_constraint_list_add=(tdarknet_like.large.v,    device=koios_large)
 circuit_constraint_list_add=(tdarknet_like.small.v,    device=koios_extra_large)
 
 # Constrain the IOs
@@ -158,7 +158,7 @@ pass_requirements_file=pass_requirements.txt
 
 # Pass the script params while writing the vpr constraints.
 #       With AP
-script_params=-no_second_run -track_memory_usage --analytical_place --route --timing_analysis off
+# script_params=-no_second_run -track_memory_usage --analytical_place --route
 #       Without AP
-# script_params=-no_second_run -track_memory_usage --pack --place --route --timing_analysis off
+script_params=-no_second_run -track_memory_usage --pack --place --route
 
