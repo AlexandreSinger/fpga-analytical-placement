@@ -1,0 +1,490 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:xport~11"><add_atom name_pattern="out:xport~11" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~9"><add_atom name_pattern="out:xport~9" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~8"><add_atom name_pattern="out:xport~8" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~7"><add_atom name_pattern="out:xport~7" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~14"><add_atom name_pattern="out:xport~14" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~6"><add_atom name_pattern="out:xport~6" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~5"><add_atom name_pattern="out:xport~5" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~4"><add_atom name_pattern="out:xport~4" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~13"><add_atom name_pattern="out:xport~13" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~12"><add_atom name_pattern="out:xport~12" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~15"><add_atom name_pattern="out:xport~15" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~3"><add_atom name_pattern="out:xport~3" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~2"><add_atom name_pattern="out:xport~2" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~1"><add_atom name_pattern="out:xport~1" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~0"><add_atom name_pattern="out:xport~0" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~10"><add_atom name_pattern="out:xport~10" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~16"><add_atom name_pattern="out:yport~16" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~13"><add_atom name_pattern="out:yport~13" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~12"><add_atom name_pattern="out:yport~12" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~11"><add_atom name_pattern="out:yport~11" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~10"><add_atom name_pattern="out:yport~10" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~9"><add_atom name_pattern="out:yport~9" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~8"><add_atom name_pattern="out:yport~8" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~7"><add_atom name_pattern="out:yport~7" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~6"><add_atom name_pattern="out:yport~6" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~5"><add_atom name_pattern="out:yport~5" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~4"><add_atom name_pattern="out:yport~4" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~3"><add_atom name_pattern="out:yport~3" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~2"><add_atom name_pattern="out:yport~2" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~1"><add_atom name_pattern="out:yport~1" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~0"><add_atom name_pattern="out:yport~0" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~18"><add_atom name_pattern="out:yport~18" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:xport~31"><add_atom name_pattern="out:xport~31" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~30"><add_atom name_pattern="out:xport~30" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~29"><add_atom name_pattern="out:xport~29" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~28"><add_atom name_pattern="out:xport~28" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~27"><add_atom name_pattern="out:xport~27" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~26"><add_atom name_pattern="out:xport~26" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~25"><add_atom name_pattern="out:xport~25" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~15"><add_atom name_pattern="out:yport~15" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:xport~24"><add_atom name_pattern="out:xport~24" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~17"><add_atom name_pattern="out:yport~17" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~23"><add_atom name_pattern="out:xport~23" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~22"><add_atom name_pattern="out:xport~22" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~21"><add_atom name_pattern="out:xport~21" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~20"><add_atom name_pattern="out:xport~20" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~19"><add_atom name_pattern="out:xport~19" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~18"><add_atom name_pattern="out:xport~18" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="out:xport~17"><add_atom name_pattern="out:xport~17" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~14"><add_atom name_pattern="out:yport~14" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:xport~16"><add_atom name_pattern="out:xport~16" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~19"><add_atom name_pattern="out:yport~19" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~20"><add_atom name_pattern="out:yport~20" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="out:yport~21"><add_atom name_pattern="out:yport~21" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~22"><add_atom name_pattern="out:yport~22" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~23"><add_atom name_pattern="out:yport~23" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~24"><add_atom name_pattern="out:yport~24" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="out:yport~25"><add_atom name_pattern="out:yport~25" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~26"><add_atom name_pattern="out:yport~26" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~27"><add_atom name_pattern="out:yport~27" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:yport~28"><add_atom name_pattern="out:yport~28" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~29"><add_atom name_pattern="out:yport~29" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~30"><add_atom name_pattern="out:yport~30" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:yport~31"><add_atom name_pattern="out:yport~31" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~0"><add_atom name_pattern="out:uport~0" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~1"><add_atom name_pattern="out:uport~1" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~2"><add_atom name_pattern="out:uport~2" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~3"><add_atom name_pattern="out:uport~3" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~4"><add_atom name_pattern="out:uport~4" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~5"><add_atom name_pattern="out:uport~5" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~6"><add_atom name_pattern="out:uport~6" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~7"><add_atom name_pattern="out:uport~7" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~8"><add_atom name_pattern="out:uport~8" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~9"><add_atom name_pattern="out:uport~9" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~10"><add_atom name_pattern="out:uport~10" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~11"><add_atom name_pattern="out:uport~11" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~12"><add_atom name_pattern="out:uport~12" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~13"><add_atom name_pattern="out:uport~13" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~14"><add_atom name_pattern="out:uport~14" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~15"><add_atom name_pattern="out:uport~15" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~16"><add_atom name_pattern="out:uport~16" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~17"><add_atom name_pattern="out:uport~17" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~18"><add_atom name_pattern="out:uport~18" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~19"><add_atom name_pattern="out:uport~19" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~20"><add_atom name_pattern="out:uport~20" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:uport~21"><add_atom name_pattern="out:uport~21" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="out:uport~22"><add_atom name_pattern="out:uport~22" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~23"><add_atom name_pattern="out:uport~23" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~24"><add_atom name_pattern="out:uport~24" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~25"><add_atom name_pattern="out:uport~25" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~26"><add_atom name_pattern="out:uport~26" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="out:uport~27"><add_atom name_pattern="out:uport~27" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~28"><add_atom name_pattern="out:uport~28" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:uport~29"><add_atom name_pattern="out:uport~29" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~30"><add_atom name_pattern="out:uport~30" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:uport~31"><add_atom name_pattern="out:uport~31" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="aport~30"><add_atom name_pattern="aport~30" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~6"><add_atom name_pattern="dxport~6" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="aport~27"><add_atom name_pattern="aport~27" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~4"><add_atom name_pattern="dxport~4" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="dxport~5"><add_atom name_pattern="dxport~5" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="dxport~3"><add_atom name_pattern="dxport~3" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="aport~6"><add_atom name_pattern="aport~6" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~2"><add_atom name_pattern="dxport~2" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="dxport~1"><add_atom name_pattern="dxport~1" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="aport~28"><add_atom name_pattern="aport~28" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~0"><add_atom name_pattern="dxport~0" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="dxport~16"><add_atom name_pattern="dxport~16" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~11"><add_atom name_pattern="dxport~11" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="dxport~10"><add_atom name_pattern="dxport~10" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~15"><add_atom name_pattern="aport~15" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~15"><add_atom name_pattern="dxport~15" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="aport~16"><add_atom name_pattern="aport~16" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~14"><add_atom name_pattern="dxport~14" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="aport~17"><add_atom name_pattern="aport~17" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~13"><add_atom name_pattern="dxport~13" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="dxport~12"><add_atom name_pattern="dxport~12" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~31"><add_atom name_pattern="aport~31" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~26"><add_atom name_pattern="dxport~26" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~23"><add_atom name_pattern="dxport~23" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~22"><add_atom name_pattern="dxport~22" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~21"><add_atom name_pattern="dxport~21" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="dxport~20"><add_atom name_pattern="dxport~20" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="dxport~19"><add_atom name_pattern="dxport~19" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~25"><add_atom name_pattern="dxport~25" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="dxport~18"><add_atom name_pattern="dxport~18" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="dxport~24"><add_atom name_pattern="dxport~24" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="dxport~17"><add_atom name_pattern="dxport~17" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="dxport~29"><add_atom name_pattern="dxport~29" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~28"><add_atom name_pattern="dxport~28" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="dxport~27"><add_atom name_pattern="dxport~27" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="reset"><add_atom name_pattern="reset" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="clk"><add_atom name_pattern="clk" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="dxport~31"><add_atom name_pattern="dxport~31" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="dxport~30"><add_atom name_pattern="dxport~30" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~26"><add_atom name_pattern="aport~26" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~8"><add_atom name_pattern="aport~8" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~5"><add_atom name_pattern="aport~5" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~7"><add_atom name_pattern="aport~7" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~11"><add_atom name_pattern="aport~11" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~12"><add_atom name_pattern="aport~12" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~10"><add_atom name_pattern="aport~10" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~9"><add_atom name_pattern="aport~9" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~19"><add_atom name_pattern="aport~19" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~9"><add_atom name_pattern="dxport~9" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="aport~29"><add_atom name_pattern="aport~29" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="dxport~7"><add_atom name_pattern="dxport~7" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="dxport~8"><add_atom name_pattern="dxport~8" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="aport~18"><add_atom name_pattern="aport~18" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~13"><add_atom name_pattern="aport~13" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~14"><add_atom name_pattern="aport~14" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~20"><add_atom name_pattern="aport~20" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~21"><add_atom name_pattern="aport~21" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~0"><add_atom name_pattern="aport~0" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~24"><add_atom name_pattern="aport~24" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~3"><add_atom name_pattern="aport~3" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~22"><add_atom name_pattern="aport~22" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~1"><add_atom name_pattern="aport~1" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~23"><add_atom name_pattern="aport~23" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~2"><add_atom name_pattern="aport~2" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~25"><add_atom name_pattern="aport~25" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="aport~4"><add_atom name_pattern="aport~4" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+</partition_list>
+</vpr_constraints>

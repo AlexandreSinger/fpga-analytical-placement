@@ -1,0 +1,1198 @@
+<vpr_constraints tool_name="vpr">
+<partition_list>
+<partition name="out:prevent_sweep_node"><add_atom name_pattern="out:prevent_sweep_node" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:wmiM_MFlag~7"><add_atom name_pattern="out:wmiM_MFlag~7" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~9"><add_atom name_pattern="out:wmiM_MFlag~9" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~11"><add_atom name_pattern="out:wmiM_MFlag~11" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~13"><add_atom name_pattern="out:wmiM_MFlag~13" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~15"><add_atom name_pattern="out:wmiM_MFlag~15" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~17"><add_atom name_pattern="out:wmiM_MFlag~17" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~19"><add_atom name_pattern="out:wmiM_MFlag~19" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~21"><add_atom name_pattern="out:wmiM_MFlag~21" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~23"><add_atom name_pattern="out:wmiM_MFlag~23" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~25"><add_atom name_pattern="out:wmiM_MFlag~25" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~27"><add_atom name_pattern="out:wmiM_MFlag~27" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~29"><add_atom name_pattern="out:wmiM_MFlag~29" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~31"><add_atom name_pattern="out:wmiM_MFlag~31" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wsiM1_MCmd~0"><add_atom name_pattern="out:wsiM1_MCmd~0" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MReqLast"><add_atom name_pattern="out:wsiM1_MReqLast" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstPrecise"><add_atom name_pattern="out:wsiM1_MBurstPrecise" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~0"><add_atom name_pattern="out:wsiM1_MBurstLength~0" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~1"><add_atom name_pattern="out:wsiM1_MBurstLength~1" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~2"><add_atom name_pattern="out:wsiM1_MBurstLength~2" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~3"><add_atom name_pattern="out:wsiM1_MBurstLength~3" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~4"><add_atom name_pattern="out:wsiM1_MBurstLength~4" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~5"><add_atom name_pattern="out:wsiM1_MBurstLength~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~6"><add_atom name_pattern="out:wsiM1_MBurstLength~6" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~7"><add_atom name_pattern="out:wsiM1_MBurstLength~7" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~8"><add_atom name_pattern="out:wsiM1_MBurstLength~8" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~9"><add_atom name_pattern="out:wsiM1_MBurstLength~9" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~10"><add_atom name_pattern="out:wsiM1_MBurstLength~10" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MBurstLength~11"><add_atom name_pattern="out:wsiM1_MBurstLength~11" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MReqInfo~0"><add_atom name_pattern="out:wsiM1_MReqInfo~0" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MReqInfo~1"><add_atom name_pattern="out:wsiM1_MReqInfo~1" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MReqInfo~2"><add_atom name_pattern="out:wsiM1_MReqInfo~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="out:wsiM1_MReqInfo~3"><add_atom name_pattern="out:wsiM1_MReqInfo~3" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wsiM1_MReqInfo~4"><add_atom name_pattern="out:wsiM1_MReqInfo~4" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MReqInfo~5"><add_atom name_pattern="out:wsiM1_MReqInfo~5" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="out:wsiM1_MReqInfo~6"><add_atom name_pattern="out:wsiM1_MReqInfo~6" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MReqInfo~7"><add_atom name_pattern="out:wsiM1_MReqInfo~7" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiS1_SThreadBusy"><add_atom name_pattern="out:wsiS1_SThreadBusy" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~1"><add_atom name_pattern="out:wmiM_MFlag~1" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~3"><add_atom name_pattern="out:wmiM_MFlag~3" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MCmd~1"><add_atom name_pattern="out:wmiM_MCmd~1" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MFlag~5"><add_atom name_pattern="out:wmiM_MFlag~5" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MReset_n"><add_atom name_pattern="out:wmiM_MReset_n" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="out:wsiM1_MData~0"><add_atom name_pattern="out:wsiM1_MData~0" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~1"><add_atom name_pattern="out:wsiM1_MData~1" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~2"><add_atom name_pattern="out:wsiM1_MData~2" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~3"><add_atom name_pattern="out:wsiM1_MData~3" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="out:wsiM1_MData~4"><add_atom name_pattern="out:wsiM1_MData~4" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~5"><add_atom name_pattern="out:wsiM1_MData~5" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~6"><add_atom name_pattern="out:wsiM1_MData~6" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~7"><add_atom name_pattern="out:wsiM1_MData~7" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:wsiM1_MData~8"><add_atom name_pattern="out:wsiM1_MData~8" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~9"><add_atom name_pattern="out:wsiM1_MData~9" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~10"><add_atom name_pattern="out:wsiM1_MData~10" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~11"><add_atom name_pattern="out:wsiM1_MData~11" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~12"><add_atom name_pattern="out:wsiM1_MData~12" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~13"><add_atom name_pattern="out:wsiM1_MData~13" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="out:wsiM1_MData~14"><add_atom name_pattern="out:wsiM1_MData~14" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~15"><add_atom name_pattern="out:wsiM1_MData~15" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~16"><add_atom name_pattern="out:wsiM1_MData~16" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~17"><add_atom name_pattern="out:wsiM1_MData~17" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~18"><add_atom name_pattern="out:wsiM1_MData~18" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~19"><add_atom name_pattern="out:wsiM1_MData~19" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~20"><add_atom name_pattern="out:wsiM1_MData~20" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~21"><add_atom name_pattern="out:wsiM1_MData~21" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~22"><add_atom name_pattern="out:wsiM1_MData~22" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~23"><add_atom name_pattern="out:wsiM1_MData~23" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~24"><add_atom name_pattern="out:wsiM1_MData~24" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~25"><add_atom name_pattern="out:wsiM1_MData~25" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~26"><add_atom name_pattern="out:wsiM1_MData~26" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~27"><add_atom name_pattern="out:wsiM1_MData~27" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~28"><add_atom name_pattern="out:wsiM1_MData~28" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~29"><add_atom name_pattern="out:wsiM1_MData~29" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~30"><add_atom name_pattern="out:wsiM1_MData~30" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MData~31"><add_atom name_pattern="out:wsiM1_MData~31" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MByteEn~0"><add_atom name_pattern="out:wsiM1_MByteEn~0" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MByteEn~1"><add_atom name_pattern="out:wsiM1_MByteEn~1" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MByteEn~2"><add_atom name_pattern="out:wsiM1_MByteEn~2" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MByteEn~3"><add_atom name_pattern="out:wsiM1_MByteEn~3" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wsiM1_MReset_n"><add_atom name_pattern="out:wsiM1_MReset_n" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="2" y_low="2" />
+</partition>
+<partition name="out:wsiS1_SReset_n"><add_atom name_pattern="out:wsiS1_SReset_n" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="out:wciS0_SData~1"><add_atom name_pattern="out:wciS0_SData~1" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~2"><add_atom name_pattern="out:wciS0_SData~2" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="out:wciS0_SData~3"><add_atom name_pattern="out:wciS0_SData~3" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="out:wmiM_MBurstLength~9"><add_atom name_pattern="out:wmiM_MBurstLength~9" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MBurstLength~11"><add_atom name_pattern="out:wmiM_MBurstLength~11" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wciS0_SData~4"><add_atom name_pattern="out:wciS0_SData~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="out:wmiM_MData~1"><add_atom name_pattern="out:wmiM_MData~1" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~5"><add_atom name_pattern="out:wciS0_SData~5" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~6"><add_atom name_pattern="out:wciS0_SData~6" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:wciS0_SData~7"><add_atom name_pattern="out:wciS0_SData~7" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~29"><add_atom name_pattern="out:wmiM_MData~29" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~8"><add_atom name_pattern="out:wciS0_SData~8" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~9"><add_atom name_pattern="out:wciS0_SData~9" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~31"><add_atom name_pattern="out:wmiM_MData~31" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~3"><add_atom name_pattern="out:wmiM_MData~3" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~10"><add_atom name_pattern="out:wciS0_SData~10" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~11"><add_atom name_pattern="out:wciS0_SData~11" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~12"><add_atom name_pattern="out:wciS0_SData~12" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="out:wciS0_SData~13"><add_atom name_pattern="out:wciS0_SData~13" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="out:wmiM_MData~5"><add_atom name_pattern="out:wmiM_MData~5" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~14"><add_atom name_pattern="out:wciS0_SData~14" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~15"><add_atom name_pattern="out:wciS0_SData~15" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~16"><add_atom name_pattern="out:wciS0_SData~16" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~7"><add_atom name_pattern="out:wmiM_MData~7" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~9"><add_atom name_pattern="out:wmiM_MData~9" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~11"><add_atom name_pattern="out:wmiM_MData~11" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~17"><add_atom name_pattern="out:wciS0_SData~17" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~13"><add_atom name_pattern="out:wmiM_MData~13" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~18"><add_atom name_pattern="out:wciS0_SData~18" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~19"><add_atom name_pattern="out:wciS0_SData~19" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="out:wciS0_SData~20"><add_atom name_pattern="out:wciS0_SData~20" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~21"><add_atom name_pattern="out:wciS0_SData~21" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~22"><add_atom name_pattern="out:wciS0_SData~22" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~23"><add_atom name_pattern="out:wciS0_SData~23" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="6" y_low="6" />
+</partition>
+<partition name="out:wciS0_SData~24"><add_atom name_pattern="out:wciS0_SData~24" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~25"><add_atom name_pattern="out:wciS0_SData~25" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~26"><add_atom name_pattern="out:wciS0_SData~26" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~27"><add_atom name_pattern="out:wciS0_SData~27" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~28"><add_atom name_pattern="out:wciS0_SData~28" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~29"><add_atom name_pattern="out:wciS0_SData~29" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~30"><add_atom name_pattern="out:wciS0_SData~30" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SData~31"><add_atom name_pattern="out:wciS0_SData~31" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="out:wmiM_MData~15"><add_atom name_pattern="out:wmiM_MData~15" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SThreadBusy"><add_atom name_pattern="out:wciS0_SThreadBusy" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="out:wmiM_MReqLast"><add_atom name_pattern="out:wmiM_MReqLast" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MReqInfo"><add_atom name_pattern="out:wmiM_MReqInfo" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wciS0_SResp~0"><add_atom name_pattern="out:wciS0_SResp~0" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="out:wmiM_MAddr~2"><add_atom name_pattern="out:wmiM_MAddr~2" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MAddr~3"><add_atom name_pattern="out:wmiM_MAddr~3" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MAddr~4"><add_atom name_pattern="out:wmiM_MAddr~4" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MAddr~1"><add_atom name_pattern="out:wmiM_MAddr~1" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MAddr~5"><add_atom name_pattern="out:wmiM_MAddr~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="out:wmiM_MAddr~6"><add_atom name_pattern="out:wmiM_MAddr~6" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:wmiM_MAddr~7"><add_atom name_pattern="out:wmiM_MAddr~7" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MAddr~8"><add_atom name_pattern="out:wmiM_MAddr~8" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MAddr~9"><add_atom name_pattern="out:wmiM_MAddr~9" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="out:wmiM_MAddr~10"><add_atom name_pattern="out:wmiM_MAddr~10" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MAddr~11"><add_atom name_pattern="out:wmiM_MAddr~11" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="out:wmiM_MAddr~12"><add_atom name_pattern="out:wmiM_MAddr~12" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:wmiM_MAddr~13"><add_atom name_pattern="out:wmiM_MAddr~13" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MBurstLength~0"><add_atom name_pattern="out:wmiM_MBurstLength~0" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MBurstLength~1"><add_atom name_pattern="out:wmiM_MBurstLength~1" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MBurstLength~2"><add_atom name_pattern="out:wmiM_MBurstLength~2" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MBurstLength~3"><add_atom name_pattern="out:wmiM_MBurstLength~3" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wciS0_SResp~1"><add_atom name_pattern="out:wciS0_SResp~1" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="out:wciS0_SData~0"><add_atom name_pattern="out:wciS0_SData~0" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="out:wmiM_MBurstLength~5"><add_atom name_pattern="out:wmiM_MBurstLength~5" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MBurstLength~7"><add_atom name_pattern="out:wmiM_MBurstLength~7" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MData~17"><add_atom name_pattern="out:wmiM_MData~17" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~19"><add_atom name_pattern="out:wmiM_MData~19" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~21"><add_atom name_pattern="out:wmiM_MData~21" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~23"><add_atom name_pattern="out:wmiM_MData~23" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~25"><add_atom name_pattern="out:wmiM_MData~25" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~27"><add_atom name_pattern="out:wmiM_MData~27" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~8"><add_atom name_pattern="out:wmiM_MFlag~8" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MFlag~10"><add_atom name_pattern="out:wmiM_MFlag~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:wmiM_MFlag~12"><add_atom name_pattern="out:wmiM_MFlag~12" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~14"><add_atom name_pattern="out:wmiM_MFlag~14" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MFlag~16"><add_atom name_pattern="out:wmiM_MFlag~16" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~18"><add_atom name_pattern="out:wmiM_MFlag~18" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~20"><add_atom name_pattern="out:wmiM_MFlag~20" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~22"><add_atom name_pattern="out:wmiM_MFlag~22" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~24"><add_atom name_pattern="out:wmiM_MFlag~24" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="out:wmiM_MFlag~26"><add_atom name_pattern="out:wmiM_MFlag~26" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:wmiM_MFlag~28"><add_atom name_pattern="out:wmiM_MFlag~28" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="out:wmiM_MFlag~30"><add_atom name_pattern="out:wmiM_MFlag~30" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:wsiM1_MCmd~1"><add_atom name_pattern="out:wsiM1_MCmd~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:wsiM1_MCmd~2"><add_atom name_pattern="out:wsiM1_MCmd~2" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MBurstLength~8"><add_atom name_pattern="out:wmiM_MBurstLength~8" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:wmiM_MBurstLength~10"><add_atom name_pattern="out:wmiM_MBurstLength~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="1" y_low="1" />
+</partition>
+<partition name="out:wmiM_MDataValid"><add_atom name_pattern="out:wmiM_MDataValid" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="out:wmiM_MDataLast"><add_atom name_pattern="out:wmiM_MDataLast" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MData~0"><add_atom name_pattern="out:wmiM_MData~0" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~2"><add_atom name_pattern="out:wmiM_MData~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="out:wmiM_MData~30"><add_atom name_pattern="out:wmiM_MData~30" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:wmiM_MDataByteEn~0"><add_atom name_pattern="out:wmiM_MDataByteEn~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="out:wmiM_MDataByteEn~1"><add_atom name_pattern="out:wmiM_MDataByteEn~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="out:wmiM_MData~4"><add_atom name_pattern="out:wmiM_MData~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="out:wmiM_MDataByteEn~2"><add_atom name_pattern="out:wmiM_MDataByteEn~2" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MDataByteEn~3"><add_atom name_pattern="out:wmiM_MDataByteEn~3" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="out:wmiM_MFlag~0"><add_atom name_pattern="out:wmiM_MFlag~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="out:wmiM_MData~6"><add_atom name_pattern="out:wmiM_MData~6" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~2"><add_atom name_pattern="out:wmiM_MFlag~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:wmiM_MData~8"><add_atom name_pattern="out:wmiM_MData~8" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+<partition name="out:wmiM_MData~10"><add_atom name_pattern="out:wmiM_MData~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="out:wmiM_MData~12"><add_atom name_pattern="out:wmiM_MData~12" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~14"><add_atom name_pattern="out:wmiM_MData~14" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:wmiM_MData~16"><add_atom name_pattern="out:wmiM_MData~16" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SFlag~0"><add_atom name_pattern="out:wciS0_SFlag~0" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wciS0_SFlag~1"><add_atom name_pattern="out:wciS0_SFlag~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="out:wmiM_MCmd~0"><add_atom name_pattern="out:wmiM_MCmd~0" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MCmd~2"><add_atom name_pattern="out:wmiM_MCmd~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="out:wmiM_MAddrSpace"><add_atom name_pattern="out:wmiM_MAddrSpace" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="out:wmiM_MAddr~0"><add_atom name_pattern="out:wmiM_MAddr~0" />
+<add_region subtile="-1" x_high="18" x_low="18" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MFlag~4"><add_atom name_pattern="out:wmiM_MFlag~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="out:wmiM_MBurstLength~4"><add_atom name_pattern="out:wmiM_MBurstLength~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="out:wmiM_MBurstLength~6"><add_atom name_pattern="out:wmiM_MBurstLength~6" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="18" y_low="18" />
+</partition>
+<partition name="out:wmiM_MFlag~6"><add_atom name_pattern="out:wmiM_MFlag~6" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:wmiM_MData~18"><add_atom name_pattern="out:wmiM_MData~18" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="18" y_low="18" />
+</partition>
+<partition name="out:wmiM_MData~20"><add_atom name_pattern="out:wmiM_MData~20" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="15" y_low="15" />
+</partition>
+<partition name="out:wmiM_MData~22"><add_atom name_pattern="out:wmiM_MData~22" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="16" y_low="16" />
+</partition>
+<partition name="out:wmiM_MData~24"><add_atom name_pattern="out:wmiM_MData~24" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="0" y_low="0" />
+</partition>
+<partition name="out:wmiM_MData~26"><add_atom name_pattern="out:wmiM_MData~26" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="1" y_low="1" />
+</partition>
+<partition name="out:wmiM_MData~28"><add_atom name_pattern="out:wmiM_MData~28" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="17" y_low="17" />
+</partition>
+<partition name="wciS0_MReset_n"><add_atom name_pattern="wciS0_MReset_n" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MCmd~1"><add_atom name_pattern="wciS0_MCmd~1" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="wciS0_MByteEn~3"><add_atom name_pattern="wciS0_MByteEn~3" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="wciS0_MByteEn~2"><add_atom name_pattern="wciS0_MByteEn~2" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="wsiS1_MData~25"><add_atom name_pattern="wsiS1_MData~25" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="wmiM_SData~22"><add_atom name_pattern="wmiM_SData~22" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="wsiS1_MData~26"><add_atom name_pattern="wsiS1_MData~26" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="wmiM_SData~23"><add_atom name_pattern="wmiM_SData~23" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~24"><add_atom name_pattern="wmiM_SData~24" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_MAddr~0"><add_atom name_pattern="wciS0_MAddr~0" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="wciS0_MAddr~1"><add_atom name_pattern="wciS0_MAddr~1" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="wciS0_MAddr~2"><add_atom name_pattern="wciS0_MAddr~2" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="wmiM_SData~25"><add_atom name_pattern="wmiM_SData~25" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~26"><add_atom name_pattern="wmiM_SData~26" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~27"><add_atom name_pattern="wmiM_SData~27" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~20"><add_atom name_pattern="wmiM_SData~20" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~28"><add_atom name_pattern="wmiM_SData~28" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="wsiS1_MData~27"><add_atom name_pattern="wsiS1_MData~27" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="wmiM_SData~29"><add_atom name_pattern="wmiM_SData~29" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~30"><add_atom name_pattern="wmiM_SData~30" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_MAddr~3"><add_atom name_pattern="wciS0_MAddr~3" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="wmiM_SData~31"><add_atom name_pattern="wmiM_SData~31" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_MAddr~4"><add_atom name_pattern="wciS0_MAddr~4" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="wmiM_SThreadBusy"><add_atom name_pattern="wmiM_SThreadBusy" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_MAddr~5"><add_atom name_pattern="wciS0_MAddr~5" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="wmiM_SDataThreadBusy"><add_atom name_pattern="wmiM_SDataThreadBusy" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_MAddr~6"><add_atom name_pattern="wciS0_MAddr~6" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="wciS0_MAddr~7"><add_atom name_pattern="wciS0_MAddr~7" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="wmiM_SFlag~0"><add_atom name_pattern="wmiM_SFlag~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="wmiM_SFlag~1"><add_atom name_pattern="wmiM_SFlag~1" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~2"><add_atom name_pattern="wmiM_SFlag~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="wmiM_SFlag~3"><add_atom name_pattern="wmiM_SFlag~3" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="wmiM_SFlag~4"><add_atom name_pattern="wmiM_SFlag~4" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~5"><add_atom name_pattern="wmiM_SFlag~5" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~6"><add_atom name_pattern="wmiM_SFlag~6" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_MAddr~8"><add_atom name_pattern="wciS0_MAddr~8" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="wciS0_MAddr~9"><add_atom name_pattern="wciS0_MAddr~9" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="wmiM_SFlag~7"><add_atom name_pattern="wmiM_SFlag~7" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~8"><add_atom name_pattern="wmiM_SFlag~8" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~9"><add_atom name_pattern="wmiM_SFlag~9" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~10"><add_atom name_pattern="wmiM_SFlag~10" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="wmiM_SFlag~11"><add_atom name_pattern="wmiM_SFlag~11" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~12"><add_atom name_pattern="wmiM_SFlag~12" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="0" y_low="0" />
+</partition>
+<partition name="wmiM_SFlag~13"><add_atom name_pattern="wmiM_SFlag~13" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~14"><add_atom name_pattern="wmiM_SFlag~14" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="wmiM_SFlag~15"><add_atom name_pattern="wmiM_SFlag~15" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="wsiS1_MData~28"><add_atom name_pattern="wsiS1_MData~28" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="wmiM_SFlag~16"><add_atom name_pattern="wmiM_SFlag~16" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~17"><add_atom name_pattern="wmiM_SFlag~17" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~18"><add_atom name_pattern="wmiM_SFlag~18" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~19"><add_atom name_pattern="wmiM_SFlag~19" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="13" y_low="13" />
+</partition>
+<partition name="wmiM_SFlag~20"><add_atom name_pattern="wmiM_SFlag~20" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="wmiM_SFlag~21"><add_atom name_pattern="wmiM_SFlag~21" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~22"><add_atom name_pattern="wmiM_SFlag~22" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~23"><add_atom name_pattern="wmiM_SFlag~23" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~24"><add_atom name_pattern="wmiM_SFlag~24" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MAddr~10"><add_atom name_pattern="wciS0_MAddr~10" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="wmiM_SFlag~25"><add_atom name_pattern="wmiM_SFlag~25" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~26"><add_atom name_pattern="wmiM_SFlag~26" />
+<add_region subtile="-1" x_high="8" x_low="8" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~27"><add_atom name_pattern="wmiM_SFlag~27" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~28"><add_atom name_pattern="wmiM_SFlag~28" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="14" y_low="14" />
+</partition>
+<partition name="wmiM_SFlag~29"><add_atom name_pattern="wmiM_SFlag~29" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SFlag~30"><add_atom name_pattern="wmiM_SFlag~30" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="wsiS1_MData~29"><add_atom name_pattern="wsiS1_MData~29" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~30"><add_atom name_pattern="wsiS1_MData~30" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="wmiM_SFlag~31"><add_atom name_pattern="wmiM_SFlag~31" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SReset_n"><add_atom name_pattern="wmiM_SReset_n" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="14" y_low="14" />
+</partition>
+<partition name="wmiM_SData~8"><add_atom name_pattern="wmiM_SData~8" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="wsiM1_SThreadBusy"><add_atom name_pattern="wsiM1_SThreadBusy" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="19" y_low="19" />
+</partition>
+<partition name="wsiM1_SReset_n"><add_atom name_pattern="wsiM1_SReset_n" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MAddr~11"><add_atom name_pattern="wciS0_MAddr~11" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="wsiS1_MCmd~0"><add_atom name_pattern="wsiS1_MCmd~0" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MCmd~1"><add_atom name_pattern="wsiS1_MCmd~1" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MAddr~12"><add_atom name_pattern="wciS0_MAddr~12" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="wsiS1_MCmd~2"><add_atom name_pattern="wsiS1_MCmd~2" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~31"><add_atom name_pattern="wsiS1_MData~31" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="wciS0_MAddr~13"><add_atom name_pattern="wciS0_MAddr~13" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="wsiS1_MReqLast"><add_atom name_pattern="wsiS1_MReqLast" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="wsiS1_MByteEn~0"><add_atom name_pattern="wsiS1_MByteEn~0" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MAddr~14"><add_atom name_pattern="wciS0_MAddr~14" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="wsiS1_MBurstPrecise"><add_atom name_pattern="wsiS1_MBurstPrecise" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MAddr~15"><add_atom name_pattern="wciS0_MAddr~15" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="wsiS1_MBurstLength~0"><add_atom name_pattern="wsiS1_MBurstLength~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="wciS0_MAddr~16"><add_atom name_pattern="wciS0_MAddr~16" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="wsiS1_MBurstLength~1"><add_atom name_pattern="wsiS1_MBurstLength~1" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="wsiS1_MByteEn~1"><add_atom name_pattern="wsiS1_MByteEn~1" />
+<add_region subtile="-1" x_high="13" x_low="13" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MAddr~17"><add_atom name_pattern="wciS0_MAddr~17" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="8" y_low="8" />
+</partition>
+<partition name="wsiS1_MBurstLength~2"><add_atom name_pattern="wsiS1_MBurstLength~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="wsiS1_MByteEn~2"><add_atom name_pattern="wsiS1_MByteEn~2" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MByteEn~3"><add_atom name_pattern="wsiS1_MByteEn~3" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MAddr~18"><add_atom name_pattern="wciS0_MAddr~18" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="wsiS1_MBurstLength~3"><add_atom name_pattern="wsiS1_MBurstLength~3" />
+<add_region subtile="-1" x_high="3" x_low="3" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MAddr~19"><add_atom name_pattern="wciS0_MAddr~19" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="10" y_low="10" />
+</partition>
+<partition name="wsiS1_MBurstLength~4"><add_atom name_pattern="wsiS1_MBurstLength~4" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MReqInfo~0"><add_atom name_pattern="wsiS1_MReqInfo~0" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~0"><add_atom name_pattern="wciS0_MData~0" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="wsiS1_MBurstLength~5"><add_atom name_pattern="wsiS1_MBurstLength~5" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MReqInfo~1"><add_atom name_pattern="wsiS1_MReqInfo~1" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~1"><add_atom name_pattern="wciS0_MData~1" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MBurstLength~6"><add_atom name_pattern="wsiS1_MBurstLength~6" />
+<add_region subtile="-1" x_high="4" x_low="4" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MReqInfo~2"><add_atom name_pattern="wsiS1_MReqInfo~2" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~2"><add_atom name_pattern="wciS0_MData~2" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="wsiS1_MBurstLength~7"><add_atom name_pattern="wsiS1_MBurstLength~7" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="4" y_low="4" />
+</partition>
+<partition name="wciS0_MData~3"><add_atom name_pattern="wciS0_MData~3" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="wsiS1_MBurstLength~8"><add_atom name_pattern="wsiS1_MBurstLength~8" />
+<add_region subtile="-1" x_high="5" x_low="5" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MReqInfo~3"><add_atom name_pattern="wsiS1_MReqInfo~3" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MReqInfo~4"><add_atom name_pattern="wsiS1_MReqInfo~4" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MBurstLength~9"><add_atom name_pattern="wsiS1_MBurstLength~9" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="wsiS1_MBurstLength~10"><add_atom name_pattern="wsiS1_MBurstLength~10" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MBurstLength~11"><add_atom name_pattern="wsiS1_MBurstLength~11" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~0"><add_atom name_pattern="wsiS1_MData~0" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~4"><add_atom name_pattern="wciS0_MData~4" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="wsiS1_MData~1"><add_atom name_pattern="wsiS1_MData~1" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~2"><add_atom name_pattern="wsiS1_MData~2" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~3"><add_atom name_pattern="wsiS1_MData~3" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~4"><add_atom name_pattern="wsiS1_MData~4" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~5"><add_atom name_pattern="wciS0_MData~5" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="wciS0_MData~6"><add_atom name_pattern="wciS0_MData~6" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="wciS0_MData~7"><add_atom name_pattern="wciS0_MData~7" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="wciS0_MData~8"><add_atom name_pattern="wciS0_MData~8" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="wciS0_MData~9"><add_atom name_pattern="wciS0_MData~9" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="wsiS1_MReqInfo~5"><add_atom name_pattern="wsiS1_MReqInfo~5" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MReqInfo~6"><add_atom name_pattern="wsiS1_MReqInfo~6" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~10"><add_atom name_pattern="wciS0_MData~10" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="wciS0_MData~11"><add_atom name_pattern="wciS0_MData~11" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="wciS0_MData~12"><add_atom name_pattern="wciS0_MData~12" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="wciS0_MData~13"><add_atom name_pattern="wciS0_MData~13" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="wciS0_MData~14"><add_atom name_pattern="wciS0_MData~14" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="wciS0_MCmd~0"><add_atom name_pattern="wciS0_MCmd~0" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="wciS0_MData~15"><add_atom name_pattern="wciS0_MData~15" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="wciS0_MData~16"><add_atom name_pattern="wciS0_MData~16" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="wsiS1_MData~5"><add_atom name_pattern="wsiS1_MData~5" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~6"><add_atom name_pattern="wsiS1_MData~6" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~7"><add_atom name_pattern="wsiS1_MData~7" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MReqInfo~7"><add_atom name_pattern="wsiS1_MReqInfo~7" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="wmiM_SData~21"><add_atom name_pattern="wmiM_SData~21" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="wmiM_SData~9"><add_atom name_pattern="wmiM_SData~9" />
+<add_region subtile="-1" x_high="6" x_low="6" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~10"><add_atom name_pattern="wmiM_SData~10" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~11"><add_atom name_pattern="wmiM_SData~11" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~12"><add_atom name_pattern="wmiM_SData~12" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_MData~17"><add_atom name_pattern="wciS0_MData~17" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="wsiS1_MReset_n"><add_atom name_pattern="wsiS1_MReset_n" />
+<add_region subtile="-1" x_high="7" x_low="7" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~8"><add_atom name_pattern="wsiS1_MData~8" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~18"><add_atom name_pattern="wciS0_MData~18" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="wsiS1_MData~9"><add_atom name_pattern="wsiS1_MData~9" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~10"><add_atom name_pattern="wsiS1_MData~10" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~11"><add_atom name_pattern="wsiS1_MData~11" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="wmiM_SData~19"><add_atom name_pattern="wmiM_SData~19" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_MData~19"><add_atom name_pattern="wciS0_MData~19" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="wciS0_MData~20"><add_atom name_pattern="wciS0_MData~20" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="8" y_low="8" />
+</partition>
+<partition name="wciS0_MData~21"><add_atom name_pattern="wciS0_MData~21" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="9" y_low="9" />
+</partition>
+<partition name="wsiS1_MData~12"><add_atom name_pattern="wsiS1_MData~12" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~22"><add_atom name_pattern="wciS0_MData~22" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="10" y_low="10" />
+</partition>
+<partition name="wciS0_MData~23"><add_atom name_pattern="wciS0_MData~23" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="11" y_low="11" />
+</partition>
+<partition name="wsiS1_MData~13"><add_atom name_pattern="wsiS1_MData~13" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~14"><add_atom name_pattern="wsiS1_MData~14" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="0" y_low="0" />
+</partition>
+<partition name="wmiM_SData~18"><add_atom name_pattern="wmiM_SData~18" />
+<add_region subtile="-1" x_high="12" x_low="12" y_high="19" y_low="19" />
+</partition>
+<partition name="wsiS1_MData~15"><add_atom name_pattern="wsiS1_MData~15" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~24"><add_atom name_pattern="wciS0_MData~24" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="wciS0_MData~25"><add_atom name_pattern="wciS0_MData~25" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="wsiS1_MData~16"><add_atom name_pattern="wsiS1_MData~16" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="wciS0_MData~26"><add_atom name_pattern="wciS0_MData~26" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="12" y_low="12" />
+</partition>
+<partition name="wciS0_MData~27"><add_atom name_pattern="wciS0_MData~27" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="7" y_low="7" />
+</partition>
+<partition name="wsiS1_MData~17"><add_atom name_pattern="wsiS1_MData~17" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="wsiS1_MData~18"><add_atom name_pattern="wsiS1_MData~18" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="1" y_low="1" />
+</partition>
+<partition name="wsiS1_MData~19"><add_atom name_pattern="wsiS1_MData~19" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="6" y_low="6" />
+</partition>
+<partition name="wsiS1_MData~20"><add_atom name_pattern="wsiS1_MData~20" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="5" y_low="5" />
+</partition>
+<partition name="wsiS1_MData~21"><add_atom name_pattern="wsiS1_MData~21" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="wsiS1_MData~22"><add_atom name_pattern="wsiS1_MData~22" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="3" y_low="3" />
+</partition>
+<partition name="wsiS1_MData~23"><add_atom name_pattern="wsiS1_MData~23" />
+<add_region subtile="-1" x_high="0" x_low="0" y_high="2" y_low="2" />
+</partition>
+<partition name="wciS0_MData~28"><add_atom name_pattern="wciS0_MData~28" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="wsiS1_MData~24"><add_atom name_pattern="wsiS1_MData~24" />
+<add_region subtile="-1" x_high="2" x_low="2" y_high="0" y_low="0" />
+</partition>
+<partition name="wmiM_SData~7"><add_atom name_pattern="wmiM_SData~7" />
+<add_region subtile="-1" x_high="17" x_low="17" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~6"><add_atom name_pattern="wmiM_SData~6" />
+<add_region subtile="-1" x_high="16" x_low="16" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~5"><add_atom name_pattern="wmiM_SData~5" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~3"><add_atom name_pattern="wmiM_SData~3" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~4"><add_atom name_pattern="wmiM_SData~4" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~2"><add_atom name_pattern="wmiM_SData~2" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~1"><add_atom name_pattern="wmiM_SData~1" />
+<add_region subtile="-1" x_high="15" x_low="15" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~0"><add_atom name_pattern="wmiM_SData~0" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_MData~31"><add_atom name_pattern="wciS0_MData~31" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="wciS0_MData~30"><add_atom name_pattern="wciS0_MData~30" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="7" y_low="7" />
+</partition>
+<partition name="wciS0_MData~29"><add_atom name_pattern="wciS0_MData~29" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="wciS0_MCmd~2"><add_atom name_pattern="wciS0_MCmd~2" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="12" y_low="12" />
+</partition>
+<partition name="wciS0_MByteEn~0"><add_atom name_pattern="wciS0_MByteEn~0" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="11" y_low="11" />
+</partition>
+<partition name="wciS0_MAddrSpace"><add_atom name_pattern="wciS0_MAddrSpace" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="9" y_low="9" />
+</partition>
+<partition name="wciS0_MByteEn~1"><add_atom name_pattern="wciS0_MByteEn~1" />
+<add_region subtile="-1" x_high="19" x_low="19" y_high="13" y_low="13" />
+</partition>
+<partition name="wmiM_SData~13"><add_atom name_pattern="wmiM_SData~13" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~14"><add_atom name_pattern="wmiM_SData~14" />
+<add_region subtile="-1" x_high="14" x_low="14" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~15"><add_atom name_pattern="wmiM_SData~15" />
+<add_region subtile="-1" x_high="9" x_low="9" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~16"><add_atom name_pattern="wmiM_SData~16" />
+<add_region subtile="-1" x_high="11" x_low="11" y_high="19" y_low="19" />
+</partition>
+<partition name="wmiM_SData~17"><add_atom name_pattern="wmiM_SData~17" />
+<add_region subtile="-1" x_high="10" x_low="10" y_high="19" y_low="19" />
+</partition>
+<partition name="wciS0_Clk"><add_atom name_pattern="wciS0_Clk" />
+<add_region subtile="-1" x_high="1" x_low="1" y_high="19" y_low="19" />
+</partition>
+</partition_list>
+</vpr_constraints>
