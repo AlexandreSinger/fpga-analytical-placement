@@ -1,0 +1,44 @@
+############################################
+# Configuration file for running experiments
+##############################################
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/titan_blif/titan23/stratixiv
+
+# Path to directory of SDCs to use
+sdc_dir=benchmarks/titan_blif/titan23/stratixiv
+
+# Path to directory of architectures to use
+archs_dir=arch/titan
+
+# Add circuits to list to sweep
+circuit_list_add=directrf_stratixiv_arch_timing.blif
+
+# Constrain the circuits to their devices
+circuit_constraint_list_add=(directrf_stratixiv_arch_timing.blif,      device=titan_extra_large)
+
+# Constrain the IOs
+circuit_constraint_list_add=(directrf_stratixiv_arch_timing.blif,      constraints=../../../../constraints/directrf_stratixiv_arch_timing_io_constraint.xml)
+
+# Constrain the circuits to their channel widths
+#       1.3 * minW
+circuit_constraint_list_add=(directrf_stratixiv_arch_timing.blif,      route_chan_width=274)
+
+# Add architectures to list to sweep
+arch_list_add=stratixiv_arch.timing.xml
+
+# Parse info and how to parse
+parse_file=vpr_fixed_chan_width.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+# Pass the script params while writing the vpr constraints.
+#       With AP
+# script_params=-starting_stage vpr -no_second_run -track_memory_usage --analytical_place --route --max_router_iterations 400 --router_lookahead map --initial_pres_fac 1.0 --router_profiler_astar_fac 1.5 --seed 3 --timing_analysis off
+#       Without AP
+script_params=-starting_stage vpr -no_second_run -track_memory_usage --max_router_iterations 400 --router_lookahead map --initial_pres_fac 1.0 --router_profiler_astar_fac 1.5 --seed 3
+
