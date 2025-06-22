@@ -8,3 +8,5 @@ koios_ap
 koios_no_ap
 titanium_s10_ap
 titanium_s10_no_ap
+z1000_ap
+z1000_no_ap
