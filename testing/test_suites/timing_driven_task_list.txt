@@ -6,3 +6,5 @@ titan_ap
 titan_no_ap
 koios_ap
 koios_no_ap
+titanium_s10_ap
+titanium_s10_no_ap
