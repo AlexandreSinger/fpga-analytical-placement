@@ -1,0 +1,66 @@
+##############################################
+# Configuration file for running experiments
+##############################################
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/verilog
+
+# Path to directory of architectures to use
+archs_dir=arch/timing
+
+# Add architectures to list to sweep
+arch_list_add=k6_frac_N10_frac_chain_mem32K_40nm.xml
+
+# Add circuits to list to sweep
+circuit_list_add=arm_core.v
+circuit_list_add=bgm.v
+circuit_list_add=mkDelayWorker32B.v
+circuit_list_add=stereovision0.v
+circuit_list_add=stereovision1.v
+circuit_list_add=stereovision2.v
+circuit_list_add=LU8PEEng.v
+circuit_list_add=LU32PEEng.v
+circuit_list_add=mcml.v
+
+# Constrain the circuits to their devices
+circuit_constraint_list_add=(stereovision0.v,    device=vtr_medium)
+circuit_constraint_list_add=(arm_core.v,         device=vtr_medium)
+circuit_constraint_list_add=(stereovision1.v,    device=vtr_medium)
+circuit_constraint_list_add=(mkDelayWorker32B.v, device=vtr_large)
+circuit_constraint_list_add=(LU8PEEng.v,         device=vtr_large)
+circuit_constraint_list_add=(bgm.v,              device=vtr_large)
+circuit_constraint_list_add=(stereovision2.v,    device=vtr_extra_large)
+circuit_constraint_list_add=(mcml.v,             device=vtr_extra_large)
+circuit_constraint_list_add=(LU32PEEng.v,        device=vtr_extra_large)
+
+# Constrain the circuits to their channel widths
+#       1.3 * minW
+circuit_constraint_list_add=(stereovision0.v,    route_chan_width=62)
+circuit_constraint_list_add=(arm_core.v,         route_chan_width=132)
+circuit_constraint_list_add=(stereovision1.v,    route_chan_width=110)
+circuit_constraint_list_add=(mkDelayWorker32B.v, route_chan_width=44)
+circuit_constraint_list_add=(LU8PEEng.v,         route_chan_width=114)
+circuit_constraint_list_add=(bgm.v,              route_chan_width=90)
+circuit_constraint_list_add=(stereovision2.v,    route_chan_width=124)
+circuit_constraint_list_add=(mcml.v,             route_chan_width=182)
+circuit_constraint_list_add=(LU32PEEng.v,        route_chan_width=166)
+
+# Parse info and how to parse
+parse_file=vpr_fixed_chan_width.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+# Pass the script params while writing the vpr constraints.
+#       With AP
+script_params_common=-no_second_run -track_memory_usage -crit_path_router_iterations 100 --analytical_place --route --timing_analysis on --ap_generate_mass_report on
+script_params_list_add=--ap_high_fanout_threshold 64
+script_params_list_add=--ap_high_fanout_threshold 128
+script_params_list_add=--ap_high_fanout_threshold 256
+script_params_list_add=--ap_high_fanout_threshold 512
+script_params_list_add=--ap_high_fanout_threshold 1024
+#       Without AP
+# script_params=-no_second_run -track_memory_usage -crit_path_router_iterations 100 --pack --place --route --timing_analysis off
