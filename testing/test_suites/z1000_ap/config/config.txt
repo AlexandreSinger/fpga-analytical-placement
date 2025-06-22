@@ -1,0 +1,51 @@
+#
+############################################
+# Configuration file for running experiments
+##############################################
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/blif/4
+
+# Path to directory of architectures to use
+archs_dir=arch/zeroasic/z1000
+
+# Add architectures to list to sweep
+arch_list_add=z1000.xml
+additional_files_list_add=--read_rr_graph,z1000_rr_graph.xml
+
+# Add circuits to list to sweep
+# circuit_list_add=alu4.blif
+# circuit_list_add=apex2.blif
+circuit_list_add=apex4.blif
+# circuit_list_add=bigkey.blif
+# circuit_list_add=des.blif
+# circuit_list_add=diffeq.blif
+# circuit_list_add=dsip.blif
+circuit_list_add=ex5p.blif
+circuit_list_add=misex3.blif
+# circuit_list_add=s298.blif
+# circuit_list_add=seq.blif
+circuit_list_add=tseng.blif
+
+# Constrain the clocks
+# circuit_constraint_list_add=(bigkey.blif, constraints=../../../../constraints/bigkey_clk_constraints.xml)
+# circuit_constraint_list_add=(diffeq.blif, constraints=../../../../constraints/diffeq_clk_constraints.xml)
+# circuit_constraint_list_add=(dsip.blif,   constraints=../../../../constraints/dsip_clk_constraints.xml)
+# circuit_constraint_list_add=(s298.blif,   constraints=../../../../constraints/s298_clk_constraints.xml)
+circuit_constraint_list_add=(tseng.blif,  constraints=../../../../constraints/tseng_clk_constraints.xml)
+
+# Parse info and how to parse
+parse_file=vpr_fixed_chan_width.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+# Pass the script params while writing the vpr constraints.
+#       With AP
+script_params=-starting_stage vpr -no_second_run -track_memory_usage --analytical_place --route --timing_analysis on --route_chan_width 100 --device z1000 --clock_modeling route --constant_net_method route --const_gen_inference none --sweep_dangling_primary_ios off --sweep_dangling_primary_ios off --sweep_dangling_nets off -allow_dangling_combinational_nodes on --sweep_constant_primary_outputs off --sweep_dangling_blocks off
+#       Without AP
+# script_params=-starting_stage vpr -no_second_run -track_memory_usage --pack --place --route --timing_analysis on --route_chan_width 100 --device z1000 --clock_modeling route --constant_net_method route --const_gen_inference none --sweep_dangling_primary_ios off --sweep_dangling_primary_ios off --sweep_dangling_nets off -allow_dangling_combinational_nodes on --sweep_constant_primary_outputs off --sweep_dangling_blocks off
+
