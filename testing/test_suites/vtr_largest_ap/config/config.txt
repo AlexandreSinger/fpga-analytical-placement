@@ -14,7 +14,7 @@ arch_list_add=k6_frac_N10_frac_chain_mem32K_40nm.xml
 # Add circuits to list to sweep
 circuit_list_add=arm_core.v
 circuit_list_add=bgm.v
-circuit_list_add=mkDelayWorker32B.v
+# circuit_list_add=mkDelayWorker32B.v
 circuit_list_add=stereovision0.v
 circuit_list_add=stereovision1.v
 circuit_list_add=stereovision2.v
@@ -26,7 +26,7 @@ circuit_list_add=mcml.v
 circuit_constraint_list_add=(stereovision0.v,    device=vtr_medium)
 circuit_constraint_list_add=(arm_core.v,         device=vtr_medium)
 circuit_constraint_list_add=(stereovision1.v,    device=vtr_medium)
-circuit_constraint_list_add=(mkDelayWorker32B.v, device=vtr_large)
+# circuit_constraint_list_add=(mkDelayWorker32B.v, device=vtr_large)
 circuit_constraint_list_add=(LU8PEEng.v,         device=vtr_large)
 circuit_constraint_list_add=(bgm.v,              device=vtr_large)
 circuit_constraint_list_add=(stereovision2.v,    device=vtr_extra_large)
@@ -38,7 +38,7 @@ circuit_constraint_list_add=(LU32PEEng.v,        device=vtr_extra_large)
 circuit_constraint_list_add=(stereovision0.v,    route_chan_width=62)
 circuit_constraint_list_add=(arm_core.v,         route_chan_width=132)
 circuit_constraint_list_add=(stereovision1.v,    route_chan_width=110)
-circuit_constraint_list_add=(mkDelayWorker32B.v, route_chan_width=44)
+# circuit_constraint_list_add=(mkDelayWorker32B.v, route_chan_width=44)
 circuit_constraint_list_add=(LU8PEEng.v,         route_chan_width=114)
 circuit_constraint_list_add=(bgm.v,              route_chan_width=90)
 circuit_constraint_list_add=(stereovision2.v,    route_chan_width=124)

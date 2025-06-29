@@ -14,23 +14,23 @@ arch_list_add=z1000.xml
 additional_files_list_add=--read_rr_graph,z1000_rr_graph.xml
 
 # Add circuits to list to sweep
-# circuit_list_add=alu4.blif
+circuit_list_add=alu4.blif
 # circuit_list_add=apex2.blif
 circuit_list_add=apex4.blif
-# circuit_list_add=bigkey.blif
-# circuit_list_add=des.blif
-# circuit_list_add=diffeq.blif
-# circuit_list_add=dsip.blif
+circuit_list_add=bigkey.blif
+circuit_list_add=des.blif
+circuit_list_add=diffeq.blif
+circuit_list_add=dsip.blif
 circuit_list_add=ex5p.blif
 circuit_list_add=misex3.blif
 # circuit_list_add=s298.blif
-# circuit_list_add=seq.blif
+circuit_list_add=seq.blif
 circuit_list_add=tseng.blif
 
 # Constrain the clocks
-# circuit_constraint_list_add=(bigkey.blif, constraints=../../../../constraints/bigkey_clk_constraints.xml)
-# circuit_constraint_list_add=(diffeq.blif, constraints=../../../../constraints/diffeq_clk_constraints.xml)
-# circuit_constraint_list_add=(dsip.blif,   constraints=../../../../constraints/dsip_clk_constraints.xml)
+circuit_constraint_list_add=(bigkey.blif, constraints=../../../../constraints/bigkey_clk_constraints.xml)
+circuit_constraint_list_add=(diffeq.blif, constraints=../../../../constraints/diffeq_clk_constraints.xml)
+circuit_constraint_list_add=(dsip.blif,   constraints=../../../../constraints/dsip_clk_constraints.xml)
 # circuit_constraint_list_add=(s298.blif,   constraints=../../../../constraints/s298_clk_constraints.xml)
 circuit_constraint_list_add=(tseng.blif,  constraints=../../../../constraints/tseng_clk_constraints.xml)
 
