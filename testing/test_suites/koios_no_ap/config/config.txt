@@ -74,38 +74,6 @@ circuit_constraint_list_add=(dla_like.large.v,         device=koios_large)
 circuit_constraint_list_add=(tdarknet_like.large.v,    device=koios_large)
 circuit_constraint_list_add=(tdarknet_like.small.v,    device=koios_extra_large)
 
-# Constrain the circuits to their channel widths
-#       1.3 * minW
-circuit_constraint_list_add=(reduction_layer.v,        route_chan_width=190) 
-circuit_constraint_list_add=(lenet.v,                  route_chan_width=232) 
-circuit_constraint_list_add=(robot_rl.v,               route_chan_width=144) 
-circuit_constraint_list_add=(softmax.v,                route_chan_width=154) 
-circuit_constraint_list_add=(conv_layer.v,             route_chan_width=172) 
-circuit_constraint_list_add=(eltwise_layer.v,          route_chan_width=166) 
-circuit_constraint_list_add=(spmv.v,                   route_chan_width=112) 
-circuit_constraint_list_add=(bnn.v,                    route_chan_width=228) 
-circuit_constraint_list_add=(dla_like.small.v,         route_chan_width=258) 
-circuit_constraint_list_add=(bwave_like.fixed.small.v, route_chan_width=202) 
-circuit_constraint_list_add=(bwave_like.float.small.v, route_chan_width=274) 
-circuit_constraint_list_add=(conv_layer_hls.v,         route_chan_width=118) 
-circuit_constraint_list_add=(gemm_layer.v,             route_chan_width=150) 
-circuit_constraint_list_add=(clstm_like.small.v,       route_chan_width=176) 
-circuit_constraint_list_add=(tpu_like.small.os.v,      route_chan_width=120) 
-circuit_constraint_list_add=(tpu_like.small.ws.v,      route_chan_width=182) 
-circuit_constraint_list_add=(attention_layer.v,        route_chan_width=148) 
-circuit_constraint_list_add=(lstm.v,                   route_chan_width=166) 
-circuit_constraint_list_add=(dla_like.medium.v,        route_chan_width=292) 
-circuit_constraint_list_add=(clstm_like.medium.v,      route_chan_width=174) 
-circuit_constraint_list_add=(bwave_like.fixed.large.v, route_chan_width=326) 
-circuit_constraint_list_add=(dnnweaver.v,              route_chan_width=188) 
-circuit_constraint_list_add=(clstm_like.large.v,       route_chan_width=192) 
-circuit_constraint_list_add=(bwave_like.float.large.v, route_chan_width=406) 
-circuit_constraint_list_add=(tpu_like.large.os.v,      route_chan_width=120) 
-circuit_constraint_list_add=(tpu_like.large.ws.v,      route_chan_width=202) 
-circuit_constraint_list_add=(dla_like.large.v,         route_chan_width=268) 
-circuit_constraint_list_add=(tdarknet_like.large.v,    route_chan_width=164) 
-circuit_constraint_list_add=(tdarknet_like.small.v,    route_chan_width=132) 
-
 # Add architectures to list to sweep
 arch_list_add=k6FracN10LB_mem20K_complexDSP_customSB_22nm.xml
 
@@ -127,7 +95,7 @@ pass_requirements_file=pass_requirements.txt
 
 # Pass the script params while writing the vpr constraints.
 #       With AP
-# script_params=-no_second_run -track_memory_usage --analytical_place --route --timing_analysis on --ap_generate_mass_report on
+# script_params=-no_second_run -track_memory_usage --analytical_place --route --route_chan_width 300 --timing_analysis on --ap_generate_mass_report on
 #       Without AP
-script_params=-no_second_run -track_memory_usage --pack --place --route --timing_analysis on
+script_params=-no_second_run -track_memory_usage --pack --place --route --route_chan_width 300 --timing_analysis on
 

@@ -32,7 +32,7 @@ circuit_list_add=fft2d_stratix10_arch_timing.blif
 circuit_list_add=DLA_ELT_stratix10_arch_timing.blif
 circuit_list_add=DLA_BSC_stratix10_arch_timing.blif
 circuit_list_add=jpeg_deco_stratix10_arch_timing.blif
-# circuit_list_add=nyuzi_stratix10_arch_timing.blif
+circuit_list_add=nyuzi_stratix10_arch_timing.blif
 circuit_list_add=sobel_stratix10_arch_timing.blif
 
 # Constrain the circuits to their devices
@@ -56,7 +56,7 @@ circuit_constraint_list_add=(fft2d_stratix10_arch_timing.blif,          device=1
 circuit_constraint_list_add=(DLA_ELT_stratix10_arch_timing.blif,        device=1SX110HN1F43E1VG)
 circuit_constraint_list_add=(DLA_BSC_stratix10_arch_timing.blif,        device=1SX110HN1F43E1VG)
 circuit_constraint_list_add=(jpeg_deco_stratix10_arch_timing.blif,      device=1SG280HH1F55E1VG)
-# circuit_constraint_list_add=(nyuzi_stratix10_arch_timing.blif,          device=1ST040EH1F35E1VG)
+circuit_constraint_list_add=(nyuzi_stratix10_arch_timing.blif,          device=1SX040HH1F35E1VG)
 circuit_constraint_list_add=(sobel_stratix10_arch_timing.blif,          device=1SX065HH1F35E1VG)
 
 # Add architectures to list to sweep
