@@ -40,9 +40,9 @@ circuit_list_add=neko_stratix10_arch_timing.blif
 
 # Constrain the circuits to their devices
 circuit_constraint_list_add=(ASU_LRN_stratix10_arch_timing.blif,        device=1SG211HN1F43E1VG)
-circuit_constraint_list_add=(ChainNN_LRN_LG_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
-circuit_constraint_list_add=(ChainNN_ELT_LG_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
-circuit_constraint_list_add=(ChainNN_BSC_LG_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
+circuit_constraint_list_add=(ChainNN_LRN_LG_stratix10_arch_timing.blif, device=1SG280HH1F55E1VG)
+circuit_constraint_list_add=(ChainNN_ELT_LG_stratix10_arch_timing.blif, device=1SG280HH1F55E1VG)
+circuit_constraint_list_add=(ChainNN_BSC_LG_stratix10_arch_timing.blif, device=1SG280HH1F55E1VG)
 circuit_constraint_list_add=(rocket17_stratix10_arch_timing.blif,       device=1SG280HH1F55E1VG)
 circuit_constraint_list_add=(ASU_ELT_stratix10_arch_timing.blif,        device=1SG211HN1F43E1VG)
 circuit_constraint_list_add=(ASU_BSC_stratix10_arch_timing.blif,        device=1SG211HN1F43E1VG)
