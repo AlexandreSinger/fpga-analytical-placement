@@ -35,15 +35,15 @@ circuit_constraint_list_add=(LU32PEEng.v,        device=vtr_extra_large)
 
 # Constrain the circuits to their channel widths
 #       1.3 * minW
-circuit_constraint_list_add=(stereovision0.v,    route_chan_width=62)
-circuit_constraint_list_add=(arm_core.v,         route_chan_width=132)
-circuit_constraint_list_add=(stereovision1.v,    route_chan_width=110)
+circuit_constraint_list_add=(stereovision0.v,    route_chan_width=66)
+circuit_constraint_list_add=(arm_core.v,         route_chan_width=148)
+circuit_constraint_list_add=(stereovision1.v,    route_chan_width=100)
 # circuit_constraint_list_add=(mkDelayWorker32B.v, route_chan_width=44)
-circuit_constraint_list_add=(LU8PEEng.v,         route_chan_width=114)
-circuit_constraint_list_add=(bgm.v,              route_chan_width=90)
-circuit_constraint_list_add=(stereovision2.v,    route_chan_width=124)
-circuit_constraint_list_add=(mcml.v,             route_chan_width=182)
-circuit_constraint_list_add=(LU32PEEng.v,        route_chan_width=166)
+circuit_constraint_list_add=(LU8PEEng.v,         route_chan_width=118)
+circuit_constraint_list_add=(bgm.v,              route_chan_width=110)
+circuit_constraint_list_add=(stereovision2.v,    route_chan_width=114)
+circuit_constraint_list_add=(mcml.v,             route_chan_width=170)
+circuit_constraint_list_add=(LU32PEEng.v,        route_chan_width=146)
 
 # Parse info and how to parse
 parse_file=vpr_fixed_chan_width.txt
