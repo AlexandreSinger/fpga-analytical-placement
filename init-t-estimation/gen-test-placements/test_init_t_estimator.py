@@ -23,11 +23,27 @@ class BenchmarkCircuit:
     device: str
     route_chan_width: int
     is_verilog: bool
+    sdc_file: Path = None
 
 @dataclass
 class Benchmark:
     name: str
     benchmark_circuits: list[BenchmarkCircuit]
+
+    def verify(self):
+        circuit_names = set()
+        for circuit in self.benchmark_circuits:
+            assert(circuit.unique_name not in circuit_names)
+            assert(circuit.circuit_source_file.exists())
+            assert(circuit.arch_file.exists())
+            assert(circuit.arch_file.suffix == ".xml")
+            assert(circuit.route_chan_width > 0)
+            if circuit.is_verilog:
+                assert(circuit.circuit_source_file.suffix == ".v")
+            else:
+                assert(circuit.circuit_source_file.suffix == ".blif")
+            if circuit.sdc_file is not None:
+                assert(circuit.sdc_file.suffix == ".sdc")
 
 class VTRBenchmark(Benchmark):
     def __init__(self, vtr_base_dir: Path):
@@ -53,24 +69,57 @@ class VTRBenchmark(Benchmark):
                 BenchmarkCircuit(unique_name=data[0][:-5],
                                  circuit_source_file=circuits_dir.joinpath(data[0]),
                                  arch_file=arch_file,
+                                 sdc_file=circuits_dir.joinpath(data[0][:-5] + ".sdc"),
                                  device=data[1],
                                  route_chan_width=data[2],
                                  is_verilog=False)
             )
 
 
-    def verify(self):
-        circuit_names = set()
-        for circuit in self.benchmark_circuits:
-            assert(circuit.unique_name not in circuit_names)
-            assert(circuit.circuit_source_file.exists())
-            assert(circuit.arch_file.exists())
-            assert(circuit.arch_file.suffix == ".xml")
-            assert(circuit.route_chan_width > 0)
-            if circuit.is_verilog:
-                assert(circuit.circuit_source_file.suffix == ".v")
-            else:
-                assert(circuit.circuit_source_file.suffix == ".blif")
+class TitanQuickBenchmark(Benchmark):
+    def __init__(self, vtr_base_dir: Path):
+        self.name = "titan_quick"
+
+        circuits_dir = vtr_base_dir.joinpath("vtr_flow").joinpath("benchmarks").joinpath("titan_blif").joinpath("titan23").joinpath("stratixiv")
+        sdc_dir = circuits_dir
+        arch_file = vtr_base_dir.joinpath("vtr_flow").joinpath("arch").joinpath("titan").joinpath("stratixiv_arch.timing.xml")
+
+        circuit_data = [
+            ("sparcT1_core_stratixiv_arch_timing.blif",  "titan_extra_small"),
+            ("SLAM_spheric_stratixiv_arch_timing.blif",  "titan_extra_small"),
+            ("stereo_vision_stratixiv_arch_timing.blif", "titan_small"),
+            ("cholesky_mc_stratixiv_arch_timing.blif",   "titan_small"),
+            ("neuron_stratixiv_arch_timing.blif",        "titan_small"),
+            ("segmentation_stratixiv_arch_timing.blif",  "titan_small"),
+            ("dart_stratixiv_arch_timing.blif",          "titan_small"),
+            ("denoise_stratixiv_arch_timing.blif",       "titan_small"),
+            ("sparcT2_core_stratixiv_arch_timing.blif",  "titan_small"),
+            ("stap_qrd_stratixiv_arch_timing.blif",      "titan_medium"),
+            ("cholesky_bdti_stratixiv_arch_timing.blif", "titan_medium"),
+            ("des90_stratixiv_arch_timing.blif",         "titan_medium"),
+            ("mes_noc_stratixiv_arch_timing.blif",       "titan_medium"),
+            ("openCV_stratixiv_arch_timing.blif",        "titan_medium"),
+            ("LU_Network_stratixiv_arch_timing.blif",    "titan_medium"),
+            ("minres_stratixiv_arch_timing.blif",        "titan_medium"),
+            ("bitcoin_miner_stratixiv_arch_timing.blif", "titan_medium"),
+            ("bitonic_mesh_stratixiv_arch_timing.blif",  "titan_large"),
+            ("gsm_switch_stratixiv_arch_timing.blif",    "titan_large"),
+            ("sparcT1_chip2_stratixiv_arch_timing.blif", "titan_large"),
+            ("directrf_stratixiv_arch_timing.blif",      "titan_large"),
+            ("LU230_stratixiv_arch_timing.blif",         "titan_extra_large"),
+            ("gaussianblur_stratixiv_arch_timing.blif",  "titan_extra_large"),
+        ]
+
+        self.benchmark_circuits = []
+        for data in circuit_data:
+            self.benchmark_circuits.append(
+                BenchmarkCircuit(unique_name=data[0][:-5],
+                                 circuit_source_file=circuits_dir.joinpath(data[0]),
+                                 arch_file=arch_file,
+                                 device=data[1],
+                                 route_chan_width=300,
+                                 is_verilog=False)
+            )
 
 
 class GenPlacementType(Enum):
@@ -150,6 +199,9 @@ def gen_test_placements_for_circuit(thread_args):
         "--route_chan_width", str(circuit.route_chan_width),
         ])
 
+    if circuit.sdc_file is not None:
+        args.extend(["--sdc_file", str(circuit.sdc_file)])
+
     if placement_type == GenPlacementType.CENTROID:
         args.extend([
             "--pack",
@@ -179,12 +231,7 @@ def gen_test_placements_for_benchmark(benchmark: Benchmark,
     assert(temp_dir.exists())
 
     benchmark_result_dir = result_dir.joinpath(benchmark.name)
-    if benchmark_result_dir.exists():
-        should_regenerate = input(f"Benchmark placements already exist for {benchmark.name}. Do you want to regenerate them (y/n): ")
-        if should_regenerate != 'y':
-            print("Skipping regenerating placements.")
-            return
-        shutil.rmtree(benchmark_result_dir)
+    assert(not benchmark_result_dir.exists())
     os.mkdir(benchmark_result_dir)
 
     benchmark_temp_dir = temp_dir.joinpath(benchmark.name)
@@ -259,6 +306,9 @@ def run_placement(thread_args):
         "--route_chan_width", str(circuit.route_chan_width),
         ])
 
+    if circuit.sdc_file is not None:
+        args.extend(["--sdc_file", str(circuit.sdc_file)])
+
     if run_placement_type == RunPlacementType.VARIANCE:
         args.extend([
             "--anneal_auto_init_t_estimator", "cost_variance",
@@ -290,65 +340,58 @@ def get_next_run_name(base_dir: Path) -> str:
 
 
 def run_test_placements_for_benchmark(benchmark: Benchmark,
+                                      run_place_type: RunPlacementType,
                                       placements_dir: Path,
                                       results_dir: Path,
-                                      temp_dir: Path,
+                                      run_dir: Path,
                                       vtr_base_dir: Path,
                                       num_threads: int):
 
-    print(f"Running test placements for {benchmark.name}...")
+    print(f"Running test placements for {benchmark.name} with the {run_place_type.name} estimator...")
 
-    assert(temp_dir.exists())
-    benchmark_temp_dir = temp_dir.joinpath(benchmark.name)
-    if not benchmark_temp_dir.exists():
-        os.mkdir(benchmark_temp_dir)
-    run_name = get_next_run_name(benchmark_temp_dir)
-    benchmark_run_dir = benchmark_temp_dir.joinpath(run_name)
-    assert(not benchmark_run_dir.exists())
-    os.mkdir(benchmark_run_dir)
+    assert(run_dir.exists())
 
     centroid_placements_dir = placements_dir.joinpath(benchmark.name).joinpath("centroid")
     ap_placements_dir = placements_dir.joinpath(benchmark.name).joinpath("ap")
     
     vpr_executable = vtr_base_dir.joinpath("vpr").joinpath("vpr")
 
+    run_place_type_name = ""
+    if run_place_type == RunPlacementType.VARIANCE:
+        run_place_type_name = "variance"
+    elif run_place_type == RunPlacementType.EQUILIBRIUM_EST:
+        run_place_type_name = "equilibriumest"
+
     thread_args = []
     for circuit in benchmark.benchmark_circuits:
-        circuit_run_dir = benchmark_run_dir.joinpath(circuit.unique_name)
+        circuit_run_dir = run_dir.joinpath(circuit.unique_name)
         assert(not circuit_run_dir.exists())
         os.mkdir(circuit_run_dir)
 
-        for run_place_type in [RunPlacementType.VARIANCE, RunPlacementType.EQUILIBRIUM_EST]:
-            run_place_type_name = ""
-            if run_place_type == RunPlacementType.VARIANCE:
-                run_place_type_name = "variance"
-            elif run_place_type == RunPlacementType.EQUILIBRIUM_EST:
-                run_place_type_name = "equilibriumest"
+        for place_qual in ["init", "final"]:
+            centroid_run_dir = circuit_run_dir.joinpath(f"centroid_{place_qual}_{run_place_type_name}")
+            assert(not centroid_run_dir.exists())
+            os.mkdir(centroid_run_dir)
+            thread_args.append([
+                circuit,
+                centroid_run_dir,
+                centroid_placements_dir.joinpath(f"{circuit.unique_name}_{place_qual}.place"),
+                centroid_placements_dir.joinpath(f"{circuit.unique_name}.net"),
+                run_place_type,
+                vpr_executable,
+            ])
 
-            for place_qual in ["init", "final"]:
-                centroid_run_dir = circuit_run_dir.joinpath(f"centroid_{place_qual}_{run_place_type_name}")
-                assert(not centroid_run_dir.exists())
-                os.mkdir(centroid_run_dir)
-                thread_args.append([
-                    circuit,
-                    centroid_run_dir,
-                    centroid_placements_dir.joinpath(f"{circuit.unique_name}_{place_qual}.place"),
-                    centroid_placements_dir.joinpath(f"{circuit.unique_name}.net"),
-                    run_place_type,
-                    vpr_executable,
-                ])
-
-                ap_run_dir = circuit_run_dir.joinpath(f"ap_{place_qual}_{run_place_type_name}")
-                assert(not ap_run_dir.exists())
-                os.mkdir(ap_run_dir)
-                thread_args.append([
-                    circuit,
-                    ap_run_dir,
-                    ap_placements_dir.joinpath(f"{circuit.unique_name}_{place_qual}.place"),
-                    ap_placements_dir.joinpath(f"{circuit.unique_name}.net"),
-                    run_place_type,
-                    vpr_executable,
-                ])
+            ap_run_dir = circuit_run_dir.joinpath(f"ap_{place_qual}_{run_place_type_name}")
+            assert(not ap_run_dir.exists())
+            os.mkdir(ap_run_dir)
+            thread_args.append([
+                circuit,
+                ap_run_dir,
+                ap_placements_dir.joinpath(f"{circuit.unique_name}_{place_qual}.place"),
+                ap_placements_dir.joinpath(f"{circuit.unique_name}.net"),
+                run_place_type,
+                vpr_executable,
+            ])
 
     pool = Pool(num_threads)
     pool.map(run_placement, thread_args)
@@ -365,71 +408,70 @@ def run_test_placements_for_benchmark(benchmark: Benchmark,
          'init_wl', 'final_wl', 'init_cpd', 'final_cpd', 'place_runtime']
     ]
     for circuit in benchmark.benchmark_circuits:
-        for estimator in ["variance", "equilibriumest"]:
+        for place_qual in ["init", "final"]:
             for init_placer_type in ["centroid", "ap"]:
-                for place_qual in ["init", "final"]:
-                    data_row = [circuit.unique_name,
-                                estimator,
-                                init_placer_type,
-                                place_qual]
+                data_row = [circuit.unique_name,
+                            run_place_type_name,
+                            init_placer_type,
+                            place_qual]
 
-                    vpr_out_file = benchmark_run_dir.joinpath(f"{circuit.unique_name}").joinpath(f"{init_placer_type}_{place_qual}_{estimator}").joinpath("vpr.out")
+                vpr_out_file = run_dir.joinpath(f"{circuit.unique_name}").joinpath(f"{init_placer_type}_{place_qual}_{run_place_type_name}").joinpath("vpr.out")
 
-                    init_t = -1
-                    cost_ratio = -1
-                    init_wl = -1
-                    final_wl = -1
-                    init_cpd = -1
-                    final_cpd = -1
-                    place_time = -1
-                    first_line_pattern = re.compile(r"^\s*1\s+\S+\s+(\S+)\s+(\S+)(\s+\S+){11}\s*$")
-                    init_wl_pattern = re.compile(r"Initial placement BB estimate of wirelength:\s*(\S+)")
-                    final_wl_pattern = re.compile(r"BB estimate of min-dist \(placement\) wire length:\s*(\S+)")
-                    init_cpd_pattern = re.compile(r"Initial placement estimated Critical Path Delay \(CPD\):\s*(\S+)\s+ns")
-                    final_cpd_pattern = re.compile(r"Placement estimated critical path delay \(least slack\):\s*(\S+)\s+ns")
-                    place_time_pattern = re.compile(r"# Placement took (\S+) seconds")
-                    with open(vpr_out_file, "r") as f:
-                        for line in f:
-                            first_line_match = first_line_pattern.search(line)
-                            if first_line_match:
-                                init_t = float(first_line_match.group(1))
-                                cost_ratio = float(first_line_match.group(2))
-                                continue
-                            init_wl_match = init_wl_pattern.search(line)
-                            if init_wl_match:
-                                init_wl = float(init_wl_match.group(1))
-                                continue
-                            final_wl_match = final_wl_pattern.search(line)
-                            if final_wl_match:
-                                final_wl = float(final_wl_match.group(1))
-                                continue
-                            init_cpd_match = init_cpd_pattern.search(line)
-                            if init_cpd_match:
-                                init_cpd = float(init_cpd_match.group(1))
-                                continue
-                            final_cpd_match = final_cpd_pattern.search(line)
-                            if final_cpd_match:
-                                final_cpd = float(final_cpd_match.group(1))
-                                continue
-                            place_time_match = place_time_pattern.search(line)
-                            if place_time_match:
-                                place_time = float(place_time_match.group(1))
-                                continue
+                init_t = -1
+                cost_ratio = -1
+                init_wl = -1
+                final_wl = -1
+                init_cpd = -1
+                final_cpd = -1
+                place_time = -1
+                first_line_pattern = re.compile(r"^\s*1\s+\S+\s+(\S+)\s+(\S+)(\s+\S+){11}\s*$")
+                init_wl_pattern = re.compile(r"Initial placement BB estimate of wirelength:\s*(\S+)")
+                final_wl_pattern = re.compile(r"BB estimate of min-dist \(placement\) wire length:\s*(\S+)")
+                init_cpd_pattern = re.compile(r"Initial placement estimated Critical Path Delay \(CPD\):\s*(\S+)\s+ns")
+                final_cpd_pattern = re.compile(r"Placement estimated critical path delay \(least slack\):\s*(\S+)\s+ns")
+                place_time_pattern = re.compile(r"# Placement took (\S+) seconds")
+                with open(vpr_out_file, "r") as f:
+                    for line in f:
+                        first_line_match = first_line_pattern.search(line)
+                        if first_line_match:
+                            init_t = float(first_line_match.group(1))
+                            cost_ratio = float(first_line_match.group(2))
+                            continue
+                        init_wl_match = init_wl_pattern.search(line)
+                        if init_wl_match:
+                            init_wl = float(init_wl_match.group(1))
+                            continue
+                        final_wl_match = final_wl_pattern.search(line)
+                        if final_wl_match:
+                            final_wl = float(final_wl_match.group(1))
+                            continue
+                        init_cpd_match = init_cpd_pattern.search(line)
+                        if init_cpd_match:
+                            init_cpd = float(init_cpd_match.group(1))
+                            continue
+                        final_cpd_match = final_cpd_pattern.search(line)
+                        if final_cpd_match:
+                            final_cpd = float(final_cpd_match.group(1))
+                            continue
+                        place_time_match = place_time_pattern.search(line)
+                        if place_time_match:
+                            place_time = float(place_time_match.group(1))
+                            continue
 
 
-                    # Collect the data into a row in CSV file
-                    data_row.extend([
-                        init_t,
-                        cost_ratio,
-                        init_wl,
-                        final_wl,
-                        init_cpd,
-                        final_cpd,
-                        place_time,
-                    ])
-                    data.append(data_row)
+                # Collect the data into a row in CSV file
+                data_row.extend([
+                    init_t,
+                    cost_ratio,
+                    init_wl,
+                    final_wl,
+                    init_cpd,
+                    final_cpd,
+                    place_time,
+                ])
+                data.append(data_row)
 
-    csv_file_path = benchmark_run_dir.joinpath("results.csv")
+    csv_file_path = run_dir.joinpath("results.csv")
     with open(csv_file_path, 'w', newline='') as file:
         writer = csv.writer(file)
 
@@ -455,7 +497,11 @@ if __name__ == "__main__":
     args = command_parser().parse_args(sys.argv[1:])
 
     vtr_base_dir = Path.home().joinpath("vtr-verilog-to-routing")
-    vtr_benchmark = VTRBenchmark(vtr_base_dir)
+
+    benchmarks_to_run = [
+        VTRBenchmark(vtr_base_dir),
+        TitanQuickBenchmark(vtr_base_dir),
+    ]
 
     result_dir = Path(os.path.dirname(os.path.abspath(__file__))).joinpath("placements")
     if not result_dir.exists():
@@ -465,20 +511,58 @@ if __name__ == "__main__":
     if not temp_dir.exists():
         os.mkdir(temp_dir)
 
+    for benchmark in benchmarks_to_run:
+        benchmark_result_dir = result_dir.joinpath(benchmark.name)
+        if benchmark_result_dir.exists():
+            should_regenerate = input(f"Benchmark placements already exist for {benchmark.name}. Do you want to regenerate them (y/n): ")
+            if should_regenerate != 'y':
+                print("Skipping regenerating placements.")
+                continue
+            shutil.rmtree(benchmark_result_dir)
 
-    gen_test_placements_for_benchmark(vtr_benchmark,
-                                      result_dir,
-                                      temp_dir,
-                                      vtr_base_dir,
-                                      args.j)
+    for benchmark in benchmarks_to_run:
+        benchmark_result_dir = result_dir.joinpath(benchmark.name)
+        if benchmark_result_dir.exists():
+            continue
+        # TODO: We can extract way more parallelism by collecting the thread
+        #       args at a high level.
+        gen_test_placements_for_benchmark(benchmark,
+                                          result_dir,
+                                          temp_dir,
+                                          vtr_base_dir,
+                                          args.j)
 
     run_dir = Path(os.path.dirname(os.path.abspath(__file__))).joinpath("runs")
     if not run_dir.exists():
         os.mkdir(run_dir)
-    run_test_placements_for_benchmark(vtr_benchmark,
-                                      result_dir,
-                                      None,
-                                      run_dir,
-                                      vtr_base_dir,
-                                      args.j)
 
+    for benchmark in benchmarks_to_run:
+        benchmark_run_dir = run_dir.joinpath(benchmark.name)
+        if not benchmark_run_dir.exists():
+            os.mkdir(benchmark_run_dir)
+        run_name = get_next_run_name(benchmark_run_dir)
+        current_run_dir = benchmark_run_dir.joinpath(run_name)
+        assert(not current_run_dir.exists())
+        os.mkdir(current_run_dir)
+
+        # TODO: We can extract way more parralelism by collecting the thread
+        #       args at a high level.
+        equilibrium_run_dir = current_run_dir.joinpath("equilibrium")
+        os.mkdir(equilibrium_run_dir)
+        run_test_placements_for_benchmark(benchmark,
+                                          RunPlacementType.EQUILIBRIUM_EST,
+                                          result_dir,
+                                          None,
+                                          equilibrium_run_dir,
+                                          vtr_base_dir,
+                                          args.j)
+
+        variance_run_dir = current_run_dir.joinpath("variance")
+        os.mkdir(variance_run_dir)
+        run_test_placements_for_benchmark(benchmark,
+                                          RunPlacementType.VARIANCE,
+                                          result_dir,
+                                          None,
+                                          variance_run_dir,
+                                          vtr_base_dir,
+                                          args.j)
