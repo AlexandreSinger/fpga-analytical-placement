@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -69,7 +69,6 @@ class VTRBenchmark(Benchmark):
                 BenchmarkCircuit(unique_name=data[0][:-5],
                                  circuit_source_file=circuits_dir.joinpath(data[0]),
                                  arch_file=arch_file,
-                                 sdc_file=circuits_dir.joinpath(data[0][:-5] + ".sdc"),
                                  device=data[1],
                                  route_chan_width=data[2],
                                  is_verilog=False)
@@ -116,6 +115,7 @@ class TitanQuickBenchmark(Benchmark):
                 BenchmarkCircuit(unique_name=data[0][:-5],
                                  circuit_source_file=circuits_dir.joinpath(data[0]),
                                  arch_file=arch_file,
+                                 sdc_file=circuits_dir.joinpath(data[0][:-5] + ".sdc"),
                                  device=data[1],
                                  route_chan_width=300,
                                  is_verilog=False)
