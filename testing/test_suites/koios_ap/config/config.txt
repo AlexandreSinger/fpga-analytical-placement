@@ -95,7 +95,4 @@ pass_requirements_file=pass_requirements.txt
 
 # Pass the script params while writing the vpr constraints.
 #       With AP
-script_params=-no_second_run -track_memory_usage --analytical_place --route --route_chan_width 300 --timing_analysis on --ap_generate_mass_report on
-#       Without AP
-# script_params=-no_second_run -track_memory_usage --pack --place --route --route_chan_width 300 --timing_analysis on
-
+script_params=--analytical_place --route --route_chan_width 300

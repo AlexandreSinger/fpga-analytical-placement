@@ -42,5 +42,4 @@ pass_requirements_file=pass_requirements_vpr_xilinx_fixed_width.txt
 # Xilinx Benchmarks route at the physical channel
 # width of the chip which is 190. Flat routing is
 # also enabled.
-script_params=--route_chan_width 190 --analytical_place --route --timing_analysis on --ap_generate_mass_report on
-# script_params=--route_chan_width 190 --pack --place --route --timing_analysis on
+script_params=--route_chan_width 190 --analytical_place --route

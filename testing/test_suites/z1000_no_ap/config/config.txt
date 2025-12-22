@@ -45,7 +45,7 @@ pass_requirements_file=pass_requirements.txt
 
 # Pass the script params while writing the vpr constraints.
 #       With AP
-# script_params=-starting_stage vpr -no_second_run -track_memory_usage --analytical_place --route --timing_analysis on --route_chan_width 100 --device z1000 --clock_modeling route --constant_net_method route --const_gen_inference none --sweep_dangling_primary_ios off --sweep_dangling_primary_ios off --sweep_dangling_nets off -allow_dangling_combinational_nodes on --sweep_constant_primary_outputs off --sweep_dangling_blocks off
+# script_params=-starting_stage vpr -no_second_run -track_memory_usage --analytical_place --route --timing_analysis on --route_chan_width 100 --device z1000 --clock_modeling route --constant_net_method route --const_gen_inference none --sweep_dangling_primary_ios off --sweep_dangling_primary_ios off --sweep_dangling_nets off -allow_dangling_combinational_nodes on --sweep_constant_primary_outputs off --sweep_dangling_blocks off --router_lookahead classic
 #       Without AP
-script_params=-starting_stage vpr -no_second_run -track_memory_usage --pack --place --route --timing_analysis on --route_chan_width 100 --device z1000 --clock_modeling route --constant_net_method route --const_gen_inference none --sweep_dangling_primary_ios off --sweep_dangling_primary_ios off --sweep_dangling_nets off -allow_dangling_combinational_nodes on --sweep_constant_primary_outputs off --sweep_dangling_blocks off
+script_params=-starting_stage vpr -no_second_run -track_memory_usage --pack --place --route --timing_analysis on --route_chan_width 100 --device z1000 --clock_modeling route --constant_net_method route --const_gen_inference none --sweep_dangling_primary_ios off --sweep_dangling_primary_ios off --sweep_dangling_nets off -allow_dangling_combinational_nodes on --sweep_constant_primary_outputs off --sweep_dangling_blocks off --router_lookahead classic
 
