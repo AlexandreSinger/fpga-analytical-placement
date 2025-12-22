@@ -95,4 +95,4 @@ pass_requirements_file=pass_requirements.txt
 
 # Pass the script params while writing the vpr constraints.
 #       Without AP
-script_params=--pack --place --route --route_chan_width 300
+script_params=--pack --place --route --route_chan_width 300 --anneal_auto_init_t_estimator cost_variance
