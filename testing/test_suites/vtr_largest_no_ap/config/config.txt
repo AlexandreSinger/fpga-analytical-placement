@@ -3,7 +3,7 @@
 ##############################################
 
 # Path to directory of circuits to use
-circuits_dir=benchmarks/verilog
+circuits_dir=/shared/singera8/flagship_blifs
 
 # Path to directory of architectures to use
 archs_dir=arch/timing
@@ -12,38 +12,35 @@ archs_dir=arch/timing
 arch_list_add=k6_frac_N10_frac_chain_mem32K_40nm.xml
 
 # Add circuits to list to sweep
-circuit_list_add=arm_core.v
-circuit_list_add=bgm.v
-# circuit_list_add=mkDelayWorker32B.v
-circuit_list_add=stereovision0.v
-circuit_list_add=stereovision1.v
-circuit_list_add=stereovision2.v
-circuit_list_add=LU8PEEng.v
-circuit_list_add=LU32PEEng.v
-circuit_list_add=mcml.v
+circuit_list_add=arm_core.blif
+circuit_list_add=bgm.blif
+circuit_list_add=stereovision0.blif
+circuit_list_add=stereovision1.blif
+circuit_list_add=stereovision2.blif
+circuit_list_add=LU8PEEng.blif
+circuit_list_add=LU32PEEng.blif
+circuit_list_add=mcml.blif
 
 # Constrain the circuits to their devices
-circuit_constraint_list_add=(stereovision0.v,    device=vtr_medium)
-circuit_constraint_list_add=(arm_core.v,         device=vtr_medium)
-circuit_constraint_list_add=(stereovision1.v,    device=vtr_medium)
-# circuit_constraint_list_add=(mkDelayWorker32B.v, device=vtr_large)
-circuit_constraint_list_add=(LU8PEEng.v,         device=vtr_large)
-circuit_constraint_list_add=(bgm.v,              device=vtr_large)
-circuit_constraint_list_add=(stereovision2.v,    device=vtr_extra_large)
-circuit_constraint_list_add=(mcml.v,             device=vtr_extra_large)
-circuit_constraint_list_add=(LU32PEEng.v,        device=vtr_extra_large)
+circuit_constraint_list_add=(stereovision0.blif,    device=vtr_medium)
+circuit_constraint_list_add=(arm_core.blif,         device=vtr_medium)
+circuit_constraint_list_add=(stereovision1.blif,    device=vtr_medium)
+circuit_constraint_list_add=(LU8PEEng.blif,         device=vtr_large)
+circuit_constraint_list_add=(bgm.blif,              device=vtr_large)
+circuit_constraint_list_add=(stereovision2.blif,    device=vtr_extra_large)
+circuit_constraint_list_add=(mcml.blif,             device=vtr_extra_large)
+circuit_constraint_list_add=(LU32PEEng.blif,        device=vtr_extra_large)
 
 # Constrain the circuits to their channel widths
 #       1.3 * minW
-circuit_constraint_list_add=(stereovision0.v,    route_chan_width=66)
-circuit_constraint_list_add=(arm_core.v,         route_chan_width=148)
-circuit_constraint_list_add=(stereovision1.v,    route_chan_width=100)
-# circuit_constraint_list_add=(mkDelayWorker32B.v, route_chan_width=44)
-circuit_constraint_list_add=(LU8PEEng.v,         route_chan_width=118)
-circuit_constraint_list_add=(bgm.v,              route_chan_width=110)
-circuit_constraint_list_add=(stereovision2.v,    route_chan_width=114)
-circuit_constraint_list_add=(mcml.v,             route_chan_width=170)
-circuit_constraint_list_add=(LU32PEEng.v,        route_chan_width=146)
+circuit_constraint_list_add=(stereovision0.blif,    route_chan_width=66)
+circuit_constraint_list_add=(arm_core.blif,         route_chan_width=148)
+circuit_constraint_list_add=(stereovision1.blif,    route_chan_width=100)
+circuit_constraint_list_add=(LU8PEEng.blif,         route_chan_width=118)
+circuit_constraint_list_add=(bgm.blif,              route_chan_width=110)
+circuit_constraint_list_add=(stereovision2.blif,    route_chan_width=114)
+circuit_constraint_list_add=(mcml.blif,             route_chan_width=170)
+circuit_constraint_list_add=(LU32PEEng.blif,        route_chan_width=146)
 
 # Parse info and how to parse
 parse_file=vpr_fixed_chan_width.txt
@@ -55,5 +52,5 @@ qor_parse_file=qor_ap_fixed_chan_width.txt
 pass_requirements_file=pass_requirements.txt
 
 # Pass the script params while writing the vpr constraints.
-#       Without AP
-script_params=-crit_path_router_iterations 100 --pack --place --route --anneal_auto_init_t_estimator cost_variance
+#       With AP
+script_params=-starting_stage vpr -crit_path_router_iterations 100 --pack --place --route --anneal_auto_init_t_estimator cost_variance
