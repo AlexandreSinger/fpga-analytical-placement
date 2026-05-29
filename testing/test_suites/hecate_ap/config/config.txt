@@ -10,35 +10,39 @@ circuits_dir=/shared/gholam39/koios_3d
 archs_dir=arch/multi_die/hecate/interposer
 
 # Add circuits to list to sweep
+# NOTE: Some circuits were commented out. These circuits are auto-sized to
+#		devices which are so small that no interposer cut-lines are produced.
+#		We should put these on a fixed device which is at the minimum device size.
+# TODO: There appear to be other missing circuits from the Koios benchmarks which
+#       need to be accounted for.
 circuit_list_add=attention_layer.blif
 circuit_list_add=bnn.blif
-circuit_list_add=bwave_like.fixed.large.blif
 circuit_list_add=bwave_like.fixed.small.blif
-circuit_list_add=bwave_like.float.large.blif
-circuit_list_add=bwave_like.float.small.blif
+circuit_list_add=bwave_like.fixed.large.blif
 circuit_list_add=clstm_like.large.blif
 circuit_list_add=clstm_like.medium.blif
 circuit_list_add=clstm_like.small.blif
-circuit_list_add=conv_layer.blif
+#circuit_list_add=conv_layer.blif
 circuit_list_add=conv_layer_hls.blif
-# circuit_list_add=dla_like.large.blif
 circuit_list_add=dla_like.medium.blif
 circuit_list_add=dla_like.small.blif
 circuit_list_add=dnnweaver.blif
-circuit_list_add=eltwise_layer.blif
+#circuit_list_add=eltwise_layer.blif
 circuit_list_add=gemm_layer.blif
-circuit_list_add=lenet.blif
+#circuit_list_add=lenet.blif
 circuit_list_add=lstm.blif
-circuit_list_add=reduction_layer.blif
-circuit_list_add=robot_rl.blif
-circuit_list_add=softmax.blif
-circuit_list_add=spmv.blif
+circuit_list_add=proxy.5.blif
+circuit_list_add=proxy.7.blif
+#circuit_list_add=reduction_layer.blif
+#circuit_list_add=robot_rl.blif
+#circuit_list_add=softmax.blif
+#circuit_list_add=spmv.blif
 circuit_list_add=tdarknet_like.large.blif
 circuit_list_add=tdarknet_like.small.blif
 circuit_list_add=tpu_like.large.os.blif
 circuit_list_add=tpu_like.large.ws.blif
-circuit_list_add=tpu_like.small.os.blif
-circuit_list_add=tpu_like.small.ws.blif
+#circuit_list_add=tpu_like.small.os.blif
+#circuit_list_add=tpu_like.small.ws.blif
 
 # Add architectures to list to sweep
 arch_list_add=hecate_25d_L17_int_10um_bump_fanin_12.xml
@@ -54,4 +58,4 @@ pass_requirements_file=pass_requirements.txt
 
 # Pass the script params while writing the vpr constraints.
 #       With AP
-script_params=-starting_stage vpr --analytical_place --route --analysis --route_chan_width 320
+script_params=-starting_stage vpr --analytical_place --route --analysis --route_chan_width 320 -max_router_iterations 100 --place_checkpointing off --place_interposer_cost_factor 0.1 --place_interposer_cong_cost_factor 0.1 --place_interposer_cong_threshold 0.9
