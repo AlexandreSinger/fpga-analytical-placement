@@ -107,20 +107,20 @@ def make_ratios_and_summary(ratio_sheet, summary_sheet, raw_sheets):
             # TODO: Ensure that these are these two columns.
             row_data.append(ap_raw_sheet.cell(row=row, column=1).value.strip())
             row_data.append(ap_raw_sheet.cell(row=row, column=2).value.strip())
-            # Find the wirelength cell. This is used to detect unroutes.
-            ap_wirelength_cell_coord = None
-            no_ap_wirelength_cell_coord = None
+            # Find the vpr_status cell. This is used to detect unroutes.
+            ap_vpr_status_cell_coord = None
+            no_ap_vpr_status_cell_coord = None
             for col in range(3, ap_raw_sheet.max_column + 1):
                 ap_header_name = ap_raw_sheet.cell(row=1, column=col).value.strip()
-                if ap_header_name != "total_wirelength":
+                if ap_header_name != "vpr_status":
                     continue
-                ap_wirelength_cell = ap_raw_sheet.cell(row=row, column=col)
-                no_ap_wirelength_cell = no_ap_raw_sheet.cell(row=row, column=col)
-                ap_wirelength_cell_coord = f"'{ap_raw_sheet.title}'!{ap_wirelength_cell.coordinate}"
-                no_ap_wirelength_cell_coord = f"'{no_ap_raw_sheet.title}'!{no_ap_wirelength_cell.coordinate}"
+                ap_vpr_status_cell = ap_raw_sheet.cell(row=row, column=col)
+                no_ap_vpr_status_cell = no_ap_raw_sheet.cell(row=row, column=col)
+                ap_vpr_status_cell_coord = f"'{ap_raw_sheet.title}'!{ap_vpr_status_cell.coordinate}"
+                no_ap_vpr_status_cell_coord = f"'{no_ap_raw_sheet.title}'!{no_ap_vpr_status_cell.coordinate}"
                 break
-            assert(ap_wirelength_cell_coord is not None)
-            assert(no_ap_wirelength_cell_coord is not None)
+            assert(ap_vpr_status_cell_coord is not None)
+            assert(no_ap_vpr_status_cell_coord is not None)
             # Get the other metrics.
             for col in range(3, ap_raw_sheet.max_column + 1):
                 ap_header_name = ap_raw_sheet.cell(row=1, column=col).value.strip()
@@ -134,7 +134,7 @@ def make_ratios_and_summary(ratio_sheet, summary_sheet, raw_sheets):
                 no_ap_cell = no_ap_raw_sheet.cell(row=row, column=col)
                 ap_cell_coord = f"'{ap_raw_sheet.title}'!{ap_cell.coordinate}"
                 no_ap_cell_coord = f"'{no_ap_raw_sheet.title}'!{no_ap_cell.coordinate}"
-                row_data.append(f"=IF(OR({ap_wirelength_cell_coord}=-1, {no_ap_wirelength_cell_coord}=-1), \"\", {ap_cell_coord}/{no_ap_cell_coord})")
+                row_data.append(f"=IF(AND(ISNUMBER(SEARCH(\"success\", {ap_vpr_status_cell_coord})), ISNUMBER(SEARCH(\"success\", {no_ap_vpr_status_cell_coord}))), {ap_cell_coord}/{no_ap_cell_coord}, \"\")")
                 # if ap_value == -1 or no_ap_value == -1:
                 #     row_data.append("")
                 # else:
