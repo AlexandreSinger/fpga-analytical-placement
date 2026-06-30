@@ -52,7 +52,7 @@ arch_list_add=hecate_25d_L13_int_10um_bump_fanin_12.xml
 arch_list_add=hecate_25d_L17_int_10um_bump_fanin_12.xml
 
 # Parse info and how to parse
-parse_file=vpr_fixed_chan_width.txt
+parse_file=vpr_titan_interposer.txt
 
 # How to parse QoR info
 qor_parse_file=qor_ap_fixed_chan_width.txt
@@ -60,6 +60,6 @@ qor_parse_file=qor_ap_fixed_chan_width.txt
 # Pass requirements
 pass_requirements_file=pass_requirements.txt
 
-script_params_common=-starting_stage vpr --route_chan_width 320 -max_router_iterations 100 --place_checkpointing off
+script_params_common=-starting_stage vpr --route_chan_width 320 -max_router_iterations 100 --place_checkpointing off -timeout 43200
 script_params_list_add=--analytical_place --route --analysis
 script_params_list_add=--pack --place --route --analysis
