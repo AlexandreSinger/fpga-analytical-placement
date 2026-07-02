@@ -47,30 +47,30 @@ circuit_list_add=tpu_like.large.ws.blif
 
 # Fix the devices to a fixed device width. This is better for AP since the device
 # size is not changing during the flow.
-#   These were found by running the auto-sizer on the AP flow.
+#   These were found by running the auto-sizer on the traditional flow.
 circuit_constraint_list_add=(attention_layer.blif,        device_width=54)
-circuit_constraint_list_add=(bnn.blif,                    device_width=107)
-circuit_constraint_list_add=(bwave_like.fixed.large.blif, device_width=115)
-circuit_constraint_list_add=(clstm_like.large.blif,       device_width=227)
-circuit_constraint_list_add=(clstm_like.medium.blif,      device_width=177)
-circuit_constraint_list_add=(clstm_like.small.blif,       device_width=123)
+circuit_constraint_list_add=(bnn.blif,                    device_width=98)
+circuit_constraint_list_add=(bwave_like.fixed.large.blif, device_width=114)
+circuit_constraint_list_add=(clstm_like.large.blif,       device_width=179)
+circuit_constraint_list_add=(clstm_like.medium.blif,      device_width=147)
+circuit_constraint_list_add=(clstm_like.small.blif,       device_width=106)
 circuit_constraint_list_add=(conv_layer_hls.blif,         device_width=105)
-circuit_constraint_list_add=(dla_like.large.pre-vpr.blif, device_width=288)
-circuit_constraint_list_add=(dla_like.medium.blif,        device_width=153)
-circuit_constraint_list_add=(dla_like.small.blif,         device_width=96)
+circuit_constraint_list_add=(dla_like.large.pre-vpr.blif, device_width=233)
+circuit_constraint_list_add=(dla_like.medium.blif,        device_width=138)
+circuit_constraint_list_add=(dla_like.small.blif,         device_width=89)
 circuit_constraint_list_add=(dnnweaver.blif,              device_width=129)
-circuit_constraint_list_add=(gemm_layer.blif,             device_width=174)
+circuit_constraint_list_add=(gemm_layer.blif,             device_width=156)
 circuit_constraint_list_add=(lstm.blif,                   device_width=86)
-circuit_constraint_list_add=(proxy.5.blif,                device_width=84)
-circuit_constraint_list_add=(proxy.7.blif,                device_width=137)
+circuit_constraint_list_add=(proxy.5.blif,                device_width=78)
+circuit_constraint_list_add=(proxy.7.blif,                device_width=126)
 circuit_constraint_list_add=(tdarknet_like.large.blif,    device_width=89)
 circuit_constraint_list_add=(tdarknet_like.small.blif,    device_width=206)
-circuit_constraint_list_add=(tpu_like.large.os.blif,      device_width=154)
+circuit_constraint_list_add=(tpu_like.large.os.blif,      device_width=153)
 circuit_constraint_list_add=(tpu_like.large.ws.blif,      device_width=154)
 
 # Add architectures to list to sweep
 arch_list_add=hecate_25d_L5_int_10um_bump_fanin_12.xml
-# arch_list_add=hecate_25d_L9_int_10um_bump_fanin_12.xml
+arch_list_add=hecate_25d_L9_int_10um_bump_fanin_12.xml
 # arch_list_add=hecate_25d_L13_int_10um_bump_fanin_12.xml
 # arch_list_add=hecate_25d_L17_int_10um_bump_fanin_12.xml
 
@@ -84,4 +84,6 @@ qor_parse_file=qor_ap_fixed_chan_width.txt
 pass_requirements_file=pass_requirements.txt
 
 script_params_common=-starting_stage vpr --analytical_place --route --analysis --route_chan_width 320 -max_router_iterations 100 --place_checkpointing off -timeout 43200
-script_params_list_add=
+script_params_list_add=--ap_interdie_crossing_penalty_scale 0.0
+script_params_list_add=--ap_interdie_crossing_penalty_scale 1.0
+script_params_list_add=--ap_interdie_crossing_penalty_scale 2.0
