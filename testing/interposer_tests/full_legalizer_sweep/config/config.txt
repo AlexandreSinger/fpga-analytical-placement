@@ -85,9 +85,9 @@ pass_requirements_file=pass_requirements.txt
 
 script_params_common=-starting_stage vpr --analytical_place --route --analysis --route_chan_width 320 -max_router_iterations 100 --place_checkpointing off -timeout 64800
 script_params_list_add=
-script_params_list_add=--appack_max_dist_th "clb:0.04,10"
-script_params_list_add=--appack_max_dist_th "clb:0.06,10"
-script_params_list_add=--appack_max_dist_th "clb:0.08,10"
-script_params_list_add=--appack_max_dist_th "clb:0.1,10"
-script_params_list_add=--appack_max_dist_th "clb:0.02,20"
-script_params_list_add=--appack_max_dist_th "clb:0.02,30"
+script_params_list_add=--appack_max_dist_th clb:0.04,10
+script_params_list_add=--appack_max_dist_th clb:0.06,10
+script_params_list_add=--appack_max_dist_th clb:0.08,10
+script_params_list_add=--appack_max_dist_th clb:0.1,10
+script_params_list_add=--appack_max_dist_th clb:0.02,20
+script_params_list_add=--appack_max_dist_th clb:0.02,30
