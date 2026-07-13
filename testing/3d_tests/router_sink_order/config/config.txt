@@ -7,7 +7,7 @@
 circuits_dir=/shared/gholam39/koios_3d
 
 # Path to directory of architectures to use
-archs_dir=/shared/gholam39/koios_3d
+archs_dir=arch/multi_die/hecate/3d/hecate_3D
 
 # Add circuits to list to sweep
 # NOTE: Some circuits were commented out. These circuits are auto-sized to
@@ -51,27 +51,49 @@ circuit_list_add=tpu_like.large.ws.blif
 circuit_constraint_list_add=(attention_layer.blif,        device_width=39)
 circuit_constraint_list_add=(bnn.blif,                    device_width=71)
 circuit_constraint_list_add=(bwave_like.fixed.large.blif, device_width=74)
-circuit_constraint_list_add=(clstm_like.large.blif,       device_width=129)
+circuit_constraint_list_add=(clstm_like.large.blif,       device_width=130)
 circuit_constraint_list_add=(clstm_like.medium.blif,      device_width=106)
-circuit_constraint_list_add=(clstm_like.small.blif,       device_width=76)
-circuit_constraint_list_add=(conv_layer_hls.blif,         device_width=55)
-circuit_constraint_list_add=(dla_like.large.pre-vpr.blif, device_width=166)
+circuit_constraint_list_add=(clstm_like.small.blif,       device_width=77)
+circuit_constraint_list_add=(conv_layer_hls.blif,         device_width=54)
+circuit_constraint_list_add=(dla_like.large.pre-vpr.blif, device_width=168)
 circuit_constraint_list_add=(dla_like.medium.blif,        device_width=99)
-circuit_constraint_list_add=(dla_like.small.blif,         device_width=64)
+circuit_constraint_list_add=(dla_like.small.blif,         device_width=65)
 circuit_constraint_list_add=(dnnweaver.blif,              device_width=95)
-circuit_constraint_list_add=(gemm_layer.blif,             device_width=111)
-circuit_constraint_list_add=(lstm.blif,                   device_width=62)
+circuit_constraint_list_add=(gemm_layer.blif,             device_width=112)
+circuit_constraint_list_add=(lstm.blif,                   device_width=63)
 circuit_constraint_list_add=(proxy.5.blif,                device_width=61)
-circuit_constraint_list_add=(proxy.7.blif,                device_width=90)
+circuit_constraint_list_add=(proxy.7.blif,                device_width=91)
 circuit_constraint_list_add=(tdarknet_like.large.blif,    device_width=67)
 circuit_constraint_list_add=(tdarknet_like.small.blif,    device_width=150)
-circuit_constraint_list_add=(tpu_like.large.os.blif,      device_width=108)
-circuit_constraint_list_add=(tpu_like.large.ws.blif,      device_width=108)
+circuit_constraint_list_add=(tpu_like.large.os.blif,      device_width=110)
+circuit_constraint_list_add=(tpu_like.large.ws.blif,      device_width=110)
+
+# Fix the .net files
+circuit_constraint_list_add=(attention_layer.blif,        net_file=/shared/gholam39/hecate_3d_net_files/attention_layer.net)
+circuit_constraint_list_add=(bnn.blif,                    net_file=/shared/gholam39/hecate_3d_net_files/bnn.net)
+circuit_constraint_list_add=(bwave_like.fixed.large.blif, net_file=/shared/gholam39/hecate_3d_net_files/bwave_like.fixed.large.net)
+circuit_constraint_list_add=(clstm_like.large.blif,       net_file=/shared/gholam39/hecate_3d_net_files/clstm_like.large.net)
+circuit_constraint_list_add=(clstm_like.medium.blif,      net_file=/shared/gholam39/hecate_3d_net_files/clstm_like.medium.net)
+circuit_constraint_list_add=(clstm_like.small.blif,       net_file=/shared/gholam39/hecate_3d_net_files/clstm_like.small.net)
+circuit_constraint_list_add=(conv_layer_hls.blif,         net_file=/shared/gholam39/hecate_3d_net_files/conv_layer_hls.net)
+circuit_constraint_list_add=(dla_like.large.pre-vpr.blif, net_file=/shared/gholam39/hecate_3d_net_files/dla_like.large.pre-vpr.net)
+circuit_constraint_list_add=(dla_like.medium.blif,        net_file=/shared/gholam39/hecate_3d_net_files/dla_like.medium.net)
+circuit_constraint_list_add=(dla_like.small.blif,         net_file=/shared/gholam39/hecate_3d_net_files/dla_like.small.net)
+circuit_constraint_list_add=(dnnweaver.blif,              net_file=/shared/gholam39/hecate_3d_net_files/dnnweaver.net)
+circuit_constraint_list_add=(gemm_layer.blif,             net_file=/shared/gholam39/hecate_3d_net_files/gemm_layer.net)
+circuit_constraint_list_add=(lstm.blif,                   net_file=/shared/gholam39/hecate_3d_net_files/lstm.net)
+circuit_constraint_list_add=(proxy.5.blif,                net_file=/shared/gholam39/hecate_3d_net_files/proxy.5.net)
+circuit_constraint_list_add=(proxy.7.blif,                net_file=/shared/gholam39/hecate_3d_net_filesproxy.7.net)
+circuit_constraint_list_add=(tdarknet_like.large.blif,    net_file=/shared/gholam39/hecate_3d_net_files/tdarknet_like.large.net)
+circuit_constraint_list_add=(tdarknet_like.small.blif,    net_file=/shared/gholam39/hecate_3d_net_files/tdarknet_like.small.net)
+circuit_constraint_list_add=(tpu_like.large.os.blif,      net_file=/shared/gholam39/hecate_3d_net_files/tpu_like.large.os.net)
+circuit_constraint_list_add=(tpu_like.large.ws.blif,      net_file=/shared/gholam39/hecate_3d_net_files/tpu_like.large.ws.net)
 
 # Add architectures to list to sweep
 # arch_list_add=3d_SB_koios_5um_dir_7nm.xml
-arch_list_add=3d_SB_koios_10um_dir_7nm.xml
-# arch_list_add=3d_SB_koios_25um_dir_7nm.xml
+# arch_list_add=3d_SB_koios_10um_dir_7nm.xml
+# NOTE: We chose a higher fanin/fanout to ensure that you routing failures are only impacted by the number of CHANZ nodes, and not their connectivity and accessiblity.
+arch_list_add=hecate_3d_sb_25um_dir_fanin_64_fanout_64_with_esd_7nm.xml
 
 # Parse info and how to parse
 parse_file=common/vpr.3d.txt
@@ -82,8 +104,14 @@ qor_parse_file=qor_ap_fixed_chan_width.txt
 # Pass requirements
 pass_requirements_file=pass_requirements.txt
 
-script_params_common=-starting_stage vpr --analytical_place --route --analysis --route_chan_width 300 -max_router_iterations 100 --place_checkpointing off -timeout 64800
+script_params_common=-starting_stage vpr --place --route --analysis --route_chan_width 300 -max_router_iterations 100 --place_checkpointing off --verify_file_digests off -timeout 64800
+# script_params_list_add=--router_sink_order_die_crossing_multiplier 0.0 --router_sink_order_die_alignment_multiplier 0.0
+# script_params_list_add=--router_sink_order_die_crossing_multiplier 1.0 --router_sink_order_die_alignment_multiplier 0.0
+# script_params_list_add=--router_sink_order_die_crossing_multiplier 0.0 --router_sink_order_die_alignment_multiplier 1.0
+# script_params_list_add=--router_sink_order_die_crossing_multiplier 1.0 --router_sink_order_die_alignment_multiplier 1.0
 script_params_list_add=--router_sink_order_die_crossing_multiplier 0.0 --router_sink_order_die_alignment_multiplier 0.0
-script_params_list_add=--router_sink_order_die_crossing_multiplier 1.0 --router_sink_order_die_alignment_multiplier 0.0
+script_params_list_add=--router_sink_order_die_crossing_multiplier 0.0 --router_sink_order_die_alignment_multiplier 0.2
+script_params_list_add=--router_sink_order_die_crossing_multiplier 0.0 --router_sink_order_die_alignment_multiplier 0.4
+script_params_list_add=--router_sink_order_die_crossing_multiplier 0.0 --router_sink_order_die_alignment_multiplier 0.6
+script_params_list_add=--router_sink_order_die_crossing_multiplier 0.0 --router_sink_order_die_alignment_multiplier 0.8
 script_params_list_add=--router_sink_order_die_crossing_multiplier 0.0 --router_sink_order_die_alignment_multiplier 1.0
-script_params_list_add=--router_sink_order_die_crossing_multiplier 1.0 --router_sink_order_die_alignment_multiplier 1.0
