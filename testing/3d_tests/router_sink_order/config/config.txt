@@ -83,7 +83,7 @@ circuit_constraint_list_add=(dnnweaver.blif,              net_file=/shared/ghola
 circuit_constraint_list_add=(gemm_layer.blif,             net_file=/shared/gholam39/hecate_3d_net_files/gemm_layer.net)
 circuit_constraint_list_add=(lstm.blif,                   net_file=/shared/gholam39/hecate_3d_net_files/lstm.net)
 circuit_constraint_list_add=(proxy.5.blif,                net_file=/shared/gholam39/hecate_3d_net_files/proxy.5.net)
-circuit_constraint_list_add=(proxy.7.blif,                net_file=/shared/gholam39/hecate_3d_net_filesproxy.7.net)
+circuit_constraint_list_add=(proxy.7.blif,                net_file=/shared/gholam39/hecate_3d_net_files/proxy.7.net)
 circuit_constraint_list_add=(tdarknet_like.large.blif,    net_file=/shared/gholam39/hecate_3d_net_files/tdarknet_like.large.net)
 circuit_constraint_list_add=(tdarknet_like.small.blif,    net_file=/shared/gholam39/hecate_3d_net_files/tdarknet_like.small.net)
 circuit_constraint_list_add=(tpu_like.large.os.blif,      net_file=/shared/gholam39/hecate_3d_net_files/tpu_like.large.os.net)
