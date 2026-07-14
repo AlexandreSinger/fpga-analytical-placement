@@ -1,0 +1,87 @@
+#
+############################################
+# Configuration file for running experiments
+##############################################
+
+# Path to directory of circuits to use
+circuits_dir=/shared/gholam39/koios_3d
+
+# Path to directory of architectures to use
+archs_dir=/shared/pooladam/hecate_arch_gen/hecate_25D
+
+# Add architectures to list to sweep
+# For the AP exploration, we do not need every architecture. The traditional
+# flow can comfortably run L16; so we want to try L14 and L12. We also run
+# L34 since it is the longest wires.
+# arch_list_add=hecate_25d_L10_int_10um_bump_unidir_fanin_64.xml
+arch_list_add=hecate_25d_L12_int_10um_bump_unidir_fanin_64.xml
+arch_list_add=hecate_25d_L14_int_10um_bump_unidir_fanin_64.xml
+arch_list_add=hecate_25d_L16_int_10um_bump_unidir_fanin_64.xml
+# arch_list_add=hecate_25d_L18_int_10um_bump_unidir_fanin_64.xml
+# arch_list_add=hecate_25d_L20_int_10um_bump_unidir_fanin_64.xml
+# arch_list_add=hecate_25d_L22_int_10um_bump_unidir_fanin_64.xml
+# arch_list_add=hecate_25d_L24_int_10um_bump_unidir_fanin_64.xml
+# arch_list_add=hecate_25d_L26_int_10um_bump_unidir_fanin_64.xml
+# arch_list_add=hecate_25d_L28_int_10um_bump_unidir_fanin_64.xml
+# arch_list_add=hecate_25d_L30_int_10um_bump_unidir_fanin_64.xml
+# arch_list_add=hecate_25d_L32_int_10um_bump_unidir_fanin_64.xml
+arch_list_add=hecate_25d_L34_int_10um_bump_unidir_fanin_64.xml
+
+
+# Add circuits to list to sweep
+circuit_list_add=attention_layer.blif
+circuit_list_add=bnn.blif
+circuit_list_add=bwave_like.fixed.large.blif
+circuit_list_add=clstm_like.large.blif
+circuit_list_add=clstm_like.medium.blif
+circuit_list_add=clstm_like.small.blif
+circuit_list_add=conv_layer_hls.blif
+circuit_list_add=dla_like.large.pre-vpr.blif
+circuit_list_add=dla_like.medium.blif
+circuit_list_add=dla_like.small.blif
+circuit_list_add=dnnweaver.blif
+circuit_list_add=gemm_layer.blif
+circuit_list_add=lstm.blif
+circuit_list_add=proxy.5.blif
+circuit_list_add=proxy.7.blif
+circuit_list_add=tdarknet_like.large.blif
+circuit_list_add=tdarknet_like.small.blif
+circuit_list_add=tpu_like.large.os.blif
+circuit_list_add=tpu_like.large.ws.blif
+
+# Fix the devices to a fixed device width. This is better for AP since the device
+# size is not changing during the flow.
+#   These were found by running the auto-sizer on the traditional flow.
+circuit_constraint_list_add=(attention_layer.blif,        device_width=54)
+circuit_constraint_list_add=(bnn.blif,                    device_width=98)
+circuit_constraint_list_add=(bwave_like.fixed.large.blif, device_width=114)
+circuit_constraint_list_add=(clstm_like.large.blif,       device_width=180)
+circuit_constraint_list_add=(clstm_like.medium.blif,      device_width=148)
+circuit_constraint_list_add=(clstm_like.small.blif,       device_width=106)
+circuit_constraint_list_add=(conv_layer_hls.blif,         device_width=105)
+circuit_constraint_list_add=(dla_like.large.pre-vpr.blif, device_width=233)
+circuit_constraint_list_add=(dla_like.medium.blif,        device_width=138)
+circuit_constraint_list_add=(dla_like.small.blif,         device_width=89)
+circuit_constraint_list_add=(dnnweaver.blif,              device_width=129)
+circuit_constraint_list_add=(gemm_layer.blif,             device_width=156)
+circuit_constraint_list_add=(lstm.blif,                   device_width=86)
+circuit_constraint_list_add=(proxy.5.blif,                device_width=78)
+circuit_constraint_list_add=(proxy.7.blif,                device_width=126)
+circuit_constraint_list_add=(tdarknet_like.large.blif,    device_width=89)
+circuit_constraint_list_add=(tdarknet_like.small.blif,    device_width=206)
+circuit_constraint_list_add=(tpu_like.large.os.blif,      device_width=153)
+circuit_constraint_list_add=(tpu_like.large.ws.blif,      device_width=154)
+
+# Parse info and how to parse
+parse_file=vpr_titan_interposer.txt
+
+# How to parse QoR info
+qor_parse_file=qor_standard.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements_fixed_chan_width.txt
+
+#Script parameters
+script_params_common=-starting_stage vpr -max_router_iterations 100 --route_chan_width 320 --place_checkpointing off --verify_file_digests off --router_lookahead separable --place_delay_model simple --astar_fac 0.9 -timeout 64800
+script_params_list_add=--analytical_place --route --analysis
+script_params_list_add=--pack --place --route --analysis
