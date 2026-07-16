@@ -69,9 +69,14 @@ circuit_constraint_list_add=(tpu_like.large.os.blif,      device_width=110)
 circuit_constraint_list_add=(tpu_like.large.ws.blif,      device_width=110)
 
 # Add architectures to list to sweep
-arch_list_add=hecate_3d_sb_5um_dir_fanin_64_fanout_64_with_esd_7nm.xml
-arch_list_add=hecate_3d_sb_10um_dir_fanin_64_fanout_64_with_esd_7nm.xml
-arch_list_add=hecate_3d_sb_25um_dir_fanin_64_fanout_64_with_esd_7nm.xml
+# Soheil recommended not doing 5um, and instead doing 10um-reduced. He said that
+# the number of inter-layer connections was the most interesting, and 5um is easy
+# to route.
+# Soheil also recommended using fanin/fanout of 16 since that yields the best
+# area / delay tradeoff.
+arch_list_add=hecate_3d_sb_10um_reduced_dir_fanin_16_fanout_16_with_esd_7nm.xml
+arch_list_add=hecate_3d_sb_10um_dir_fanin_16_fanout_16_with_esd_7nm.xml
+arch_list_add=hecate_3d_sb_25um_dir_fanin_16_fanout_16_with_esd_7nm.xml
 
 # Parse info and how to parse
 parse_file=common/vpr.3d.txt
