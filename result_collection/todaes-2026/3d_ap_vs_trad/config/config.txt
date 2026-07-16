@@ -1,0 +1,87 @@
+#
+############################################
+# Configuration file for running experiments
+##############################################
+
+# Path to directory of circuits to use
+circuits_dir=/shared/gholam39/koios_3d
+
+# Path to directory of architectures to use
+archs_dir=arch/multi_die/hecate/3d/hecate_3D
+
+# Add circuits to list to sweep
+# NOTE: Some circuits were commented out. These circuits are auto-sized to
+#		devices which are so small that no interposer cut-lines are produced.
+#		We should put these on a fixed device which is at the minimum device size.
+# TODO: There appear to be other missing circuits from the Koios benchmarks which
+#       need to be accounted for.
+circuit_list_add=attention_layer.blif
+circuit_list_add=bnn.blif
+#circuit_list_add=bwave_like.fixed.small.blif
+circuit_list_add=bwave_like.fixed.large.blif
+circuit_list_add=clstm_like.large.blif
+circuit_list_add=clstm_like.medium.blif
+circuit_list_add=clstm_like.small.blif
+#circuit_list_add=conv_layer.blif
+circuit_list_add=conv_layer_hls.blif
+circuit_list_add=dla_like.large.pre-vpr.blif
+circuit_list_add=dla_like.medium.blif
+circuit_list_add=dla_like.small.blif
+circuit_list_add=dnnweaver.blif
+#circuit_list_add=eltwise_layer.blif
+circuit_list_add=gemm_layer.blif
+#circuit_list_add=lenet.blif
+circuit_list_add=lstm.blif
+circuit_list_add=proxy.5.blif
+circuit_list_add=proxy.7.blif
+#circuit_list_add=reduction_layer.blif
+#circuit_list_add=robot_rl.blif
+#circuit_list_add=softmax.blif
+#circuit_list_add=spmv.blif
+circuit_list_add=tdarknet_like.large.blif
+circuit_list_add=tdarknet_like.small.blif
+circuit_list_add=tpu_like.large.os.blif
+circuit_list_add=tpu_like.large.ws.blif
+#circuit_list_add=tpu_like.small.os.blif
+#circuit_list_add=tpu_like.small.ws.blif
+
+# Fix the devices to a fixed device width. This is better for AP since the device
+# size is not changing during the flow.
+#   These were found by running the auto-sizer on the traditional flow.
+circuit_constraint_list_add=(attention_layer.blif,        device_width=39)
+circuit_constraint_list_add=(bnn.blif,                    device_width=71)
+circuit_constraint_list_add=(bwave_like.fixed.large.blif, device_width=74)
+circuit_constraint_list_add=(clstm_like.large.blif,       device_width=130)
+circuit_constraint_list_add=(clstm_like.medium.blif,      device_width=106)
+circuit_constraint_list_add=(clstm_like.small.blif,       device_width=77)
+circuit_constraint_list_add=(conv_layer_hls.blif,         device_width=54)
+circuit_constraint_list_add=(dla_like.large.pre-vpr.blif, device_width=168)
+circuit_constraint_list_add=(dla_like.medium.blif,        device_width=99)
+circuit_constraint_list_add=(dla_like.small.blif,         device_width=65)
+circuit_constraint_list_add=(dnnweaver.blif,              device_width=95)
+circuit_constraint_list_add=(gemm_layer.blif,             device_width=112)
+circuit_constraint_list_add=(lstm.blif,                   device_width=63)
+circuit_constraint_list_add=(proxy.5.blif,                device_width=61)
+circuit_constraint_list_add=(proxy.7.blif,                device_width=91)
+circuit_constraint_list_add=(tdarknet_like.large.blif,    device_width=67)
+circuit_constraint_list_add=(tdarknet_like.small.blif,    device_width=150)
+circuit_constraint_list_add=(tpu_like.large.os.blif,      device_width=110)
+circuit_constraint_list_add=(tpu_like.large.ws.blif,      device_width=110)
+
+# Add architectures to list to sweep
+arch_list_add=hecate_3d_sb_5um_dir_fanin_64_fanout_64_with_esd_7nm.xml
+arch_list_add=hecate_3d_sb_10um_dir_fanin_64_fanout_64_with_esd_7nm.xml
+arch_list_add=hecate_3d_sb_25um_dir_fanin_64_fanout_64_with_esd_7nm.xml
+
+# Parse info and how to parse
+parse_file=common/vpr.3d.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+script_params_common=-starting_stage vpr --route_chan_width 320 -max_router_iterations 100 --place_checkpointing off --verify_file_digests off -timeout 64800
+script_params_list_add=--analytical_place --route --analysis
+script_params_list_add=--pack --place --route --analysis
