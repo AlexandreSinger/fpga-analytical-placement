@@ -86,6 +86,6 @@ pass_requirements_file=pass_requirements_fixed_chan_width.txt
 #       runtime to be very large. Turning on memoization helps by reducing how
 #       often intra-lb routing is used in this architecture without changing the
 #       result quality at all.
-script_params_common=-starting_stage vpr -max_router_iterations 100 --route_chan_width 320 --place_checkpointing off --verify_file_digests off --place_interposer_net_cost_type interposer_wire_aware_crossing_bb --router_lookahead separable --place_delay_model separable --astar_fac 0.9 --memoize_cluster_packings on -timeout 64800
+script_params_common=-starting_stage vpr -max_router_iterations 400 --route_chan_width 320 --place_checkpointing off --verify_file_digests off --place_interposer_net_cost_type interposer_wire_aware_crossing_bb --router_lookahead separable --place_delay_model separable --astar_fac 0.9 --memoize_cluster_packings on -timeout 64800
 script_params_list_add=--analytical_place --route --analysis
 script_params_list_add=--pack --place --route --analysis
