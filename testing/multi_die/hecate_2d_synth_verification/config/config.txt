@@ -1,0 +1,80 @@
+#
+############################################
+# Configuration file for running experiments
+##############################################
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/verilog
+
+# Path to directory of architectures to use
+archs_dir=arch
+
+# Directory containing the verilog includes file(s)
+includes_dir=benchmarks/verilog/koios
+
+# Add circuits to list to sweep
+circuit_list_add=koios/attention_layer.v
+circuit_list_add=koios/bnn.v
+circuit_list_add=koios/bwave_like.fixed.large.v
+circuit_list_add=koios/bwave_like.fixed.small.v
+circuit_list_add=koios/bwave_like.float.large.v
+circuit_list_add=koios/bwave_like.float.small.v
+circuit_list_add=koios/clstm_like.large.v
+circuit_list_add=koios/clstm_like.medium.v
+circuit_list_add=koios/clstm_like.small.v
+circuit_list_add=koios/conv_layer.v
+circuit_list_add=koios/conv_layer_hls.v
+circuit_list_add=koios/dla_like.large.v
+circuit_list_add=koios/dla_like.medium.v
+circuit_list_add=koios/dla_like.small.v
+circuit_list_add=koios/dnnweaver.v
+circuit_list_add=koios/eltwise_layer.v
+circuit_list_add=koios/gemm_layer.v
+circuit_list_add=koios/lenet.v
+circuit_list_add=koios/lstm.v
+circuit_list_add=koios/reduction_layer.v
+circuit_list_add=koios/robot_rl.v
+circuit_list_add=koios/softmax.v
+circuit_list_add=koios/spmv.v
+circuit_list_add=koios/tdarknet_like.large.v
+circuit_list_add=koios/tdarknet_like.small.v
+circuit_list_add=koios/tpu_like.large.os.v
+circuit_list_add=koios/tpu_like.large.ws.v
+circuit_list_add=koios/tpu_like.small.os.v
+circuit_list_add=koios/tpu_like.small.ws.v
+circuit_list_add=koios_proxy/proxy.1.v
+circuit_list_add=koios_proxy/proxy.2.v
+circuit_list_add=koios_proxy/proxy.3.v
+circuit_list_add=koios_proxy/proxy.4.v
+circuit_list_add=koios_proxy/proxy.5.v
+circuit_list_add=koios_proxy/proxy.6.v
+circuit_list_add=koios_proxy/proxy.7.v
+circuit_list_add=koios_proxy/proxy.8.v
+
+# Add architectures to list to sweep
+arch_list_add=COFFE_22nm/k6FracN10LB_mem20K_complexDSP_customSB_22nm.xml
+arch_list_add=multi_die/hecate/2d/variations/hecate_2d_with_adders.xml
+
+# Add include files to the list.
+# Some benchmarks instantiate hard dsp and memory blocks 
+# This functionality is guarded under the `complex_dsp` and `hard_mem` macros. 
+# The hard_mem_include.v file 
+# defines the memory macros, thereby enabling instantiations of the memory hard blocks
+include_list_add=hard_mem_include.v
+
+# Parse info and how to parse
+parse_file=vpr_fixed_chan_width.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+# Pass the script params.
+# Here, we explicitly want the traditional flow since we want to know the device
+# widths estimated by that flow.
+# We set the route channel width to 320 for the hecate architecture. Its not a
+# huge deal that Aman's arch may use 300.
+# Increase the max router iterations just in case.
+script_params=--pack --place --route --analysis --route_chan_width 320 -max_router_iterations 400
