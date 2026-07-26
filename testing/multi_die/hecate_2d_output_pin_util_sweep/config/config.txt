@@ -1,0 +1,76 @@
+#
+############################################
+# Configuration file for running experiments
+##############################################
+
+# Path to directory of circuits to use
+circuits_dir=/shared/singera8/koios_hecate_2d_blifs
+
+# Path to directory of architectures to use
+archs_dir=arch/multi_die/hecate/2d/variations
+
+# Add circuits to list to sweep
+circuit_list_add=attention_layer.blif
+circuit_list_add=bnn.blif
+circuit_list_add=bwave_like.fixed.large.blif
+circuit_list_add=bwave_like.fixed.small.blif
+circuit_list_add=bwave_like.float.large.blif
+circuit_list_add=bwave_like.float.small.blif
+circuit_list_add=clstm_like.large.blif
+circuit_list_add=clstm_like.medium.blif
+circuit_list_add=clstm_like.small.blif
+circuit_list_add=conv_layer.blif
+circuit_list_add=conv_layer_hls.blif
+circuit_list_add=dla_like.large.blif
+circuit_list_add=dla_like.medium.blif
+circuit_list_add=dla_like.small.blif
+circuit_list_add=dnnweaver.blif
+circuit_list_add=eltwise_layer.blif
+circuit_list_add=gemm_layer.blif
+circuit_list_add=lenet.blif
+circuit_list_add=lstm.blif
+circuit_list_add=reduction_layer.blif
+circuit_list_add=robot_rl.blif
+circuit_list_add=softmax.blif
+circuit_list_add=spmv.blif
+circuit_list_add=tdarknet_like.large.blif
+circuit_list_add=tdarknet_like.small.blif
+circuit_list_add=tpu_like.large.os.blif
+circuit_list_add=tpu_like.large.ws.blif
+circuit_list_add=tpu_like.small.os.blif
+circuit_list_add=tpu_like.small.ws.blif
+circuit_list_add=proxy.1.blif
+circuit_list_add=proxy.2.blif
+circuit_list_add=proxy.3.blif
+circuit_list_add=proxy.4.blif
+circuit_list_add=proxy.5.blif
+circuit_list_add=proxy.6.blif
+circuit_list_add=proxy.7.blif
+circuit_list_add=proxy.8.blif
+
+# Add architectures to list to sweep
+arch_list_add=hecate_2d_with_adders.xml
+
+# Parse info and how to parse
+parse_file=hecate_2d.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+# Pass the script params.
+# Here, we explicitly want the traditional flow since we want to know the device
+# widths estimated by that flow.
+# We set the route channel width to 320 for the hecate architecture. Its not a
+# huge deal that Aman's arch may use 300.
+# Increase the max router iterations just in case.
+script_params_common=-starting_stage vpr --route_chan_width 320 -max_router_iterations 400 -timeout 14400
+script_params_list_add=--target_ext_pin_util clb:0.8,0.6 --analytical_place --route --analysis
+script_params_list_add=--target_ext_pin_util clb:0.8,0.8 --analytical_place --route --analysis
+script_params_list_add=--target_ext_pin_util clb:0.8,1.0 --analytical_place --route --analysis
+script_params_list_add=--target_ext_pin_util clb:0.8,0.6 --pack --place --route --analysis
+script_params_list_add=--target_ext_pin_util clb:0.8,0.8 --pack --place --route --analysis
+script_params_list_add=--target_ext_pin_util clb:0.8,1.0 --pack --place --route --analysis
+
