@@ -58,12 +58,12 @@ arch_list_add=multi_die/hecate/2d/variations/hecate_2d_with_adders.xml
 # Add include files to the list.
 # Some benchmarks instantiate hard dsp and memory blocks 
 # This functionality is guarded under the `complex_dsp` and `hard_mem` macros. 
-# The hard_mem_include.v file 
-# defines the memory macros, thereby enabling instantiations of the memory hard blocks
-include_list_add=hard_mem_include.v
+# The hard_block_include.v file 
+# defines the complex_dsp and memory macros, thereby enabling instantiations of the hard blocks
+include_list_add=hard_block_include.v
 
 # Parse info and how to parse
-parse_file=vpr_fixed_chan_width.txt
+parse_file=hecate_2d.txt
 
 # How to parse QoR info
 qor_parse_file=qor_ap_fixed_chan_width.txt
@@ -77,4 +77,4 @@ pass_requirements_file=pass_requirements.txt
 # We set the route channel width to 320 for the hecate architecture. Its not a
 # huge deal that Aman's arch may use 300.
 # Increase the max router iterations just in case.
-script_params=--pack --place --route --analysis --route_chan_width 320 -max_router_iterations 400
+script_params=--pack --place --route --analysis --route_chan_width 320 -max_router_iterations 400 --memoize_cluster_packings on
