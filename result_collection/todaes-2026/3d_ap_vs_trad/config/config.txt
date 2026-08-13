@@ -4,7 +4,7 @@
 ##############################################
 
 # Path to directory of circuits to use
-circuits_dir=/shared/gholam39/koios_3d
+circuits_dir=/shared/singera8/koios_hecate_2d_blifs/
 
 # Path to directory of architectures to use
 archs_dir=arch/multi_die/hecate/3d/hecate_3D
@@ -24,7 +24,7 @@ circuit_list_add=clstm_like.medium.blif
 circuit_list_add=clstm_like.small.blif
 #circuit_list_add=conv_layer.blif
 circuit_list_add=conv_layer_hls.blif
-circuit_list_add=dla_like.large.pre-vpr.blif
+circuit_list_add=dla_like.large.blif
 circuit_list_add=dla_like.medium.blif
 circuit_list_add=dla_like.small.blif
 circuit_list_add=dnnweaver.blif
