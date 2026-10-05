@@ -1,0 +1,74 @@
+##############################################
+# Configuration file for running experiments
+##############################################
+#
+# Estimate: reads in the final flat placement of the routed task and writes
+# the post-routing timing estimate of that placement.
+#
+# See ../../README.md for how to run this experiment.
+
+# Path to directory of circuits to use
+circuits_dir=/shared/singera8/flagship_blifs
+
+# Path to directory of architectures to use
+archs_dir=arch/timing
+
+# Add architectures to list to sweep
+arch_list_add=k6_frac_N10_frac_chain_mem32K_40nm.xml
+
+# Add circuits to list to sweep
+circuit_list_add=arm_core.blif
+circuit_list_add=bgm.blif
+circuit_list_add=stereovision0.blif
+circuit_list_add=stereovision1.blif
+circuit_list_add=stereovision2.blif
+circuit_list_add=LU8PEEng.blif
+circuit_list_add=LU32PEEng.blif
+circuit_list_add=mcml.blif
+
+# Constrain the circuits to their devices
+circuit_constraint_list_add=(stereovision0.blif,    device=vtr_medium)
+circuit_constraint_list_add=(arm_core.blif,         device=vtr_medium)
+circuit_constraint_list_add=(stereovision1.blif,    device=vtr_medium)
+circuit_constraint_list_add=(LU8PEEng.blif,         device=vtr_large)
+circuit_constraint_list_add=(bgm.blif,              device=vtr_large)
+circuit_constraint_list_add=(stereovision2.blif,    device=vtr_extra_large)
+circuit_constraint_list_add=(mcml.blif,             device=vtr_extra_large)
+circuit_constraint_list_add=(LU32PEEng.blif,        device=vtr_extra_large)
+
+# Constrain the circuits to their channel widths
+#       1.3 * minW
+circuit_constraint_list_add=(stereovision0.blif,    route_chan_width=66)
+circuit_constraint_list_add=(arm_core.blif,         route_chan_width=148)
+circuit_constraint_list_add=(stereovision1.blif,    route_chan_width=100)
+circuit_constraint_list_add=(LU8PEEng.blif,         route_chan_width=118)
+circuit_constraint_list_add=(bgm.blif,              route_chan_width=110)
+circuit_constraint_list_add=(stereovision2.blif,    route_chan_width=114)
+circuit_constraint_list_add=(mcml.blif,             route_chan_width=170)
+circuit_constraint_list_add=(LU32PEEng.blif,        route_chan_width=146)
+
+# Read in the final flat placement of the routed task (copied into this task's
+# flat_placements directory by collect_flat_placements.py). The path is
+# relative to the run directory of each circuit (<task>/runXXX/<arch>/<circuit>/common).
+circuit_constraint_list_add=(arm_core.blif, read_flat_place=../../../../flat_placements/arm_core.fplace)
+circuit_constraint_list_add=(bgm.blif, read_flat_place=../../../../flat_placements/bgm.fplace)
+circuit_constraint_list_add=(stereovision0.blif, read_flat_place=../../../../flat_placements/stereovision0.fplace)
+circuit_constraint_list_add=(stereovision1.blif, read_flat_place=../../../../flat_placements/stereovision1.fplace)
+circuit_constraint_list_add=(stereovision2.blif, read_flat_place=../../../../flat_placements/stereovision2.fplace)
+circuit_constraint_list_add=(LU8PEEng.blif, read_flat_place=../../../../flat_placements/LU8PEEng.fplace)
+circuit_constraint_list_add=(LU32PEEng.blif, read_flat_place=../../../../flat_placements/LU32PEEng.fplace)
+circuit_constraint_list_add=(mcml.blif, read_flat_place=../../../../flat_placements/mcml.fplace)
+
+# Parse info and how to parse
+parse_file=vpr_fixed_chan_width.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+# Run only the AP flow on the read-in flat placement (global placement is
+# skipped) and write the estimated timing graph echo file. The detailed placer
+# is turned off since only the estimate is needed.
+script_params=-starting_stage vpr -crit_path_router_iterations 100 --seed 1 --analytical_place --ap_detailed_placer none --echo_files timing_graph.ap_post_routing_estimate.echo
