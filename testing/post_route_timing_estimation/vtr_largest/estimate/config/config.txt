@@ -27,14 +27,14 @@ circuit_list_add=LU32PEEng.blif
 circuit_list_add=mcml.blif
 
 # Constrain the circuits to their devices
-circuit_constraint_list_add=(stereovision0.blif,    device=vtr_medium)
-circuit_constraint_list_add=(arm_core.blif,         device=vtr_medium)
-circuit_constraint_list_add=(stereovision1.blif,    device=vtr_medium)
-circuit_constraint_list_add=(LU8PEEng.blif,         device=vtr_large)
-circuit_constraint_list_add=(bgm.blif,              device=vtr_large)
-circuit_constraint_list_add=(stereovision2.blif,    device=vtr_extra_large)
-circuit_constraint_list_add=(mcml.blif,             device=vtr_extra_large)
-circuit_constraint_list_add=(LU32PEEng.blif,        device=vtr_extra_large)
+circuit_constraint_list_add=(stereovision0.blif,    device_width=42)
+circuit_constraint_list_add=(arm_core.blif,         device_width=42)
+circuit_constraint_list_add=(stereovision1.blif,    device_width=42)
+circuit_constraint_list_add=(LU8PEEng.blif,         device_width=65)
+circuit_constraint_list_add=(bgm.blif,              device_width=65)
+circuit_constraint_list_add=(stereovision2.blif,    device_width=105)
+circuit_constraint_list_add=(mcml.blif,             device_width=105)
+circuit_constraint_list_add=(LU32PEEng.blif,        device_width=105)
 
 # Constrain the circuits to their channel widths
 #       1.3 * minW
