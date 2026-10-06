@@ -1,2 +1,2 @@
-vtr_largest/estimate
-koios/estimate
+vtr_largest/vtr_largest_estimate
+koios/koios_estimate

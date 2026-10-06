@@ -13,13 +13,19 @@ the routed design.
 Each suite contains two tasks over the same circuits, devices and channel
 widths:
 
-- `<suite>/routed`: Runs the AP flow, routes, and analyzes the design. Writes
+- `<suite>/<suite>_routed`: Runs the AP flow, routes, and analyzes the design. Writes
   the final flat placement (`final.fplace`) and the routed timing graph
   (`timing_graph.analysis.echo`).
-- `<suite>/estimate`: Reads in the final flat placement of the routed task
+- `<suite>/<suite>_estimate`: Reads in the final flat placement of the routed task
   (global placement is skipped) and writes the estimated timing graph
   (`timing_graph.ap_post_routing_estimate.echo`). The estimated CPD and sTNS
-  are printed in the VPR log ("Placement estimated CPD/sTNS").
+  are printed in the VPR log ("Placement estimated CPD/sTNS"), along with the
+  estimated wirelength ("Placement estimated wirelength").
+
+NOTE: Every task must have a unique directory name. `run_vtr_task.py` names a
+task after its directory (not its path), and when several tasks with the same
+name are run together their run directories collide (e.g. the jobs and parse
+results of one task are written into the run directory of the other).
 
 | Suite         | Circuits                                         |
 |---------------|--------------------------------------------------|
@@ -43,7 +49,7 @@ All commands are run from this directory.
    ```
 
 2. Copy the final flat placements of the latest routed runs into the estimate
-   tasks (`<suite>/estimate/flat_placements/<circuit>.fplace`):
+   tasks (`<suite>/<suite>_estimate/flat_placements/<circuit>.fplace`):
    ```sh
    ./collect_flat_placements.py
    ```
@@ -68,14 +74,17 @@ Each suite can be run on its own. Pass the task directly to `run_vtr_task.py`
 run only `vtr_largest`:
 
 ```sh
-VTR_PATH/vtr_flow/scripts/run_vtr_task.py vtr_largest/routed -j <N>
+VTR_PATH/vtr_flow/scripts/run_vtr_task.py vtr_largest/vtr_largest_routed -j <N>
 ./collect_flat_placements.py --suites vtr_largest
-VTR_PATH/vtr_flow/scripts/run_vtr_task.py vtr_largest/estimate -j <N>
+VTR_PATH/vtr_flow/scripts/run_vtr_task.py vtr_largest/vtr_largest_estimate -j <N>
 ./parse_timing_estimation.py --suites vtr_largest
 ```
 
 `--suites` takes one or more suite names. Without it, the scripts process every
 suite; when parsing, suites without a run of both tasks are skipped.
+
+Only the architectures and circuits listed in a task's config are collected and
+parsed; any other directories in its run directories are ignored.
 
 ## Results
 
@@ -83,6 +92,8 @@ suite; when parsing, suites without a run of both tasks are skipped.
 
 - `timing_estimation_results.csv`: One row per circuit, with:
   - The routed and estimated CPD and sTNS.
+  - The routed wirelength ("Total wirelength" after routing) and the estimated
+    post-routing wire usage of the flat placement, both in tiles.
   - Path delay accuracy: the setup arrival time at every timing endpoint, per
     clock domain pair (Pearson r, median estimated / routed, mean absolute %
     error). The median ratio and % error are also reported separately for
@@ -91,14 +102,17 @@ suite; when parsing, suites without a run of both tasks are skipped.
     connection, computed the same way as VPR (Pearson r, mean absolute error
     over all connections and over the critical connections, i.e. routed
     criticality > 0.8).
-- `cpd_tns_comparison.png`: Estimated vs. routed CPD and sTNS of every circuit.
+- `cpd_tns_wirelength_comparison.png`: Estimated vs. routed CPD, sTNS, and
+  wirelength of every circuit.
 - `path_crit_accuracy.png`: The path delay and criticality accuracy of every
   circuit.
 - `circuits/<suite>_<circuit>.png` (with `--per_circuit_plots`): Scatter plots
   of the estimated vs. routed path delays and criticalities of each circuit.
+  The path delays are colored by the routed criticality of their endpoint, with
+  the most critical endpoints drawn on top.
 
-A summary table and the geomean of the estimated / routed CPD and sTNS of each
-suite are also printed.
+A summary table and the geomean of the estimated / routed CPD, sTNS, and
+wirelength of each suite are also printed.
 
 Connections driven by constant generators and connections to clock pins are not
 routed through the general routing network, so they are not compared.

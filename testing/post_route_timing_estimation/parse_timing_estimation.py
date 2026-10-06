@@ -7,17 +7,22 @@ estimate made by the AP flow from a flat placement (the "estimate" task)
 against the actual timing after routing that same placement (the "routed"
 task), and produces:
     - results/timing_estimation_results.csv: One row per circuit with the
-      routed and estimated CPD and sTNS, and the accuracy of the estimated
-      path delays and criticalities.
-    - results/cpd_tns_comparison.png: Estimated vs. routed CPD and sTNS.
+      routed and estimated CPD, sTNS, and wirelength, and the accuracy of
+      the estimated path delays and criticalities.
+    - results/cpd_tns_wirelength_comparison.png: Estimated vs. routed CPD,
+      sTNS, and wirelength.
     - results/path_crit_accuracy.png: The accuracy of the estimated path
       delays and connection criticalities of each circuit.
     - results/circuits/<suite>_<circuit>.png (with --per_circuit_plots):
-      Scatter plots of the estimated vs. routed path delays and connection
-      criticalities of each circuit.
+      Scatter plots of the estimated vs. routed path delays (colored by the
+      routed criticality of their endpoint) and connection criticalities of
+      each circuit.
 
-The CPD and sTNS are parsed from the VPR logs. The path delays and
-criticalities are computed from the timing graph echo files:
+The CPD, sTNS, and wirelength are parsed from the VPR logs. The routed
+wirelength is the total wirelength of the routing; the estimated wirelength
+is the AP flow's post-routing wire usage estimate of the flat placement. Both
+are in tiles. The path delays and criticalities are computed from the timing
+graph echo files:
     - Routed:    timing_graph.analysis.echo
     - Estimated: timing_graph.ap_post_routing_estimate.echo
 Both are over the same atom-level timing graph, so they are compared node by
@@ -51,6 +56,15 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # pylint: disable=wrong-import-position
 import numpy as np  # pylint: disable=wrong-import-position
 
+# pylint: disable-next=wrong-import-position
+from collect_flat_placements import (
+    find_circuit_dirs,
+    find_run_dir,
+    find_suites,
+    read_task_config_jobs,
+    task_dir,
+)
+
 ROUTED_ECHO = "timing_graph.analysis.echo"
 ESTIMATE_ECHO = "timing_graph.ap_post_routing_estimate.echo"
 
@@ -66,45 +80,6 @@ CRITICAL_THRESHOLD = 0.8
 # ---------------------------------------------------------------------------
 # Finding the runs.
 # ---------------------------------------------------------------------------
-
-
-def find_suites(base_dir):
-    """Find the suite directories (those with a routed and an estimate task)."""
-    return [
-        name
-        for name in sorted(os.listdir(base_dir))
-        if os.path.isdir(os.path.join(base_dir, name, "routed"))
-        and os.path.isdir(os.path.join(base_dir, name, "estimate"))
-    ]
-
-
-def find_run_dir(task_dir, run_name=None):
-    """Find the given run directory of a task, or the latest one if not given."""
-    if run_name is not None:
-        run_dir = os.path.join(task_dir, run_name)
-        return run_dir if os.path.isdir(run_dir) else None
-    if not os.path.isdir(task_dir):
-        return None
-    runs = [d for d in os.listdir(task_dir) if re.fullmatch(r"run\d+", d)]
-    if not runs:
-        return None
-    return os.path.join(task_dir, max(runs, key=lambda d: int(d[3:])))
-
-
-def find_circuit_dirs(run_dir):
-    """Map each (arch, circuit) in a task run to its common directory."""
-    circuit_dirs = {}
-    if run_dir is None:
-        return circuit_dirs
-    for arch in sorted(os.listdir(run_dir)):
-        arch_dir = os.path.join(run_dir, arch)
-        if not os.path.isdir(arch_dir):
-            continue
-        for circuit in sorted(os.listdir(arch_dir)):
-            common_dir = os.path.join(arch_dir, circuit, "common")
-            if os.path.isdir(common_dir):
-                circuit_dirs[(arch, circuit)] = common_dir
-    return circuit_dirs
 
 
 # ---------------------------------------------------------------------------
@@ -126,20 +101,29 @@ def parse_log_value(log_file, pattern):
 
 
 def parse_routed_log(common_dir):
-    """Parse the routed CPD and sTNS (in ns) from the routed task's VPR log."""
+    """
+    Parse the routed CPD and sTNS (in ns) and the routed wirelength (in tiles)
+    from the routed task's VPR log.
+    """
     log_file = os.path.join(common_dir, "vpr.out")
     return (
         parse_log_value(log_file, r"Final critical path delay \(least slack\): (\S+) ns"),
         parse_log_value(log_file, r"Final setup Total Negative Slack \(sTNS\): (\S+) ns"),
+        parse_log_value(log_file, r"Total wirelength: (\d+), average net length"),
     )
 
 
 def parse_estimate_log(common_dir):
-    """Parse the estimated CPD and sTNS (in ns) from the estimate task's VPR log."""
+    """
+    Parse the estimated CPD and sTNS (in ns) and the estimated wirelength (in
+    tiles) from the estimate task's VPR log. The first estimated wirelength in
+    the log is the one of the read-in flat placement.
+    """
     log_file = os.path.join(common_dir, "vpr.out")
     return (
         parse_log_value(log_file, r"Placement estimated CPD: (\S+) ns"),
         parse_log_value(log_file, r"Placement estimated sTNS: (\S+) ns"),
+        parse_log_value(log_file, r"Placement estimated wirelength: (\S+)"),
     )
 
 
@@ -310,22 +294,48 @@ def pair_stats(pairs, prefix):
     return stats
 
 
+def endpoint_path_pairs(routed, estimated):
+    """
+    Get the (routed, estimated) path delays of the timing endpoints: the setup
+    arrival times at the SINK nodes (in ns), per clock domain pair. Also get
+    the routed criticality of the endpoint of each pair, which is 0 for
+    endpoints without a criticality.
+    """
+    endpoint_crits = {}
+    path_pairs = []
+    path_crits = []
+    for key, arrival in routed.endpoint_arrival.items():
+        if key not in estimated.endpoint_arrival:
+            continue
+        node = key[0]
+        if node not in endpoint_crits:
+            endpoint_crits[node] = routed.setup_criticality(node) or 0.0
+        path_pairs.append((arrival * 1e9, estimated.endpoint_arrival[key] * 1e9))
+        path_crits.append(endpoint_crits[node])
+    return np.array(path_pairs).reshape(-1, 2), np.array(path_crits)
+
+
 def compare_circuit(job):
     """
     Compare the routed and estimated timing of one circuit. Returns the row
-    of results, and the (routed, estimated) path delay and criticality pairs
-    if they are needed for per-circuit plots.
+    of results, and if they are needed for per-circuit plots, the (routed,
+    estimated) path delay pairs, the routed criticality of the endpoint of
+    each path delay pair, and the (routed, estimated) criticality pairs.
     """
     suite, arch, circuit, routed_dir, estimate_dir, keep_pairs = job
     row = {"suite": suite, "arch": arch, "circuit": os.path.splitext(circuit)[0]}
-    row["routed_cpd_ns"], row["routed_stns_ns"] = parse_routed_log(routed_dir)
-    row["estimated_cpd_ns"], row["estimated_stns_ns"] = parse_estimate_log(estimate_dir)
+    row["routed_cpd_ns"], row["routed_stns_ns"], row["routed_wirelength"] = parse_routed_log(
+        routed_dir
+    )
+    row["estimated_cpd_ns"], row["estimated_stns_ns"], row["estimated_wirelength"] = (
+        parse_estimate_log(estimate_dir)
+    )
 
     routed_echo_file = os.path.join(routed_dir, ROUTED_ECHO)
     estimate_echo_file = os.path.join(estimate_dir, ESTIMATE_ECHO)
     if not os.path.isfile(routed_echo_file) or not os.path.isfile(estimate_echo_file):
         row["error"] = "missing echo file"
-        return row, None, None
+        return row, None
 
     routed = parse_timing_echo(routed_echo_file)
     estimated = parse_timing_echo(estimate_echo_file)
@@ -334,26 +344,10 @@ def compare_circuit(job):
         or routed.node_types != estimated.node_types
     ):
         row["error"] = "timing graphs do not match"
-        return row, None, None
+        return row, None
 
-    # Path delays: the setup arrival times at the timing endpoints (in ns).
-    # Also record the routed criticality of each endpoint, to split the path
-    # delay accuracy into critical and non-critical endpoints.
-    endpoint_crits = {}
-    path_pairs = []
-    path_is_critical = []
-    for key, arrival in routed.endpoint_arrival.items():
-        if key not in estimated.endpoint_arrival:
-            continue
-        node = key[0]
-        if node not in endpoint_crits:
-            endpoint_crits[node] = routed.setup_criticality(node)
-        path_pairs.append((arrival * 1e9, estimated.endpoint_arrival[key] * 1e9))
-        path_is_critical.append(
-            endpoint_crits[node] is not None and endpoint_crits[node] > CRITICAL_THRESHOLD
-        )
-    path_pairs = np.array(path_pairs).reshape(-1, 2)
-    path_is_critical = np.array(path_is_critical, dtype=bool)
+    path_pairs, path_crits = endpoint_path_pairs(routed, estimated)
+    path_is_critical = path_crits > CRITICAL_THRESHOLD
 
     # Criticalities of the sinks of routed connections.
     crit_pairs = []
@@ -371,11 +365,13 @@ def compare_circuit(job):
     critical = crit_pairs[crit_pairs[:, 0] > CRITICAL_THRESHOLD] if len(crit_pairs) else crit_pairs
     row["crit_critical_count"] = len(critical)
     if len(critical) > 0:
-        row["crit_critical_mean_abs_error"] = float(np.mean(np.abs(critical[:, 1] - critical[:, 0])))
+        row["crit_critical_mean_abs_error"] = float(
+            np.mean(np.abs(critical[:, 1] - critical[:, 0]))
+        )
 
     if keep_pairs:
-        return row, path_pairs, crit_pairs
-    return row, None, None
+        return row, (path_pairs, path_crits, crit_pairs)
+    return row, None
 
 
 # ---------------------------------------------------------------------------
@@ -390,6 +386,8 @@ CSV_COLUMNS = [
     "estimated_cpd_ns",
     "routed_stns_ns",
     "estimated_stns_ns",
+    "routed_wirelength",
+    "estimated_wirelength",
     "path_count",
     "path_pearson_r",
     "path_median_ratio",
@@ -427,10 +425,18 @@ def _geomean(values):
     return math.exp(sum(math.log(v) for v in values) / len(values)) if values else math.nan
 
 
+def _ratio(row, estimated_key, routed_key):
+    """The estimated / routed ratio of a value of a row, or NaN if it cannot be computed."""
+    estimated, routed = row.get(estimated_key), row.get(routed_key)
+    if not _finite(estimated) or not _finite(routed) or routed == 0:
+        return math.nan
+    return estimated / routed
+
+
 def print_summary(rows):
     """Print a table of the results and the geomean of the estimate ratios per suite."""
     print(
-        f"{'suite':<12} {'circuit':<26} {'CPD r/e (ns)':>17} {'sTNS r/e (ns)':>25} "
+        f"{'suite':<12} {'circuit':<26} {'CPD r/e (ns)':>17} {'sTNS r/e (ns)':>25} {'WL e/r':>7} "
         f"{'path r':>7} {'path med':>8} {'crit med':>8} {'ncrit med':>9} {'path %err':>9} "
         f"{'crit r':>7} {'crit MAE':>8}"
     )
@@ -443,6 +449,7 @@ def print_summary(rows):
             f"{row['suite']:<12} {row['circuit']:<26} "
             f"{fmt(row['routed_cpd_ns'], '8.3f')}/{fmt(row['estimated_cpd_ns'], '<8.3f')} "
             f"{fmt(row['routed_stns_ns'], '12.1f')}/{fmt(row['estimated_stns_ns'], '<12.1f')} "
+            f"{fmt(_ratio(row, 'estimated_wirelength', 'routed_wirelength'), '7.3f')} "
             f"{fmt(row.get('path_pearson_r'), '7.3f')} {fmt(row.get('path_median_ratio'), '8.3f')} "
             f"{fmt(row.get('path_critical_median_ratio'), '8.3f')} "
             f"{fmt(row.get('path_noncritical_median_ratio'), '9.3f')} "
@@ -454,9 +461,10 @@ def print_summary(rows):
     print("\nGeomean of estimated / routed:")
     for suite in sorted({row["suite"] for row in rows}):
         suite_rows = [row for row in rows if row["suite"] == suite]
-        cpd = _geomean([r["estimated_cpd_ns"] / r["routed_cpd_ns"] for r in suite_rows if _finite(r["estimated_cpd_ns"]) and _finite(r["routed_cpd_ns"]) and r["routed_cpd_ns"] > 0])  # fmt: skip
-        tns = _geomean([r["estimated_stns_ns"] / r["routed_stns_ns"] for r in suite_rows if _finite(r["estimated_stns_ns"]) and _finite(r["routed_stns_ns"]) and r["routed_stns_ns"] < 0])  # fmt: skip
-        print(f"\t{suite:<12} CPD: {cpd:.3f}  sTNS: {tns:.3f}")
+        cpd = _geomean([_ratio(r, "estimated_cpd_ns", "routed_cpd_ns") for r in suite_rows])
+        tns = _geomean([_ratio(r, "estimated_stns_ns", "routed_stns_ns") for r in suite_rows])
+        wl = _geomean([_ratio(r, "estimated_wirelength", "routed_wirelength") for r in suite_rows])
+        print(f"\t{suite:<12} CPD: {cpd:.3f}  sTNS: {tns:.3f}  Wirelength: {wl:.3f}")
 
 
 def _suite_colors(rows):
@@ -497,10 +505,10 @@ def _scatter_with_labels(ax, rows, colors, routed_key, estimated_key, negate):
     ax.legend(fontsize=8)
 
 
-def plot_cpd_tns(rows, filename):
-    """Plot the estimated vs. routed CPD and sTNS of every circuit."""
+def plot_cpd_tns_wirelength(rows, filename):
+    """Plot the estimated vs. routed CPD, sTNS, and wirelength of every circuit."""
     colors = _suite_colors(rows)
-    fig, axes = plt.subplots(1, 2, figsize=(13, 6.5))
+    fig, axes = plt.subplots(1, 3, figsize=(19.5, 6.5))
     _scatter_with_labels(axes[0], rows, colors, "routed_cpd_ns", "estimated_cpd_ns", negate=False)
     axes[0].set_xlabel("Routed CPD (ns)")
     axes[0].set_ylabel("Estimated CPD (ns)")
@@ -509,6 +517,12 @@ def plot_cpd_tns(rows, filename):
     axes[1].set_xlabel("Routed -sTNS (ns)")
     axes[1].set_ylabel("Estimated -sTNS (ns)")
     axes[1].set_title("Setup Total Negative Slack")
+    _scatter_with_labels(
+        axes[2], rows, colors, "routed_wirelength", "estimated_wirelength", negate=False
+    )
+    axes[2].set_xlabel("Routed wirelength (tiles)")
+    axes[2].set_ylabel("Estimated wirelength (tiles)")
+    axes[2].set_title("Wirelength")
     fig.tight_layout()
     fig.savefig(filename, dpi=150)
     plt.close(fig)
@@ -544,7 +558,9 @@ def plot_accuracy(rows, filename):
             None,
         ),
     ]
-    fig, axes = plt.subplots(len(panels), 1, figsize=(max(8, 0.35 * len(rows) + 2), 3 * len(panels)))
+    fig, axes = plt.subplots(
+        len(panels), 1, figsize=(max(8, 0.35 * len(rows) + 2), 3 * len(panels))
+    )
     for ax, (key, title, reference) in zip(axes, panels):
         values = [row.get(key, math.nan) for row in rows]
         values = [v if _finite(v) else 0.0 for v in values]
@@ -564,26 +580,51 @@ def plot_accuracy(rows, filename):
     plt.close(fig)
 
 
-def plot_circuit(row, path_pairs, crit_pairs, filename):
-    """Scatter plots of the estimated vs. routed path delays and criticalities of a circuit."""
-    fig, axes = plt.subplots(1, 2, figsize=(12, 6))
-    for ax, pairs, title, unit in (
-        (axes[0], path_pairs, "Endpoint path delay", " (ns)"),
-        (axes[1], crit_pairs, "Connection criticality", ""),
-    ):
-        if pairs is None or len(pairs) == 0:
-            continue
-        ax.scatter(pairs[:, 0], pairs[:, 1], s=3, alpha=0.25, linewidths=0, rasterized=True)
-        lo = min(0.0, float(pairs.min()))
-        hi = float(pairs.max()) * 1.05
-        ax.plot([lo, hi], [lo, hi], color="#555555", linewidth=1, linestyle="--")
-        ax.set_xlim(lo, hi)
-        ax.set_ylim(lo, hi)
-        ax.set_aspect("equal")
-        ax.set_xlabel(f"Routed{unit}")
-        ax.set_ylabel(f"Estimated{unit}")
-        ax.set_title(f"{row['suite']} / {row['circuit']}: {title}")
-        ax.grid(True, linewidth=0.3)
+def _plot_identity_axes(ax, pairs, title, unit):
+    """Draw the y = x line and set up square axes covering the given pairs."""
+    lo = min(0.0, float(pairs.min()))
+    hi = float(pairs.max()) * 1.05
+    ax.plot([lo, hi], [lo, hi], color="#555555", linewidth=1, linestyle="--")
+    ax.set_xlim(lo, hi)
+    ax.set_ylim(lo, hi)
+    ax.set_aspect("equal")
+    ax.set_xlabel(f"Routed{unit}")
+    ax.set_ylabel(f"Estimated{unit}")
+    ax.set_title(title)
+    ax.grid(True, linewidth=0.3)
+
+
+def plot_circuit(row, path_pairs, path_crits, crit_pairs, filename):
+    """
+    Scatter plots of the estimated vs. routed path delays and criticalities of
+    a circuit. The path delays are colored by the routed criticality of their
+    endpoint, with the most critical drawn on top.
+    """
+    fig, axes = plt.subplots(1, 2, figsize=(13, 6))
+    name = f"{row['suite']} / {row['circuit']}"
+    if len(path_pairs) > 0:
+        order = np.argsort(path_crits, kind="stable")
+        points = axes[0].scatter(
+            path_pairs[order, 0],
+            path_pairs[order, 1],
+            c=path_crits[order],
+            cmap="viridis",
+            vmin=0.0,
+            vmax=1.0,
+            s=3,
+            alpha=0.5,
+            linewidths=0,
+            rasterized=True,
+        )
+        fig.colorbar(
+            points, ax=axes[0], fraction=0.046, pad=0.04, label="Routed endpoint criticality"
+        )
+        _plot_identity_axes(axes[0], path_pairs, f"{name}: Endpoint path delay", " (ns)")
+    if len(crit_pairs) > 0:
+        axes[1].scatter(
+            crit_pairs[:, 0], crit_pairs[:, 1], s=3, alpha=0.25, linewidths=0, rasterized=True
+        )
+        _plot_identity_axes(axes[1], crit_pairs, f"{name}: Connection criticality", "")
     fig.tight_layout()
     fig.savefig(filename, dpi=120)
     plt.close(fig)
@@ -598,20 +639,34 @@ def collect_jobs(base_dir, suites, args):
     """Find the routed and estimate run directories of every circuit."""
     jobs = []
     for suite in suites:
-        routed_run = find_run_dir(os.path.join(base_dir, suite, "routed"), args.routed_run)
-        estimate_run = find_run_dir(os.path.join(base_dir, suite, "estimate"), args.estimate_run)
+        routed_task_dir = task_dir(base_dir, suite, "routed")
+        estimate_task_dir = task_dir(base_dir, suite, "estimate")
+        routed_run = find_run_dir(routed_task_dir, args.routed_run)
+        estimate_run = find_run_dir(estimate_task_dir, args.estimate_run)
         if routed_run is None or estimate_run is None:
             print(f"{suite}: skipping, missing a run of the routed or estimate task")
             continue
         print(f"{suite}: routed {routed_run}, estimate {estimate_run}")
-        routed_dirs = find_circuit_dirs(routed_run)
-        estimate_dirs = find_circuit_dirs(estimate_run)
-        for key in sorted(set(routed_dirs) | set(estimate_dirs)):
-            if key not in routed_dirs or key not in estimate_dirs:
+        # Only the circuits in the tasks' configs are parsed; any other
+        # directories in the runs are ignored.
+        config_jobs = read_task_config_jobs(routed_task_dir) | read_task_config_jobs(
+            estimate_task_dir
+        )
+        routed_dirs = find_circuit_dirs(routed_run, config_jobs)
+        estimate_dirs = find_circuit_dirs(estimate_run, config_jobs)
+        for key in sorted(config_jobs):
+            if routed_dirs[key] is None or estimate_dirs[key] is None:
                 print(f"\tskipping {key[1]}: not in both runs")
                 continue
             jobs.append(
-                (suite, key[0], key[1], routed_dirs[key], estimate_dirs[key], args.per_circuit_plots)
+                (
+                    suite,
+                    key[0],
+                    key[1],
+                    routed_dirs[key],
+                    estimate_dirs[key],
+                    args.per_circuit_plots,
+                )
             )
     return jobs
 
@@ -622,9 +677,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Parse the results of the post-routing timing estimation experiment."
     )
-    parser.add_argument(
-        "--suites", nargs="+", default=None, help="Suites to parse (default: all)."
-    )
+    parser.add_argument("--suites", nargs="+", default=None, help="Suites to parse (default: all).")
     parser.add_argument(
         "--routed_run", default=None, help="Run of the routed tasks (default: latest)."
     )
@@ -661,21 +714,24 @@ def main():
 
     rows = []
     with Pool(max(1, args.j)) as pool:
-        for row, path_pairs, crit_pairs in pool.imap(compare_circuit, jobs):
+        for row, circuit_data in pool.imap(compare_circuit, jobs):
             print(f"\tparsed {row['suite']} / {row['circuit']}", flush=True)
             rows.append(row)
-            if args.per_circuit_plots and path_pairs is not None:
+            if args.per_circuit_plots and circuit_data is not None:
                 plot_circuit(
                     row,
-                    path_pairs,
-                    crit_pairs,
-                    os.path.join(args.output_dir, "circuits", f"{row['suite']}_{row['circuit']}.png"),
+                    *circuit_data,
+                    os.path.join(
+                        args.output_dir, "circuits", f"{row['suite']}_{row['circuit']}.png"
+                    ),
                 )
 
     print()
     print_summary(rows)
     write_csv(rows, os.path.join(args.output_dir, "timing_estimation_results.csv"))
-    plot_cpd_tns(rows, os.path.join(args.output_dir, "cpd_tns_comparison.png"))
+    plot_cpd_tns_wirelength(
+        rows, os.path.join(args.output_dir, "cpd_tns_wirelength_comparison.png")
+    )
     plot_accuracy(rows, os.path.join(args.output_dir, "path_crit_accuracy.png"))
     print(f"\nResults written to {args.output_dir}")
 

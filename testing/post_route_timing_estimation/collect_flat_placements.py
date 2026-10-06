@@ -3,11 +3,15 @@
 Copy the final flat placements written by the routed tasks into the estimate
 tasks.
 
-For each suite (a directory containing a "routed" and an "estimate" task), the
-final flat placement of every circuit in the latest run of the routed task
-(<suite>/routed/runXXX/<arch>/<circuit>/common/final.fplace) is copied to
-<suite>/estimate/flat_placements/<circuit name>.fplace, which is where the
-estimate task reads it from.
+For each suite (a directory containing a <suite>_routed and a <suite>_estimate
+task), the final flat placement of every circuit in the latest run of the
+routed task
+(<suite>/<suite>_routed/runXXX/<arch>/<circuit>/common/final.fplace) is copied
+to <suite>/<suite>_estimate/flat_placements/<circuit name>.fplace, which is
+where the estimate task reads it from.
+
+Only the architectures and circuits listed in the routed task's config are
+collected; any other directories in the run directory are ignored.
 """
 
 import argparse
@@ -17,43 +21,61 @@ import shutil
 import sys
 
 
+def task_dir(base_dir, suite, kind):
+    """Get the directory of the given kind of task ("routed" or "estimate") of a suite."""
+    return os.path.join(base_dir, suite, f"{suite}_{kind}")
+
+
 def find_suites(base_dir):
     """Find the suite directories (those with a routed and an estimate task)."""
-    suites = []
-    for name in sorted(os.listdir(base_dir)):
-        suite_dir = os.path.join(base_dir, name)
-        if os.path.isdir(os.path.join(suite_dir, "routed")) and os.path.isdir(
-            os.path.join(suite_dir, "estimate")
-        ):
-            suites.append(name)
-    return suites
+    return [
+        name
+        for name in sorted(os.listdir(base_dir))
+        if os.path.isdir(task_dir(base_dir, name, "routed"))
+        and os.path.isdir(task_dir(base_dir, name, "estimate"))
+    ]
 
 
-def find_run_dir(task_dir, run_name=None):
+def find_run_dir(run_parent_dir, run_name=None):
     """Find the given run directory of a task, or the latest one if not given."""
     if run_name is not None:
-        run_dir = os.path.join(task_dir, run_name)
+        run_dir = os.path.join(run_parent_dir, run_name)
         return run_dir if os.path.isdir(run_dir) else None
-    runs = [d for d in os.listdir(task_dir) if re.fullmatch(r"run\d+", d)]
+    if not os.path.isdir(run_parent_dir):
+        return None
+    runs = [d for d in os.listdir(run_parent_dir) if re.fullmatch(r"run\d+", d)]
     if not runs:
         return None
-    return os.path.join(task_dir, max(runs, key=lambda d: int(d[3:])))
+    return os.path.join(run_parent_dir, max(runs, key=lambda d: int(d[3:])))
 
 
-def find_circuit_dirs(run_dir):
+def read_task_config_jobs(config_task_dir):
     """
-    Find the common directory of every (arch, circuit) in a task run.
-    Returns a dictionary from (arch, circuit) to the common directory.
+    Get the (arch, circuit) pairs listed in a task's config. These are the
+    names of the arch and circuit directories in the task's run directories.
+    """
+    archs, circuits = [], []
+    config_file = os.path.join(config_task_dir, "config", "config.txt")
+    with open(config_file, "r", encoding="utf-8") as config:
+        for line in config:
+            line = line.split("#")[0].strip()
+            if line.startswith("arch_list_add="):
+                archs.append(line.split("=", 1)[1].strip())
+            elif line.startswith("circuit_list_add="):
+                circuits.append(line.split("=", 1)[1].strip())
+    return {(arch, circuit) for arch in archs for circuit in circuits}
+
+
+def find_circuit_dirs(run_dir, config_jobs):
+    """
+    Find the common directory of every (arch, circuit) of the task's config
+    in a task run. Returns a dictionary from (arch, circuit) to the common
+    directory, which is None if the circuit's directory does not exist.
     """
     circuit_dirs = {}
-    for arch in sorted(os.listdir(run_dir)):
-        arch_dir = os.path.join(run_dir, arch)
-        if not os.path.isdir(arch_dir):
-            continue
-        for circuit in sorted(os.listdir(arch_dir)):
-            common_dir = os.path.join(arch_dir, circuit, "common")
-            if os.path.isdir(common_dir):
-                circuit_dirs[(arch, circuit)] = common_dir
+    for arch, circuit in sorted(config_jobs):
+        common_dir = os.path.join(run_dir, arch, circuit, "common")
+        circuit_dirs[(arch, circuit)] = common_dir if os.path.isdir(common_dir) else None
     return circuit_dirs
 
 
@@ -82,19 +104,20 @@ def main():
     suites = args.suites if args.suites is not None else find_suites(base_dir)
     num_missing = 0
     for suite in suites:
-        routed_task_dir = os.path.join(base_dir, suite, "routed")
+        routed_task_dir = task_dir(base_dir, suite, "routed")
         run_dir = find_run_dir(routed_task_dir, args.run)
         if run_dir is None:
             print(f"{suite}: no run of the routed task found in {routed_task_dir}")
             num_missing += 1
             continue
 
-        dest_dir = os.path.join(base_dir, suite, "estimate", "flat_placements")
+        dest_dir = os.path.join(task_dir(base_dir, suite, "estimate"), "flat_placements")
         os.makedirs(dest_dir, exist_ok=True)
         print(f"{suite}: collecting flat placements from {run_dir}")
-        for (_, circuit), common_dir in find_circuit_dirs(run_dir).items():
-            src = os.path.join(common_dir, "final.fplace")
-            if not os.path.isfile(src):
+        config_jobs = read_task_config_jobs(routed_task_dir)
+        for (_, circuit), common_dir in find_circuit_dirs(run_dir, config_jobs).items():
+            src = None if common_dir is None else os.path.join(common_dir, "final.fplace")
+            if src is None or not os.path.isfile(src):
                 print(f"\tMISSING: {circuit} (no final.fplace; did the routed run fail?)")
                 num_missing += 1
                 continue
