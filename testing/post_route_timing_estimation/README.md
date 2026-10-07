@@ -31,6 +31,12 @@ results of one task are written into the run directory of the other).
 |---------------|--------------------------------------------------|
 | `vtr_largest` | The 8 largest VTR circuits (same as `vtr_largest_ap`) |
 | `koios`       | The Koios circuits (same as `koios_ap`)          |
+| `titan_quick` | The Titan circuits of the `ap_titan` regression test (titan_quick, without gaussianblur) |
+
+The `titan_quick` tasks use the same device widths and router options as the
+`ap_titan` regression test (`vtr_reg_nightly_test7`), but with timing analysis
+turned on (that test is wirelength driven). The Titan benchmarks must be
+downloaded into the VTR tree (`make get_titan_benchmarks`).
 
 Only the needed timing graph echo files are written (using
 `--echo_files`), since `--echo_file on` writes many very large files.
@@ -118,4 +124,6 @@ Connections driven by constant generators and connections to clock pins are not
 routed through the general routing network, so they are not compared.
 
 NOTE: Parsing the echo files of a large circuit can use several GB of memory
-(about 150 MB for stereovision2). Increase `-j` with care.
+(about 150 MB for stereovision2, and about 3 GB for the largest Koios
+circuits). The Titan circuits are larger still, so parse `titan_quick` with a
+low `-j`.

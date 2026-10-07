@@ -1,0 +1,86 @@
+##############################################
+# Configuration file for running experiments
+##############################################
+#
+# Routed reference: runs the full AP flow, routes and analyzes the design,
+# and writes the final flat placement and the post-routing timing graph.
+#
+# The circuits, device sizes, and router options are the same as the
+# titan_quick AP regression test
+# (vtr_flow/tasks/regression_tests/vtr_reg_nightly_test7/ap_titan), except that
+# timing analysis is turned on. gaussianblur is excluded (as in that test).
+#
+# See ../../README.md for how to run this experiment.
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/titan_blif/titan23/stratixiv
+
+# Path to directory of SDCs to use
+sdc_dir=benchmarks/titan_blif/titan23/stratixiv
+
+# Path to directory of architectures to use
+archs_dir=arch/titan
+
+# Add architectures to list to sweep
+arch_list_add=stratixiv_arch.timing.xml
+
+# Add circuits to list to sweep
+circuit_list_add=LU230_stratixiv_arch_timing.blif
+circuit_list_add=LU_Network_stratixiv_arch_timing.blif
+circuit_list_add=SLAM_spheric_stratixiv_arch_timing.blif
+circuit_list_add=bitcoin_miner_stratixiv_arch_timing.blif
+circuit_list_add=bitonic_mesh_stratixiv_arch_timing.blif
+circuit_list_add=cholesky_bdti_stratixiv_arch_timing.blif
+circuit_list_add=cholesky_mc_stratixiv_arch_timing.blif
+circuit_list_add=dart_stratixiv_arch_timing.blif
+circuit_list_add=denoise_stratixiv_arch_timing.blif
+circuit_list_add=des90_stratixiv_arch_timing.blif
+circuit_list_add=directrf_stratixiv_arch_timing.blif
+circuit_list_add=gsm_switch_stratixiv_arch_timing.blif
+circuit_list_add=mes_noc_stratixiv_arch_timing.blif
+circuit_list_add=minres_stratixiv_arch_timing.blif
+circuit_list_add=neuron_stratixiv_arch_timing.blif
+circuit_list_add=openCV_stratixiv_arch_timing.blif
+circuit_list_add=segmentation_stratixiv_arch_timing.blif
+circuit_list_add=sparcT1_chip2_stratixiv_arch_timing.blif
+circuit_list_add=sparcT1_core_stratixiv_arch_timing.blif
+circuit_list_add=sparcT2_core_stratixiv_arch_timing.blif
+circuit_list_add=stap_qrd_stratixiv_arch_timing.blif
+circuit_list_add=stereo_vision_stratixiv_arch_timing.blif
+
+# Constrain the circuits to their device widths
+circuit_constraint_list_add=(sparcT1_core_stratixiv_arch_timing.blif,  device_width=100)
+circuit_constraint_list_add=(SLAM_spheric_stratixiv_arch_timing.blif,  device_width=100)
+circuit_constraint_list_add=(stereo_vision_stratixiv_arch_timing.blif, device_width=150)
+circuit_constraint_list_add=(cholesky_mc_stratixiv_arch_timing.blif,   device_width=150)
+circuit_constraint_list_add=(neuron_stratixiv_arch_timing.blif,        device_width=150)
+circuit_constraint_list_add=(segmentation_stratixiv_arch_timing.blif,  device_width=150)
+circuit_constraint_list_add=(dart_stratixiv_arch_timing.blif,          device_width=150)
+circuit_constraint_list_add=(denoise_stratixiv_arch_timing.blif,       device_width=225)
+circuit_constraint_list_add=(sparcT2_core_stratixiv_arch_timing.blif,  device_width=225)
+circuit_constraint_list_add=(stap_qrd_stratixiv_arch_timing.blif,      device_width=225)
+circuit_constraint_list_add=(cholesky_bdti_stratixiv_arch_timing.blif, device_width=225)
+circuit_constraint_list_add=(des90_stratixiv_arch_timing.blif,         device_width=225)
+circuit_constraint_list_add=(mes_noc_stratixiv_arch_timing.blif,       device_width=225)
+circuit_constraint_list_add=(openCV_stratixiv_arch_timing.blif,        device_width=225)
+circuit_constraint_list_add=(LU_Network_stratixiv_arch_timing.blif,    device_width=300)
+circuit_constraint_list_add=(minres_stratixiv_arch_timing.blif,        device_width=300)
+circuit_constraint_list_add=(bitcoin_miner_stratixiv_arch_timing.blif, device_width=300)
+circuit_constraint_list_add=(bitonic_mesh_stratixiv_arch_timing.blif,  device_width=300)
+circuit_constraint_list_add=(gsm_switch_stratixiv_arch_timing.blif,    device_width=300)
+circuit_constraint_list_add=(sparcT1_chip2_stratixiv_arch_timing.blif, device_width=300)
+circuit_constraint_list_add=(directrf_stratixiv_arch_timing.blif,      device_width=450)
+circuit_constraint_list_add=(LU230_stratixiv_arch_timing.blif,         device_width=450)
+
+# Parse info and how to parse
+parse_file=vpr_titan.txt
+
+# How to parse QoR info
+qor_parse_file=qor_vpr_titan.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements_ap_vpr_titan.txt
+
+# Run the AP flow, route, and analyze. Write out the final flat placement
+# (used by the estimate task) and the routed timing graph echo file.
+script_params=-starting_stage vpr --route_chan_width 300 --max_router_iterations 400 --router_lookahead map -timeout 86400 --initial_pres_fac 1.0 --router_profiler_astar_fac 1.5 --seed 3 --analytical_place --route --analysis --write_flat_place final.fplace --echo_files timing_graph.analysis.echo

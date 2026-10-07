@@ -436,7 +436,7 @@ def _ratio(row, estimated_key, routed_key):
 def print_summary(rows):
     """Print a table of the results and the geomean of the estimate ratios per suite."""
     print(
-        f"{'suite':<12} {'circuit':<26} {'CPD r/e (ns)':>17} {'sTNS r/e (ns)':>25} {'WL e/r':>7} "
+        f"{'suite':<12} {'circuit':<34} {'CPD r/e (ns)':>17} {'sTNS r/e (ns)':>25} {'WL e/r':>7} "
         f"{'path r':>7} {'path med':>8} {'crit med':>8} {'ncrit med':>9} {'path %err':>9} "
         f"{'crit r':>7} {'crit MAE':>8}"
     )
@@ -446,7 +446,7 @@ def print_summary(rows):
 
     for row in rows:
         print(
-            f"{row['suite']:<12} {row['circuit']:<26} "
+            f"{row['suite']:<12} {row['circuit']:<34} "
             f"{fmt(row['routed_cpd_ns'], '8.3f')}/{fmt(row['estimated_cpd_ns'], '<8.3f')} "
             f"{fmt(row['routed_stns_ns'], '12.1f')}/{fmt(row['estimated_stns_ns'], '<12.1f')} "
             f"{fmt(_ratio(row, 'estimated_wirelength', 'routed_wirelength'), '7.3f')} "
