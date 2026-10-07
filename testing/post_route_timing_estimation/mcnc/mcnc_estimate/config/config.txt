@@ -1,0 +1,125 @@
+##############################################
+# Configuration file for running experiments
+##############################################
+#
+# Estimate: reads in the final flat placement of the routed task and writes
+# the post-routing timing estimate of that placement.
+#
+# The MCNC circuits are small, so this suite is useful for quickly testing the
+# experiment, but not for measuring the accuracy of the estimate.
+#
+# See ../../README.md for how to run this experiment.
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/blif/wiremap6
+
+# Path to directory of architectures to use
+archs_dir=arch/timing
+
+# Add architectures to list to sweep
+arch_list_add=k6_frac_N10_40nm.xml
+
+# Add circuits to list to sweep
+circuit_list_add=alu4.pre-vpr.blif
+circuit_list_add=apex2.pre-vpr.blif
+circuit_list_add=apex4.pre-vpr.blif
+circuit_list_add=bigkey.pre-vpr.blif
+circuit_list_add=clma.pre-vpr.blif
+circuit_list_add=des.pre-vpr.blif
+circuit_list_add=diffeq.pre-vpr.blif
+circuit_list_add=dsip.pre-vpr.blif
+circuit_list_add=elliptic.pre-vpr.blif
+circuit_list_add=ex1010.pre-vpr.blif
+circuit_list_add=ex5p.pre-vpr.blif
+circuit_list_add=frisc.pre-vpr.blif
+circuit_list_add=misex3.pre-vpr.blif
+circuit_list_add=pdc.pre-vpr.blif
+circuit_list_add=s298.pre-vpr.blif
+circuit_list_add=s38417.pre-vpr.blif
+circuit_list_add=s38584.1.pre-vpr.blif
+circuit_list_add=seq.pre-vpr.blif
+circuit_list_add=spla.pre-vpr.blif
+circuit_list_add=tseng.pre-vpr.blif
+
+# Constrain the circuits to their devices
+circuit_constraint_list_add=(ex5p.pre-vpr.blif,     device=mcnc_small)
+circuit_constraint_list_add=(s298.pre-vpr.blif,     device=mcnc_small)
+circuit_constraint_list_add=(tseng.pre-vpr.blif,    device=mcnc_small)
+circuit_constraint_list_add=(misex3.pre-vpr.blif,   device=mcnc_small)
+circuit_constraint_list_add=(alu4.pre-vpr.blif,     device=mcnc_small)
+circuit_constraint_list_add=(diffeq.pre-vpr.blif,   device=mcnc_small)
+circuit_constraint_list_add=(seq.pre-vpr.blif,      device=mcnc_medium)
+circuit_constraint_list_add=(apex4.pre-vpr.blif,    device=mcnc_medium)
+circuit_constraint_list_add=(apex2.pre-vpr.blif,    device=mcnc_medium)
+circuit_constraint_list_add=(elliptic.pre-vpr.blif, device=mcnc_medium)
+circuit_constraint_list_add=(frisc.pre-vpr.blif,    device=mcnc_medium)
+circuit_constraint_list_add=(bigkey.pre-vpr.blif,   device=mcnc_medium)
+circuit_constraint_list_add=(dsip.pre-vpr.blif,     device=mcnc_medium)
+circuit_constraint_list_add=(spla.pre-vpr.blif,     device=mcnc_large)
+circuit_constraint_list_add=(s38417.pre-vpr.blif,   device=mcnc_large)
+circuit_constraint_list_add=(s38584.1.pre-vpr.blif, device=mcnc_large)
+circuit_constraint_list_add=(des.pre-vpr.blif,      device=mcnc_large)
+circuit_constraint_list_add=(ex1010.pre-vpr.blif,   device=mcnc_large)
+circuit_constraint_list_add=(pdc.pre-vpr.blif,      device=mcnc_large)
+circuit_constraint_list_add=(clma.pre-vpr.blif,     device=mcnc_large)
+
+# Constrain the circuits to their channel widths
+#       1.3 * minW
+circuit_constraint_list_add=(ex5p.pre-vpr.blif,     route_chan_width=68)
+circuit_constraint_list_add=(s298.pre-vpr.blif,     route_chan_width=60)
+circuit_constraint_list_add=(tseng.pre-vpr.blif,    route_chan_width=58)
+circuit_constraint_list_add=(misex3.pre-vpr.blif,   route_chan_width=70)
+circuit_constraint_list_add=(alu4.pre-vpr.blif,     route_chan_width=70)
+circuit_constraint_list_add=(diffeq.pre-vpr.blif,   route_chan_width=58)
+circuit_constraint_list_add=(seq.pre-vpr.blif,      route_chan_width=78)
+circuit_constraint_list_add=(apex4.pre-vpr.blif,    route_chan_width=78)
+circuit_constraint_list_add=(apex2.pre-vpr.blif,    route_chan_width=78)
+circuit_constraint_list_add=(elliptic.pre-vpr.blif, route_chan_width=76)
+circuit_constraint_list_add=(frisc.pre-vpr.blif,    route_chan_width=96)
+circuit_constraint_list_add=(bigkey.pre-vpr.blif,   route_chan_width=44)
+circuit_constraint_list_add=(dsip.pre-vpr.blif,     route_chan_width=44)
+circuit_constraint_list_add=(spla.pre-vpr.blif,     route_chan_width=88)
+circuit_constraint_list_add=(s38417.pre-vpr.blif,   route_chan_width=58)
+circuit_constraint_list_add=(s38584.1.pre-vpr.blif, route_chan_width=76)
+circuit_constraint_list_add=(des.pre-vpr.blif,      route_chan_width=44)
+circuit_constraint_list_add=(ex1010.pre-vpr.blif,   route_chan_width=112)
+circuit_constraint_list_add=(pdc.pre-vpr.blif,      route_chan_width=96)
+circuit_constraint_list_add=(clma.pre-vpr.blif,     route_chan_width=112)
+
+# Read in the final flat placement of the routed task (copied into this task's
+# flat_placements directory by collect_flat_placements.py). The path is
+# relative to the run directory of each circuit (<task>/runXXX/<arch>/<circuit>/common).
+circuit_constraint_list_add=(alu4.pre-vpr.blif, read_flat_place=../../../../flat_placements/alu4.pre-vpr.fplace)
+circuit_constraint_list_add=(apex2.pre-vpr.blif, read_flat_place=../../../../flat_placements/apex2.pre-vpr.fplace)
+circuit_constraint_list_add=(apex4.pre-vpr.blif, read_flat_place=../../../../flat_placements/apex4.pre-vpr.fplace)
+circuit_constraint_list_add=(bigkey.pre-vpr.blif, read_flat_place=../../../../flat_placements/bigkey.pre-vpr.fplace)
+circuit_constraint_list_add=(clma.pre-vpr.blif, read_flat_place=../../../../flat_placements/clma.pre-vpr.fplace)
+circuit_constraint_list_add=(des.pre-vpr.blif, read_flat_place=../../../../flat_placements/des.pre-vpr.fplace)
+circuit_constraint_list_add=(diffeq.pre-vpr.blif, read_flat_place=../../../../flat_placements/diffeq.pre-vpr.fplace)
+circuit_constraint_list_add=(dsip.pre-vpr.blif, read_flat_place=../../../../flat_placements/dsip.pre-vpr.fplace)
+circuit_constraint_list_add=(elliptic.pre-vpr.blif, read_flat_place=../../../../flat_placements/elliptic.pre-vpr.fplace)
+circuit_constraint_list_add=(ex1010.pre-vpr.blif, read_flat_place=../../../../flat_placements/ex1010.pre-vpr.fplace)
+circuit_constraint_list_add=(ex5p.pre-vpr.blif, read_flat_place=../../../../flat_placements/ex5p.pre-vpr.fplace)
+circuit_constraint_list_add=(frisc.pre-vpr.blif, read_flat_place=../../../../flat_placements/frisc.pre-vpr.fplace)
+circuit_constraint_list_add=(misex3.pre-vpr.blif, read_flat_place=../../../../flat_placements/misex3.pre-vpr.fplace)
+circuit_constraint_list_add=(pdc.pre-vpr.blif, read_flat_place=../../../../flat_placements/pdc.pre-vpr.fplace)
+circuit_constraint_list_add=(s298.pre-vpr.blif, read_flat_place=../../../../flat_placements/s298.pre-vpr.fplace)
+circuit_constraint_list_add=(s38417.pre-vpr.blif, read_flat_place=../../../../flat_placements/s38417.pre-vpr.fplace)
+circuit_constraint_list_add=(s38584.1.pre-vpr.blif, read_flat_place=../../../../flat_placements/s38584.1.pre-vpr.fplace)
+circuit_constraint_list_add=(seq.pre-vpr.blif, read_flat_place=../../../../flat_placements/seq.pre-vpr.fplace)
+circuit_constraint_list_add=(spla.pre-vpr.blif, read_flat_place=../../../../flat_placements/spla.pre-vpr.fplace)
+circuit_constraint_list_add=(tseng.pre-vpr.blif, read_flat_place=../../../../flat_placements/tseng.pre-vpr.fplace)
+
+# Parse info and how to parse
+parse_file=vpr_fixed_chan_width.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements.txt
+
+# Run only the AP flow on the read-in flat placement (global placement is
+# skipped) and write the estimated timing graph and wire usage echo files. The
+# detailed placer is turned off since only the estimate is needed.
+script_params=-starting_stage vpr --seed 1 --analytical_place --ap_detailed_placer none --echo_files timing_graph.ap_post_routing_estimate.echo wire_usage.ap_post_routing_estimate.echo

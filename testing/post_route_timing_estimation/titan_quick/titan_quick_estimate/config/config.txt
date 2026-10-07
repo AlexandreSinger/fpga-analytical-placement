@@ -112,4 +112,4 @@ pass_requirements_file=pass_requirements_ap_vpr_titan.txt
 # is turned off since only the estimate is needed. The router options are kept
 # the same as the routed task, since the place delay model used by the
 # estimate is built from the router lookahead.
-script_params=-starting_stage vpr --route_chan_width 300 --max_router_iterations 400 --router_lookahead map -timeout 86400 --initial_pres_fac 1.0 --router_profiler_astar_fac 1.5 --seed 3 --analytical_place --ap_detailed_placer none --echo_files timing_graph.ap_post_routing_estimate.echo
+script_params=-starting_stage vpr --route_chan_width 300 --max_router_iterations 400 --router_lookahead map -timeout 86400 --initial_pres_fac 1.0 --router_profiler_astar_fac 1.5 --seed 3 --analytical_place --ap_detailed_placer none --echo_files timing_graph.ap_post_routing_estimate.echo wire_usage.ap_post_routing_estimate.echo

@@ -14,11 +14,13 @@ Each suite contains two tasks over the same circuits, devices and channel
 widths:
 
 - `<suite>/<suite>_routed`: Runs the AP flow, routes, and analyzes the design. Writes
-  the final flat placement (`final.fplace`) and the routed timing graph
-  (`timing_graph.analysis.echo`).
+  the final flat placement (`final.fplace`), the routed timing graph
+  (`timing_graph.analysis.echo`), and the routed wire usage of each net
+  (`wire_usage.routed.echo`).
 - `<suite>/<suite>_estimate`: Reads in the final flat placement of the routed task
   (global placement is skipped) and writes the estimated timing graph
-  (`timing_graph.ap_post_routing_estimate.echo`). The estimated CPD and sTNS
+  (`timing_graph.ap_post_routing_estimate.echo`) and the estimated wire usage
+  of each net (`wire_usage.ap_post_routing_estimate.echo`). The estimated CPD and sTNS
   are printed in the VPR log ("Placement estimated CPD/sTNS"), along with the
   estimated wirelength ("Placement estimated wirelength").
 
@@ -29,20 +31,26 @@ results of one task are written into the run directory of the other).
 
 | Suite         | Circuits                                         |
 |---------------|--------------------------------------------------|
+| `mcnc`        | The 20 MCNC circuits (`k6_frac_N10_40nm.xml`, fixed `mcnc_small/medium/large` devices) |
 | `vtr_largest` | The 8 largest VTR circuits (same as `vtr_largest_ap`) |
 | `koios`       | The Koios circuits (same as `koios_ap`)          |
 | `titan_quick` | The Titan circuits of the `ap_titan` regression test (titan_quick, without gaussianblur) |
+
+The `mcnc` suite is small enough to run on a local machine in a few minutes.
+It is meant for quickly testing the experiment (e.g. after changing VPR or
+these scripts), not for measuring the accuracy of the estimate, since the
+circuits are very small.
 
 The `titan_quick` tasks use the same device widths and router options as the
 `ap_titan` regression test (`vtr_reg_nightly_test7`), but with timing analysis
 turned on (that test is wirelength driven). The Titan benchmarks must be
 downloaded into the VTR tree (`make get_titan_benchmarks`).
 
-Only the needed timing graph echo files are written (using
+Only the needed timing graph and wire usage echo files are written (using
 `--echo_files`), since `--echo_file on` writes many very large files.
 
-NOTE: This requires a VPR build with the `--echo_files` option and the AP
-post-routing timing estimate.
+NOTE: This requires a VPR build with the `--echo_files` option, the AP
+post-routing timing estimate, and the wire usage echo files.
 
 ## Running
 
@@ -77,13 +85,13 @@ By default the latest runs of each task are used; use `--run` (collection) or
 
 Each suite can be run on its own. Pass the task directly to `run_vtr_task.py`
 (instead of a task list) and use `--suites` with the scripts. For example, to
-run only `vtr_largest`:
+run only `mcnc` (a quick local test):
 
 ```sh
-VTR_PATH/vtr_flow/scripts/run_vtr_task.py vtr_largest/vtr_largest_routed -j <N>
-./collect_flat_placements.py --suites vtr_largest
-VTR_PATH/vtr_flow/scripts/run_vtr_task.py vtr_largest/vtr_largest_estimate -j <N>
-./parse_timing_estimation.py --suites vtr_largest
+VTR_PATH/vtr_flow/scripts/run_vtr_task.py mcnc/mcnc_routed -j <N>
+./collect_flat_placements.py --suites mcnc
+VTR_PATH/vtr_flow/scripts/run_vtr_task.py mcnc/mcnc_estimate -j <N>
+./parse_timing_estimation.py --suites mcnc --per_circuit_plots
 ```
 
 `--suites` takes one or more suite names. Without it, the scripts process every
@@ -108,14 +116,37 @@ parsed; any other directories in its run directories are ignored.
     connection, computed the same way as VPR (Pearson r, mean absolute error
     over all connections and over the critical connections, i.e. routed
     criticality > 0.8).
+  - Per-net wire usage accuracy, over the nets which are both estimated and
+    routed (`wl_net_*`: Pearson r, median estimated / routed, mean absolute %
+    error). The median error is also split into two factors:
+    - `wl_net_bb_median_ratio`: estimated tile HPWL / placed tile HPWL. The
+      error of the flat placement's bounding box (e.g. blocks moving during
+      legalization, or blocks in large tiles).
+    - `wl_net_crossing_median_ratio`: placed tile HPWL * crossing / routed
+      wire usage. The error of the crossing count (routing detours).
+  - The number of nets and the wire usage of each category of net: `matched`
+    (estimated and routed), `spurious` (estimated, but absorbed by clustering),
+    `missed_absorbed` (estimated as absorbed into a tile, but routed), and
+    `missed_other` (routed, but not estimated for another reason, e.g.
+    estimated as global).
 - `cpd_tns_wirelength_comparison.png`: Estimated vs. routed CPD, sTNS, and
   wirelength of every circuit.
-- `path_crit_accuracy.png`: The path delay and criticality accuracy of every
-  circuit.
-- `circuits/<suite>_<circuit>.png` (with `--per_circuit_plots`): Scatter plots
+- `path_crit_accuracy.png`: The path delay, criticality, and per-net wire
+  usage accuracy of every circuit.
+- `circuits/timing/<suite>_<circuit>.png` (with `--per_circuit_plots`): Scatter plots
   of the estimated vs. routed path delays and criticalities of each circuit.
   The path delays are colored by the routed criticality of their endpoint, with
   the most critical endpoints drawn on top.
+- `circuits/wire_usage/<suite>_<circuit>.png` (with `--per_circuit_plots`):
+  Per-net plots of the estimated vs. routed wire usage (colored by the number
+  of placed tiles the net connects, with the totals of each category of net),
+  the estimated / routed ratio vs. the number of placed tiles, the estimated vs.
+  placed tile HPWL (bounding box error), and the placed HPWL * crossing /
+  routed ratio vs. the number of placed tiles (crossing count error).
+
+The nets of the two wire usage echo files are joined by name (AP nets and
+clustered nets are both named after their atom net). The wire usage is
+compared even when the timing echo files are missing.
 
 A summary table and the geomean of the estimated / routed CPD, sTNS, and
 wirelength of each suite are also printed.

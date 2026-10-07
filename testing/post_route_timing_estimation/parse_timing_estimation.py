@@ -13,10 +13,13 @@ task), and produces:
       sTNS, and wirelength.
     - results/path_crit_accuracy.png: The accuracy of the estimated path
       delays and connection criticalities of each circuit.
-    - results/circuits/<suite>_<circuit>.png (with --per_circuit_plots):
+    - results/circuits/timing/<suite>_<circuit>.png (with --per_circuit_plots):
       Scatter plots of the estimated vs. routed path delays (colored by the
       routed criticality of their endpoint) and connection criticalities of
       each circuit.
+    - results/circuits/wire_usage/<suite>_<circuit>.png (with
+      --per_circuit_plots): Plots of the estimated vs. routed wire usage of
+      every net of each circuit.
 
 The CPD, sTNS, and wirelength are parsed from the VPR logs. The routed
 wirelength is the total wirelength of the routing; the estimated wirelength
@@ -37,6 +40,21 @@ criticalities of the sinks of routed connections, computed the same way as VPR
 (relaxed criticality). Connections driven by constant generators and
 connections to clock pins are not routed through the general routing network
 and are not compared.
+
+The wire usage of every net is compared using the wire usage echo files:
+    - Routed:    wire_usage.routed.echo
+    - Estimated: wire_usage.ap_post_routing_estimate.echo
+The nets are joined by name (AP nets and clustered nets are both named after
+their atom net). Nets which are routed and estimated are compared directly.
+The estimated wire usage of a net can be split into two factors:
+    estimated / routed = (estimated HPWL / placed HPWL)
+                       * (placed HPWL * crossing / routed)
+where the placed HPWL is the bounding box of the tiles the net's clusters are
+placed in after routing. The first factor is the error of the flat
+placement's bounding box (e.g. blocks moving during legalization), and the
+second is the error of the crossing count (routing detours / Steiner trees).
+Nets which are only estimated or only routed (e.g. estimated as absorbed into
+a tile but routed between tiles) are reported separately.
 """
 
 import argparse
@@ -67,6 +85,8 @@ from collect_flat_placements import (
 
 ROUTED_ECHO = "timing_graph.analysis.echo"
 ESTIMATE_ECHO = "timing_graph.ap_post_routing_estimate.echo"
+ROUTED_WIRE_USAGE_ECHO = "wire_usage.routed.echo"
+ESTIMATE_WIRE_USAGE_ECHO = "wire_usage.ap_post_routing_estimate.echo"
 
 NODE_TYPE_CODES = {"SOURCE": 0, "SINK": 1, "IPIN": 2, "OPIN": 3, "CPIN": 4}
 SINK = NODE_TYPE_CODES["SINK"]
@@ -272,6 +292,113 @@ def parse_timing_echo(filename):
 
 
 # ---------------------------------------------------------------------------
+# Parsing and comparing the wire usage echo files.
+# ---------------------------------------------------------------------------
+
+
+def parse_wire_usage_echo(filename):
+    """
+    Parse a wire usage echo file into a dict of net name -> dict of the
+    columns of that net. The net name is the last column, and may contain
+    spaces. The status column is kept as a string; all others are numbers.
+    """
+    nets = {}
+    columns = None
+    with open(filename, "r", encoding="utf-8") as echo_file:
+        for line in echo_file:
+            if line.startswith("#") or not line.strip():
+                continue
+            if columns is None:
+                columns = line.split()
+                continue
+            values = line.rstrip("\n").split(maxsplit=len(columns) - 1)
+            net = {}
+            for column, value in zip(columns[:-1], values[:-1]):
+                net[column] = value if column == "status" else float(value)
+            nets[values[-1]] = net
+    return nets
+
+
+def _hpwl(net):
+    """The tile bounding box half-perimeter of a net of a wire usage echo file."""
+    return net["bb_dx"] + net["bb_dy"] + net["bb_dz"]
+
+
+def compare_wire_usage(routed_nets, estimated_nets):
+    """
+    Compare the routed and estimated wire usage of every net. Returns the
+    statistics for the row of results, and a dict of arrays (one entry per net
+    which is both routed and estimated) for the per-circuit plots.
+
+    Nets are categorized as:
+        - matched: Estimated and routed (wire usage > 0 in both).
+        - spurious: Estimated, but used no routing wires (absorbed into a
+          cluster, or not in the routed netlist at all, which happens when
+          clustering absorbs the net).
+        - missed_absorbed: Estimated as absorbed into a tile, but routed.
+        - missed_other: Routed, but not estimated for another reason (e.g.
+          estimated as global / constant, or not in the AP netlist).
+    """
+    # Every category is reported, even if it has no nets.
+    stats = {
+        f"wl_{category}_{value}": 0.0
+        for category, values in (
+            ("matched", ("count", "routed", "estimated")),
+            ("spurious", ("count", "estimated")),
+            ("missed_absorbed", ("count", "routed")),
+            ("missed_other", ("count", "routed")),
+        )
+        for value in values
+    }
+    matched = defaultdict(list)
+    for name, est in estimated_nets.items():
+        routed = routed_nets.get(name)
+        routed_length = routed["length"] if routed is not None else 0.0
+        if est["status"] == "estimated":
+            if routed_length > 0:
+                stats["wl_matched_count"] += 1
+                stats["wl_matched_routed"] += routed_length
+                stats["wl_matched_estimated"] += est["estimate"]
+                matched["routed"].append(routed_length)
+                matched["estimated"].append(est["estimate"])
+                matched["estimated_tiles"].append(est["num_tiles"])
+                matched["estimated_hpwl"].append(_hpwl(est))
+                matched["crossing"].append(est["crossing"])
+                matched["placed_tiles"].append(routed["num_tiles"])
+                matched["placed_hpwl"].append(_hpwl(routed))
+            else:
+                stats["wl_spurious_count"] += 1
+                stats["wl_spurious_estimated"] += est["estimate"]
+        elif routed_length > 0:
+            if est["status"] == "absorbed":
+                stats["wl_missed_absorbed_count"] += 1
+                stats["wl_missed_absorbed_routed"] += routed_length
+            else:
+                stats["wl_missed_other_count"] += 1
+                stats["wl_missed_other_routed"] += routed_length
+    for name, routed in routed_nets.items():
+        if routed["length"] > 0 and name not in estimated_nets:
+            stats["wl_missed_other_count"] += 1
+            stats["wl_missed_other_routed"] += routed["length"]
+
+    matched = {key: np.array(values, dtype=float) for key, values in matched.items()}
+    if not matched:
+        return stats, None
+
+    pairs = np.column_stack((matched["routed"], matched["estimated"]))
+    stats.update(pair_stats(pairs, "wl_net"))
+    # Split the error of each net into the error of the bounding box and the
+    # error of the crossing count (see the module docstring).
+    stats["wl_net_bb_median_ratio"] = float(
+        np.median(matched["estimated_hpwl"] / matched["placed_hpwl"])
+    )
+    stats["wl_net_crossing_median_ratio"] = float(
+        np.median(matched["placed_hpwl"] * matched["crossing"] / matched["routed"])
+    )
+    return stats, matched
+
+
+# ---------------------------------------------------------------------------
 # Comparing a circuit.
 # ---------------------------------------------------------------------------
 
@@ -317,10 +444,15 @@ def endpoint_path_pairs(routed, estimated):
 
 def compare_circuit(job):
     """
-    Compare the routed and estimated timing of one circuit. Returns the row
-    of results, and if they are needed for per-circuit plots, the (routed,
-    estimated) path delay pairs, the routed criticality of the endpoint of
-    each path delay pair, and the (routed, estimated) criticality pairs.
+    Compare the routed and estimated timing and wire usage of one circuit.
+    Returns the row of results, and if they are needed for per-circuit plots,
+    a dict with:
+        - "timing": The (routed, estimated) path delay pairs, the routed
+          criticality of the endpoint of each path delay pair, and the
+          (routed, estimated) criticality pairs.
+        - "wire_usage": The per-net wire usage arrays (see
+          compare_wire_usage).
+    Either is None if it could not be computed.
     """
     suite, arch, circuit, routed_dir, estimate_dir, keep_pairs = job
     row = {"suite": suite, "arch": arch, "circuit": os.path.splitext(circuit)[0]}
@@ -331,11 +463,25 @@ def compare_circuit(job):
         parse_estimate_log(estimate_dir)
     )
 
+    circuit_data = {"timing": None, "wire_usage": None}
+
+    # The wire usage is compared first, since it does not depend on the
+    # timing echo files.
+    routed_wl_file = os.path.join(routed_dir, ROUTED_WIRE_USAGE_ECHO)
+    estimate_wl_file = os.path.join(estimate_dir, ESTIMATE_WIRE_USAGE_ECHO)
+    if os.path.isfile(routed_wl_file) and os.path.isfile(estimate_wl_file):
+        wl_stats, circuit_data["wire_usage"] = compare_wire_usage(
+            parse_wire_usage_echo(routed_wl_file), parse_wire_usage_echo(estimate_wl_file)
+        )
+        row.update(wl_stats)
+    else:
+        row["wire_usage_error"] = "missing wire usage echo file"
+
     routed_echo_file = os.path.join(routed_dir, ROUTED_ECHO)
     estimate_echo_file = os.path.join(estimate_dir, ESTIMATE_ECHO)
     if not os.path.isfile(routed_echo_file) or not os.path.isfile(estimate_echo_file):
         row["error"] = "missing echo file"
-        return row, None
+        return row, circuit_data if keep_pairs else None
 
     routed = parse_timing_echo(routed_echo_file)
     estimated = parse_timing_echo(estimate_echo_file)
@@ -344,7 +490,7 @@ def compare_circuit(job):
         or routed.node_types != estimated.node_types
     ):
         row["error"] = "timing graphs do not match"
-        return row, None
+        return row, circuit_data if keep_pairs else None
 
     path_pairs, path_crits = endpoint_path_pairs(routed, estimated)
     path_is_critical = path_crits > CRITICAL_THRESHOLD
@@ -370,7 +516,8 @@ def compare_circuit(job):
         )
 
     if keep_pairs:
-        return row, (path_pairs, path_crits, crit_pairs)
+        circuit_data["timing"] = (path_pairs, path_crits, crit_pairs)
+        return row, circuit_data
     return row, None
 
 
@@ -404,7 +551,22 @@ CSV_COLUMNS = [
     "crit_mean_abs_error",
     "crit_critical_count",
     "crit_critical_mean_abs_error",
+    "wl_matched_count",
+    "wl_matched_routed",
+    "wl_matched_estimated",
+    "wl_net_pearson_r",
+    "wl_net_median_ratio",
+    "wl_net_mean_abs_pct_error",
+    "wl_net_bb_median_ratio",
+    "wl_net_crossing_median_ratio",
+    "wl_spurious_count",
+    "wl_spurious_estimated",
+    "wl_missed_absorbed_count",
+    "wl_missed_absorbed_routed",
+    "wl_missed_other_count",
+    "wl_missed_other_routed",
     "error",
+    "wire_usage_error",
 ]
 
 
@@ -438,7 +600,7 @@ def print_summary(rows):
     print(
         f"{'suite':<12} {'circuit':<34} {'CPD r/e (ns)':>17} {'sTNS r/e (ns)':>25} {'WL e/r':>7} "
         f"{'path r':>7} {'path med':>8} {'crit med':>8} {'ncrit med':>9} {'path %err':>9} "
-        f"{'crit r':>7} {'crit MAE':>8}"
+        f"{'crit r':>7} {'crit MAE':>8} {'WLn med':>7} {'WLn bb':>7} {'WLn cr':>7}"
     )
 
     def fmt(value, spec):
@@ -454,8 +616,12 @@ def print_summary(rows):
             f"{fmt(row.get('path_critical_median_ratio'), '8.3f')} "
             f"{fmt(row.get('path_noncritical_median_ratio'), '9.3f')} "
             f"{fmt(row.get('path_mean_abs_pct_error'), '9.1f')} "
-            f"{fmt(row.get('crit_pearson_r'), '7.3f')} {fmt(row.get('crit_mean_abs_error'), '8.4f')}"
+            f"{fmt(row.get('crit_pearson_r'), '7.3f')} {fmt(row.get('crit_mean_abs_error'), '8.4f')} "
+            f"{fmt(row.get('wl_net_median_ratio'), '7.3f')} "
+            f"{fmt(row.get('wl_net_bb_median_ratio'), '7.3f')} "
+            f"{fmt(row.get('wl_net_crossing_median_ratio'), '7.3f')}"
             + (f"  ERROR: {row['error']}" if row.get("error") else "")
+            + (f"  WL ERROR: {row['wire_usage_error']}" if row.get("wire_usage_error") else "")
         )
 
     print("\nGeomean of estimated / routed:")
@@ -557,6 +723,17 @@ def plot_accuracy(rows, filename):
             f"Criticality: mean abs. error (routed crit > {CRITICAL_THRESHOLD})",
             None,
         ),
+        ("wl_net_median_ratio", "Wire usage per net: median estimated / routed", 1.0),
+        (
+            "wl_net_bb_median_ratio",
+            "Wire usage per net: median estimated HPWL / placed HPWL (bounding box error)",
+            1.0,
+        ),
+        (
+            "wl_net_crossing_median_ratio",
+            "Wire usage per net: median placed HPWL * crossing / routed (crossing count error)",
+            1.0,
+        ),
     ]
     fig, axes = plt.subplots(
         len(panels), 1, figsize=(max(8, 0.35 * len(rows) + 2), 3 * len(panels))
@@ -630,6 +807,134 @@ def plot_circuit(row, path_pairs, path_crits, crit_pairs, filename):
     plt.close(fig)
 
 
+def _binned_medians(x, y):
+    """The median of y in power-of-two bins of x, as (bin center, median) arrays."""
+    centers, medians = [], []
+    lo = 1.0
+    while lo <= x.max():
+        in_bin = (x >= lo) & (x < 2 * lo)
+        if np.any(in_bin):
+            centers.append(math.sqrt(lo * (2 * lo - 1)))
+            medians.append(float(np.median(y[in_bin])))
+        lo *= 2
+    return np.array(centers), np.array(medians)
+
+
+def _log_identity_axes(ax, x, y):
+    """Draw the y = x line and set up square log-log axes covering x and y."""
+    lo = min(float(x.min()), float(y.min())) / 1.3
+    hi = max(float(x.max()), float(y.max())) * 1.3
+    ax.plot([lo, hi], [lo, hi], color="#555555", linewidth=1, linestyle="--")
+    ax.set_xlim(lo, hi)
+    ax.set_ylim(lo, hi)
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_aspect("equal")
+    ax.grid(True, which="both", linewidth=0.3)
+
+
+def _ratio_vs_tiles(ax, tiles, ratio, title, ylabel):
+    """Log-log scatter of a per-net ratio vs. the number of tiles of the net, with bin medians."""
+    ax.scatter(tiles, ratio, s=3, alpha=0.2, linewidths=0, rasterized=True)
+    centers, medians = _binned_medians(tiles, ratio)
+    ax.plot(centers, medians, color="#e8743b", marker="o", markersize=3, label="bin median")
+    ax.axhline(1.0, color="#555555", linewidth=1, linestyle="--")
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_title(title)
+    ax.set_ylabel(ylabel)
+    ax.grid(True, which="both", linewidth=0.3)
+
+
+def plot_circuit_wire_usage(row, nets, filename):
+    """
+    Plots of the estimated vs. routed wire usage of the nets of a circuit
+    which are both routed and estimated:
+        - Estimated vs. routed wire usage, colored by the number of placed
+          tiles the net connects. The totals of each category of net are
+          also listed.
+        - Estimated / routed vs. the number of placed tiles.
+        - Estimated vs. placed HPWL (the bounding box error).
+        - Placed HPWL * crossing / routed vs. the number of placed tiles (the
+          crossing count error).
+    """
+    fig, axes = plt.subplots(2, 2, figsize=(13, 12))
+    name = f"{row['suite']} / {row['circuit']}"
+    order = np.argsort(nets["placed_tiles"], kind="stable")
+    points = axes[0, 0].scatter(
+        nets["routed"][order],
+        nets["estimated"][order],
+        c=np.log10(nets["placed_tiles"][order]),
+        cmap="viridis",
+        s=3,
+        alpha=0.5,
+        linewidths=0,
+        rasterized=True,
+    )
+    fig.colorbar(points, ax=axes[0, 0], fraction=0.046, pad=0.04, label="log10(placed tiles)")
+    _log_identity_axes(axes[0, 0], nets["routed"], nets["estimated"])
+    axes[0, 0].set_xlabel("Routed wire usage (tiles)")
+    axes[0, 0].set_ylabel("Estimated wire usage (tiles)")
+    axes[0, 0].set_title(f"{name}: Net wire usage")
+
+    def total(key):
+        return row.get(key, 0.0)
+
+    axes[0, 0].text(
+        0.02,
+        0.98,
+        f"matched: {total('wl_matched_count'):.0f} nets, routed {total('wl_matched_routed'):.0f}, "
+        f"est. {total('wl_matched_estimated'):.0f}\n"
+        f"est. only (spurious): {total('wl_spurious_count'):.0f} nets, "
+        f"est. {total('wl_spurious_estimated'):.0f}\n"
+        f"est. absorbed, routed: {total('wl_missed_absorbed_count'):.0f} nets, "
+        f"routed {total('wl_missed_absorbed_routed'):.0f}\n"
+        f"other routed only: {total('wl_missed_other_count'):.0f} nets, "
+        f"routed {total('wl_missed_other_routed'):.0f}",
+        transform=axes[0, 0].transAxes,
+        fontsize=7,
+        va="top",
+        bbox={"facecolor": "white", "alpha": 0.8, "linewidth": 0.3},
+    )
+
+    _ratio_vs_tiles(
+        axes[0, 1],
+        nets["placed_tiles"],
+        nets["estimated"] / nets["routed"],
+        f"{name}: Net wire usage error",
+        "Estimated / routed",
+    )
+    axes[0, 1].set_xlabel("Placed tiles connected by the net")
+    axes[0, 1].legend(fontsize=8)
+
+    axes[1, 0].scatter(
+        nets["placed_hpwl"],
+        nets["estimated_hpwl"],
+        s=3,
+        alpha=0.2,
+        linewidths=0,
+        rasterized=True,
+    )
+    _log_identity_axes(axes[1, 0], nets["placed_hpwl"], nets["estimated_hpwl"])
+    axes[1, 0].set_xlabel("Placed tile HPWL (tiles)")
+    axes[1, 0].set_ylabel("Estimated tile HPWL (tiles)")
+    axes[1, 0].set_title(f"{name}: Bounding box error")
+
+    _ratio_vs_tiles(
+        axes[1, 1],
+        nets["placed_tiles"],
+        nets["placed_hpwl"] * nets["crossing"] / nets["routed"],
+        f"{name}: Crossing count error",
+        "Placed HPWL * crossing / routed",
+    )
+    axes[1, 1].set_xlabel("Placed tiles connected by the net")
+    axes[1, 1].legend(fontsize=8)
+
+    fig.tight_layout()
+    fig.savefig(filename, dpi=120)
+    plt.close(fig)
+
+
 # ---------------------------------------------------------------------------
 # Main.
 # ---------------------------------------------------------------------------
@@ -692,7 +997,8 @@ def main():
     parser.add_argument(
         "--per_circuit_plots",
         action="store_true",
-        help="Also write scatter plots of the path delays and criticalities of each circuit.",
+        help="Also write scatter plots of the path delays, criticalities, and net wire "
+        "usage of each circuit.",
     )
     parser.add_argument(
         "-j",
@@ -709,8 +1015,11 @@ def main():
         sys.exit("No circuits to parse.")
 
     os.makedirs(args.output_dir, exist_ok=True)
+    timing_plot_dir = os.path.join(args.output_dir, "circuits", "timing")
+    wire_usage_plot_dir = os.path.join(args.output_dir, "circuits", "wire_usage")
     if args.per_circuit_plots:
-        os.makedirs(os.path.join(args.output_dir, "circuits"), exist_ok=True)
+        os.makedirs(timing_plot_dir, exist_ok=True)
+        os.makedirs(wire_usage_plot_dir, exist_ok=True)
 
     rows = []
     with Pool(max(1, args.j)) as pool:
@@ -718,13 +1027,17 @@ def main():
             print(f"\tparsed {row['suite']} / {row['circuit']}", flush=True)
             rows.append(row)
             if args.per_circuit_plots and circuit_data is not None:
-                plot_circuit(
-                    row,
-                    *circuit_data,
-                    os.path.join(
-                        args.output_dir, "circuits", f"{row['suite']}_{row['circuit']}.png"
-                    ),
-                )
+                plot_name = f"{row['suite']}_{row['circuit']}.png"
+                if circuit_data["timing"] is not None:
+                    plot_circuit(
+                        row, *circuit_data["timing"], os.path.join(timing_plot_dir, plot_name)
+                    )
+                if circuit_data["wire_usage"] is not None:
+                    plot_circuit_wire_usage(
+                        row,
+                        circuit_data["wire_usage"],
+                        os.path.join(wire_usage_plot_dir, plot_name),
+                    )
 
     print()
     print_summary(rows)
