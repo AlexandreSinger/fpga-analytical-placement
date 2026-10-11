@@ -22,7 +22,9 @@ widths:
   (`timing_graph.ap_post_routing_estimate.echo`) and the estimated wire usage
   of each net (`wire_usage.ap_post_routing_estimate.echo`). The estimated CPD and sTNS
   are printed in the VPR log ("Placement estimated CPD/sTNS"), along with the
-  estimated wirelength ("Placement estimated wirelength").
+  estimated wirelength ("Placement estimated wirelength"). The legality
+  estimate of the flat placement is also printed ("Legality Estimate Summary"),
+  and its per-tile penalty is written to `legality.ap_estimate.echo`.
 
 NOTE: Every task must have a unique directory name. `run_vtr_task.py` names a
 task after its directory (not its path), and when several tasks with the same
@@ -46,7 +48,7 @@ The `titan_quick` tasks use the same device widths and router options as the
 turned on (that test is wirelength driven). The Titan benchmarks must be
 downloaded into the VTR tree (`make get_titan_benchmarks`).
 
-Only the needed timing graph and wire usage echo files are written (by
+Only the needed timing graph, wire usage, and legality echo files are written (by
 passing their names to `--echo_file`), since `--echo_file on` writes many very
 large files.
 
@@ -128,6 +130,14 @@ parsed; any other directories in its run directories are ignored.
       crossing here is the effective crossing of the estimate (estimated /
       estimated tile HPWL), so it includes the correction factor VPR applies to
       every net and the two factors multiply to estimated / routed.
+  - The legality estimate of the read-in flat placement (`legality_*`): the
+    pins in violation and pin-weighted displacement (raw and normalized by the
+    number of connected pins), the sanity counters (primitives placed off the
+    device, evicted primitives with no compatible tile, and molecules split
+    across tiles), and the pins in violation and displacement of each rule
+    (`legality_rule_<name>_*`). The flat placements are legal, so these
+    should all be zero; a non-zero score is either a bug in the estimator or
+    a rule which is too strict.
   - The number of nets and the wire usage of each category of net: `matched`
     (estimated and routed), `spurious` (estimated, but absorbed by clustering),
     `missed_absorbed` (estimated as absorbed into a tile, but routed), and
@@ -153,7 +163,9 @@ clustered nets are both named after their atom net). The wire usage is
 compared even when the timing echo files are missing.
 
 A summary table and the geomean of the estimated / routed CPD, sTNS, and
-wirelength of each suite are also printed.
+wirelength of each suite are also printed, followed by a table of the legality
+estimate of each circuit and the number of circuits per suite with a non-zero
+legality estimate.
 
 Connections driven by constant generators and connections to clock pins are not
 routed through the general routing network, so they are not compared.

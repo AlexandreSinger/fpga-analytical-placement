@@ -59,6 +59,12 @@ second is the error of the crossing count and correction factor (routing
 detours / Steiner trees / longer wire segments).
 Nets which are only estimated or only routed (e.g. estimated as absorbed into
 a tile but routed between tiles) are reported separately.
+
+The legality estimate of the read-in flat placement is also parsed from the
+estimate task's VPR log ("Legality Estimate Summary"). Since the flat
+placements come from legal (routed) placements, the legality estimate should
+be zero; any non-zero score is either a bug in the estimator or a legality
+rule which is too strict.
 """
 
 import argparse
@@ -149,6 +155,67 @@ def parse_estimate_log(common_dir):
         parse_log_value(log_file, r"Placement estimated sTNS: (\S+) ns"),
         parse_log_value(log_file, r"Placement estimated wirelength: (\S+)"),
     )
+
+
+LEGALITY_SUMMARY_HEADER = "Legality Estimate Summary:"
+
+# Patterns of the values in the legality summary, and the row keys they are
+# stored in. Each pattern captures one value per key.
+LEGALITY_SUMMARY_PATTERNS = [
+    (
+        re.compile(r"Pins in violation: (\d+) \((\S+) of (\d+) connected pins\)"),
+        ("legality_pins", "legality_norm_pins", "legality_connected_pins"),
+    ),
+    (
+        re.compile(r"Pin-weighted displacement: (\S+) tiles \((\S+) per connected pin\)"),
+        ("legality_displacement", "legality_norm_displacement"),
+    ),
+    (re.compile(r"Primitives placed outside of the device: (\d+)"), ("legality_off_device",)),
+    (
+        re.compile(r"Evicted primitives with no compatible tile: (\d+)"),
+        ("legality_no_compatible_tile",),
+    ),
+    (re.compile(r"Molecules split across tiles: (\d+)"), ("legality_split_molecules",)),
+]
+LEGALITY_RULE_PATTERN = re.compile(r"Rule (\w+): (\d+) / (\S+)")
+
+
+def parse_legality_summary(common_dir):
+    """
+    Parse the first legality summary from the VPR log. For the estimate task,
+    this is the legality estimate of the read-in flat placement.
+
+    Returns a dict with the total score (legality_pins, legality_displacement,
+    raw and normalized by legality_connected_pins), the sanity counters, and
+    the pins in violation and displacement of each rule
+    (legality_rule_<name>_pins / _displacement). The dict is empty if the
+    log has no legality summary.
+    """
+    log_file = os.path.join(common_dir, "vpr.out")
+    values = {}
+    if not os.path.isfile(log_file):
+        return values
+    with open(log_file, "r", encoding="utf-8", errors="replace") as log:
+        in_summary = False
+        for line in log:
+            if not in_summary:
+                in_summary = LEGALITY_SUMMARY_HEADER in line
+                continue
+            # The summary is the block of tab-indented lines after the header.
+            if not line.startswith("\t"):
+                break
+            match = LEGALITY_RULE_PATTERN.search(line)
+            if match:
+                prefix = f"legality_rule_{match.group(1)}"
+                values[f"{prefix}_pins"] = float(match.group(2))
+                values[f"{prefix}_displacement"] = float(match.group(3))
+                continue
+            for pattern, keys in LEGALITY_SUMMARY_PATTERNS:
+                match = pattern.search(line)
+                if match:
+                    values.update(zip(keys, (float(v) for v in match.groups())))
+                    break
+    return values
 
 
 # ---------------------------------------------------------------------------
@@ -468,6 +535,9 @@ def compare_circuit(job):
     row["estimated_cpd_ns"], row["estimated_stns_ns"], row["estimated_wirelength"] = (
         parse_estimate_log(estimate_dir)
     )
+    row.update(parse_legality_summary(estimate_dir))
+    if "legality_pins" not in row:
+        row["legality_error"] = "missing legality summary"
 
     circuit_data = {"timing": None, "wire_usage": None}
 
@@ -571,15 +641,39 @@ CSV_COLUMNS = [
     "wl_missed_absorbed_routed",
     "wl_missed_other_count",
     "wl_missed_other_routed",
+    "legality_connected_pins",
+    "legality_pins",
+    "legality_norm_pins",
+    "legality_displacement",
+    "legality_norm_displacement",
+    "legality_off_device",
+    "legality_no_compatible_tile",
+    "legality_split_molecules",
+    # The per-rule legality columns (legality_rule_<name>_*) are inserted
+    # here, in the order the rules appear in the VPR log, so new rules do not
+    # need to be listed.
     "error",
     "wire_usage_error",
+    "legality_error",
 ]
+
+
+def _legality_rule_columns(rows):
+    """The per-rule legality columns of the rows, in the order they first appear."""
+    columns = []
+    for row in rows:
+        for key in row:
+            if key.startswith("legality_rule") and key not in columns:
+                columns.append(key)
+    return columns
 
 
 def write_csv(rows, filename):
     """Write the results of every circuit to a CSV file."""
+    error_idx = CSV_COLUMNS.index("error")
+    fieldnames = CSV_COLUMNS[:error_idx] + _legality_rule_columns(rows) + CSV_COLUMNS[error_idx:]
     with open(filename, "w", encoding="utf-8", newline="") as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=CSV_COLUMNS, extrasaction="ignore")
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -637,6 +731,60 @@ def print_summary(rows):
         tns = _geomean([_ratio(r, "estimated_stns_ns", "routed_stns_ns") for r in suite_rows])
         wl = _geomean([_ratio(r, "estimated_wirelength", "routed_wirelength") for r in suite_rows])
         print(f"\t{suite:<12} CPD: {cpd:.3f}  sTNS: {tns:.3f}  Wirelength: {wl:.3f}")
+
+    print_legality_summary(rows)
+
+
+def print_legality_summary(rows):
+    """
+    Print the legality estimate of the read-in flat placement of each circuit.
+    These placements are legal, so every score should be zero.
+    """
+
+    def fmt(value, spec):
+        # Pad the placeholder of missing values to the width of the column.
+        width = spec.split(".")[0].lstrip("<>")
+        return format(value, spec) if _finite(value) else format("-", f">{width}")
+
+    rule_pin_columns = [c for c in _legality_rule_columns(rows) if c.endswith("_pins")]
+    print("\nLegality estimate of the read-in (legal) flat placements:")
+    print(
+        f"{'suite':<12} {'circuit':<34} {'pins':>8} {'norm pins':>10} {'disp':>10} "
+        f"{'norm disp':>10} {'off dev':>7} {'no tile':>7} {'split':>5}  non-zero rules (pins)"
+    )
+    for row in rows:
+        nonzero_rules = ", ".join(
+            f"{c[len('legality_'):-len('_pins')]}: {row[c]:.0f}"
+            for c in rule_pin_columns
+            if _finite(row.get(c)) and row[c] != 0
+        )
+        print(
+            f"{row['suite']:<12} {row['circuit']:<34} "
+            f"{fmt(row.get('legality_pins'), '8.0f')} "
+            f"{fmt(row.get('legality_norm_pins'), '10.6f')} "
+            f"{fmt(row.get('legality_displacement'), '10.1f')} "
+            f"{fmt(row.get('legality_norm_displacement'), '10.6f')} "
+            f"{fmt(row.get('legality_off_device'), '7.0f')} "
+            f"{fmt(row.get('legality_no_compatible_tile'), '7.0f')} "
+            f"{fmt(row.get('legality_split_molecules'), '5.0f')}  {nonzero_rules}"
+            + (f"  ERROR: {row['legality_error']}" if row.get("legality_error") else "")
+        )
+
+    print("\nCircuits with a non-zero legality estimate (should be 0):")
+    for suite in sorted({row["suite"] for row in rows}):
+        suite_rows = [row for row in rows if row["suite"] == suite]
+        parsed = [r for r in suite_rows if _finite(r.get("legality_pins"))]
+        nonzero = [r for r in parsed if r["legality_pins"] != 0]
+        max_norm = max((r["legality_norm_pins"] for r in parsed), default=math.nan)
+        print(
+            f"\t{suite:<12} {len(nonzero)} of {len(parsed)} parsed circuits"
+            f" (max normalized pins in violation: {fmt(max_norm, '.6f')})"
+            + (
+                f", {len(suite_rows) - len(parsed)} missing a legality summary"
+                if len(parsed) != len(suite_rows)
+                else ""
+            )
+        )
 
 
 def _suite_colors(rows):
