@@ -50,9 +50,13 @@ The estimated wire usage of a net can be split into two factors:
     estimated / routed = (estimated HPWL / placed HPWL)
                        * (placed HPWL * crossing / routed)
 where the placed HPWL is the bounding box of the tiles the net's clusters are
-placed in after routing. The first factor is the error of the flat
-placement's bounding box (e.g. blocks moving during legalization), and the
-second is the error of the crossing count (routing detours / Steiner trees).
+placed in after routing, and the crossing is the effective crossing count of
+the estimate (estimated / estimated HPWL). This includes the empirical
+correction factor VPR applies to every net's estimate, so the two factors
+always multiply to estimated / routed. The first factor is the error of the
+flat placement's bounding box (e.g. blocks moving during legalization), and the
+second is the error of the crossing count and correction factor (routing
+detours / Steiner trees / longer wire segments).
 Nets which are only estimated or only routed (e.g. estimated as absorbed into
 a tile but routed between tiles) are reported separately.
 """
@@ -363,7 +367,9 @@ def compare_wire_usage(routed_nets, estimated_nets):
                 matched["estimated"].append(est["estimate"])
                 matched["estimated_tiles"].append(est["num_tiles"])
                 matched["estimated_hpwl"].append(_hpwl(est))
-                matched["crossing"].append(est["crossing"])
+                # The effective crossing count, including the correction
+                # factor applied to the estimate (see the module docstring).
+                matched["crossing"].append(est["estimate"] / _hpwl(est))
                 matched["placed_tiles"].append(routed["num_tiles"])
                 matched["placed_hpwl"].append(_hpwl(routed))
             else:

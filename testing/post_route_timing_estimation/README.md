@@ -46,11 +46,12 @@ The `titan_quick` tasks use the same device widths and router options as the
 turned on (that test is wirelength driven). The Titan benchmarks must be
 downloaded into the VTR tree (`make get_titan_benchmarks`).
 
-Only the needed timing graph and wire usage echo files are written (using
-`--echo_files`), since `--echo_file on` writes many very large files.
+Only the needed timing graph and wire usage echo files are written (by
+passing their names to `--echo_file`), since `--echo_file on` writes many very
+large files.
 
-NOTE: This requires a VPR build with the `--echo_files` option, the AP
-post-routing timing estimate, and the wire usage echo files.
+NOTE: This requires a VPR build where `--echo_file` accepts a list of echo file
+names, with the AP post-routing timing estimate and the wire usage echo files.
 
 ## Running
 
@@ -123,7 +124,10 @@ parsed; any other directories in its run directories are ignored.
       error of the flat placement's bounding box (e.g. blocks moving during
       legalization, or blocks in large tiles).
     - `wl_net_crossing_median_ratio`: placed tile HPWL * crossing / routed
-      wire usage. The error of the crossing count (routing detours).
+      wire usage. The error of the crossing count (routing detours). The
+      crossing here is the effective crossing of the estimate (estimated /
+      estimated tile HPWL), so it includes the correction factor VPR applies to
+      every net and the two factors multiply to estimated / routed.
   - The number of nets and the wire usage of each category of net: `matched`
     (estimated and routed), `spurious` (estimated, but absorbed by clustering),
     `missed_absorbed` (estimated as absorbed into a tile, but routed), and
