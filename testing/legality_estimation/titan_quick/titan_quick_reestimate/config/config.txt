@@ -1,0 +1,116 @@
+##############################################
+# Configuration file for running experiments
+##############################################
+#
+# Re-estimate: reads in the global placement written by the gp task
+# (copied into this task's flat_placements directory by
+# collect_gp_placements.py) and only estimates its legality (global
+# placement is skipped). Useful for quickly testing changes to the legality
+# estimator without re-running global placement.
+#
+# The circuits, device sizes, and router options are the same as the
+# titan_quick AP regression test
+# (vtr_flow/tasks/regression_tests/vtr_reg_nightly_test7/ap_titan).
+# gaussianblur is excluded (as in that test).
+#
+# See ../../README.md for how to run this experiment.
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/titan_blif/titan23/stratixiv
+
+# Path to directory of SDCs to use
+sdc_dir=benchmarks/titan_blif/titan23/stratixiv
+
+# Path to directory of architectures to use
+archs_dir=arch/titan
+
+# Add architectures to list to sweep
+arch_list_add=stratixiv_arch.timing.xml
+
+# Add circuits to list to sweep
+circuit_list_add=LU230_stratixiv_arch_timing.blif
+circuit_list_add=LU_Network_stratixiv_arch_timing.blif
+circuit_list_add=SLAM_spheric_stratixiv_arch_timing.blif
+circuit_list_add=bitcoin_miner_stratixiv_arch_timing.blif
+circuit_list_add=bitonic_mesh_stratixiv_arch_timing.blif
+circuit_list_add=cholesky_bdti_stratixiv_arch_timing.blif
+circuit_list_add=cholesky_mc_stratixiv_arch_timing.blif
+circuit_list_add=dart_stratixiv_arch_timing.blif
+circuit_list_add=denoise_stratixiv_arch_timing.blif
+circuit_list_add=des90_stratixiv_arch_timing.blif
+circuit_list_add=directrf_stratixiv_arch_timing.blif
+circuit_list_add=gsm_switch_stratixiv_arch_timing.blif
+circuit_list_add=mes_noc_stratixiv_arch_timing.blif
+circuit_list_add=minres_stratixiv_arch_timing.blif
+circuit_list_add=neuron_stratixiv_arch_timing.blif
+circuit_list_add=openCV_stratixiv_arch_timing.blif
+circuit_list_add=segmentation_stratixiv_arch_timing.blif
+circuit_list_add=sparcT1_chip2_stratixiv_arch_timing.blif
+circuit_list_add=sparcT1_core_stratixiv_arch_timing.blif
+circuit_list_add=sparcT2_core_stratixiv_arch_timing.blif
+circuit_list_add=stap_qrd_stratixiv_arch_timing.blif
+circuit_list_add=stereo_vision_stratixiv_arch_timing.blif
+
+# Constrain the circuits to their device widths
+circuit_constraint_list_add=(sparcT1_core_stratixiv_arch_timing.blif,  device_width=100)
+circuit_constraint_list_add=(SLAM_spheric_stratixiv_arch_timing.blif,  device_width=100)
+circuit_constraint_list_add=(stereo_vision_stratixiv_arch_timing.blif, device_width=150)
+circuit_constraint_list_add=(cholesky_mc_stratixiv_arch_timing.blif,   device_width=150)
+circuit_constraint_list_add=(neuron_stratixiv_arch_timing.blif,        device_width=150)
+circuit_constraint_list_add=(segmentation_stratixiv_arch_timing.blif,  device_width=150)
+circuit_constraint_list_add=(dart_stratixiv_arch_timing.blif,          device_width=150)
+circuit_constraint_list_add=(denoise_stratixiv_arch_timing.blif,       device_width=225)
+circuit_constraint_list_add=(sparcT2_core_stratixiv_arch_timing.blif,  device_width=225)
+circuit_constraint_list_add=(stap_qrd_stratixiv_arch_timing.blif,      device_width=225)
+circuit_constraint_list_add=(cholesky_bdti_stratixiv_arch_timing.blif, device_width=225)
+circuit_constraint_list_add=(des90_stratixiv_arch_timing.blif,         device_width=225)
+circuit_constraint_list_add=(mes_noc_stratixiv_arch_timing.blif,       device_width=225)
+circuit_constraint_list_add=(openCV_stratixiv_arch_timing.blif,        device_width=225)
+circuit_constraint_list_add=(LU_Network_stratixiv_arch_timing.blif,    device_width=300)
+circuit_constraint_list_add=(minres_stratixiv_arch_timing.blif,        device_width=300)
+circuit_constraint_list_add=(bitcoin_miner_stratixiv_arch_timing.blif, device_width=300)
+circuit_constraint_list_add=(bitonic_mesh_stratixiv_arch_timing.blif,  device_width=300)
+circuit_constraint_list_add=(gsm_switch_stratixiv_arch_timing.blif,    device_width=300)
+circuit_constraint_list_add=(sparcT1_chip2_stratixiv_arch_timing.blif, device_width=300)
+circuit_constraint_list_add=(directrf_stratixiv_arch_timing.blif,      device_width=450)
+circuit_constraint_list_add=(LU230_stratixiv_arch_timing.blif,         device_width=450)
+
+# Read in the global placement of the gp task (copied into this task's
+# flat_placements directory by collect_gp_placements.py). The path is
+# relative to the run directory of each circuit (<task>/runXXX/<arch>/<circuit>/common).
+circuit_constraint_list_add=(LU230_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/LU230_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(LU_Network_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/LU_Network_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(SLAM_spheric_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/SLAM_spheric_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(bitcoin_miner_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/bitcoin_miner_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(bitonic_mesh_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/bitonic_mesh_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(cholesky_bdti_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/cholesky_bdti_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(cholesky_mc_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/cholesky_mc_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(dart_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/dart_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(denoise_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/denoise_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(des90_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/des90_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(directrf_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/directrf_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(gsm_switch_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/gsm_switch_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(mes_noc_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/mes_noc_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(minres_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/minres_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(neuron_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/neuron_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(openCV_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/openCV_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(segmentation_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/segmentation_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(sparcT1_chip2_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/sparcT1_chip2_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(sparcT1_core_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/sparcT1_core_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(sparcT2_core_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/sparcT2_core_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(stap_qrd_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/stap_qrd_stratixiv_arch_timing.fplace)
+circuit_constraint_list_add=(stereo_vision_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/stereo_vision_stratixiv_arch_timing.fplace)
+
+# Parse info and how to parse
+parse_file=vpr_ap_global_place.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements_ap_global_place.txt
+
+# Read in the global placement and only estimate its legality (global
+# placement is skipped), writing the legality echo file. The router options
+# are kept the same as the gp task.
+script_params=-starting_stage vpr --route_chan_width 300 --max_router_iterations 400 --router_lookahead map -timeout 86400 --initial_pres_fac 1.0 --router_profiler_astar_fac 1.5 --seed 3 -track_memory_usage --global_place --echo_file legality.ap_estimate.echo
