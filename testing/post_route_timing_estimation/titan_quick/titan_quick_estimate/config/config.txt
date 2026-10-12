@@ -99,17 +99,18 @@ circuit_constraint_list_add=(stap_qrd_stratixiv_arch_timing.blif, read_flat_plac
 circuit_constraint_list_add=(stereo_vision_stratixiv_arch_timing.blif, read_flat_place=../../../../flat_placements/stereo_vision_stratixiv_arch_timing.fplace)
 
 # Parse info and how to parse
-parse_file=vpr_titan.txt
+parse_file=vpr_ap_global_place.txt
 
 # How to parse QoR info
-qor_parse_file=qor_vpr_titan.txt
+qor_parse_file=qor_ap_fixed_chan_width.txt
 
 # Pass requirements
-pass_requirements_file=pass_requirements_ap_vpr_titan.txt
+pass_requirements_file=pass_requirements_ap_global_place.txt
 
-# Run only the AP flow on the read-in flat placement (global placement is
-# skipped) and write the estimated timing graph echo file. The detailed placer
-# is turned off since only the estimate is needed. The router options are kept
-# the same as the routed task, since the place delay model used by the
-# estimate is built from the router lookahead.
-script_params=-starting_stage vpr --route_chan_width 300 --max_router_iterations 400 --router_lookahead map -timeout 86400 --initial_pres_fac 1.0 --router_profiler_astar_fac 1.5 --seed 3 --analytical_place --ap_detailed_placer none --echo_file timing_graph.ap_post_routing_estimate.echo wire_usage.ap_post_routing_estimate.echo legality.ap_estimate.echo
+# Read in the flat placement and stop after global placement (--global_place),
+# which skips the global placer, so only the estimates of the read-in flat
+# placement are made. Writes the estimated timing graph, wire usage, and
+# legality echo files.
+# The router options are kept the same as the routed task, since the place
+# delay model used by the estimate is built from the router lookahead.
+script_params=-starting_stage vpr --route_chan_width 300 --max_router_iterations 400 --router_lookahead map -timeout 86400 --initial_pres_fac 1.0 --router_profiler_astar_fac 1.5 --seed 3 --global_place --echo_file timing_graph.ap_post_routing_estimate.echo wire_usage.ap_post_routing_estimate.echo legality.ap_estimate.echo

@@ -18,7 +18,9 @@ widths:
   (`timing_graph.analysis.echo`), and the routed wire usage of each net
   (`wire_usage.routed.echo`).
 - `<suite>/<suite>_estimate`: Reads in the final flat placement of the routed task
-  (global placement is skipped) and writes the estimated timing graph
+  and stops after global placement (`--global_place`; the global placer is
+  skipped, so the flow only makes the estimates of the read-in flat placement
+  and does not legalize or pack it). Writes the estimated timing graph
   (`timing_graph.ap_post_routing_estimate.echo`) and the estimated wire usage
   of each net (`wire_usage.ap_post_routing_estimate.echo`). The estimated CPD and sTNS
   are printed in the VPR log ("Placement estimated CPD/sTNS"), along with the
@@ -54,6 +56,9 @@ large files.
 
 NOTE: This requires a VPR build where `--echo_file` accepts a list of echo file
 names, with the AP post-routing timing estimate and the wire usage echo files.
+The estimate tasks also require `--global_place` (VTR PR #3899), including the
+`vpr_ap_global_place.txt` parse config and
+`pass_requirements_ap_global_place.txt` pass requirements.
 
 ## Running
 

@@ -112,15 +112,16 @@ circuit_constraint_list_add=(tpu_like.small.os.blif, read_flat_place=../../../..
 circuit_constraint_list_add=(tpu_like.small.ws.blif, read_flat_place=../../../../flat_placements/tpu_like.small.ws.fplace)
 
 # Parse info and how to parse
-parse_file=vpr_fixed_chan_width.txt
+parse_file=vpr_ap_global_place.txt
 
 # How to parse QoR info
 qor_parse_file=qor_ap_fixed_chan_width.txt
 
 # Pass requirements
-pass_requirements_file=pass_requirements.txt
+pass_requirements_file=pass_requirements_ap_global_place.txt
 
-# Run only the AP flow on the read-in flat placement (global placement is
-# skipped) and write the estimated timing graph echo file. The detailed placer
-# is turned off since only the estimate is needed.
-script_params=-starting_stage vpr --route_chan_width 300 --seed 1 -timeout 43200 --analytical_place --ap_detailed_placer none --echo_file timing_graph.ap_post_routing_estimate.echo wire_usage.ap_post_routing_estimate.echo legality.ap_estimate.echo
+# Read in the flat placement and stop after global placement (--global_place),
+# which skips the global placer, so only the estimates of the read-in flat
+# placement are made. Writes the estimated timing graph, wire usage, and
+# legality echo files.
+script_params=-starting_stage vpr --route_chan_width 300 --seed 1 -timeout 43200 --global_place --echo_file timing_graph.ap_post_routing_estimate.echo wire_usage.ap_post_routing_estimate.echo legality.ap_estimate.echo
