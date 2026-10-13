@@ -122,6 +122,8 @@ VTR_PATH/vtr_flow/scripts/run_vtr_task.py mcnc/mcnc_gp -j <N>
   - The legality estimate: the pins in violation (raw and normalized by the
     number of connected pins), and the pins in violation of each rule
     (`legality_rule_<name>_pins`).
+  - The chains whose relative placement is checked (`legality_num_chains`) and
+    how many of them are broken (`legality_broken_chains`).
   - The sanity counters: primitives placed off the device, evicted primitives
     with no compatible tile, and molecules split across tiles. The global
     placer places each molecule as one block, and the partial legalizer keeps

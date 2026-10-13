@@ -139,9 +139,11 @@ parsed; any other directories in its run directories are ignored.
     pins in violation (raw and normalized by the number of connected pins),
     the sanity counters (primitives placed off the device, evicted primitives
     with no compatible tile, and molecules split across tiles), and the pins
-    in violation of each rule (`legality_rule_<name>_pins`). The flat placements are legal, so these
-    should all be zero; a non-zero score is either a bug in the estimator or
-    a rule which is too strict.
+    in violation of each rule (`legality_rule_<name>_pins`), and the chains
+    whose relative placement is checked (`legality_num_chains`) and how many of
+    them are broken (`legality_broken_chains`). The flat placements are legal,
+    so everything except the number of chains should be zero; a non-zero score
+    is either a bug in the estimator or a rule which is too strict.
   - The number of nets and the wire usage of each category of net: `matched`
     (estimated and routed), `spurious` (estimated, but absorbed by clustering),
     `missed_absorbed` (estimated as absorbed into a tile, but routed), and
