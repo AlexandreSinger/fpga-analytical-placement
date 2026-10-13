@@ -39,6 +39,8 @@ results of one task are written into the run directory of the other).
 | `vtr_largest` | The 8 largest VTR circuits (same as `vtr_largest_ap`) |
 | `koios`       | The Koios circuits (same as `koios_ap`)          |
 | `titan_quick` | The Titan circuits of the `ap_titan` regression test (titan_quick, without gaussianblur) |
+| `titanium_quick` | The Titanium circuits of the `titanium_s10_quick_qor` regression test (16 circuits which run in under around 2 hours), on their Stratix 10 devices from the `titanium_s10_ap` test suite |
+| `artix_7`     | The 8 VTR circuits of the `artix_7_ap` test suite (`7series_BRAM_DSP_carry.xml`, fixed Artix-7-like devices, channel width 190) |
 
 The `mcnc` suite is small enough to run on a local machine in a few minutes.
 It is meant for quickly testing the experiment (e.g. after changing VPR or
@@ -47,8 +49,12 @@ circuits are very small.
 
 The `titan_quick` tasks use the same device widths and router options as the
 `ap_titan` regression test (`vtr_reg_nightly_test7`), but with timing analysis
-turned on (that test is wirelength driven). The Titan benchmarks must be
-downloaded into the VTR tree (`make get_titan_benchmarks`).
+turned on (that test is wirelength driven). The `titanium_quick` tasks use the
+same circuits and router options as the `titanium_s10_quick_qor` regression
+test (`vtr_reg_nightly_test7`), on the devices of the `titanium_s10_ap` test
+suite. The Titan and Titanium benchmarks must be downloaded into the VTR tree
+(`make get_titan_benchmarks`). The Artix-7 circuits are read from
+`/shared/singera8/7series_blifs` (the same as the `artix_7_ap` test suite).
 
 Only the needed timing graph, wire usage, and legality echo files are written (by
 passing their names to `--echo_file`), since `--echo_file on` writes many very
@@ -178,5 +184,5 @@ routed through the general routing network, so they are not compared.
 
 NOTE: Parsing the echo files of a large circuit can use several GB of memory
 (about 150 MB for stereovision2, and about 3 GB for the largest Koios
-circuits). The Titan circuits are larger still, so parse `titan_quick` with a
-low `-j`.
+circuits). The Titan and Titanium circuits are larger still, so parse
+`titan_quick` and `titanium_quick` with a low `-j`.

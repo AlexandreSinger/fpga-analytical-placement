@@ -2,3 +2,5 @@ mcnc/mcnc_routed
 vtr_largest/vtr_largest_routed
 koios/koios_routed
 titan_quick/titan_quick_routed
+titanium_quick/titanium_quick_routed
+artix_7/artix_7_routed

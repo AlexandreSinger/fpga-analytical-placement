@@ -38,6 +38,8 @@ name are run together their run directories collide.
 | `vtr_largest` | The 8 largest VTR circuits (same as `vtr_largest_ap`) |
 | `koios`       | The Koios circuits (same as `koios_ap`)          |
 | `titan_quick` | The Titan circuits of the `ap_titan` regression test (titan_quick, without gaussianblur) |
+| `titanium_quick` | The Titanium circuits of the `titanium_s10_quick_qor` regression test (16 circuits which run in under around 2 hours), on their Stratix 10 devices from the `titanium_s10_ap` test suite |
+| `artix_7`     | The 8 VTR circuits of the `artix_7_ap` test suite (`7series_BRAM_DSP_carry.xml`, fixed Artix-7-like devices, channel width 190) |
 
 The circuits, devices, channel widths and router options are the same as the
 `post_route_timing_estimation` suites. The router options matter even though
@@ -46,8 +48,9 @@ built from the router lookahead.
 
 The `mcnc` suite is small enough to run on a local machine in a few minutes. It
 is meant for quickly testing the experiment, not for drawing conclusions about
-the legality estimator. The Titan benchmarks must be downloaded into the VTR
-tree (`make get_titan_benchmarks`).
+the legality estimator. The Titan and Titanium benchmarks must be downloaded into
+the VTR tree (`make get_titan_benchmarks`). The Artix-7 circuits are read from
+`/shared/singera8/7series_blifs` (the same as the `artix_7_ap` test suite).
 
 NOTE: This requires a VPR build with:
 - `--global_place` and `--write_post_gp_flat_place` (VTR PR #3899), including

@@ -1,0 +1,80 @@
+##############################################
+# Configuration file for running experiments
+##############################################
+#
+# Global placement: runs only the global placement stage of the AP flow
+# (--global_place), prints the legality estimate of the global placement
+# ("Legality Estimate Summary"), writes its per-tile penalty to
+# legality.ap_estimate.echo, and writes the global placement to gp.fplace.
+#
+# The circuits and router options are the same as the titanium_s10_quick_qor
+# regression test
+# (vtr_flow/tasks/regression_tests/vtr_reg_nightly_test7/titanium_s10_quick_qor):
+# the Titanium circuits which run in under around 2 hours. Each circuit is
+# placed on its device from the titanium_s10_ap test suite
+# (fpga-analytical-placement/testing/test_suites/titanium_s10_ap).
+#
+# See ../../README.md for how to run this experiment.
+
+# Path to directory of circuits to use
+circuits_dir=benchmarks/titan_blif/titanium/stratix10
+
+# Path to directory of SDCs to use
+sdc_dir=benchmarks/titan_blif/titanium/stratix10
+
+# Path to directory of architectures to use
+archs_dir=arch/titan
+
+# Add architectures to list to sweep
+arch_list_add=stratix10_arch.timing.xml
+
+# Add circuits to list to sweep
+circuit_list_add=ASU_LRN_stratix10_arch_timing.blif
+circuit_list_add=ASU_ELT_stratix10_arch_timing.blif
+circuit_list_add=ASU_BSC_stratix10_arch_timing.blif
+circuit_list_add=tdfir_stratix10_arch_timing.blif
+circuit_list_add=mem_tester_stratix10_arch_timing.blif
+circuit_list_add=mandelbrot_stratix10_arch_timing.blif
+circuit_list_add=channelizer_stratix10_arch_timing.blif
+circuit_list_add=fft1d_offchip_stratix10_arch_timing.blif
+circuit_list_add=DLA_LRN_stratix10_arch_timing.blif
+circuit_list_add=fft1d_stratix10_arch_timing.blif
+circuit_list_add=fft2d_stratix10_arch_timing.blif
+circuit_list_add=DLA_ELT_stratix10_arch_timing.blif
+circuit_list_add=DLA_BSC_stratix10_arch_timing.blif
+circuit_list_add=jpeg_deco_stratix10_arch_timing.blif
+circuit_list_add=nyuzi_stratix10_arch_timing.blif
+circuit_list_add=sobel_stratix10_arch_timing.blif
+
+# Constrain the circuits to their devices
+circuit_constraint_list_add=(ASU_LRN_stratix10_arch_timing.blif, device=1SG211HN1F43E1VG)
+circuit_constraint_list_add=(ASU_ELT_stratix10_arch_timing.blif, device=1SG211HN1F43E1VG)
+circuit_constraint_list_add=(ASU_BSC_stratix10_arch_timing.blif, device=1SG211HN1F43E1VG)
+circuit_constraint_list_add=(tdfir_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
+circuit_constraint_list_add=(mem_tester_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
+circuit_constraint_list_add=(mandelbrot_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
+circuit_constraint_list_add=(channelizer_stratix10_arch_timing.blif, device=1SG280HH1F55E1VG)
+circuit_constraint_list_add=(fft1d_offchip_stratix10_arch_timing.blif, device=1SG280HH1F55E1VG)
+circuit_constraint_list_add=(DLA_LRN_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
+circuit_constraint_list_add=(fft1d_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
+circuit_constraint_list_add=(fft2d_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
+circuit_constraint_list_add=(DLA_ELT_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
+circuit_constraint_list_add=(DLA_BSC_stratix10_arch_timing.blif, device=1SX110HN1F43E1VG)
+circuit_constraint_list_add=(jpeg_deco_stratix10_arch_timing.blif, device=1SG280HH1F55E1VG)
+circuit_constraint_list_add=(nyuzi_stratix10_arch_timing.blif, device=1SX040HH1F35E1VG)
+circuit_constraint_list_add=(sobel_stratix10_arch_timing.blif, device=1SX065HH1F35E1VG)
+
+# Parse info and how to parse
+parse_file=vpr_ap_global_place.txt
+
+# How to parse QoR info
+qor_parse_file=qor_ap_fixed_chan_width.txt
+
+# Pass requirements
+pass_requirements_file=pass_requirements_ap_global_place.txt
+
+# Run only global placement, and write the legality echo file and the global
+# placement. The router options are kept the same as the full AP flow, since
+# the place delay model used by the timing-driven global placer is built from
+# the router lookahead.
+script_params=-starting_stage vpr --route_chan_width 400 --max_router_iterations 400 --initial_pres_fac 1.0 --router_profiler_astar_fac 1.5 -timeout 86400 --seed 1 -track_memory_usage --global_place --write_post_gp_flat_place gp.fplace --echo_file legality.ap_estimate.echo
