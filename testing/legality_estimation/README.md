@@ -119,9 +119,9 @@ VTR_PATH/vtr_flow/scripts/run_vtr_task.py mcnc/mcnc_gp -j <N>
 
 - `legality_estimation_results.csv`: One row per circuit, with:
   - The VPR status (`success` if the log says "VPR succeeded").
-  - The legality estimate: the pins in violation and pin-weighted displacement
-    (raw and normalized by the number of connected pins), and the pins in
-    violation and displacement of each rule (`legality_rule_<name>_*`).
+  - The legality estimate: the pins in violation (raw and normalized by the
+    number of connected pins), and the pins in violation of each rule
+    (`legality_rule_<name>_pins`).
   - The sanity counters: primitives placed off the device, evicted primitives
     with no compatible tile, and molecules split across tiles. The global
     placer places each molecule as one block, and the partial legalizer keeps
@@ -140,7 +140,7 @@ VTR_PATH/vtr_flow/scripts/run_vtr_task.py mcnc/mcnc_gp -j <N>
   the echo file:
   - The number of occupied tiles and of tiles with a violation, the number of
     primitives and connected pins placed in them, and the pins in violation
-    and displacement (total and per rule, `rule_<name>`).
+    (total and per rule, `rule_<name>`).
   - For each class of tile pin (`in_regular`, `in_global`, `in_clock`, `out`):
     the number of occupied tiles whose demand is over the capacity
     (`*_over_cap`), and the largest demand / capacity ratio (`*_max_ratio`).

@@ -7,9 +7,9 @@ global placement from the VPR log ("Legality Estimate Summary") and the
 per-tile penalty from the legality echo file (legality.ap_estimate.echo), and
 produces:
     - results/legality_estimation_results.csv: One row per circuit with the
-      legality estimate (pins in violation and pin-weighted displacement, raw
-      and normalized by the number of connected pins), the pins in violation
-      and displacement of each rule, the sanity counters, the post-global
+      legality estimate (pins in violation, raw and normalized by the number
+      of connected pins), the pins in violation of each rule, the sanity
+      counters, the post-global
       placement wirelength / CPD / sTNS estimates, and the run time of global
       placement.
     - results/legality_tile_types.csv: One row per (circuit, tile type) with
@@ -60,10 +60,6 @@ LEGALITY_SUMMARY_PATTERNS = [
         re.compile(r"Pins in violation: (\d+) \((\S+) of (\d+) connected pins\)"),
         ("legality_pins", "legality_norm_pins", "legality_connected_pins"),
     ),
-    (
-        re.compile(r"Pin-weighted displacement: (\S+) tiles \((\S+) per connected pin\)"),
-        ("legality_displacement", "legality_norm_displacement"),
-    ),
     (re.compile(r"Primitives placed outside of the device: (\d+)"), ("legality_off_device",)),
     (
         re.compile(r"Evicted primitives with no compatible tile: (\d+)"),
@@ -71,9 +67,11 @@ LEGALITY_SUMMARY_PATTERNS = [
     ),
     (re.compile(r"Molecules split across tiles: (\d+)"), ("legality_split_molecules",)),
 ]
-LEGALITY_RULE_PATTERN = re.compile(r"Rule (\w+): (\d+) / (\S+)")
-# A line of the per tile type section: "<tile type>: <pins> / <displacement>".
-LEGALITY_TILE_TYPE_PATTERN = re.compile(r"^\t\t(\S+): (\d+) / (\S+)$")
+# NOTE: Logs from before the pin-weighted displacement was removed print
+#       "<pins> / <displacement>"; the displacement is ignored.
+LEGALITY_RULE_PATTERN = re.compile(r"Rule (\w+): (\d+)(?: / \S+)?$")
+# A line of the per tile type section: "<tile type>: <pins>".
+LEGALITY_TILE_TYPE_PATTERN = re.compile(r"^\t\t(\S+): (\d+)(?: / \S+)?$")
 # A line of the worst tiles section.
 LEGALITY_WORST_TILE_PATTERN = re.compile(r"^\t\t(\S+ at \(.*\): .*)$")
 
@@ -106,8 +104,6 @@ CSV_COLUMNS = [
     "legality_connected_pins",
     "legality_pins",
     "legality_norm_pins",
-    "legality_displacement",
-    "legality_norm_displacement",
     "legality_off_device",
     "legality_no_compatible_tile",
     "legality_split_molecules",
@@ -132,7 +128,6 @@ TILE_TYPE_CSV_COLUMNS = [
     "num_prims",
     "num_pins",
     "pins_in_violation",
-    "displacement",
     # The per-rule columns (rule_<name>) are inserted here.
     *[f"{pin_class}_{stat}" for pin_class in PIN_CLASSES for stat in ("over_cap", "max_ratio")],
 ]
@@ -148,12 +143,11 @@ def parse_log(common_dir):
     Parse the VPR log of a circuit.
 
     Returns a dict with the VPR status, the values of LOG_PATTERNS, and the
-    first legality summary in the log: the total score (legality_pins,
-    legality_displacement, raw and normalized by legality_connected_pins), the
-    sanity counters, the pins in violation and displacement of each rule
-    (legality_rule_<name>_pins / _displacement), the pins in violation and
-    displacement of each tile type (legality_tile_types: {name: (pins,
-    displacement)}), and the worst tiles (legality_worst_tiles: [line]).
+    first legality summary in the log: the total score (legality_pins, raw
+    and normalized by legality_connected_pins), the sanity counters, the pins
+    in violation of each rule (legality_rule_<name>_pins), the pins in
+    violation of each tile type (legality_tile_types: {name: pins}), and the
+    worst tiles (legality_worst_tiles: [line]).
     """
     log_file = os.path.join(common_dir, "vpr.out")
     values = {"legality_tile_types": {}, "legality_worst_tiles": []}
@@ -197,15 +191,11 @@ def parse_log(common_dir):
             if match:
                 prefix = f"legality_rule_{match.group(1)}"
                 values[f"{prefix}_pins"] = float(match.group(2))
-                values[f"{prefix}_displacement"] = float(match.group(3))
                 continue
             if section.startswith("Per tile type"):
                 match = LEGALITY_TILE_TYPE_PATTERN.match(line)
                 if match:
-                    values["legality_tile_types"][match.group(1)] = (
-                        float(match.group(2)),
-                        float(match.group(3)),
-                    )
+                    values["legality_tile_types"][match.group(1)] = float(match.group(2))
                 continue
             if section.startswith("Worst"):
                 match = LEGALITY_WORST_TILE_PATTERN.match(line)
@@ -259,7 +249,6 @@ def parse_legality_echo(filename):
             stats["num_prims"] += float(tile["num_prims"])
             stats["num_pins"] += float(tile["num_pins"])
             stats["pins_in_violation"] += pins_in_violation
-            stats["displacement"] += float(tile["displacement"])
             for rule_column in rule_columns:
                 stats[rule_column] += float(tile[rule_column])
             for pin_class, (demand_column, cap_column) in PIN_CLASSES.items():
@@ -329,7 +318,7 @@ def parse_circuit(job):
         for name in sorted(set(tile_type_penalties) | set(tile_types)):
             if name == "<off-device>":
                 continue
-            log_pins = tile_type_penalties.get(name, (0.0, 0.0))[0]
+            log_pins = tile_type_penalties.get(name, 0.0)
             echo_pins = tile_types.get(name, {}).get("pins_in_violation", 0.0)
             if echo_pins != log_pins:
                 errors.append(f"{name}: {log_pins:.0f} pins in the log, {echo_pins:.0f} in the echo file")
@@ -379,7 +368,7 @@ def write_tile_type_csv(tile_type_rows, filename):
         for key in row:
             if key.startswith("rule_") and key not in rule_columns:
                 rule_columns.append(key)
-    insert_idx = TILE_TYPE_CSV_COLUMNS.index("displacement") + 1
+    insert_idx = TILE_TYPE_CSV_COLUMNS.index("pins_in_violation") + 1
     fieldnames = (
         TILE_TYPE_CSV_COLUMNS[:insert_idx] + rule_columns + TILE_TYPE_CSV_COLUMNS[insert_idx:]
     )
@@ -404,7 +393,7 @@ def print_circuit_summary(rows, num_worst_tiles):
     rules = _rule_names(rows)
     print(
         f"{'suite':<12} {'circuit':<40} {'conn pins':>10} {'pins':>9} {'norm pins':>9} "
-        f"{'norm disp':>9} {'off':>5} {'no tile':>7} {'split':>5} "
+        f"{'off':>5} {'no tile':>7} {'split':>5} "
         + " ".join(f"{rule[:12]:>12}" for rule in rules)
         + f" {'GP (s)':>8}"
     )
@@ -414,7 +403,6 @@ def print_circuit_summary(rows, num_worst_tiles):
             f"{_fmt(row.get('legality_connected_pins'), '10.0f')} "
             f"{_fmt(row.get('legality_pins'), '9.0f')} "
             f"{_fmt(row.get('legality_norm_pins'), '9.4f')} "
-            f"{_fmt(row.get('legality_norm_displacement'), '9.4f')} "
             f"{_fmt(row.get('legality_off_device'), '5.0f')} "
             f"{_fmt(row.get('legality_no_compatible_tile'), '7.0f')} "
             f"{_fmt(row.get('legality_split_molecules'), '5.0f')} "
@@ -431,13 +419,13 @@ def print_circuit_summary(rows, num_worst_tiles):
 
 def print_suite_summary(rows):
     """
-    Print, per suite, the geomean of the normalized pins in violation and
-    displacement, and the share of the pins in violation charged to each rule.
+    Print, per suite, the geomean of the normalized pins in violation, and
+    the share of the pins in violation charged to each rule.
     """
     rules = _rule_names(rows)
     print("\nPer suite (geomean over circuits with a non-zero score; share of pins in violation per rule):")
     print(
-        f"\t{'suite':<12} {'circuits':>8} {'non-zero':>8} {'norm pins':>9} {'norm disp':>9} "
+        f"\t{'suite':<12} {'circuits':>8} {'non-zero':>8} {'norm pins':>9} "
         + " ".join(f"{rule[:12]:>12}" for rule in rules)
     )
     for suite in sorted({row["suite"] for row in rows}):
@@ -451,7 +439,6 @@ def print_suite_summary(rows):
         print(
             f"\t{suite:<12} {len(suite_rows):>8} {len(nonzero):>8} "
             f"{_fmt(_geomean([r['legality_norm_pins'] for r in nonzero]), '9.4f')} "
-            f"{_fmt(_geomean([r['legality_norm_displacement'] for r in nonzero]), '9.4f')} "
             + " ".join(_fmt(share, "12.3f") for share in shares)
         )
 

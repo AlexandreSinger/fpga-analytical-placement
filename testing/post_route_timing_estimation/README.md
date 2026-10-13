@@ -136,11 +136,10 @@ parsed; any other directories in its run directories are ignored.
       estimated tile HPWL), so it includes the correction factor VPR applies to
       every net and the two factors multiply to estimated / routed.
   - The legality estimate of the read-in flat placement (`legality_*`): the
-    pins in violation and pin-weighted displacement (raw and normalized by the
-    number of connected pins), the sanity counters (primitives placed off the
-    device, evicted primitives with no compatible tile, and molecules split
-    across tiles), and the pins in violation and displacement of each rule
-    (`legality_rule_<name>_*`). The flat placements are legal, so these
+    pins in violation (raw and normalized by the number of connected pins),
+    the sanity counters (primitives placed off the device, evicted primitives
+    with no compatible tile, and molecules split across tiles), and the pins
+    in violation of each rule (`legality_rule_<name>_pins`). The flat placements are legal, so these
     should all be zero; a non-zero score is either a bug in the estimator or
     a rule which is too strict.
   - The number of nets and the wire usage of each category of net: `matched`

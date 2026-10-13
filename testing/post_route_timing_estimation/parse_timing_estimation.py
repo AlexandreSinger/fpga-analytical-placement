@@ -166,10 +166,6 @@ LEGALITY_SUMMARY_PATTERNS = [
         re.compile(r"Pins in violation: (\d+) \((\S+) of (\d+) connected pins\)"),
         ("legality_pins", "legality_norm_pins", "legality_connected_pins"),
     ),
-    (
-        re.compile(r"Pin-weighted displacement: (\S+) tiles \((\S+) per connected pin\)"),
-        ("legality_displacement", "legality_norm_displacement"),
-    ),
     (re.compile(r"Primitives placed outside of the device: (\d+)"), ("legality_off_device",)),
     (
         re.compile(r"Evicted primitives with no compatible tile: (\d+)"),
@@ -177,7 +173,9 @@ LEGALITY_SUMMARY_PATTERNS = [
     ),
     (re.compile(r"Molecules split across tiles: (\d+)"), ("legality_split_molecules",)),
 ]
-LEGALITY_RULE_PATTERN = re.compile(r"Rule (\w+): (\d+) / (\S+)")
+# NOTE: Logs from before the pin-weighted displacement was removed print
+#       "<pins> / <displacement>"; the displacement is ignored.
+LEGALITY_RULE_PATTERN = re.compile(r"Rule (\w+): (\d+)(?: / \S+)?$")
 
 
 def parse_legality_summary(common_dir):
@@ -185,11 +183,10 @@ def parse_legality_summary(common_dir):
     Parse the first legality summary from the VPR log. For the estimate task,
     this is the legality estimate of the read-in flat placement.
 
-    Returns a dict with the total score (legality_pins, legality_displacement,
-    raw and normalized by legality_connected_pins), the sanity counters, and
-    the pins in violation and displacement of each rule
-    (legality_rule_<name>_pins / _displacement). The dict is empty if the
-    log has no legality summary.
+    Returns a dict with the total score (legality_pins, raw and normalized by
+    legality_connected_pins), the sanity counters, and the pins in violation
+    of each rule (legality_rule_<name>_pins). The dict is empty if the log has
+    no legality summary.
     """
     log_file = os.path.join(common_dir, "vpr.out")
     values = {}
@@ -204,11 +201,9 @@ def parse_legality_summary(common_dir):
             # The summary is the block of tab-indented lines after the header.
             if not line.startswith("\t"):
                 break
-            match = LEGALITY_RULE_PATTERN.search(line)
+            match = LEGALITY_RULE_PATTERN.search(line.rstrip("\n"))
             if match:
-                prefix = f"legality_rule_{match.group(1)}"
-                values[f"{prefix}_pins"] = float(match.group(2))
-                values[f"{prefix}_displacement"] = float(match.group(3))
+                values[f"legality_rule_{match.group(1)}_pins"] = float(match.group(2))
                 continue
             for pattern, keys in LEGALITY_SUMMARY_PATTERNS:
                 match = pattern.search(line)
@@ -644,12 +639,10 @@ CSV_COLUMNS = [
     "legality_connected_pins",
     "legality_pins",
     "legality_norm_pins",
-    "legality_displacement",
-    "legality_norm_displacement",
     "legality_off_device",
     "legality_no_compatible_tile",
     "legality_split_molecules",
-    # The per-rule legality columns (legality_rule_<name>_*) are inserted
+    # The per-rule legality columns (legality_rule_<name>_pins) are inserted
     # here, in the order the rules appear in the VPR log, so new rules do not
     # need to be listed.
     "error",
@@ -749,8 +742,8 @@ def print_legality_summary(rows):
     rule_pin_columns = [c for c in _legality_rule_columns(rows) if c.endswith("_pins")]
     print("\nLegality estimate of the read-in (legal) flat placements:")
     print(
-        f"{'suite':<12} {'circuit':<34} {'pins':>8} {'norm pins':>10} {'disp':>10} "
-        f"{'norm disp':>10} {'off dev':>7} {'no tile':>7} {'split':>5}  non-zero rules (pins)"
+        f"{'suite':<12} {'circuit':<34} {'pins':>8} {'norm pins':>10} "
+        f"{'off dev':>7} {'no tile':>7} {'split':>5}  non-zero rules (pins)"
     )
     for row in rows:
         nonzero_rules = ", ".join(
@@ -762,8 +755,6 @@ def print_legality_summary(rows):
             f"{row['suite']:<12} {row['circuit']:<34} "
             f"{fmt(row.get('legality_pins'), '8.0f')} "
             f"{fmt(row.get('legality_norm_pins'), '10.6f')} "
-            f"{fmt(row.get('legality_displacement'), '10.1f')} "
-            f"{fmt(row.get('legality_norm_displacement'), '10.6f')} "
             f"{fmt(row.get('legality_off_device'), '7.0f')} "
             f"{fmt(row.get('legality_no_compatible_tile'), '7.0f')} "
             f"{fmt(row.get('legality_split_molecules'), '5.0f')}  {nonzero_rules}"
