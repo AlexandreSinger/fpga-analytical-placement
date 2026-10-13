@@ -17,6 +17,10 @@ produces:
       pins in violation of each rule, and the tile pin demand (how many tiles
       are over the capacity of each class of tile pin, and the largest demand
       / capacity ratio).
+    - results/legality_suite_summary.csv: One row per suite with the number
+      of circuits (and how many have a non-zero score), the geomean of the
+      normalized pins in violation, and the share of the pins in violation
+      charged to each rule.
 
 A summary of each circuit, the share of the pins in violation charged to each
 rule per suite, and the tile types with the most pins in violation per suite
@@ -423,7 +427,44 @@ def print_circuit_summary(rows, num_worst_tiles):
                 print(f"\t\t{tile}")
 
 
-def print_suite_summary(rows):
+def suite_summary(rows):
+    """
+    Summarize the legality estimate of each suite.
+
+    Returns one row per suite with the number of circuits, the number with a
+    non-zero score, the geomean of the normalized pins in violation (over the
+    circuits with a non-zero score), and the share of the pins in violation
+    charged to each rule (<rule>_share).
+    """
+    rules = _rule_names(rows)
+    summary = []
+    for suite in sorted({row["suite"] for row in rows}):
+        suite_rows = [row for row in rows if row["suite"] == suite and _finite(row.get("legality_pins"))]
+        nonzero = [row for row in suite_rows if row["legality_pins"] > 0]
+        total_pins = sum(row["legality_pins"] for row in suite_rows)
+        suite_row = {
+            "suite": suite,
+            "circuits": len(suite_rows),
+            "nonzero_circuits": len(nonzero),
+            "geomean_norm_pins": _geomean([r["legality_norm_pins"] for r in nonzero]),
+        }
+        for rule in rules:
+            rule_pins = sum(row.get(f"legality_rule_{rule}_pins", 0.0) for row in suite_rows)
+            suite_row[f"{rule}_share"] = rule_pins / total_pins if total_pins > 0 else math.nan
+        summary.append(suite_row)
+    return summary
+
+
+def write_suite_csv(suite_rows, filename):
+    """Write the summary of every suite to a CSV file."""
+    fieldnames = list(dict.fromkeys(key for row in suite_rows for key in row))
+    with open(filename, "w", encoding="utf-8", newline="") as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(suite_rows)
+
+
+def print_suite_summary(rows, suite_rows):
     """
     Print, per suite, the geomean of the normalized pins in violation, and
     the share of the pins in violation charged to each rule.
@@ -434,18 +475,11 @@ def print_suite_summary(rows):
         f"\t{'suite':<12} {'circuits':>8} {'non-zero':>8} {'norm pins':>9} "
         + " ".join(f"{rule[:12]:>12}" for rule in rules)
     )
-    for suite in sorted({row["suite"] for row in rows}):
-        suite_rows = [row for row in rows if row["suite"] == suite and _finite(row.get("legality_pins"))]
-        nonzero = [row for row in suite_rows if row["legality_pins"] > 0]
-        total_pins = sum(row["legality_pins"] for row in suite_rows)
-        shares = []
-        for rule in rules:
-            rule_pins = sum(row.get(f"legality_rule_{rule}_pins", 0.0) for row in suite_rows)
-            shares.append(rule_pins / total_pins if total_pins > 0 else math.nan)
+    for suite_row in suite_rows:
         print(
-            f"\t{suite:<12} {len(suite_rows):>8} {len(nonzero):>8} "
-            f"{_fmt(_geomean([r['legality_norm_pins'] for r in nonzero]), '9.4f')} "
-            + " ".join(_fmt(share, "12.3f") for share in shares)
+            f"\t{suite_row['suite']:<12} {suite_row['circuits']:>8} {suite_row['nonzero_circuits']:>8} "
+            f"{_fmt(suite_row['geomean_norm_pins'], '9.4f')} "
+            + " ".join(_fmt(suite_row[f"{rule}_share"], "12.3f") for rule in rules)
         )
 
 
@@ -579,12 +613,14 @@ def main():
 
     print()
     print_circuit_summary(rows, args.worst_tiles)
-    print_suite_summary(rows)
+    suite_rows = suite_summary(rows)
+    print_suite_summary(rows, suite_rows)
     print_tile_type_summary(tile_type_rows)
 
     os.makedirs(args.output_dir, exist_ok=True)
     write_csv(rows, os.path.join(args.output_dir, "legality_estimation_results.csv"))
     write_tile_type_csv(tile_type_rows, os.path.join(args.output_dir, "legality_tile_types.csv"))
+    write_suite_csv(suite_rows, os.path.join(args.output_dir, "legality_suite_summary.csv"))
     print(f"\nResults written to {args.output_dir}")
 
 

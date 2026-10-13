@@ -152,6 +152,11 @@ VTR_PATH/vtr_flow/scripts/run_vtr_task.py mcnc/mcnc_gp -j <N>
     The demand counts every primitive placed in the tile (before any
     evictions), so it shows how overloaded the global placement is, not what
     remains after the estimator's evictions.
+- `legality_suite_summary.csv`: One row per suite, the same as the printed
+  per-suite table: the number of circuits (`circuits`) and of circuits with a
+  non-zero score (`nonzero_circuits`), the geomean normalized score over the
+  circuits with a non-zero score (`geomean_norm_pins`), and the share of the
+  pins in violation charged to each rule (`<rule>_share`).
 
 A table of the legality estimate of each circuit is also printed (with the worst
 tiles of each circuit from the VPR log when `--worst_tiles` is given), followed
