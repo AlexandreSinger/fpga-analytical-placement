@@ -60,6 +60,10 @@ LEGALITY_SUMMARY_PATTERNS = [
         re.compile(r"Pins in violation: (\d+) \((\S+) of (\d+) connected pins\)"),
         ("legality_pins", "legality_norm_pins", "legality_connected_pins"),
     ),
+    (
+        re.compile(r"Chains with a fixed offset: (\d+) \((\d+) broken\)"),
+        ("legality_num_chains", "legality_broken_chains"),
+    ),
     (re.compile(r"Primitives placed outside of the device: (\d+)"), ("legality_off_device",)),
     (
         re.compile(r"Evicted primitives with no compatible tile: (\d+)"),
