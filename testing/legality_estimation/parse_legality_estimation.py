@@ -111,6 +111,8 @@ CSV_COLUMNS = [
     "legality_off_device",
     "legality_no_compatible_tile",
     "legality_split_molecules",
+    "legality_num_chains",
+    "legality_broken_chains",
     # The per-rule columns are inserted here (see _legality_rule_columns).
     "post_gp_wirelength",
     "post_gp_cpd_ns",

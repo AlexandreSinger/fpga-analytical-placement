@@ -646,6 +646,8 @@ CSV_COLUMNS = [
     "legality_off_device",
     "legality_no_compatible_tile",
     "legality_split_molecules",
+    "legality_num_chains",
+    "legality_broken_chains",
     # The per-rule legality columns (legality_rule_<name>_pins) are inserted
     # here, in the order the rules appear in the VPR log, so new rules do not
     # need to be listed.
