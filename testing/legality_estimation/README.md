@@ -135,8 +135,10 @@ VTR_PATH/vtr_flow/scripts/run_vtr_task.py mcnc/mcnc_gp -j <N>
     with no compatible tile means some primitive cannot legally go anywhere,
     which is a bug in the estimator (or an architecture it does not support).
   - The post-global placement wirelength, CPD and sTNS estimates.
-  - The run time of the global placer, of the AP flow (and its max RSS), and of
-    VPR.
+  - The run time of the global placer, of the legality estimate
+    (`legality_time_s`, from "Legality Estimation took" in the log), of the AP
+    flow (and its max RSS), and of VPR. The legality estimate made after
+    global placement is included in the run time of the global placer.
   - `reestimate_mismatch` (with `--check_reestimate`): the legality values
     which differ between the two tasks.
   - `error`: missing logs / echo files, a failed VPR run, or a disagreement
@@ -156,7 +158,12 @@ VTR_PATH/vtr_flow/scripts/run_vtr_task.py mcnc/mcnc_gp -j <N>
   per-suite table: the number of circuits (`circuits`) and of circuits with a
   non-zero score (`nonzero_circuits`), the geomean normalized score over the
   circuits with a non-zero score (`geomean_norm_pins`), and the share of the
-  pins in violation charged to each rule (`<rule>_share`).
+  pins in violation charged to each rule (`<rule>_share`). It also has the run
+  time of the legality estimate: its total over the circuits
+  (`legality_time_s`), its largest value (`max_legality_time_s`), and the total
+  as a fraction of the total run time of the global placer
+  (`legality_frac_of_gp`). Totals are used rather than geomeans since small
+  circuits often report 0.00 seconds.
 
 A table of the legality estimate of each circuit is also printed (with the worst
 tiles of each circuit from the VPR log when `--worst_tiles` is given), followed

@@ -10,8 +10,9 @@ produces:
       legality estimate (pins in violation, raw and normalized by the number
       of connected pins), the pins in violation of each rule, the sanity
       counters, the post-global
-      placement wirelength / CPD / sTNS estimates, and the run time of global
-      placement.
+      placement wirelength / CPD / sTNS estimates, the run time of global
+      placement, and the run time of the legality estimate. NOTE: the legality
+      estimate made during global placement is included in its run time.
     - results/legality_tile_types.csv: One row per (circuit, tile type) with
       the number of occupied tiles, the number of tiles with a violation, the
       pins in violation of each rule, and the tile pin demand (how many tiles
@@ -19,8 +20,9 @@ produces:
       / capacity ratio).
     - results/legality_suite_summary.csv: One row per suite with the number
       of circuits (and how many have a non-zero score), the geomean of the
-      normalized pins in violation, and the share of the pins in violation
-      charged to each rule.
+      normalized pins in violation, the share of the pins in violation
+      charged to each rule, and the run time of the legality estimate (total,
+      largest, and as a fraction of the total run time of global placement).
 
 A summary of each circuit, the share of the pins in violation charged to each
 rule per suite, and the tile types with the most pins in violation per suite
@@ -56,6 +58,10 @@ from collect_gp_placements import (
 LEGALITY_ECHO = "legality.ap_estimate.echo"
 
 LEGALITY_SUMMARY_HEADER = "Legality Estimate Summary:"
+
+# The run time of a legality estimate. Only the first is kept, which is the
+# run time of the first legality summary in the log.
+LEGALITY_TIME_PATTERN = re.compile(r"Legality Estimation took (\S+) seconds")
 
 # Patterns of the values in the legality summary, and the row keys they are
 # stored in. Each pattern captures one value per key.
@@ -122,6 +128,7 @@ CSV_COLUMNS = [
     "post_gp_cpd_ns",
     "post_gp_stns_ns",
     "gp_time_s",
+    "legality_time_s",
     "ap_time_s",
     "ap_max_rss_mib",
     "vpr_time_s",
@@ -152,8 +159,9 @@ def parse_log(common_dir):
     """
     Parse the VPR log of a circuit.
 
-    Returns a dict with the VPR status, the values of LOG_PATTERNS, and the
-    first legality summary in the log: the total score (legality_pins, raw
+    Returns a dict with the VPR status, the values of LOG_PATTERNS, the run
+    time of the first legality estimate (legality_time_s), and the first
+    legality summary in the log: the total score (legality_pins, raw
     and normalized by legality_connected_pins), the sanity counters, the pins
     in violation of each rule (legality_rule_<name>_pins), the pins in
     violation of each tile type (legality_tile_types: {name: pins}), and the
@@ -175,6 +183,11 @@ def parse_log(common_dir):
                 values["vpr_status"] = "success"
             elif "VPR failed" in line:
                 values["vpr_status"] = "failed"
+
+            if "legality_time_s" not in values:
+                match = LEGALITY_TIME_PATTERN.search(line)
+                if match:
+                    values["legality_time_s"] = float(match.group(1))
 
             for pattern, keys in LOG_PATTERNS:
                 match = pattern.search(line)
@@ -405,7 +418,7 @@ def print_circuit_summary(rows, num_worst_tiles):
         f"{'suite':<12} {'circuit':<40} {'conn pins':>10} {'pins':>9} {'norm pins':>9} "
         f"{'off':>5} {'no tile':>7} {'split':>5} "
         + " ".join(f"{rule[:12]:>12}" for rule in rules)
-        + f" {'GP (s)':>8}"
+        + f" {'GP (s)':>8} {'legal (s)':>9}"
     )
     for row in rows:
         print(
@@ -418,6 +431,7 @@ def print_circuit_summary(rows, num_worst_tiles):
             f"{_fmt(row.get('legality_split_molecules'), '5.0f')} "
             + " ".join(_fmt(row.get(f"legality_rule_{rule}_pins"), "12.0f") for rule in rules)
             + f" {_fmt(row.get('gp_time_s'), '8.1f')}"
+            + f" {_fmt(row.get('legality_time_s'), '9.2f')}"
             + (f"  ERROR: {row['error']}" if row.get("error") else "")
             + (f"  REESTIMATE MISMATCH: {row['reestimate_mismatch']}"
                if row.get("reestimate_mismatch") else "")
@@ -435,6 +449,12 @@ def suite_summary(rows):
     non-zero score, the geomean of the normalized pins in violation (over the
     circuits with a non-zero score), and the share of the pins in violation
     charged to each rule (<rule>_share).
+
+    The run time of the legality estimate is summarized by its total over the
+    circuits (legality_time_s), its largest value (max_legality_time_s), and
+    its total as a fraction of the total run time of global placement over the
+    same circuits (legality_frac_of_gp). Totals are used rather than geomeans
+    since the run time of small circuits is often printed as 0.00 seconds.
     """
     rules = _rule_names(rows)
     summary = []
@@ -451,6 +471,12 @@ def suite_summary(rows):
         for rule in rules:
             rule_pins = sum(row.get(f"legality_rule_{rule}_pins", 0.0) for row in suite_rows)
             suite_row[f"{rule}_share"] = rule_pins / total_pins if total_pins > 0 else math.nan
+        timed_rows = [row for row in suite_rows if _finite(row.get("legality_time_s"))]
+        legality_time = sum(row["legality_time_s"] for row in timed_rows)
+        gp_time = sum(row["gp_time_s"] for row in timed_rows if _finite(row.get("gp_time_s")))
+        suite_row["legality_time_s"] = legality_time if timed_rows else math.nan
+        suite_row["max_legality_time_s"] = max((row["legality_time_s"] for row in timed_rows), default=math.nan)
+        suite_row["legality_frac_of_gp"] = legality_time / gp_time if gp_time > 0 else math.nan
         summary.append(suite_row)
     return summary
 
@@ -466,20 +492,28 @@ def write_suite_csv(suite_rows, filename):
 
 def print_suite_summary(rows, suite_rows):
     """
-    Print, per suite, the geomean of the normalized pins in violation, and
-    the share of the pins in violation charged to each rule.
+    Print, per suite, the geomean of the normalized pins in violation, the
+    share of the pins in violation charged to each rule, and the run time of
+    the legality estimate.
     """
     rules = _rule_names(rows)
-    print("\nPer suite (geomean over circuits with a non-zero score; share of pins in violation per rule):")
+    print(
+        "\nPer suite (geomean over circuits with a non-zero score; share of pins in violation per rule; "
+        "legality estimate run time, total / largest / fraction of GP):"
+    )
     print(
         f"\t{'suite':<12} {'circuits':>8} {'non-zero':>8} {'norm pins':>9} "
         + " ".join(f"{rule[:12]:>12}" for rule in rules)
+        + f" {'legal (s)':>9} {'max (s)':>8} {'of GP':>6}"
     )
     for suite_row in suite_rows:
         print(
             f"\t{suite_row['suite']:<12} {suite_row['circuits']:>8} {suite_row['nonzero_circuits']:>8} "
             f"{_fmt(suite_row['geomean_norm_pins'], '9.4f')} "
             + " ".join(_fmt(suite_row[f"{rule}_share"], "12.3f") for rule in rules)
+            + f" {_fmt(suite_row['legality_time_s'], '9.2f')}"
+            + f" {_fmt(suite_row['max_legality_time_s'], '8.2f')}"
+            + f" {_fmt(suite_row['legality_frac_of_gp'], '6.3f')}"
         )
 
 
